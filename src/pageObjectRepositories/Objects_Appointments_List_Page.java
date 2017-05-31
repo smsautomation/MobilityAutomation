@@ -42,7 +42,7 @@ public class Objects_Appointments_List_Page {
 		try{
 			element = driver.findElement(By.xpath(".//*[@id='app']/siemensheader/div[1]/div/div[3]/div[1]"));
  		}catch(Exception e){
-			Log.error(sRepositoryName + " | btn_Force_Sync field not found | Exception desc : "+e.getMessage());		
+			Log.error(sRepositoryName + " | btn_Force_Sync not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
