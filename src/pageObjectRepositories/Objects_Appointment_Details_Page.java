@@ -137,6 +137,25 @@ public class Objects_Appointment_Details_Page {
 	    return element;
 	}
 	
+	public static WebElement btn_Depart_For_Appointment_OK (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btnCall2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Depart_ForAppointment_OK not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Depart_For_Appointment_Cancel (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btnCall3"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Depart_ForAppointment_Cancel not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 		
 //END OF METHODS	    
 }
