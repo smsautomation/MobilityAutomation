@@ -1,0 +1,152 @@
+package pageObjectRepositories;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import utility.Log;
+
+/* *******************************************************************
+* Author: Iain Storrie
+* Date: 06/06/2017
+* Function: Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page
+* Purpose: This class contains all of the elements on the Gas Meter Pre Installation Gas Tightness Test page
+* Arguments: 
+* 			
+* Returns: 
+**********************************************************************
+* Change Log:
+* 
+* Date:
+* Author: 
+* Details:
+*
+*********************************************************************/
+
+public class Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page {
+   
+    private static WebElement element = null;
+    private static String sRepositoryName = "Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page";
+
+    public static WebElement lbl_Pre_Installation_Gas_Tightness_Test(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[1]/div[1]/h4"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Pre_Installation_Gas_Tightness_Test not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+
+	public static WebElement btn_Gas_Tightness_Test_Carried_Out_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[1]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Gas_Tightness_Test_Carried_Out_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+
+	public static WebElement btn_Gas_Tightness_Test_Carried_Out_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[1]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Gas_Tightness_Test_Carried_Out_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Capture_Photo(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btn1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Drop_In_Pressure_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[3]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Drop_In_Pressure_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Drop_In_Pressure_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[3]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Drop_In_Pressure_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement cbx_Dip_Gas_Pressure(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("select1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Dip_Gas_Pressure not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement cbx_Meter_Type(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("select2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Meter_Type not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Smell_Gas_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[6]/div[2]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Smell_Gas_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Smell_Gas_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[2]/div/div[6]/div[2]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Smell_Gas_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement txt_Additional_Notes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("text1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Additional_Notes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement lbl_Pre_Installation_Gas_Tightness_Test_Complete(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/gastightness/div[1]/div[2]"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Pre_Installation_Gas_Tightness_Test_Complete not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+			
+//END OF METHODS	    
+}

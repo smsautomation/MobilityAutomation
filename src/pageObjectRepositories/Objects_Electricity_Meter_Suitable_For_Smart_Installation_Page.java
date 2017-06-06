@@ -105,7 +105,27 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 			Log.error(sRepositoryName + " | btn_Suitable_For_Dumb_Instalation_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
-	}
+	 }
+	
+	public static WebElement btn_Reschedule_Job_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Reschedule_Job_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	 }
+	
+	public static WebElement btn_Reschedule_Job_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Reschedule_Job_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	 }
 	
 	public static WebElement lbl_Risk_Assessment_Elec_Complete(WebDriver driver){
 	   	 

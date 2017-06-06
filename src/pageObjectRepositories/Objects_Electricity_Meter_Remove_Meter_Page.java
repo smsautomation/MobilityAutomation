@@ -36,6 +36,56 @@ public class Objects_Electricity_Meter_Remove_Meter_Page {
  		} 
 	    return element;
 	}
+    
+    public static WebElement cbx_Status_Of_Asset(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("select1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Status_Of_Asset not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement txt_Removed_Meter_Readings(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.id("input0"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Removed_Meter_Readings not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Unable_Read_Meter_Yes(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[2]/div/div[3]/div[2]/div[2]/div/label/span/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Unable_Read_Meter_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement txt_Additional_Notes(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.id("text1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Additional_Notes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Next_Section(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("btnNextrmv"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 
 	public static WebElement lbl_Remove_Meter_Complete(WebDriver driver){
 	   	 

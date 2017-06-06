@@ -25,7 +25,7 @@ import utility.Log;
 public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page {
    
     private static WebElement element = null;
-    private static String sRepositoryName = "Objects_Electricity_Capture_Initial_Photo_Of_Elec_Installation_Page";
+    private static String sRepositoryName = "Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page";
 
     public static WebElement lbl_Capture_Initial_Photo_Of_Elec_Installation(WebDriver driver){
     	 
