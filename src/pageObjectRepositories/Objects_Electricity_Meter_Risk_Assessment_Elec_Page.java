@@ -97,12 +97,132 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	    return element;
 	}
 	
+	public static WebElement btn_Capture_Photo_Hazards(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btn2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Photo_Hazards not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Called_AIRline_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[1]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Called_AIRline_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Called_AIRline_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[1]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Called_AIRline_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement txt_AIRline_Reference_Number(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("input1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_AIRline_Reference_Number not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Reported_Risk_DNO_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[3]/div/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Reported_Risk_DNO_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Reported_Risk_DNO_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[3]/div/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Reported_Risk_DNO_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement txt_DNO_Job_Ref(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("input2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_DNO_Job_Ref not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Can_Work_Completed_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[4]/div/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Can_Work_Completed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Can_Work_Completed_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[3]/div[4]/div/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Can_Work_Completed_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement txt_Additional_Notes_DNO(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("text3"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Additional_Notes_DNO not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+			
 	public static WebElement btn_Next_Section(WebDriver driver){
 	   	 
 		try{
 			element = driver.findElement(By.id("btnNextrae"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement lbl_Elec_Meter_Procedure_Fail(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/div[3]/h4"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Elec_Meter_Procedure_Fail not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Abort(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btn2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}

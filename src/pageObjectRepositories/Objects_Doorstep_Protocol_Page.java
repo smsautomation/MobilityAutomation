@@ -192,6 +192,55 @@ public static class Sidebar{
 	    return element;
 	}
 	
+	public static WebElement btn_Capture_Photo (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[1]/div[1]/div/button"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_No_Access_Card_Left_Yes (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[1]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_No_Access_Card_Left_No (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[2]/label/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement lbl_Doorstep_Procedure_Fail (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[5]/div[1]/div/div/h4"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Doorstep_Procedure_Fail not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Abort_No_Access (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btnCall2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 			
 //END OF METHODS	    
 }
