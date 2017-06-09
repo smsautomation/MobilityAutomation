@@ -46,5 +46,6 @@ public class Constant {
 	public static final int Col_Browser = 1;
 	
 	public static final int Col_User = 2;
-    
+	
+	    
 }
