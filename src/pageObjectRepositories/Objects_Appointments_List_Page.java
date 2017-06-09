@@ -157,5 +157,95 @@ public class Objects_Appointments_List_Page {
 	    return element;
 	}
 	
+	public static WebElement btn_Second_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[2]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Second_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Third_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[3]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Third_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Fourth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[4]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Fourth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Fifth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[5]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Fifth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Sixth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[6]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sixth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Seventh_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[7]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Seventh_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Eighth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[8]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Eighth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Ninth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[9]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Ninth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Tenth_Appointment_Select (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[10]/div/div[1]/div/div[1]/span[1]/span"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Tenth_Appointment_Select not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 //END OF METHODS	    
 }
