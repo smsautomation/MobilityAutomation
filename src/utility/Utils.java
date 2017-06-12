@@ -62,9 +62,10 @@ public class Utils {
 	*****************************************************************************************************
 	* Change Log:
 	* 
-	* Date:
-	* Author: 
-	* Details:
+	* Date: 12/06/2017
+	* Author: Iain Storrie
+	* Details: Updated sBrowserName for IE and Chrome only.  Removed different user accounts and replaced
+	* with automation user only as this is the only test user account that will be used 
 	*
 	****************************************************************************************************/
 	public static WebDriver openBrowser(int iTestCaseRow) throws Exception{
@@ -80,48 +81,23 @@ public class Utils {
         sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
         
         //Check which browser we are using as that will define how we handle username and password
-        if(sBrowserName.contentEquals("IE") ){
+        if(sBrowserName.matches("IE|Chrome") ){
 	       	switch(sUser){
-	        	case "Administrator" :
+	        	case "Automation" :
 	        		Log.info("User set as " + sUser);
-	        		sUsername = "ncc-1@company-net.com";
-	        		sPassword = "P@ssword123";
+	        		sUsername = "automation";
+	        		sPassword = "Aut0m4t1on";
 	        		break;
-	        	case "Content Author" :
-	        		Log.info("User set as " + sUser);
-	        		sUsername = "ncc-2@company-net.com";
-	        		sPassword = "P@ssword123";
-	        		break;
-	        	case "Visitor" :
-	        		Log.info("User set as " + sUser);
-	        		sUsername = "ncc-3@company-net.com";
-	        		sPassword = "P@ssword123";
-	        		break;  
 		        default :
 		            Log.error("No valid user selected");
 	        }     
 	        //The URL will always be the same, so set that here
         	sURL = "http://" + Constant.URL;
-        }else{
-        	//Must be either Firefox or Chrome, so we can set the username and password as part of the URL
-	        switch(sUser){
-	        	case "Administrator" :
-	        		Log.info("User set as " + sUser);
-	        		sURL = "http://ncc-1%40company-net%2Ecom:P%40ssword123@" + Constant.URL;
-	        		break;
-	        	case "Content Author" :
-	        		Log.info("User set as " + sUser);
-	        		sURL = "http://ncc-2%40company-net%2Ecom:P%40ssword123@" + Constant.URL;
-	        		break;
-	        	case "Visitor" :
-	        		Log.info("User set as " + sUser);
-	        		sURL = "http://ncc-3%40company-net%2Ecom:P%40ssword123@" + Constant.URL;
-	        		break;  
-		        default :
+        }else{       	 
 		            Log.error("No valid user selected");
 		            sURL = "";
 	        }
-        }
+        
         
         switch(sBrowserName){
 	        case "Firefox" :
