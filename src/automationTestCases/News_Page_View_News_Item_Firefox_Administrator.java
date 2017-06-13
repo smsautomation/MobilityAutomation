@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
-import appModule.*;
+import webModule.*;
 import pageObjectRepositories.Objects_Navigation_Bar;
 import pageObjectRepositories.Objects_News_Page;
 

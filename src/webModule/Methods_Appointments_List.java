@@ -1,4 +1,4 @@
-package appModule;
+package webModule;
 
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Appointments_List_Page;

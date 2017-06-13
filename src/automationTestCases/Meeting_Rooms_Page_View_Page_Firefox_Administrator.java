@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
-import appModule.Methods_Meeting_Rooms;
+import webModule.Methods_Meeting_Rooms;
 import pageObjectRepositories.Objects_Meeting_Rooms_Page;
 import pageObjectRepositories.Objects_Navigation_Bar;
 

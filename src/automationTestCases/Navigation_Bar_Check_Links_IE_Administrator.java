@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
-import appModule.*;
+import webModule.*;
 import pageObjectRepositories.Objects_Navigation_Bar;
 
 public class Navigation_Bar_Check_Links_IE_Administrator {

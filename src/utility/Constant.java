@@ -33,7 +33,7 @@ package utility;
 *********************************************************************/
 public class Constant {
 
-    public static final String URL = "https://siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
+    public static final String URL = "siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
     
     public static final String Path_TestData = "C://MobilityAutomation//src//testData//";
     		 

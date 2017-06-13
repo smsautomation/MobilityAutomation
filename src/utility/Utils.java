@@ -81,7 +81,7 @@ public class Utils {
         sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
         
         //Check which browser we are using as that will define how we handle username and password
-        if(sBrowserName.matches("IE|Chrome") ){
+        if(sBrowserName.matches("IE|Chrome|Firefox") ){
 	       	switch(sUser){
 	        	case "Automation" :
 	        		Log.info("User set as " + sUser);
@@ -92,7 +92,7 @@ public class Utils {
 		            Log.error("No valid user selected");
 	        }     
 	        //The URL will always be the same, so set that here
-        	sURL = "http://" + Constant.URL;
+        	sURL = "https://" + Constant.URL;
         }else{       	 
 		            Log.error("No valid user selected");
 		            sURL = "";
