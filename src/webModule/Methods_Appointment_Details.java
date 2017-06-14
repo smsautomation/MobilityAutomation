@@ -414,23 +414,23 @@ public class Methods_Appointment_Details{
 	public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Check that all of the elements of that are expected are displayed
-		if(Objects_Appointment_Details_Page.img_List(driver).isDisplayed() == true){
+		Objects_Appointment_Details_Page.img_List(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | List Image displayed as expected");
 		}
 		
-		if(Objects_Appointment_Details_Page.lnk_Customer_Details(driver).isDisplayed() == true){
+		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Customer Details Link displayed as expected");
 			}
 		
-		if(Objects_Appointment_Details_Page.lnk_Job_Details(driver).isDisplayed() == true){
+		Objects_Appointment_Details_Page.lnk_Job_Details(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Job Details Link displayed as expected");
 			}
 		
-		if(Objects_Appointment_Details_Page.lnk_Meter_Details(driver).isDisplayed() == true){
+		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Meter Details Link displayed as expected");
 			}
 		
-		if(Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed() == true){
+		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Call Forward Button displayed as expected");
 			}
 		

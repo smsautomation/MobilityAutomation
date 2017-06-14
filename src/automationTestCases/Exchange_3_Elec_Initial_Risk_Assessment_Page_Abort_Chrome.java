@@ -1,9 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: Exchange_3_Elec_Initial_Risk_Assessment_Abort_Chrome
 * Author: Iain Storrie
-* Date: 12/06/2017
-* Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* Date: 14/06/2017
+* Purpose: This test ensure that a user can abort an appointment from the 
+* Elec Initial Risk Assessment page where the initial risk assessment fails 
+* on the Chrome browser for an Exchange 3 job
 *
 **********************************************************************
 * Change Log:
@@ -27,10 +28,9 @@ import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
-import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
+import pageObjectRepositories.Objects_Abort_Page;
 
-
-public class Exchange_3_End_To_End_Chrome {
+public class Exchange_3_Elec_Initial_Risk_Assessment_Page_Abort_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -65,7 +65,7 @@ public class Exchange_3_End_To_End_Chrome {
 	@Test
 	public void main() throws Exception {
 			
-Methods_Appointments_List.viewPage(driver, sTestCaseName);
+		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		Objects_Appointments_List_Page.btn_First_Appointment_Select(driver).click();
 		
@@ -78,7 +78,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
 		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName);
-		
+				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
 		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName);
@@ -93,39 +93,44 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Complete Remaining Customer Contact questions
 		Objects_Appointment_Details_Page.btn_Contact_Made_Yes(driver).click();
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_Yes(driver).click();
-		
+			
 		//Click Depart Button to progress to Doorstep Protocol Page
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-		
+			
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	
-				
+		
 		//Verify that Doorstep Sidebar displayed
 		Methods_Doorstep_Protocol.viewSidebar(driver, sTestCaseName);
-			
+		
 		//Verify Arrive button displayed
 		Methods_Doorstep_Protocol.viewPage(driver, sTestCaseName);
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).click();
-			
+		
 		//Verify Arrive elements displayed
 		Methods_Doorstep_Protocol.viewArrivePage(driver, sTestCaseName);
 		Log.info("Doorstep Protocol page arrive elements displayed as expected");
-			
+		
 		//Invoke Method to complete doorstep protocol questions for a success outcome 
 		Methods_Doorstep_Protocol.addSuccessValues(driver, sTestCaseName);
-		
+				
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
 		Log.info("Electricity Meter Initial Risk Assessment page displayed as expected");	
-				
-		//Invoke Method to complete a successful initial risk assessment 
-		Methods_Electricity_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
+					
+		//Invoke Method to complete an aborted initial risk assessment 
+		Methods_Electricity_Meter_Initial_Risk_Assessment.viewSmellGasPage(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Risk_Assessment.addAbortValues(driver, sTestCaseName);
 		
-		//Verify that we are on the Electricity Meter Initial Risk Assessment page
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).isDisplayed();
-		Log.info("Risk Assessment - Elec page displayed as expected");	
+		//Click Abort button to bring up Abort page 
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Abort(driver).click();
+		Log.info("Abort button clicked");
+		
+		//Verify Abort page displayed
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Log.info("Abort page displayed as expected");
 	}
 	
 	//Log out

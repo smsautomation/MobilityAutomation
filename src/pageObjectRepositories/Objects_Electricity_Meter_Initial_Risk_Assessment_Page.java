@@ -40,7 +40,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Smell_Gas_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Smell_Gas_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Smell_Gas_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Smell_Gas_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Turned_Off_Gas_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[2]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[2]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Turned_Off_Gas_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -70,7 +70,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Called_EGP_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[3]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[3]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Called_EGP_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Reported_Incident_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Incident_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Reported_Incident_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Incident_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_OK_To_Proceed_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[6]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[6]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_OK_To_Proceed_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,7 +130,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_OK_To_Proceed_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[6]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[6]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_OK_To_Proceed_No not found | Exception desc : "+e.getMessage());		
  		} 
