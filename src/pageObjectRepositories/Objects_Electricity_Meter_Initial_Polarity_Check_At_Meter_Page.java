@@ -40,7 +40,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Polarity_Check_At_Cut_Out_Pass(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[1]/div[2]/label[1]/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[1]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Polarity_Check_At_Cut_Out_Pass not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Polarity_Check_At_Cut_Out_Fail(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[1]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[1]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Polarity_Check_At_Cut_Out_Fail not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Polarity_Check_At_Meter_Pass(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[2]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[2]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Polarity_Check_At_Meter_Pass not found | Exception desc : "+e.getMessage());		
  		} 
@@ -70,7 +70,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Polarity_Check_At_Meter_Fail(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[2]/div[2]/label[2]/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[2]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Polarity_Check_At_Meter_Fail not found | Exception desc : "+e.getMessage());		
  		} 
@@ -80,7 +80,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Reported_Team_Manager_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[4]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[4]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Team_Manager_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Team_Manager_Authorisation_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Team_Manager_Authorisation_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Team_Manager_Authorisation_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Team_Manager_Authorisation_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Called_AIRline_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[3]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[3]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Called_AIRline_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,7 +130,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Called_AIRline_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[3]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[3]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Called_AIRline_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -150,7 +150,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Reported_Risk_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[5]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[5]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Risk_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -160,7 +160,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page {
 	public static WebElement btn_Reported_Risk_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[5]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/polaritytest/div[2]/div[4]/div[6]/div[5]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Risk_No not found | Exception desc : "+e.getMessage());		
  		} 

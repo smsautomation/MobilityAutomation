@@ -90,7 +90,7 @@ public class Objects_Electricity_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Existing_Meter_Correct_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Existing_Meter_Correct_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Electricity_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Existing_Meter_Correct_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Existing_Meter_Correct_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,7 +130,7 @@ public class Objects_Electricity_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Unable_Read_Meter_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[2]/div/div[3]/div[2]/div[2]/div/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[2]/div/div[3]/div[2]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Unable_Read_Meter_Yes not found | Exception desc : "+e.getMessage());		
  		} 

@@ -39,7 +39,7 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		}
 		
 		//Take a screenshot to show what we've done
-		Utils.takeScreenshot(driver, sTestCaseName + "-viewRiskAssessmentElecPage");
+		Utils.takeScreenshot(driver, sTestCaseName + "-viewPage");
 		
 	//END OF VIEW PAGE METHOD
 	}
@@ -154,11 +154,11 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 	
 		//Add correct responses for an Elec Meter Procedure Fail Abort
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).click();{
-		Log.info(sTestCaseName + " | Risk Readon Code combobox opened");
+		Log.info(sTestCaseName + " | Risk Reason Code combobox opened");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).sendKeys("A01");
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).sendKeys(Keys.TAB);{
-		Log.info(sTestCaseName + " | Risk Readon Code selected");
+		Log.info(sTestCaseName + " | Risk Reason Code selected");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Risk_Assessment_Pass_No(driver).click();{
 		Log.info(sTestCaseName + " | Risk Assessment Pass - No radio button clicked");

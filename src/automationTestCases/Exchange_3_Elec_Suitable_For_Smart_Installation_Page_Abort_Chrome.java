@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_Elec_Initial_Risk_Assessment_Abort_IE
+* Test Case Name: Exchange_3_Elec_Suitable_For_Smart_Installation_Abort_Chrome
 * Author: Iain Storrie
-* Date: 14/06/2017
+* Date: 15/06/2017
 * Purpose: This test ensure that a user can abort an appointment from the 
-* Elec Initial Risk Assessment page where the initial risk assessment fails 
-* on the IE browser for an Exchange 3 job
+* Elec Suitable For Smart Installation page where the smart meter suitability
+* fails on the Chrome browser for an Exchange 3 job
 *
 **********************************************************************
 * Change Log:
@@ -28,9 +28,11 @@ import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_3_Elec_Initial_Risk_Assessment_Page_Abort_IE {
+public class Exchange_3_Elec_Suitable_For_Smart_Installation_Page_Abort_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -119,13 +121,42 @@ public class Exchange_3_Elec_Initial_Risk_Assessment_Page_Abort_IE {
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
 		Log.info("Electricity Meter Initial Risk Assessment page displayed as expected");	
-					
-		//Invoke Method to complete an aborted initial risk assessment 
-		Methods_Electricity_Meter_Initial_Risk_Assessment.viewSmellGasPage(driver, sTestCaseName);
-		Methods_Electricity_Meter_Initial_Risk_Assessment.addAbortValues(driver, sTestCaseName);
+		
+		//Invoke Method to complete a successful initial risk assessment 
+		Methods_Electricity_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Electricity Meter Risk Assessment - Elec page
+		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).isDisplayed();
+		Log.info("Risk Assessment - Elec page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Risk_Assessment_Elec.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Risk Assessment Elec initial elements displayed as expected");
+				
+		//Verify correct page elements displayed after Risk Assessment - Yes clicked
+		Methods_Electricity_Meter_Risk_Assessment_Elec.viewRiskAssessmentYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Risk Assessment Yes elements displayed as expected");
+				
+		//Invoke Method to complete a successful risk assessment 
+		Methods_Electricity_Meter_Risk_Assessment_Elec.addSuccessValues(driver, sTestCaseName);
+			
+		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		Log.info("Risk Assessment - Elec page displayed as expected");	
+			
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+				
+		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
+		
+		//Invoke Method to complete an aborted suitable for smart installation 
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addAbortValues(driver, sTestCaseName);
 		
 		//Click Abort button to bring up Abort page 
-		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Abort(driver).click();
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.btn_Abort(driver).click();
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
