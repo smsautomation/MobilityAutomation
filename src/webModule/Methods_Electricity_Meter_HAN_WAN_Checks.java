@@ -51,8 +51,8 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 	* Function: addSuccessValues
 	* Author: Iain Storrie
 	* Date: 15/06/2017
-	* Purpose: This method adds the required responses in the Electricity Meter Initial Polarity Check At 
-	* Meter page in order to force a successful check
+	* Purpose: This method adds the required responses in the Electricity Meter HAN / WAN Checks page in 
+	* order to force a successful check
 	* Arguments: 
 	* 			
 	* Returns: 
@@ -84,7 +84,7 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.lbl_Han_Wan_Checks_Complete(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Initial Polarity Check At Meter Complete label displayed");
+		Log.info(sTestCaseName + " | HAN / WAN Checks Complete label displayed");
 		}
 		
 		//Take a screenshot to show what we've done
@@ -112,7 +112,7 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 	****************************************************************************************************/	
 	public static void addAbortValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
-		//Add correct responses for an aborted polarity check
+		//Add correct responses for an aborted HAN/WAN Check check
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Wan_Available_No(driver).click();{
 		Log.info(sTestCaseName + " | WAN Available - No radio button clicked");
 		}

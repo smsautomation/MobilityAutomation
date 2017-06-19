@@ -40,7 +40,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_All_Seals_Intact_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_All_Seals_Intact_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Approved_Siemens_Cable_Markers_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Approved_Siemens_Cable_Markers_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Terminal_Screw_Tightness_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[3]/div[2]/div/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[3]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Terminal_Screw_Tightness_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -80,7 +80,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Visual_Inspection_Completed_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[5]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[5]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Visual_Inspection_Completed_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Replacement_Meter_Board_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[8]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[8]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Replacement_Meter_Board_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Replacement_Meter_Board_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[8]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[8]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Replacement_Meter_Board_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,7 +130,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Meter_Tails_Changed_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[9]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[9]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Meter_Tails_Changed_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -140,7 +140,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Meter_Tails_Changed_No(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[9]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[9]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Meter_Tails_Changed_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -150,7 +150,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Replaced_Main_Fuse_Yes(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[10]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[10]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Replaced_Main_Fuse_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -160,7 +160,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Replaced_Main_Fuse_No(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[10]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[10]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Replaced_Main_Fuse_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -170,7 +170,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Emergency_Job_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[11]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[11]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Emergency_Job_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -180,7 +180,7 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
     public static WebElement btn_Emergency_Job_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[11]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[11]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Emergency_Job_No not found | Exception desc : "+e.getMessage());		
  		} 

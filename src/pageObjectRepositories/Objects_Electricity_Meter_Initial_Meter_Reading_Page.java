@@ -50,7 +50,7 @@ public class Objects_Electricity_Meter_Initial_Meter_Reading_Page {
     public static WebElement btn_Unable_Read_Meter_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Unable_Read_Meter_Yes not found | Exception desc : "+e.getMessage());		
  		} 

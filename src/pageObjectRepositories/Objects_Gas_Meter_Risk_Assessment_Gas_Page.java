@@ -187,6 +187,26 @@ public class Objects_Gas_Meter_Risk_Assessment_Gas_Page {
 	    return element;
 	}
 	
+	public static WebElement btn_Med_Pressure_Perform_Job_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/riskassessgas/div/div[2]/div[2]/div[2]/div[1]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Med_Pressure_Perform_Job_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Med_Pressure_Perform_Job_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/riskassessgas/div/div[2]/div[2]/div[2]/div[2]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Med_Pressure_Perform_Job_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement lbl_Risk_Assessment_Gas_Complete(WebDriver driver){
 	   	 
 		try{

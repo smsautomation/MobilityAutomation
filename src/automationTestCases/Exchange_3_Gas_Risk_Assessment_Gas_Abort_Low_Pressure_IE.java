@@ -1,9 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_IE
 * Author: Iain Storrie
 * Date: 19/06/2017
-* Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* Purpose: This test ensure that a user can abort an appointment from the 
+* Gas Risk Assessment - Gas page where the risk assessment fails due to Low 
+* pressure on the IE browser for an Exchange 3 job
 *
 **********************************************************************
 * Change Log:
@@ -24,6 +25,7 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
+import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
@@ -42,10 +44,9 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 
 
-public class Exchange_3_End_To_End_Chrome {
+public class Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -306,14 +307,20 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Risk_Assessment_Gas.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Risk Assessment - Gas initial elements displayed as expected");
+		Log.info("Gas Meter Risk Assessment Gas initial elements displayed as expected");
 																												
-		//Invoke Method to complete a successful risk assessment - gas 
-		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
-													
-		//Verify that we are on the Gas Meter Suitable for Smart Installation page
-		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
-		Log.info("Gas Meter Suitable For Smart Installation page displayed as expected");
+		//Invoke Method to complete an aborted risk assessment - gas due to low pressure 
+		Methods_Gas_Meter_Risk_Assessment_Gas.addAbortValuesLowGas(driver, sTestCaseName);
+
+		//Click Abort button to bring up Abort page 
+		Objects_Gas_Meter_Risk_Assessment_Gas_Page.btn_Abort(driver).click();
+		Log.info("Abort button clicked");
+				
+		//Verify Abort page displayed
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Log.info("Abort page displayed as expected");
+		
+	
 	}
 	
 	//Log out
