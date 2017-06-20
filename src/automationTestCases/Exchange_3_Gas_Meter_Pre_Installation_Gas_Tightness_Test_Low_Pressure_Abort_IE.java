@@ -1,9 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_IE
 * Author: Iain Storrie
-* Date: 19/06/2017
-* Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* Date: 20/06/2017
+* Purpose: This test ensure that a user can abort an appointment from the 
+* Gas Meter Pre Installation Gas Tightness Test page where there is a pressure
+* drop fail on the IE browser for an Exchange 3 job
 *
 **********************************************************************
 * Change Log:
@@ -24,6 +25,7 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
+import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
@@ -45,14 +47,9 @@ import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Current_Meter_Details_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Remove_Meter_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Remove_Asset_Page;
-import pageObjectRepositories.Objects_Gas_Meter_New_Regulator_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Initial_Meter_Reading_Page;
 
 
-public class Exchange_3_End_To_End_Chrome {
+public class Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -347,73 +344,21 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Verify that we are on the Gas Meter Capture Pre Installation Gas Tightness Test page
 		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.lbl_Pre_Installation_Gas_Tightness_Test(driver).isDisplayed();
 		Log.info("Gas Meter Pre Installation Gas Tightness Test page displayed as expected");
-		
+	
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.viewPage(driver, sTestCaseName);
 		Log.info("Gas Meter Pre Installation Gas Tightness Test initial elements displayed as expected");
-							
-		//Invoke Method to complete a successful photo capture 
-		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.addSuccessValues(driver, sTestCaseName);
-				
-		//Verify that we are on the Gas Meter Current Meter Details page
-		Objects_Gas_Meter_Current_Meter_Details_Page.lbl_Gas_Current_Meter_Details(driver).isDisplayed();
-		Log.info("Gas Meter Current Meter Details page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Current_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Current Meter Details initial elements displayed as expected");
-														
-		//Invoke Method to complete current meter details page 
-		Methods_Gas_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
-			
-		//Verify that we are on the Gas Meter Remove Meter page
-		Objects_Gas_Meter_Remove_Meter_Page.lbl_Gas_Remove_Meter(driver).isDisplayed();
-		Log.info("Gas Remove Meter page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Remove_Meter.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Remove Meter initial elements displayed as expected");
-																
-		//Invoke Method to complete remove meter page 
-		Methods_Gas_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
-					
-		//Verify that we are on the Gas Meter Remove Asset page
-		Objects_Gas_Meter_Remove_Asset_Page.lbl_Gas_Remove_Asset(driver).isDisplayed();
-		Log.info("Gas Remove Asset page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Remove_Asset.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Remove Asset initial elements displayed as expected");
-																		
-		//Invoke Method to complete remove asset page 
-		Methods_Gas_Meter_Remove_Asset.addSuccessValues(driver, sTestCaseName);
-							
-		//Verify that we are on the Gas Meter New Regulator page
-		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();
-		Log.info("Gas New Regulator page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_New_Regulator.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
-																				
-		//Invoke Method to complete New Regulator page 
-		Methods_Gas_Meter_New_Regulator.addSuccessValues(driver, sTestCaseName);
-									
-		//Verify that we are on the Gas Meter New Meter Details page
-		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();
-		Log.info("Gas New Meter Details page displayed as expected");
-			
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_New_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
-																						
-		//Invoke Method to complete New Regulator page 
-		Methods_Gas_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
-											
-		//Verify that we are on the Gas Meter Initial Meter Reading page
-		Objects_Gas_Meter_Initial_Meter_Reading_Page.lbl_Gas_Inital_Meter_Reading(driver).isDisplayed();
-		Log.info("Gas New Meter Details page displayed as expected");
-		
+						
+		//Invoke Method to complete an aborted pressure drop 
+		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.addAbortValuesPressureDrop(driver, sTestCaseName);
+						
+		//Click Abort button to bring up Abort page 
+		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.btn_Abort(driver).click();
+		Log.info("Abort button clicked");
+						
+		//Verify Abort page displayed
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Log.info("Abort page displayed as expected");
 	}
 	
 	//Log out

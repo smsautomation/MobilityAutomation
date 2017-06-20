@@ -66,7 +66,37 @@ public class Objects_Gas_Meter_New_Meter_Details_Page {
  		} 
 	    return element;
 	}
-     
+
+    public static WebElement btn_Scan_Asset_Now(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Scan_Asset_Now not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Add_Asset_OK(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Add_Asset_OK not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Updated_OK(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.id("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Updated_OK not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement cbx_Meter_Location_Code(WebDriver driver){
     	 
   		try{

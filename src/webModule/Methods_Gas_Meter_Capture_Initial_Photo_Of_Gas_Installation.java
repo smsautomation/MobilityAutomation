@@ -1,19 +1,19 @@
 package webModule;
 
 import org.openqa.selenium.WebDriver;
-import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import utility.Log;
 import utility.Utils;
 
-public class Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation{
+public class Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation{
 	
 		
 	/* **************************************************************************************************
 	* Function: viewPage
 	* Author: Iain Storrie
-	* Date: 20/06/2017
-	* Purpose: This method checks the main page elements on the Gas Meter Capture Initial Photo
-	* Of Gas Installation page upon initial landing
+	* Date: 15/06/2017
+	* Purpose: This method checks the main page elements on the Electricity Meter Capture Initial Photo
+	* Of Elec Installation page upon initial landing
 	* Arguments: 
 	* 			
 	* Returns: 
@@ -28,11 +28,11 @@ public class Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Check that all of the elements of that are expected are displayed
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();{
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Suitable for Smart Installation label displayed as expected");
 		}
 		
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.btn_Capture_Photo(driver).isDisplayed();{
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.btn_Capture_Photo(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Suitable For Smart Installation - Yes radio button displayed as expected");
 		}
 		
@@ -45,9 +45,9 @@ public class Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	/* **************************************************************************************************
 	* Function: addSuccessValues
 	* Author: Iain Storrie
-	* Date: 20/06/2017
-	* Purpose: This method adds the required responses in the Gas Meter Capture Initial Photo Of
-	* Gas Installation page in order to force a successful outcome
+	* Date: 15/06/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Capture Initial Photo Of
+	* Elec Installation page in order to force a successful outcome
 	* Arguments: 
 	* 			
 	* Returns: 
@@ -61,11 +61,11 @@ public class Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
-		//Add correct responses for a successful suitable for photo capture
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.btn_Capture_Photo(driver).click();{
+		//Add correct responses for a successful suitable for smart installation
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.btn_Capture_Photo(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo button clicked");
 		}
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation_Completed(driver).isDisplayed();{
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation_Completed(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Capture Initial Photo Of Elec Installation Complete Label displayed");
 		}
 		
