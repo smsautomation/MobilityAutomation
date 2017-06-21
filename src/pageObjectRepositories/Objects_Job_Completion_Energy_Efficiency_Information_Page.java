@@ -40,7 +40,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Energy_Efficiency_Information_Provided_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[3]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[3]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Energy_Efficiency_Information_Provided_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Energy_Efficiency_Information_Provided_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[3]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[3]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Energy_Efficiency_Information_Provided_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Energy_Efficiency_Documentation_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[4]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[4]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Energy_Efficiency_Documentation_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -70,7 +70,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Energy_Efficiency_Documentation_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[4]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[4]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Energy_Efficiency_Documentation_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -80,7 +80,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Customer_Happy_Yes(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[5]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[5]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Happy_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Customer_Happy_No(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[5]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[5]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Happy_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Additional_Energy_Efficiency_Information_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[6]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[6]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Additional_Energy_Efficiency_Information_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Job_Completion_Energy_Efficiency_Information_Page {
     public static WebElement btn_Additional_Energy_Efficiency_Information_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[6]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[3]/div[2]/div[6]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Additional_Energy_Efficiency_Information_No not found | Exception desc : "+e.getMessage());		
  		} 

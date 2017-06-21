@@ -70,7 +70,7 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement btn_Customer_Refused_Sign_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Refused_Sign_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -80,7 +80,7 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement btn_Customer_Refused_Sign_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[2]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Refused_Sign_No not found | Exception desc : "+e.getMessage());		
  		} 

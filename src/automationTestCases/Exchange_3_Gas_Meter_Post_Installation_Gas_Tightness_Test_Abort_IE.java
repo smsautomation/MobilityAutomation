@@ -1,9 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_IE
 * Author: Iain Storrie
-* Date: 19/06/2017
-* Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* Date: 21/06/2017
+* Purpose: This test ensure that a user can abort an appointment from the 
+* Gas Meter Post Installation Gas Tightness Test page where the gas tightness test
+* has not been performed on the IE browser for an Exchange 3 job
 *
 **********************************************************************
 * Change Log:
@@ -24,6 +25,7 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
+import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
@@ -52,14 +54,9 @@ import pageObjectRepositories.Objects_Gas_Meter_New_Regulator_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Initial_Meter_Reading_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Install_Kit_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page;
-import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
-import pageObjectRepositories.Objects_Job_Completion_Energy_Efficiency_Information_Page;
-import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
-import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class Exchange_3_End_To_End_Chrome {
+public class Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -446,57 +443,18 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Post_Installation_Gas_Tightness_Test.viewPage(driver, sTestCaseName);
 		Log.info("Gas Meter Post Installation Gas Tightness Test initial elements displayed as expected");
-																												
-		//Invoke Method to complete Install Kit page 
-		Methods_Gas_Meter_Post_Installation_Gas_Tightness_Test.addSuccessValues(driver, sTestCaseName);
-																	
-		//Verify that we are on the Gas Meter Gas Appliance Safety Checks page
-		Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page.lbl_Gas_Appliance_Safety_Checks(driver).isDisplayed();
-		Log.info("Gas Appliance Safety Checks page displayed as expected");
 		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Post Installation Gas Tightness Test initial elements displayed as expected");
-																														
-		//Invoke Method to complete Install Kit page 
-		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.addSuccessValues(driver, sTestCaseName);
-																			
-		//Verify that we are on the Job Completion Configure All Meters Installed page
-		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
-		Log.info("Job Completion Configure All Meters Installed page displayed as expected");
-	
-		//Verify Initial page elements displayed
-		Methods_Job_Completion_Configure_All_Meters_Installed.viewPage(driver, sTestCaseName);
-		Log.info("Job Completion Configure All Meters Installed initial elements displayed as expected");
-																																
-		//Invoke Method to complete Configure All Meters Installed page 
-		Methods_Job_Completion_Configure_All_Meters_Installed.addSuccessValues(driver, sTestCaseName);
-																			
-		//Verify that we are on the Job Completion Energy Efficiency Information page
-		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
-		Log.info("Job Completion Energy Efficient Information page displayed as expected");
-	
-		//Verify Initial page elements displayed
-		Methods_Job_Completion_Energy_Efficient_Information.viewPage(driver, sTestCaseName);
-		Log.info("Job Completion Enerfy Efficiency Information initial elements displayed as expected");
-																																		
-		//Invoke Method to complete Energy Efficiency information page 
-		Methods_Job_Completion_Energy_Efficient_Information.addSuccessValues(driver, sTestCaseName);
-																				
-		//Verify that we are on the Job Completion Summary page
-		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();
-		Log.info("Job Completion Summary page displayed as expected");
+		//Invoke Method to complete an aborted failed test 
+		Methods_Gas_Meter_Post_Installation_Gas_Tightness_Test.addAbortValues(driver, sTestCaseName);
+								
+		//Click Abort button to bring up Abort page 
+		Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page.btn_Abort(driver).click();
+		Log.info("Abort button clicked");
+							
+		//Verify Abort page displayed
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Log.info("Abort page displayed as expected");
 		
-		//Verify Initial page elements displayed
-		Methods_Job_Completion_Summary.viewPage(driver, sTestCaseName);
-		Log.info("Job Completion Summary initial elements displayed as expected");
-																																				
-		//Invoke Method to complete Energy Efficiency information page 
-		Methods_Job_Completion_Summary.addSuccessValues(driver, sTestCaseName);
-																						
-		//Verify that we are on the Job Completion Capture Customer Signature page
-		Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
-		Log.info("Job Completion Summary page displayed as expected");
 	}
 	
 	//Log out

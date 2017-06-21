@@ -40,7 +40,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Earth_Bonding_Installed_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[1]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[1]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Earth_Bonding_Installed_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Earth_Bonding_Installed_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[1]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[1]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Earth_Bonding_Installed_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Landlord_Property_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[2]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[2]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Landlord_Property_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -70,7 +70,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Landlord_Property_No(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[2]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/div[2]/div[2]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Landlord_Property_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Ventilation_Satisfactory_Yes(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[2]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[2]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Ventilation_Satisfactory_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Ventilation_Satisfactory_No(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[2]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[2]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Ventilation_Satisfactory_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,7 +130,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Purge_Relight_Gas_App_Test_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[3]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[3]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Purge_Relight_Gas_App_Test_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -140,7 +140,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Purge_Relight_Gas_App_Test_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[3]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[3]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Purge_Relight_Gas_App_Test_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -180,7 +180,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Appliance_Safe_Use_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[5]/div[2]/label[1]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[5]/div[2]/label[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appliance_Safe_Use_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -190,7 +190,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Appliance_Safe_Use_No(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[5]/div[2]/label[2]/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/appliancelist/div/appliance/div/div[2]/div/div[5]/div[2]/label[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appliance_Safe_Use_No not found | Exception desc : "+e.getMessage());		
  		} 

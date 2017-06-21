@@ -40,7 +40,7 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
     public static WebElement btn_Full_Wan_Established_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[1]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[1]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_Wan_Established_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,7 +50,7 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
     public static WebElement btn_Full_Wan_Established_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[1]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[1]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_Wan_Established_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
     public static WebElement btn_Full_Configuration_Applied_Electricity_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Electricity_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -70,9 +70,29 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
     public static WebElement btn_Full_Configuration_Applied_Electricity_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Electricity_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Full_Configuration_Applied_Gas_Yes(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[3]/div[2]/div[1]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Gas_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Full_Configuration_Applied_Gas_No(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[3]/div[2]/div[2]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Gas_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
