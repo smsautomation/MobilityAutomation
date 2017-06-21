@@ -497,6 +497,18 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Verify that we are on the Job Completion Capture Customer Signature page
 		Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
 		Log.info("Job Completion Summary page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Capture_Customer_Signature.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Capture Customer Signature initial elements displayed as expected");
+																																						
+		//Invoke Method to complete Energy Efficiency information page 
+		Methods_Job_Completion_Capture_Customer_Signature.addSuccessValues(driver, sTestCaseName);
+	
+		//Verify that we have returned to the Appointments list page
+	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+		Log.info("First Appointment Header displayed");
+		
 	}
 	
 	//Log out
