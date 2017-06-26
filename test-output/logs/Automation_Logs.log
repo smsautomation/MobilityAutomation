@@ -357,3 +357,162 @@ Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b015
 System info: host: 'MD1N0QGC', ip: '192.168.1.124', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
 Driver info: driver.version: ChromeDriver 
 2017-06-12 17:44:15,315 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 11:48:25,877 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:48:25,877 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:48:25,877 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-26 11:48:25,878 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:48:25,878 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:48:27,756 ERROR [Log] No valid user selected 
+2017-06-26 11:48:27,757 ERROR [Log] No valid browser selected 
+2017-06-26 11:48:27,767 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 11:52:11,976 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:52:11,976 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:52:11,977 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-26 11:52:11,977 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:52:11,977 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:52:13,517 ERROR [Log] No valid user selected 
+2017-06-26 11:52:35,642 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: ChromeDriver 
+2017-06-26 11:52:35,649 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 11:55:32,727 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:55:32,728 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:55:32,728 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-26 11:55:32,728 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:55:32,728 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:55:34,285 ERROR [Log] No valid user selected 
+2017-06-26 11:55:55,960 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: ChromeDriver 
+2017-06-26 11:55:55,964 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 11:57:36,734 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:57:36,735 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:57:36,735 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-26 11:57:36,735 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:57:36,735 INFO  [Log] **************************************************************************************** 
+2017-06-26 11:57:38,279 ERROR [Log] No valid user selected 
+2017-06-26 11:57:59,956 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: ChromeDriver 
+2017-06-26 11:57:59,960 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 12:01:02,685 INFO  [Log] **************************************************************************************** 
+2017-06-26 12:01:02,686 INFO  [Log] **************************************************************************************** 
+2017-06-26 12:01:02,686 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-26 12:01:02,686 INFO  [Log] **************************************************************************************** 
+2017-06-26 12:01:02,686 INFO  [Log] **************************************************************************************** 
+2017-06-26 12:01:04,212 INFO  [Log] User set as Automation 
+2017-06-26 12:01:52,318 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+rue,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"54.0","maxVersion":"54.0"}],"targetPlatforms":[],"seen":true,"dependencies":[],"hasEmbeddedWebExtension":false,"userPermissions":null}
+1498474867117	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1498474867119	DeferredSave.extensions.json	DEBUG	Save changes
+1498474867120	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1498474867120	addons.xpi-utils	DEBUG	Updating add-on states
+1498474867121	addons.xpi-utils	DEBUG	Writing add-ons list
+1498474867123	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\aushelper@mozilla.org.xpi
+1498474867123	addons.xpi	DEBUG	Calling bootstrap method startup on aushelper@mozilla.org version 2.0
+1498474867125	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1498474867126	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.50
+1498474867126	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1498474867127	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.5
+1498474867128	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\screenshots@mozilla.org.xpi
+1498474867128	addons.xpi	DEBUG	Calling bootstrap method startup on screenshots@mozilla.org version 6.6.0
+1498474867129	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\webcompat@mozilla.org.xpi
+1498474867129	addons.xpi	DEBUG	Calling bootstrap method startup on webcompat@mozilla.org version 1.1
+1498474867133	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1498474867133	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1498474867133	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1498474867133	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1498474867134	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1498474867134	addons.manager	DEBUG	Starting provider: GMPProvider
+1498474867138	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1498474867138	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1498474867138	addons.manager	DEBUG	Starting provider: PluginProvider
+1498474867138	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1498474867139	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1498474867139	addons.manager	DEBUG	Completed startup sequence
+1498474867439	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1498474867439	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1498474867439	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1498474867691	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498474867691	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 19
+1498474867691	DeferredSave.extensions.json	DEBUG	Starting timer
+1498474867703	addons.repository	DEBUG	No addons.json found.
+1498474867704	DeferredSave.addons.json	DEBUG	Save changes
+1498474867707	DeferredSave.addons.json	DEBUG	Starting timer
+1498474867775	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1498474867775	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1498474867775	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1498474867779	DeferredSave.extensions.json	DEBUG	Starting write
+1498474867780	DeferredSave.addons.json	DEBUG	Starting write
+1498474867816	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498474867819	DeferredSave.addons.json	DEBUG	Write succeeded
+[GPU 8540] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: FirefoxDriver 
+2017-06-26 12:01:52,323 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:26:23,399 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:26:23,400 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:26:23,400 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:26:23,400 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:26:23,400 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:26:24,971 INFO  [Log] User set as Automation 
+2017-06-26 13:26:25,093 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html 
+2017-06-26 13:26:25,101 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:38:07,670 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:38:07,671 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:38:07,671 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:38:07,671 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:38:07,671 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:38:09,195 INFO  [Log] User set as Automation 
+2017-06-26 13:38:09,283 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : The path to the driver executable must be set by the webdriver.ie.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver. The latest version can be downloaded from http://selenium-release.storage.googleapis.com/index.html 
+2017-06-26 13:38:09,291 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:46:54,922 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:46:54,922 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:46:54,922 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:46:54,922 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:46:54,922 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:46:56,486 INFO  [Log] User set as Automation 
+2017-06-26 13:46:56,486 INFO  [Log] New IE driver instantiated 
+2017-06-26 13:46:56,486 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : null 
+2017-06-26 13:46:56,495 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:49:42,653 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:49:42,654 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:49:42,654 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:49:42,654 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:49:42,654 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:49:44,181 INFO  [Log] User set as Automation 
+2017-06-26 13:49:44,181 INFO  [Log] New IE driver instantiated 
+2017-06-26 13:49:44,182 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : null 
+2017-06-26 13:49:44,190 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:50:52,711 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:50:52,712 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:50:52,712 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:50:52,712 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:50:52,712 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:50:54,136 INFO  [Log] User set as Automation 
+2017-06-26 13:50:54,136 INFO  [Log] New IE driver instantiated 
+2017-06-26 13:50:54,136 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : null 
+2017-06-26 13:50:54,142 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:51:31,930 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:51:31,930 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:51:31,931 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:51:31,931 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:51:31,931 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:51:33,590 INFO  [Log] User set as Automation 
+2017-06-26 13:51:33,590 INFO  [Log] New IE driver instantiated 
+2017-06-26 13:51:33,590 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : null 
+2017-06-26 13:51:33,598 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 
+2017-06-26 13:52:49,496 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:52:49,497 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:52:49,497 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-26 13:52:49,497 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:52:49,497 INFO  [Log] **************************************************************************************** 
+2017-06-26 13:52:51,201 INFO  [Log] User set as Automation 
+2017-06-26 13:53:22,727 INFO  [Log] New IE driver instantiated 
+2017-06-26 13:53:28,343 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : null 
+2017-06-26 13:53:28,379 ERROR [Log] Objects_Appointments_List_Page | hdr_First_Appointment not found | Exception desc : null 

@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25537" started-at="2017-06-12T16:43:49Z" finished-at="2017-06-12T16:44:15Z">
+  <suite name="Default suite" duration-ms="39216" started-at="2017-06-26T12:52:49Z" finished-at="2017-06-26T12:53:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25537" started-at="2017-06-12T16:43:49Z" finished-at="2017-06-12T16:44:15Z">
-      <class name="automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome">
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome@4cf777e8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-12T17:43:49Z" finished-at="2017-06-12T17:43:49Z">
+    <test name="Default test" duration-ms="39216" started-at="2017-06-26T12:52:49Z" finished-at="2017-06-26T12:53:28Z">
+      <class name="automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE@1d9b7cce]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-26T13:52:49Z" finished-at="2017-06-26T13:52:49Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome.beforeMethod(Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome.java:55)
+	at automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE.beforeMethod(Exchange_3_Appointment_Details_Page_Abort_No_Access_IE.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -44,15 +44,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome@4cf777e8]" name="main" duration-ms="4" started-at="2017-06-12T17:44:15Z" finished-at="2017-06-12T17:44:15Z">
+        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE@1d9b7cce]" name="main" duration-ms="1" started-at="2017-06-26T13:53:28Z" finished-at="2017-06-26T13:53:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome@4cf777e8]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-12T17:44:15Z" finished-at="2017-06-12T17:44:15Z">
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE@1d9b7cce]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-26T13:53:28Z" finished-at="2017-06-26T13:53:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- automationTestCases.Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome -->
+      </class> <!-- automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_IE -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

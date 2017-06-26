@@ -39,6 +39,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+//import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -94,7 +95,7 @@ public class Utils {
 	        //The URL will always be the same, so set that here
         	sURL = "https://" + Constant.URL;
         }else{       	 
-		            Log.error("No valid user selected");
+		            Log.error("No valid user selected1");
 		            sURL = "";
 	        }
         
@@ -117,11 +118,14 @@ public class Utils {
 	            
 	        case "IE" :
 
-	            DesiredCapabilities cap = new DesiredCapabilities();
+	            /*DesiredCapabilities cap = new DesiredCapabilities();
 	            cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	            cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+	            */
+	            
+	            System.setProperty("webdriver.ie.driver","C:\\IE Driver\\IEDriverServer.exe"); 
 
-	            driver = new InternetExplorerDriver(cap);
+	            //driver = new InternetExplorerDriver(cap);
 	            Log.info("New IE driver instantiated");
 	            
 	            driver.manage().window().maximize();
