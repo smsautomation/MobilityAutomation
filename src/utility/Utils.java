@@ -74,8 +74,8 @@ public class Utils {
         String sBrowserName;
         String sUser;
         String sURL;
-        String sUsername = "";
-        String sPassword = "";
+        String sUsername;
+        String sPassword;
 
         try{
         sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
@@ -118,24 +118,28 @@ public class Utils {
 	            
 	        case "IE" :
 
-	            /*DesiredCapabilities cap = new DesiredCapabilities();
+	            DesiredCapabilities cap = new DesiredCapabilities();
 	            cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	            cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
-	            */
+	            cap.setCapability("ignoreZoomSetting", true);
 	            
 	            System.setProperty("webdriver.ie.driver","C:\\IE Driver\\IEDriverServer.exe"); 
 
-	            //driver = new InternetExplorerDriver(cap);
+	            driver = new InternetExplorerDriver(cap);
 	            Log.info("New IE driver instantiated");
 	            
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
-
-	            WebDriverWait wait = new WebDriverWait(driver, 10);   
+	            
+	            //WebDriverWait = new WebDriverWait(driver, 10);   
+	            WebDriverWait(driver, 10000);
 	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	            /*
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
 	            alert.authenticateUsing(new UserAndPassword(sUsername, sPassword));
+	            */
 	            Log.info("Web application launched successfully");
 	            break;   
 	            
@@ -143,19 +147,20 @@ public class Utils {
 	        	
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
-	        	File file = new File("C:\\Chrome Driver\\chromedriver.exe"); 
-	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath()); 
+	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	WebDriver driver = new ChromeDriver(options);	
-	            driver.get("google.com");
-	            Log.info("New Chrome driver instantiated");
+	        	//driver.get("http://www.google.co.uk");
+	        	Log.info("New Chrome driver instantiated");
 	
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
 	
-	            driver.get(Constant.URL);	
+	            //driver.get(Constant.URL);
+	            driver.get(sURL);
 	            Log.info("Web application launched successfully");
 	            break;   
 
@@ -168,6 +173,11 @@ public class Utils {
         }
         return driver;
     }
+
+	private static void WebDriverWait(WebDriver driver2, int i) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	/* **************************************************************************************************
 	* Function: getTestCaseName

@@ -24,6 +24,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Abort_Page;
@@ -54,9 +55,10 @@ public class Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
-		
+	    Thread.sleep(2000);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+		Log.info("Login button displayed");
+			    
 	}
 	
 	//Run the test
