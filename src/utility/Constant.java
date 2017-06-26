@@ -41,7 +41,7 @@ public class Constant {
     
     public static final String Path_ScreenShot = "C://MobilityAutomation//MobilityFramework//test-output//screenshots//";
    
-	public static final int Col_TestCaseName = 0;	
+	public static final int Col_Test_Case_Name = 0;	
 
 	public static final int Col_Browser = 1;
 	
