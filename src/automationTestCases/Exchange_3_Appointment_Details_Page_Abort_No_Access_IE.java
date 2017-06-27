@@ -59,7 +59,7 @@ public class Exchange_3_Appointment_Details_Page_Abort_No_Access_IE {
 	    //Verify that we are on the correct page
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
-		Log.info("Login button displayed");
+	    Log.info("Login button displayed");
 		
 	}
 	

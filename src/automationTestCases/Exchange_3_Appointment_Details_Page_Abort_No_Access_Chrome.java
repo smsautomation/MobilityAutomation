@@ -17,6 +17,7 @@
 
 package automationTestCases;
 
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -55,9 +56,9 @@ public class Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 		//Verify that we are on the correct page
-	    Thread.sleep(2000);
+	    Thread.sleep(10000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
-		Log.info("Login button displayed");
+	    Log.info("Login button displayed");
 			    
 	}
 	

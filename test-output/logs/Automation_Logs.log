@@ -1176,3 +1176,417 @@ Driver info: org.openqa.selenium.ie.InternetExplorerDriver
 Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:15251/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
 Session ID: b7f55bcb-6213-40fa-a53c-c0a2b2d4b20e
 *** Element info: {Using=id, value=submitbutton} 
+2017-06-27 09:13:51,422 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:13:51,423 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:13:51,423 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 09:13:51,423 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:13:51,423 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:13:53,018 INFO  [Log] User set as Automation 
+2017-06-27 09:13:56,727 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 09:13:56,948 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:14:01,421 INFO  [Log] Web application launched successfully 
+2017-06-27 09:14:03,577 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 09:14:54,248 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:14:54,249 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:14:54,249 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 09:14:54,249 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:14:54,249 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:14:55,727 INFO  [Log] User set as Automation 
+2017-06-27 09:15:01,459 INFO  [Log] New IE driver instantiated 
+2017-06-27 09:15:01,510 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:15:01,723 INFO  [Log] Web application launched successfully 
+2017-06-27 09:15:12,099 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == submitbutton (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.30 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:12729/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: a1a7a748-74be-4ed6-aa47-75368a81e002
+*** Element info: {Using=id, value=submitbutton} 
+2017-06-27 09:20:33,544 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:20:33,545 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:20:33,545 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 09:20:33,545 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:20:33,545 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:20:35,019 INFO  [Log] User set as Automation 
+2017-06-27 09:20:37,969 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 09:20:38,186 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:20:42,504 INFO  [Log] Web application launched successfully 
+2017-06-27 09:20:44,528 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 09:32:09,707 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:32:09,707 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:32:09,708 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 09:32:09,708 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:32:09,708 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:32:11,505 INFO  [Log] User set as Automation 
+2017-06-27 09:32:14,592 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 09:32:14,792 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:32:19,731 INFO  [Log] Web application launched successfully 
+2017-06-27 09:32:21,913 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 09:33:27,382 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:27,383 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:27,383 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 09:33:27,383 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:27,383 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:28,837 INFO  [Log] User set as Automation 
+2017-06-27 09:33:31,375 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 09:33:31,541 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:33:36,826 INFO  [Log] Web application launched successfully 
+2017-06-27 09:33:38,843 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 09:33:56,341 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:56,342 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:56,342 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 09:33:56,342 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:56,342 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:33:57,776 INFO  [Log] User set as Automation 
+2017-06-27 09:34:02,976 INFO  [Log] New IE driver instantiated 
+2017-06-27 09:34:03,024 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:34:03,175 INFO  [Log] Web application launched successfully 
+2017-06-27 09:34:13,509 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.27 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:25104/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 256b2791-b000-42cb-b5b3-f7cf685b84ee
+*** Element info: {Using=id, value=btn} 
+2017-06-27 09:43:06,671 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:43:06,672 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:43:06,672 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 09:43:06,672 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:43:06,672 INFO  [Log] **************************************************************************************** 
+2017-06-27 09:43:08,120 INFO  [Log] User set as Automation 
+2017-06-27 09:43:11,061 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 09:43:11,277 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 09:43:23,974 INFO  [Log] Web application launched successfully 
+2017-06-27 09:43:25,999 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 11:03:09,437 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:03:09,437 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:03:09,437 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 11:03:09,437 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:03:09,437 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:03:11,074 INFO  [Log] User set as Automation 
+2017-06-27 11:03:14,429 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 11:03:14,644 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 11:03:20,103 INFO  [Log] Web application launched successfully 
+2017-06-27 11:03:22,128 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 11:06:35,538 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:06:35,538 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:06:35,538 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 11:06:35,538 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:06:35,538 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:06:37,200 INFO  [Log] User set as Automation 
+2017-06-27 11:06:43,362 INFO  [Log] New IE driver instantiated 
+2017-06-27 11:06:43,416 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 11:06:43,528 INFO  [Log] Web application launched successfully 
+2017-06-27 11:06:53,757 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == submitbutton (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.12 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:40271/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 1d60b490-cbf4-4fe4-8725-8515e7b8189a
+*** Element info: {Using=id, value=submitbutton} 
+2017-06-27 11:53:07,830 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:53:07,831 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:53:07,831 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 11:53:07,831 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:53:07,831 INFO  [Log] **************************************************************************************** 
+2017-06-27 11:53:09,308 INFO  [Log] User set as Automation 
+2017-06-27 11:53:12,390 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 11:53:12,591 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 11:53:18,989 INFO  [Log] Web application launched successfully 
+2017-06-27 11:53:21,009 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 12:00:07,169 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:00:07,170 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:00:07,170 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:00:07,170 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:00:07,170 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:00:08,888 INFO  [Log] User set as Automation 
+2017-06-27 12:00:11,666 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:00:11,877 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:00:15,820 INFO  [Log] Web application launched successfully 
+2017-06-27 12:00:17,842 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 12:01:20,218 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:01:20,219 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:01:20,219 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 12:01:20,219 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:01:20,219 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:01:21,704 INFO  [Log] User set as Automation 
+2017-06-27 12:01:27,061 INFO  [Log] New IE driver instantiated 
+2017-06-27 12:01:27,109 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:01:27,222 INFO  [Log] Web application launched successfully 
+2017-06-27 12:01:37,281 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with css selector == button[id='btn'] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:13883/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: d97ba322-b19a-4111-9081-c7e6d1d3e4e7
+*** Element info: {Using=css selector, value=button[id='btn']} 
+2017-06-27 12:02:28,065 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:02:28,065 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:02:28,066 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:02:28,066 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:02:28,066 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:02:29,489 INFO  [Log] User set as Automation 
+2017-06-27 12:02:32,080 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:02:32,259 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:02:35,766 INFO  [Log] Web application launched successfully 
+2017-06-27 12:05:53,992 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:05:53,993 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:05:53,993 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:05:53,993 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:05:53,993 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:05:55,404 INFO  [Log] User set as Automation 
+2017-06-27 12:05:58,146 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:05:58,323 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:06:01,416 INFO  [Log] Web application launched successfully 
+2017-06-27 12:07:46,371 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:07:46,372 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:07:46,372 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 12:07:46,372 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:07:46,372 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:07:48,053 INFO  [Log] User set as Automation 
+2017-06-27 12:07:53,501 INFO  [Log] New IE driver instantiated 
+2017-06-27 12:07:53,550 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:07:53,650 INFO  [Log] Web application launched successfully 
+2017-06-27 12:08:04,102 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : Unable to find element with css selector == input[type=text][placeholder='Username'] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.34 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:1150/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: e2888eb3-136d-4939-aafe-0dbaafedfad7
+*** Element info: {Using=css selector, value=input[type=text][placeholder='Username']} 
+2017-06-27 12:09:32,861 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:09:32,861 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:09:32,861 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:09:32,861 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:09:32,861 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:09:34,364 INFO  [Log] User set as Automation 
+2017-06-27 12:09:37,017 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:09:37,198 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:09:43,153 INFO  [Log] Web application launched successfully 
+2017-06-27 12:12:50,909 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:12:50,910 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:12:50,910 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:12:50,910 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:12:50,910 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:12:52,551 INFO  [Log] User set as Automation 
+2017-06-27 12:12:56,064 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:12:56,261 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:13:01,702 INFO  [Log] Web application launched successfully 
+2017-06-27 12:14:19,265 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:14:19,266 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:14:19,266 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:14:19,266 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:14:19,266 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:14:20,706 INFO  [Log] User set as Automation 
+2017-06-27 12:14:23,313 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:14:23,486 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:14:28,620 INFO  [Log] Web application launched successfully 
+2017-06-27 12:14:38,639 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 12:16:25,869 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:16:25,869 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:16:25,870 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:16:25,870 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:16:25,870 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:16:27,441 INFO  [Log] User set as Automation 
+2017-06-27 12:16:30,169 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:16:30,340 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:16:36,496 INFO  [Log] Web application launched successfully 
+2017-06-27 12:16:46,515 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 12:17:35,948 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:17:35,948 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:17:35,949 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:17:35,949 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:17:35,949 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:17:37,368 INFO  [Log] User set as Automation 
+2017-06-27 12:17:39,886 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:17:40,056 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:17:44,864 INFO  [Log] Web application launched successfully 
+2017-06-27 12:17:54,882 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 12:18:17,657 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:18:17,658 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:18:17,658 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 12:18:17,658 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:18:17,658 INFO  [Log] **************************************************************************************** 
+2017-06-27 12:18:19,146 INFO  [Log] User set as Automation 
+2017-06-27 12:18:21,856 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 12:18:22,030 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 12:18:24,786 INFO  [Log] Web application launched successfully 
+2017-06-27 12:18:34,804 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 14:44:47,164 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:44:47,164 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:44:47,165 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 14:44:47,165 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:44:47,165 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:44:48,897 INFO  [Log] User set as Automation 
+2017-06-27 14:44:52,311 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 14:44:52,508 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 14:44:56,440 INFO  [Log] Web application launched successfully 
+2017-06-27 14:45:06,459 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 14:45:25,094 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:45:25,095 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:45:25,095 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 14:45:25,095 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:45:25,095 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:45:26,580 INFO  [Log] User set as Automation 
+2017-06-27 14:45:29,184 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 14:45:29,359 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 14:45:37,011 INFO  [Log] Web application launched successfully 
+2017-06-27 14:45:47,021 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 14:46:49,638 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:46:49,639 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:46:49,639 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 14:46:49,639 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:46:49,639 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:46:51,098 INFO  [Log] User set as Automation 
+2017-06-27 14:46:53,683 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 14:46:53,849 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 14:46:57,520 INFO  [Log] Web application launched successfully 
+2017-06-27 14:47:07,540 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-27 14:48:06,659 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:48:06,660 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:48:06,660 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 14:48:06,660 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:48:06,660 INFO  [Log] **************************************************************************************** 
+2017-06-27 14:48:08,230 INFO  [Log] User set as Automation 
+2017-06-27 14:48:11,358 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 14:48:11,540 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 14:48:16,904 INFO  [Log] Web application launched successfully 
+2017-06-27 14:48:26,925 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 15:47:38,790 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:47:38,791 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:47:38,791 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 15:47:38,791 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:47:38,791 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:47:40,253 INFO  [Log] User set as Automation 
+2017-06-27 15:47:43,245 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 15:47:43,441 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 15:47:48,032 INFO  [Log] Web application launched successfully 
+2017-06-27 15:58:14,794 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:58:14,795 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:58:14,795 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 15:58:14,795 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:58:14,795 INFO  [Log] **************************************************************************************** 
+2017-06-27 15:58:16,319 INFO  [Log] User set as Automation 
+2017-06-27 15:58:19,142 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 15:58:19,321 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 15:58:23,072 INFO  [Log] Web application launched successfully 
+2017-06-27 15:58:33,087 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 16:11:56,221 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:11:56,222 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:11:56,222 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 16:11:56,222 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:11:56,222 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:11:57,733 INFO  [Log] User set as Automation 
+2017-06-27 16:12:00,334 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 16:12:00,519 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:12:04,001 INFO  [Log] Web application launched successfully 
+2017-06-27 16:12:14,009 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-27 16:15:47,424 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:15:47,425 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:15:47,425 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 16:15:47,425 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:15:47,425 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:15:48,947 INFO  [Log] User set as Automation 
+2017-06-27 16:15:53,472 INFO  [Log] New IE driver instantiated 
+2017-06-27 16:15:53,521 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:15:53,624 INFO  [Log] Web application launched successfully 
+2017-06-27 16:16:03,958 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : Unable to find element with css selector == input[type=text][placeholder='Username'] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.26 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:16047/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: f42fe906-e564-4cbc-969a-e1f13db0cd44
+*** Element info: {Using=css selector, value=input[type=text][placeholder='Username']} 
+2017-06-27 16:17:28,179 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:17:28,180 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:17:28,180 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 16:17:28,180 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:17:28,180 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:17:29,701 INFO  [Log] User set as Automation 
+2017-06-27 16:17:34,288 INFO  [Log] New IE driver instantiated 
+2017-06-27 16:17:34,337 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:17:34,437 INFO  [Log] Web application launched successfully 
+2017-06-27 16:17:44,619 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:5113/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 0eac2045-e681-45d3-9c4e-0ff3f73ba955
+*** Element info: {Using=id, value=btn} 
+2017-06-27 16:23:23,318 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:23:23,319 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:23:23,319 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 16:23:23,319 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:23:23,319 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:23:24,795 INFO  [Log] User set as Automation 
+2017-06-27 16:23:30,567 INFO  [Log] New IE driver instantiated 
+2017-06-27 16:23:30,617 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:23:30,719 INFO  [Log] Web application launched successfully 
+2017-06-27 16:23:40,908 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:27719/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 8a5f44dd-5b42-4d61-907a-6c26634931ba
+*** Element info: {Using=id, value=btn} 
+2017-06-27 16:24:43,733 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:24:43,733 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:24:43,733 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 16:24:43,733 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:24:43,733 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:24:45,197 INFO  [Log] User set as Automation 
+2017-06-27 16:24:49,643 INFO  [Log] New IE driver instantiated 
+2017-06-27 16:24:49,694 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:24:49,790 INFO  [Log] Web application launched successfully 
+2017-06-27 16:25:00,162 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.30 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:27004/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: fdbe4187-effa-4f5c-a52a-73e0efc9bb0b
+*** Element info: {Using=id, value=btn} 
+2017-06-27 16:28:52,271 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:28:52,272 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:28:52,272 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-27 16:28:52,272 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:28:52,272 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:28:53,834 INFO  [Log] User set as Automation 
+2017-06-27 16:28:58,413 INFO  [Log] New IE driver instantiated 
+2017-06-27 16:28:58,462 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:28:58,556 INFO  [Log] Web application launched successfully 
+2017-06-27 16:29:08,853 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.22 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:3161/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: c085b646-242a-4866-a5ab-3be231dee917
+*** Element info: {Using=id, value=btn} 
+2017-06-27 16:49:10,971 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:49:10,972 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:49:10,972 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-27 16:49:10,972 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:49:10,972 INFO  [Log] **************************************************************************************** 
+2017-06-27 16:49:12,577 INFO  [Log] User set as Automation 
+2017-06-27 16:49:16,239 INFO  [Log] New Chrome driver instantiated 
+2017-06-27 16:49:16,460 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-27 16:49:19,761 INFO  [Log] Web application launched successfully 
