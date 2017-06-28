@@ -2,20 +2,16 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19090" started-at="2017-06-27T15:49:10Z" finished-at="2017-06-27T15:49:29Z">
+  <suite name="Default suite" duration-ms="18683" started-at="2017-06-28T16:58:21Z" finished-at="2017-06-28T16:58:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19090" started-at="2017-06-27T15:49:10Z" finished-at="2017-06-27T15:49:29Z">
+    <test name="Default test" duration-ms="18683" started-at="2017-06-28T16:58:21Z" finished-at="2017-06-28T16:58:40Z">
       <class name="automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome">
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@4883b407]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-27T16:49:10Z" finished-at="2017-06-27T16:49:10Z">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@42e26948]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2017-06-28T17:58:21Z" finished-at="2017-06-28T17:58:21Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:770)
-	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:96)
-	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:71)
-	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:45)
-	at automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome.beforeMethod(Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome.java:63)
+	at automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome.beforeMethod(Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,11 +44,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@4883b407]" name="main" duration-ms="7" started-at="2017-06-27T16:49:29Z" finished-at="2017-06-27T16:49:29Z">
+        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@42e26948]" name="main" duration-ms="1" started-at="2017-06-28T17:58:40Z" finished-at="2017-06-28T17:58:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@4883b407]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-27T16:49:29Z" finished-at="2017-06-27T16:49:29Z">
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome@42e26948]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-06-28T17:58:40Z" finished-at="2017-06-28T17:58:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->

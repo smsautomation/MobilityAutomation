@@ -162,6 +162,7 @@ public class Utils {
 	
 	            //driver.get(Constant.URL);
 	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	            Log.info("Web application launched successfully");
 	            break;   
 

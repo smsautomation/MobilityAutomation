@@ -30,8 +30,9 @@ public class Objects_Login_Page {
     public static WebElement Username(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.cssSelector("input[type=text][placeholder='Username']"));
- 		}catch(Exception e){
+			Thread.sleep(5000);
+			element = driver.findElement(By.id("input1"));
+			}catch(Exception e){
 			Log.error(sRepositoryName + " | Username field not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -50,8 +51,9 @@ public class Objects_Login_Page {
 	public static WebElement btn_Login (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn"));
-			//element = driver.findElement(By.cssSelector("button[id='btn']"));
+			//element = driver.findElement(By.id("btn"));
+			Thread.sleep(5000);
+			element = driver.findElement(By.className("btnLogin"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Login not found | Exception desc : "+e.getMessage());		
  		} 

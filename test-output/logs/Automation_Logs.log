@@ -1590,3 +1590,199 @@ Session ID: c085b646-242a-4866-a5ab-3be231dee917
 2017-06-27 16:49:16,239 INFO  [Log] New Chrome driver instantiated 
 2017-06-27 16:49:16,460 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
 2017-06-27 16:49:19,761 INFO  [Log] Web application launched successfully 
+2017-06-28 09:46:23,820 INFO  [Log] **************************************************************************************** 
+2017-06-28 09:46:23,821 INFO  [Log] **************************************************************************************** 
+2017-06-28 09:46:23,822 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 09:46:23,822 INFO  [Log] **************************************************************************************** 
+2017-06-28 09:46:23,822 INFO  [Log] **************************************************************************************** 
+2017-06-28 09:46:25,438 INFO  [Log] User set as Automation 
+2017-06-28 09:46:28,699 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 09:46:28,886 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 09:46:33,787 INFO  [Log] Web application launched successfully 
+2017-06-28 09:46:43,811 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 13:41:07,554 INFO  [Log] **************************************************************************************** 
+2017-06-28 13:41:07,556 INFO  [Log] **************************************************************************************** 
+2017-06-28 13:41:07,556 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_IE       $$$$$$$$$$$ 
+2017-06-28 13:41:07,556 INFO  [Log] **************************************************************************************** 
+2017-06-28 13:41:07,556 INFO  [Log] **************************************************************************************** 
+2017-06-28 13:41:09,195 INFO  [Log] User set as Automation 
+2017-06-28 13:41:13,914 INFO  [Log] New IE driver instantiated 
+2017-06-28 13:41:13,969 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 13:41:14,436 INFO  [Log] Web application launched successfully 
+2017-06-28 13:41:24,672 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.17 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0.0, ie.enableFullPageScreenshot=true, enablePersistentHover=true, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000.0, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=true, ie.ensureCleanSession=false, elementScrollBehavior=0.0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:27035/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: c50baf2c-cf79-4481-98a7-bf17a300bc9f
+*** Element info: {Using=id, value=btn} 
+2017-06-28 14:50:14,967 INFO  [Log] **************************************************************************************** 
+2017-06-28 14:50:14,968 INFO  [Log] **************************************************************************************** 
+2017-06-28 14:50:14,968 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 14:50:14,968 INFO  [Log] **************************************************************************************** 
+2017-06-28 14:50:14,968 INFO  [Log] **************************************************************************************** 
+2017-06-28 14:50:16,414 INFO  [Log] User set as Automation 
+2017-06-28 14:50:20,731 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 14:50:20,944 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 14:50:25,969 INFO  [Log] Web application launched successfully 
+2017-06-28 14:50:35,991 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:10:28,959 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:10:28,960 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:10:28,960 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:10:28,960 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:10:28,960 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:10:30,426 INFO  [Log] User set as Automation 
+2017-06-28 15:10:33,578 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:10:33,801 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:10:38,100 INFO  [Log] Web application launched successfully 
+2017-06-28 15:10:48,112 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:13:58,371 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:13:58,371 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:13:58,372 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:13:58,372 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:13:58,372 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:13:59,899 INFO  [Log] User set as Automation 
+2017-06-28 15:14:02,379 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:14:02,590 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:14:10,018 INFO  [Log] Web application launched successfully 
+2017-06-28 15:14:20,027 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:15:10,822 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:15:10,823 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:15:10,823 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:15:10,823 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:15:10,823 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:15:12,321 INFO  [Log] User set as Automation 
+2017-06-28 15:15:14,846 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:15:15,094 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:15:21,758 INFO  [Log] Web application launched successfully 
+2017-06-28 15:15:31,769 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:17:33,415 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:17:33,416 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:17:33,416 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:17:33,416 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:17:33,416 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:17:34,905 INFO  [Log] User set as Automation 
+2017-06-28 15:17:37,474 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:17:37,686 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:17:41,307 INFO  [Log] Web application launched successfully 
+2017-06-28 15:17:51,326 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:27:41,675 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:27:41,675 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:27:41,676 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:27:41,676 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:27:41,676 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:27:43,172 INFO  [Log] User set as Automation 
+2017-06-28 15:27:45,652 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:27:45,887 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:27:50,465 INFO  [Log] Web application launched successfully 
+2017-06-28 15:27:50,479 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:30:59,263 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:30:59,264 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:30:59,264 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:30:59,264 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:30:59,264 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:31:00,801 INFO  [Log] User set as Automation 
+2017-06-28 15:31:03,351 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:31:03,559 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:31:08,169 INFO  [Log] Web application launched successfully 
+2017-06-28 15:31:13,184 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-28 15:43:37,135 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:43:37,136 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:43:37,136 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:43:37,136 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:43:37,136 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:43:38,612 INFO  [Log] User set as Automation 
+2017-06-28 15:43:41,330 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:43:41,536 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:43:44,580 INFO  [Log] Web application launched successfully 
+2017-06-28 15:43:54,599 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 15:45:25,882 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:45:25,883 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:45:25,883 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:45:25,883 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:45:25,883 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:45:27,343 INFO  [Log] User set as Automation 
+2017-06-28 15:45:30,051 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:45:30,252 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:45:33,919 INFO  [Log] Web application launched successfully 
+2017-06-28 15:45:43,940 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 15:46:08,789 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:46:08,789 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:46:08,789 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:46:08,789 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:46:08,789 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:46:10,291 INFO  [Log] User set as Automation 
+2017-06-28 15:46:13,056 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 15:46:13,269 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 15:46:17,387 INFO  [Log] Web application launched successfully 
+2017-06-28 15:46:27,402 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 15:59:56,004 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:59:56,005 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:59:56,005 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 15:59:56,005 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:59:56,005 INFO  [Log] **************************************************************************************** 
+2017-06-28 15:59:58,154 INFO  [Log] User set as Automation 
+2017-06-28 16:00:01,774 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 16:00:01,972 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 16:00:12,992 INFO  [Log] Web application launched successfully 
+2017-06-28 16:00:28,006 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 16:07:44,468 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:07:44,468 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:07:44,469 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 16:07:44,469 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:07:44,469 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:07:45,929 INFO  [Log] User set as Automation 
+2017-06-28 16:07:48,800 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 16:07:49,017 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 16:07:52,629 INFO  [Log] Web application launched successfully 
+2017-06-28 16:08:07,639 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 16:09:27,560 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:09:27,561 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:09:27,561 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 16:09:27,561 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:09:27,561 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:09:29,069 INFO  [Log] User set as Automation 
+2017-06-28 16:09:31,591 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 16:09:31,768 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 16:09:37,961 INFO  [Log] Web application launched successfully 
+2017-06-28 16:09:52,966 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 16:19:31,081 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:19:31,081 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:19:31,082 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 16:19:31,082 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:19:31,082 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:19:32,612 INFO  [Log] User set as Automation 
+2017-06-28 16:19:35,126 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 16:19:35,303 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 16:19:39,573 INFO  [Log] Web application launched successfully 
+2017-06-28 16:19:54,592 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 16:29:21,110 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:29:21,111 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:29:21,111 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 16:29:21,111 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:29:21,111 INFO  [Log] **************************************************************************************** 
+2017-06-28 16:29:22,610 INFO  [Log] User set as Automation 
+2017-06-28 16:29:25,131 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 16:29:25,301 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 16:29:27,703 INFO  [Log] Web application launched successfully 
+2017-06-28 16:29:42,706 ERROR [Log] Objects_Login_Page | Username field not found | Exception desc : null 
+2017-06-28 17:56:14,826 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:56:14,827 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:56:14,827 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 17:56:14,827 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:56:14,827 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:56:16,414 INFO  [Log] User set as Automation 
+2017-06-28 17:56:19,297 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 17:56:19,492 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 17:56:22,529 INFO  [Log] Web application launched successfully 
+2017-06-28 17:58:22,301 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:58:22,302 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:58:22,303 INFO  [Log] $$$$$$$$$$$       Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome       $$$$$$$$$$$ 
+2017-06-28 17:58:22,303 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:58:22,303 INFO  [Log] **************************************************************************************** 
+2017-06-28 17:58:24,195 INFO  [Log] User set as Automation 
+2017-06-28 17:58:27,502 INFO  [Log] New Chrome driver instantiated 
+2017-06-28 17:58:27,728 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-06-28 17:58:30,518 INFO  [Log] Web application launched successfully 
