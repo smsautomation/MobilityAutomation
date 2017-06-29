@@ -19,7 +19,6 @@ package automationTestCases;
 
 
 import org.apache.log4j.xml.DOMConfigurator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -30,6 +29,8 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Abort_Page;
+
+
 
 public class Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome {
 
@@ -58,12 +59,7 @@ public class Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    
 		//Verify that we are on the correct page
 	    Thread.sleep(10000);
-	    driver.findElement(By.id("input1")).click();
-		driver.findElement(By.id("input1")).sendKeys("automation");
-		driver.findElement(By.id("input2")).click();
-		driver.findElement(By.id("input2")).sendKeys("Aut0m4t1on");
-		driver.findElement(By.id("btn")).click();
-		Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 			    
 	}

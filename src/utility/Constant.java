@@ -37,7 +37,7 @@ public class Constant {
     
     public static final String Path_TestData = "C://MobilityAutomation//src//testData//";
     		 
-    public static final String File_TestData = "TestData.xlsx";
+    public static final String File_TestData = "Mobility_Automation_Test_Data.xlsm";
     
     public static final String Path_ScreenShot = "C://MobilityAutomation//MobilityFramework//test-output//screenshots//";
    
@@ -45,7 +45,7 @@ public class Constant {
 
 	public static final int Col_Browser = 1;
 	
-	public static final int Col_User = 2;
+	//public static final int Col_User = 2;
 	
 	    
 }

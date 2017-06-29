@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
-import org.apache.poi.openxml4j.opc.Configuration;
+//import org.apache.poi.openxml4j.opc.Configuration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -66,25 +66,27 @@ public class Utils {
 	* 
 	* Date: 12/06/2017
 	* Author: Iain Storrie
-	* Details: Updated sBrowserName for IE and Chrome only.  Removed different user accounts and replaced
-	* with automation user only as this is the only test user account that will be used 
+	* Details: Updated sBrowserName to cover Firefox, Chrome & IE.  Removed different user accounts as the automation user 
+	* only be used 
 	*
 	****************************************************************************************************/
 	public static WebDriver openBrowser(int iTestCaseRow) throws Exception{
 
         String sBrowserName;
-        String sUser;
+        //String sUser;
         String sURL;
-        String sUsername;
-        String sPassword;
+        //String sUsername;
+        //String sPassword;
 
         try{
         sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
-        sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
+        //sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
         
+        /*
         //Check which browser we are using as that will define how we handle username and password
         if(sBrowserName.matches("IE|Chrome|Firefox") ){
-	       	switch(sUser){
+	       	
+        	switch(sUser){
 	        	case "Automation" :
 	        		Log.info("User set as " + sUser);
 	        		sUsername = "automation";
@@ -99,7 +101,10 @@ public class Utils {
 		            Log.error("No valid user selected1");
 		            sURL = "";
 	        }
+        */
         
+        //The URL will always be the same, so set that here
+    	sURL = "https://" + Constant.URL;
         
         switch(sBrowserName){
 	        case "Firefox" :
@@ -167,19 +172,21 @@ public class Utils {
 	            break;   
 
 	        default :
-	            Log.error("No valid browser selected");	            	
+	            Log.error("No valid browser selected");	}            	
 	            
-            }
+            
         }catch (Exception e){
             Log.error("Class Utils | Method OpenBrowser | Exception desc : "+e.getMessage());
         }
         return driver;
     }
 
+	
 	private static void WebDriverWait(WebDriver driver2, int i) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 	/* **************************************************************************************************
 	* Function: getTestCaseName
