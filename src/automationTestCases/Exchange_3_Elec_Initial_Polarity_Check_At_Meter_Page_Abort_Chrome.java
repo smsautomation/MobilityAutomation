@@ -17,6 +17,8 @@
 
 package automationTestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -33,6 +35,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_M
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
 public class Exchange_3_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
@@ -60,9 +63,10 @@ public class Exchange_3_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	

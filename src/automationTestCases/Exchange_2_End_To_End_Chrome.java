@@ -1,9 +1,9 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: Exchange_2_End_To_End_Chrome
 * Author: Iain Storrie
-* Date: 19/06/2017
+* Date: 29/06/2017
 * Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* the Chrome browser for an Exchange 2 job
 *
 **********************************************************************
 * Change Log:
@@ -41,18 +41,6 @@ import pageObjectRepositories.Objects_Electricity_Meter_Additional_Electricity_T
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Current_Meter_Details_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Remove_Meter_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Remove_Asset_Page;
-import pageObjectRepositories.Objects_Gas_Meter_New_Regulator_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Initial_Meter_Reading_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Install_Kit_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
 import pageObjectRepositories.Objects_Job_Completion_Energy_Efficiency_Information_Page;
 import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
@@ -60,7 +48,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class Exchange_3_End_To_End_Chrome {
+public class Exchange_2_End_To_End_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -269,7 +257,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		Methods_Electricity_Meter_New_Meter_Details.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");
 																		
-		//Invoke Method to complete remove asset page 
+		//Invoke Method to complete new meter details page 
 		Methods_Electricity_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
@@ -315,154 +303,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 																										
 		//Invoke Method to complete Post Installation Checks page 
 		Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValues(driver, sTestCaseName);
-											
-		//Verify that we are on the Gas Meter Risk Assessment - Gas page
-		Objects_Gas_Meter_Risk_Assessment_Gas_Page.lbl_Risk_Assessment_Gas(driver).isDisplayed();
-		Log.info("Risk Assessment - Gas page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Risk_Assessment_Gas.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Risk Assessment - Gas initial elements displayed as expected");
-																												
-		//Invoke Method to complete a successful risk assessment - gas 
-		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
-													
-		//Verify that we are on the Gas Meter Suitable for Smart Installation page
-		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
-		Log.info("Gas Meter Suitable For Smart Installation page displayed as expected");
-	
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Suitable for Smart Installation initial elements displayed as expected");
-				
-		//Verify correct page elements displayed after Suitable For Smart Installation - Yes clicked
-		Methods_Gas_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
-		Log.info("Gas Meter Suitable for Smart Installation Yes elements displayed as expected");
-			
-		//Invoke Method to complete a successful suitable for smart installation 
-		Methods_Gas_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
-		
-		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
-		Log.info("Gas Meter Capture Initial Photo Of Gas Installation page displayed as expected");
-	
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Suitable for Smart Installation initial elements displayed as expected");
-					
-		//Invoke Method to complete a successful photo capture 
-		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.addSuccessValues(driver, sTestCaseName);
-		
-		//Verify that we are on the Gas Meter Capture Pre Installation Gas Tightness Test page
-		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.lbl_Pre_Installation_Gas_Tightness_Test(driver).isDisplayed();
-		Log.info("Gas Meter Pre Installation Gas Tightness Test page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Pre Installation Gas Tightness Test initial elements displayed as expected");
-							
-		//Invoke Method to complete a successful photo capture 
-		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.addSuccessValues(driver, sTestCaseName);
-				
-		//Verify that we are on the Gas Meter Current Meter Details page
-		Objects_Gas_Meter_Current_Meter_Details_Page.lbl_Gas_Current_Meter_Details(driver).isDisplayed();
-		Log.info("Gas Meter Current Meter Details page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Current_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Current Meter Details initial elements displayed as expected");
-														
-		//Invoke Method to complete current meter details page 
-		Methods_Gas_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
-			
-		//Verify that we are on the Gas Meter Remove Meter page
-		Objects_Gas_Meter_Remove_Meter_Page.lbl_Gas_Remove_Meter(driver).isDisplayed();
-		Log.info("Gas Remove Meter page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Remove_Meter.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Remove Meter initial elements displayed as expected");
-																
-		//Invoke Method to complete remove meter page 
-		Methods_Gas_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
-					
-		//Verify that we are on the Gas Meter Remove Asset page
-		Objects_Gas_Meter_Remove_Asset_Page.lbl_Gas_Remove_Asset(driver).isDisplayed();
-		Log.info("Gas Remove Asset page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Remove_Asset.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Remove Asset initial elements displayed as expected");
-																		
-		//Invoke Method to complete remove asset page 
-		Methods_Gas_Meter_Remove_Asset.addSuccessValues(driver, sTestCaseName);
-							
-		//Verify that we are on the Gas Meter New Regulator page
-		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();
-		Log.info("Gas New Regulator page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_New_Regulator.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
-																				
-		//Invoke Method to complete New Regulator page 
-		Methods_Gas_Meter_New_Regulator.addSuccessValues(driver, sTestCaseName);
-									
-		//Verify that we are on the Gas Meter New Meter Details page
-		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();
-		Log.info("Gas New Meter Details page displayed as expected");
-			
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_New_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
-																						
-		//Invoke Method to complete New Regulator page 
-		Methods_Gas_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
-											
-		//Verify that we are on the Gas Meter Initial Meter Reading page
-		Objects_Gas_Meter_Initial_Meter_Reading_Page.lbl_Gas_Inital_Meter_Reading(driver).isDisplayed();
-		Log.info("Gas New Meter Details page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Initial_Meter_Reading.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Initial Meter Reading initial elements displayed as expected");
 																								
-		//Invoke Method to complete Initial Meter Reading page 
-		Methods_Gas_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
-													
-		//Verify that we are on the Gas Meter Install Kit page
-		Objects_Gas_Meter_Install_Kit_Page.lbl_Gas_Install_Kit(driver).isDisplayed();
-		Log.info("Gas Install Kit page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Install_Kit.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Install Kit initial elements displayed as expected");
-																										
-		//Invoke Method to complete Install Kit page 
-		Methods_Gas_Meter_Install_Kit.addSuccessValues(driver, sTestCaseName);
-															
-		//Verify that we are on the Gas Meter Post Installation Gas Tightness Test page
-		Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page.lbl_Post_Installation_Gas_Tightness_Test(driver).isDisplayed();
-		Log.info("Gas Install Kit page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Post_Installation_Gas_Tightness_Test.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Post Installation Gas Tightness Test initial elements displayed as expected");
-																												
-		//Invoke Method to complete Install Kit page 
-		Methods_Gas_Meter_Post_Installation_Gas_Tightness_Test.addSuccessValues(driver, sTestCaseName);
-																	
-		//Verify that we are on the Gas Meter Gas Appliance Safety Checks page
-		Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page.lbl_Gas_Appliance_Safety_Checks(driver).isDisplayed();
-		Log.info("Gas Appliance Safety Checks page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Post Installation Gas Tightness Test initial elements displayed as expected");
-																														
-		//Invoke Method to complete Install Kit page 
-		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.addSuccessValues(driver, sTestCaseName);
-																			
 		//Verify that we are on the Job Completion Configure All Meters Installed page
 		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
 		Log.info("Job Completion Configure All Meters Installed page displayed as expected");

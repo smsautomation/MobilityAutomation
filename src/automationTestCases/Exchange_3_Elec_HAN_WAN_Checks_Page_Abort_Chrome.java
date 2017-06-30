@@ -33,6 +33,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_M
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
 
 import pageObjectRepositories.Objects_Abort_Page;
@@ -62,9 +63,10 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    Thread.sleep(10000);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	

@@ -6,6 +6,7 @@
       <class name="automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome">
         <methods>
           <include name="main"/>
+          <include name="afterMethod"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome -->

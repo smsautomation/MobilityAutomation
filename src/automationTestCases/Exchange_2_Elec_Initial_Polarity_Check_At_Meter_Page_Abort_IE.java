@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_Elec_Risk_Assessment_Elec_Abort_Chrome
+* Test Case Name: Exchange_2_Elec_Initial Polarity_Check_At_Meter_Abort_IE
 * Author: Iain Storrie
-* Date: 15/06/2017
+* Date: 29/06/2017
 * Purpose: This test ensure that a user can abort an appointment from the 
-* Elec Risk Assessment - Elec page where the risk assessment fails on the 
-* Chrome browser for an Exchange 3 job
+* Elec Initial Polarity Check At Meter page where the polarity check fails
+* on the IE browser for an Exchange 2 job
 *
 **********************************************************************
 * Change Log:
@@ -17,6 +17,8 @@
 
 package automationTestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -27,12 +29,16 @@ import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_3_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
+public class Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -58,7 +64,7 @@ public class Exchange_3_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -138,11 +144,62 @@ public class Exchange_3_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Risk_Assessment_Elec.viewRiskAssessmentYesPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Risk Assessment Yes elements displayed as expected");
 				
-		//Invoke Method to complete an aborted risk assessment 
-		Methods_Electricity_Meter_Risk_Assessment_Elec.addAbortValues(driver, sTestCaseName);
+		//Invoke Method to complete a successful risk assessment 
+		Methods_Electricity_Meter_Risk_Assessment_Elec.addSuccessValues(driver, sTestCaseName);
+			
+		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		Log.info("Risk Assessment - Elec page displayed as expected");	
+			
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+				
+		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
 		
+		//Invoke Method to complete an aborted suitable for smart installation 
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addAbortValues(driver, sTestCaseName);
+		
+		//Invoke Method to complete a successful suitable for smart installation 
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
+			
+		//Verify that we are on the Electricity Meter Capture Initial Photo Of Elec Installation page
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();
+		Log.info("Capture Initial Photo Of Elec Installation page displayed as expected");
+			
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+					
+		//Invoke Method to complete a successful suitable for smart installation 
+		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
+			
+		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page
+		Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed();
+		Log.info("Initial Polarity Check - Martindale Test page displayed as expected");
+			
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Initial Polarity Check - Martindale Test initial elements displayed as expected");
+								
+		//Invoke Method to complete a successful Martindale Test 
+		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.addSuccessValues(driver, sTestCaseName);
+				
+		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - At Meter page
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter(driver).isDisplayed();
+		Log.info("Initial Polarity Check At Meter page displayed as expected");
+				
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Initial Polarity check At Meter initial elements displayed as expected");
+										
+		//Invoke Method to complete an aborted polarity check 
+		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addAbortValues(driver, sTestCaseName);
+			
 		//Click Abort button to bring up Abort page 
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Abort(driver).click();
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort(driver).click();
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed

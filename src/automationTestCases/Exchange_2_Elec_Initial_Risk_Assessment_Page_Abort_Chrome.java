@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_Elec_Risk_Assessment_Elec_Abort_Chrome
+* Test Case Name: Exchange_2_Elec_Initial_Risk_Assessment_Abort_Chrome
 * Author: Iain Storrie
-* Date: 15/06/2017
+* Date: 29/06/2017
 * Purpose: This test ensure that a user can abort an appointment from the 
-* Elec Risk Assessment - Elec page where the risk assessment fails on the 
-* Chrome browser for an Exchange 3 job
+* Elec Initial Risk Assessment page where the initial risk assessment fails 
+* on the Chrome browser for an Exchange 2 job
 *
 **********************************************************************
 * Change Log:
@@ -28,11 +28,10 @@ import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
-import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_3_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
+public class Exchange_2_Elec_Initial_Risk_Assessment_Page_Abort_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -122,27 +121,13 @@ public class Exchange_3_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
 		Log.info("Electricity Meter Initial Risk Assessment page displayed as expected");	
-		
-		//Invoke Method to complete a successful initial risk assessment 
-		Methods_Electricity_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
-		
-		//Verify that we are on the Electricity Meter Risk Assessment - Elec page
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).isDisplayed();
-		Log.info("Risk Assessment - Elec page displayed as expected");
-		
-		//Verify Initial page elements displayed
-		Methods_Electricity_Meter_Risk_Assessment_Elec.viewPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Risk Assessment Elec initial elements displayed as expected");
-				
-		//Verify correct page elements displayed after Risk Assessment - Yes clicked
-		Methods_Electricity_Meter_Risk_Assessment_Elec.viewRiskAssessmentYesPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Risk Assessment Yes elements displayed as expected");
-				
-		//Invoke Method to complete an aborted risk assessment 
-		Methods_Electricity_Meter_Risk_Assessment_Elec.addAbortValues(driver, sTestCaseName);
+					
+		//Invoke Method to complete an aborted initial risk assessment 
+		Methods_Electricity_Meter_Initial_Risk_Assessment.viewSmellGasPage(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Risk_Assessment.addAbortValues(driver, sTestCaseName);
 		
 		//Click Abort button to bring up Abort page 
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Abort(driver).click();
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Abort(driver).click();
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed

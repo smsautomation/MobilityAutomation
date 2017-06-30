@@ -17,6 +17,8 @@
 
 package automationTestCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -27,6 +29,7 @@ import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
 public class Exchange_3_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE {
@@ -54,9 +57,10 @@ public class Exchange_3_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE 
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	
