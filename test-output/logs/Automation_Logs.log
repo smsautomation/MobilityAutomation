@@ -1906,3 +1906,10 @@ Session ID: ad738157-e80b-403d-b673-fbb735db5763
 2017-06-29 10:16:21,646 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
 2017-06-29 10:16:25,812 INFO  [Log] Web application launched successfully 
 2017-06-29 10:16:35,815 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-06-30 11:24:26,743 INFO  [Log] **************************************************************************************** 
+2017-06-30 11:24:26,744 INFO  [Log] **************************************************************************************** 
+2017-06-30 11:24:26,744 INFO  [Log] $$$$$$$$$$$       FLTY_17_End_To_End_Chrome       $$$$$$$$$$$ 
+2017-06-30 11:24:26,744 INFO  [Log] **************************************************************************************** 
+2017-06-30 11:24:26,744 INFO  [Log] **************************************************************************************** 
+2017-06-30 11:24:29,190 ERROR [Log] Class ExcelUtil | Method getRowContains | Test Case Name "FLTY_17_End_To_End_Chrome" not found in Excel sheet 
+2017-06-30 11:24:29,190 ERROR [Log] No valid browser selected 

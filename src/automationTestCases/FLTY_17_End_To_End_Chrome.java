@@ -1,9 +1,9 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_End_To_End_Chrome
+* Test Case Name: FLTY_17_End_To_End_Chrome
 * Author: Iain Storrie
 * Date: 30/06/2017
 * Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Exchange 3 job
+* the Chrome browser for an Faulty 17 job
 *
 **********************************************************************
 * Change Log:
@@ -60,7 +60,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class Exchange_3_End_To_End_Chrome {
+public class FLTY_17_End_To_End_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
