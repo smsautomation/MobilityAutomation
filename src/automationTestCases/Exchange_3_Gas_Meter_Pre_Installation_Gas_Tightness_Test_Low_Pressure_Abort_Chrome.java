@@ -17,6 +17,7 @@
 
 package automationTestCases;
 
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -45,6 +46,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page;
 
@@ -74,9 +76,10 @@ public class Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    Thread.sleep(10000);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	

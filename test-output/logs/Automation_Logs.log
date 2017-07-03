@@ -1913,3 +1913,67 @@ Session ID: ad738157-e80b-403d-b673-fbb735db5763
 2017-06-30 11:24:26,744 INFO  [Log] **************************************************************************************** 
 2017-06-30 11:24:29,190 ERROR [Log] Class ExcelUtil | Method getRowContains | Test Case Name "FLTY_17_End_To_End_Chrome" not found in Excel sheet 
 2017-06-30 11:24:29,190 ERROR [Log] No valid browser selected 
+2017-07-03 14:19:05,578 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:19:05,579 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:19:05,579 INFO  [Log] $$$$$$$$$$$       FLTY_17_End_To_End_Chrome       $$$$$$$$$$$ 
+2017-07-03 14:19:05,579 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:19:05,579 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:19:10,238 INFO  [Log] New Chrome driver instantiated 
+2017-07-03 14:19:10,410 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-07-03 14:19:15,918 INFO  [Log] Web application launched successfully 
+2017-07-03 14:19:25,944 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : null 
+2017-07-03 14:21:30,273 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:30,274 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:30,274 INFO  [Log] $$$$$$$$$$$       Exchange_2_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE       $$$$$$$$$$$ 
+2017-07-03 14:21:30,274 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:30,274 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:38,066 INFO  [Log] New IE driver instantiated 
+2017-07-03 14:21:38,117 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-07-03 14:21:38,206 INFO  [Log] Web application launched successfully 
+2017-07-03 14:21:58,328 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=false, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:11240/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 732728e7-17be-45e7-9807-682b23609852
+*** Element info: {Using=id, value=btn} 
+2017-07-03 14:21:58,365 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:58,365 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:58,365 INFO  [Log] $$$$$$$$$$$       FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome       $$$$$$$$$$$ 
+2017-07-03 14:21:58,365 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:21:58,365 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:00,583 INFO  [Log] New Chrome driver instantiated 
+2017-07-03 14:22:00,821 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-07-03 14:22:10,613 INFO  [Log] Web application launched successfully 
+2017-07-03 14:22:20,622 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element on closed window (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6 milliseconds
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=false, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:11240/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: 732728e7-17be-45e7-9807-682b23609852
+*** Element info: {Using=id, value=btn} 
+2017-07-03 14:22:20,656 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:20,656 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:20,656 INFO  [Log] $$$$$$$$$$$       Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_IE       $$$$$$$$$$$ 
+2017-07-03 14:22:20,656 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:20,656 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:24,175 INFO  [Log] New IE driver instantiated 
+2017-07-03 14:22:24,204 INFO  [Log] Implicit wait applied on the driver for 20 seconds 
+2017-07-03 14:22:24,307 INFO  [Log] Web application launched successfully 
+2017-07-03 14:22:44,384 ERROR [Log] Objects_Login_Page | btn_Login not found | Exception desc : Unable to find element with id == btn (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 20.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.162.251', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{se:ieOptions={browserAttachTimeout=0, ie.enableFullPageScreenshot=true, enablePersistentHover=false, ie.forceCreateProcessApi=false, ie.forceShellWindowsApi=false, ignoreZoomSetting=true, ie.fileUploadDialogTimeout=3000, ie.useLegacyFileUploadDialogHandling=false, nativeEvents=false, ie.ensureCleanSession=false, elementScrollBehavior=0, ie.browserCommandLineSwitches=, requireWindowFocus=false, initialBrowserUrl=http://localhost:18518/, ignoreProtectedModeSettings=true, enableElementCacheCleanup=true}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, version=11, platform=WINDOWS, unexpectedAlertBehaviour=dismiss}]
+Session ID: cda13e6f-c3b4-4f9d-90f6-86cada511089
+*** Element info: {Using=id, value=btn} 
+2017-07-03 14:22:44,434 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:44,434 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:44,434 INFO  [Log] $$$$$$$$$$$       FLTY_17_Elec_Initial_Risk_Assessment_Page_Abort_IE       $$$$$$$$$$$ 
+2017-07-03 14:22:44,434 INFO  [Log] **************************************************************************************** 
+2017-07-03 14:22:44,434 INFO  [Log] **************************************************************************************** 

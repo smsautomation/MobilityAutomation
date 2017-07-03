@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome">
+      <class name="automationTestCases.FLTY_17_End_To_End_Chrome">
         <methods>
+          <include name="beforeMethod"/>
           <include name="main"/>
           <include name="afterMethod"/>
-          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationTestCases.Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome -->
+      </class> <!-- automationTestCases.FLTY_17_End_To_End_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -44,6 +44,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
+import pageObjectRepositories.Objects_Login_Page;
 
 
 public class Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome {
@@ -71,9 +72,10 @@ public class Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome {
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    Thread.sleep(10000);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	
