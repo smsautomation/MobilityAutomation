@@ -154,12 +154,9 @@ public class Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 				
-		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
-		
-		//Invoke Method to complete an aborted suitable for smart installation 
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addAbortValues(driver, sTestCaseName);
+		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
 		
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
