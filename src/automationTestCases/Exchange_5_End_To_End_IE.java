@@ -1,9 +1,9 @@
 /* *******************************************************************
-* Test Case Name: INST_5_End_To_End_Chrome
+* Test Case Name: Exchange_5_End_To_End_IE
 * Author: Iain Storrie
 * Date: 05/07/2017
 * Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Install 5 job
+* the IE browser for an Exchange 5 job
 *
 **********************************************************************
 * Change Log:
@@ -15,6 +15,8 @@
 *********************************************************************/
 
 package automationTestCases;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -29,8 +31,11 @@ import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Remove_Meter_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Remove_Asset_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Additional_Electricity_Tests_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Page;
@@ -42,7 +47,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class INST_5_End_To_End_Chrome {
+public class Exchange_5_End_To_End_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -68,7 +73,7 @@ public class INST_5_End_To_End_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -161,7 +166,18 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 				
 		//Invoke Method to complete a successful photo capture 
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
-
+		
+		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page
+		Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed();
+		Log.info("Initial Polarity Check - Martindale Test page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Initial Polarity Check - Martindale Test initial elements displayed as expected");
+						
+		//Invoke Method to complete a successful Martindale Test 
+		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.addSuccessValues(driver, sTestCaseName);
+		
 		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - At Meter page
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter(driver).isDisplayed();
 		Log.info("Initial Polarity Check At Meter page displayed as expected");
@@ -184,6 +200,28 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		//Invoke Method to complete current meter details page 
 		Methods_Electricity_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
 	
+		//Verify that we are on the Electricity Meter Remove Meter page
+		Objects_Electricity_Meter_Remove_Meter_Page.lbl_Remove_Meter(driver).isDisplayed();
+		Log.info("Remove Meter page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Remove_Meter.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Remove Meter initial elements displayed as expected");
+														
+		//Invoke Method to complete remove meter page 
+		Methods_Electricity_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Electricity Meter Remove Asset page
+		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset(driver).isDisplayed();
+		Log.info("Remove Asset page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Remove_Asset.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Remove Asset initial elements displayed as expected");
+																
+		//Invoke Method to complete remove asset page 
+		Methods_Electricity_Meter_Remove_Asset.addSuccessValues(driver, sTestCaseName);
+		
 		//Verify that we are on the Electricity Meter New Meter Details page
 		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details(driver).isDisplayed();
 		Log.info("New Meter Details page displayed as expected");
@@ -193,7 +231,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");
 																		
 		//Invoke Method to complete new meter details page 
-		Methods_Electricity_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
@@ -203,8 +241,8 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		Methods_Electricity_Meter_Additional_Electricity_Tests.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Additional Electricity Tests initial elements displayed as expected");
 																				
-		//Invoke Method to complete Additional Electricity Tests page for the INST5 workflow 
-		Methods_Electricity_Meter_Additional_Electricity_Tests.addSuccessValuesINST5(driver, sTestCaseName);
+		//Invoke Method to complete Additional Electricity Tests page 
+		Methods_Electricity_Meter_Additional_Electricity_Tests.addSuccessValues(driver, sTestCaseName);
 						
 		//Verify that we are on the Electricity Meter Initial Meter Reading page
 		Objects_Electricity_Meter_Initial_Meter_Reading_Page.lbl_Inital_Meter_Reading(driver).isDisplayed();
@@ -215,7 +253,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Initial Meter Reading initial elements displayed as expected");
 																						
 		//Invoke Method to complete Initial Meter Reading page 
-		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues2Registers(driver, sTestCaseName);
 								
 		//Verify that we are on the Electricity Meter Commissioning page
 		Objects_Electricity_Meter_Commissioning_Page.lbl_Commissioning(driver).isDisplayed();
@@ -238,7 +276,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 																										
 		//Invoke Method to complete Post Installation Checks page 
 		Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValues(driver, sTestCaseName);
-																											
+																																						
 		//Verify that we are on the Job Completion Energy Efficiency Information page
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
 		Log.info("Job Completion Energy Efficient Information page displayed as expected");
@@ -269,7 +307,7 @@ Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		Methods_Job_Completion_Capture_Customer_Signature.viewPage(driver, sTestCaseName);
 		Log.info("Job Completion Capture Customer Signature initial elements displayed as expected");
 																																						
-		//Invoke Method to complete Customer Signature page 
+		//Invoke Method to complete Energy Efficiency information page 
 		Methods_Job_Completion_Capture_Customer_Signature.addSuccessValues(driver, sTestCaseName);
 	
 		//Verify that we have returned to the Appointments list page

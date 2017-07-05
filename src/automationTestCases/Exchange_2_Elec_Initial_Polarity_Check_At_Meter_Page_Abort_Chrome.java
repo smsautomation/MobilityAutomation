@@ -169,7 +169,7 @@ public class Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 					
-		//Invoke Method to complete a successful suitable for smart installation 
+		//Invoke Method to complete a successful photo capture 
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
 			
 		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page

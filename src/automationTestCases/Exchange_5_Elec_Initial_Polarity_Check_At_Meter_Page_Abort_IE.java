@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_2_Elec_Initial Polarity_Check_At_Meter_Abort_IE
+* Test Case Name: Exchange_5_Elec_Initial Polarity_Check_At_Meter_Abort_IE
 * Author: Iain Storrie
-* Date: 29/06/2017
+* Date: 05/07/2017
 * Purpose: This test ensure that a user can abort an appointment from the 
 * Elec Initial Polarity Check At Meter page where the polarity check fails
-* on the IE browser for an Exchange 2 job
+* on the IE browser for an Exchange 5 job
 *
 **********************************************************************
 * Change Log:
@@ -34,11 +34,10 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_A
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
-import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_IE {
+public class Exchange_5_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -146,21 +145,6 @@ public class Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_IE {
 				
 		//Invoke Method to complete a successful risk assessment 
 		Methods_Electricity_Meter_Risk_Assessment_Elec.addSuccessValues(driver, sTestCaseName);
-			
-		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
-		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
-		Log.info("Risk Assessment - Elec page displayed as expected");	
-			
-		//Verify Initial page elements displayed
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
-				
-		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
-		
-		//Invoke Method to complete a successful suitable for smart installation 
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
 			
 		//Verify that we are on the Electricity Meter Capture Initial Photo Of Elec Installation page
 		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();

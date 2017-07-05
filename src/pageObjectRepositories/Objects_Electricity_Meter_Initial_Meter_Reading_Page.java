@@ -47,6 +47,16 @@ public class Objects_Electricity_Meter_Initial_Meter_Reading_Page {
 	    return element;
 	}
     
+    public static WebElement txt_Capture_Meter_Reading_Register_2(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.id("reg1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Capture_Meter_Reading_Register_2 not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement btn_Unable_Read_Meter_Yes(WebDriver driver){
       	 
 		try{

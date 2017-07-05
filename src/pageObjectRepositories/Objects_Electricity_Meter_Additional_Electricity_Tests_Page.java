@@ -67,6 +67,46 @@ public class Objects_Electricity_Meter_Additional_Electricity_Tests_Page {
 	    return element;
 	}
     
+    public static WebElement btn_Earth_Loop_Impedance_Yes(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[1]/div[2]/div[1]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Earth_Loop_Impedance_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Earth_Loop_Impedance_No(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[1]/div[2]/div[2]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Earth_Loop_Impedance_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Visual_Check_PME_Bonding_Yes(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div[1]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Visual_Check_PME_Bonding_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Visual_Check_PME_Bonding_No(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/postchecks/div[2]/div[2]/div[2]/div[2]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Visual_Check_PME_Bonding_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement btn_Capture_Photo(WebDriver driver){
     	 
 		try{

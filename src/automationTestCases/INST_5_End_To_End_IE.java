@@ -1,9 +1,9 @@
 /* *******************************************************************
-* Test Case Name: INST_5_End_To_End_Chrome
+* Test Case Name: INST_5_End_To_End_IE
 * Author: Iain Storrie
 * Date: 05/07/2017
 * Purpose: This test carries out the end to end Mobility workflow on 
-* the Chrome browser for an Install 5 job
+* the IE browser for an Install 5 job
 *
 **********************************************************************
 * Change Log:
@@ -15,6 +15,8 @@
 *********************************************************************/
 
 package automationTestCases;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -42,7 +44,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class INST_5_End_To_End_Chrome {
+public class INST_5_End_To_End_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -68,7 +70,7 @@ public class INST_5_End_To_End_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
