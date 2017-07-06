@@ -52,8 +52,6 @@ public class QuickTest {
 		
 		String appUrl = "https://siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
 		
-			 
-		
 	   // launch the chrome browser and open the application url
 		
 	   driver.get(appUrl);
@@ -68,6 +66,12 @@ public class QuickTest {
 	   driver.findElement(By.id("input2")).click();
 	   driver.findElement(By.id("input2")).sendKeys("Aut0m4t1on");
 	   driver.findElement(By.id("btn")).click();
+	
+	   driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+	   
+	   //driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[1]/div/div[2]/div[2]")).click();
+	   driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[25]/div/div[1]/div/div[1]/span[1]/span")).click();
+	 
 	}
 	
 	//Log out

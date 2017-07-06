@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_Elec_HAN_WAN_Checks_Abort_Chrome
+* Test Case Name: Exchange_9_Elec_HAN_WAN_Checks_Abort_Chrome
 * Author: Iain Storrie
-* Date: 15/06/2017
+* Date: 05/07/2017
 * Purpose: This test ensure that a user can abort an appointment from 
 * the Elec HAN / WAN Checks page where the HAN / WAN check fails on 
-* the Chrome browser for an Exchange 3 job
+* the Chrome browser for an Exchange 9 job
 * 
 ***********************************************************************
 * Change Log:
@@ -38,7 +38,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
 
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
+public class Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	

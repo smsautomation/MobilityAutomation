@@ -1,12 +1,12 @@
 /* *******************************************************************
-* Test Case Name: Exchange_3_Elec_HAN_WAN_Checks_Abort_Chrome
+* Test Case Name: Exchange_9_Elec_Initial Polarity_Check_At_Meter_Abort_Chrome
 * Author: Iain Storrie
-* Date: 15/06/2017
-* Purpose: This test ensure that a user can abort an appointment from 
-* the Elec HAN / WAN Checks page where the HAN / WAN check fails on 
-* the Chrome browser for an Exchange 3 job
-* 
-***********************************************************************
+* Date: 06/07/2017
+* Purpose: This test ensure that a user can abort an appointment from the 
+* Elec Initial Polarity Check At Meter page where the polarity check fails
+* on the Chrome browser for an Exchange 9 job
+*
+**********************************************************************
 * Change Log:
 * 
 * Date:
@@ -16,6 +16,8 @@
 *********************************************************************/
 
 package automationTestCases;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -34,11 +36,9 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Login_Page;
-import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
-
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
+public class Exchange_9_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -64,7 +64,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -74,7 +74,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	@Test
 	public void main() throws Exception {
 			
-		Methods_Appointments_List.viewPage(driver, sTestCaseName);
+Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		Objects_Appointments_List_Page.btn_First_Appointment_Select(driver).click();
 		
@@ -155,9 +155,9 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 				
-		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
+		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
 		
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
@@ -192,18 +192,11 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Initial Polarity check At Meter initial elements displayed as expected");
 										
-		//Invoke Method to complete a successful polarity check 
-		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addSuccessValues(driver, sTestCaseName);
-			
-		//Verify that we are on the Electricity Meter HAN / WAN Check page
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.lbl_Han_Wan_Checks(driver).isDisplayed();
-		Log.info("HAN / WAN Check page displayed as expected");
-		
-		//Invoke Method to complete an aborted HAN / WAN check 
-		Methods_Electricity_Meter_HAN_WAN_Checks.addAbortValues(driver, sTestCaseName);
+		//Invoke Method to complete an aborted polarity check 
+		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addAbortValues(driver, sTestCaseName);
 			
 		//Click Abort button to bring up Abort page 
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Abort(driver).click();
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort(driver).click();
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed

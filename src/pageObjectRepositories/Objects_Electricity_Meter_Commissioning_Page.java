@@ -77,6 +77,76 @@ public class Objects_Electricity_Meter_Commissioning_Page {
 	    return element;
 	}
     
+    public static WebElement btn_Comms_Hub_Connected_WAN_Yes(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div[1]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Comms_Hub_Connected_WAN_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Comms_Hub_Connected_WAN_No(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div[2]/label"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Comms_Hub_Connected_WAN_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement cbx_Gas_Meter_Location(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.id("select1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Gas_Meter_Location not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement txt_Distance_Gas_Electric(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.id("bar1"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Distance_Gas_Electric not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement cbx_Electric_Meter_Signal(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.id("select2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Electric_Meter_Signal not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement txt_Commissioning_Code(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("bar2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Commissioning_Code not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement cbx_Time_Taken_Commission_Meter(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("select3"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Time_Taken_Commission_Meter not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement btn_Next_Section(WebDriver driver){
    	 
 		try{

@@ -161,9 +161,6 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_IE {
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
 		
-		//Invoke Method to complete an aborted suitable for smart installation 
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addAbortValues(driver, sTestCaseName);
-		
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
 			
@@ -175,7 +172,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_IE {
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 					
-		//Invoke Method to complete a successful suitable for smart installation 
+		//Invoke Method to complete a successful photo capture 
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
 			
 		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page
