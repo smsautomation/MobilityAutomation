@@ -65,6 +65,7 @@ public class QuickTest {
 	   driver.findElement(By.id("input1")).sendKeys("automation");
 	   driver.findElement(By.id("input2")).click();
 	   driver.findElement(By.id("input2")).sendKeys("Aut0m4t1on");
+	   //driver.findElement(By.id("input2")).sendKeys("000000");
 	   driver.findElement(By.id("btn")).click();
 	
 	   driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
