@@ -67,12 +67,12 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).click();
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("ACT");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | Actaris selected from Manufacturer Letter combobox");
+		Log.info(sTestCaseName + " | LPG: Landis + GYR selected from Manufacturer Letter combobox");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).click();
-		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("Standard");
+		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("L&G");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | Standard Domestic Credit selected from Meter Type combobox");
+		Log.info(sTestCaseName + " | L&G PP METLG210 selected from Meter Type combobox");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.txt_Gas_Meter_Serial_No(driver).click();
 		Objects_Gas_Meter_New_Meter_Details_Page.txt_Gas_Meter_Serial_No(driver).sendKeys("54321");
@@ -89,9 +89,9 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		Log.info(sTestCaseName + " | Updated OK button clicked");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();
-		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys("04");
+		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys("03");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | Kitchen selected from Manufacturer Letter combobox");
+		Log.info(sTestCaseName + " | Hall selected from Manufacturer Letter combobox");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.lbl_Gas_New_Meter_Details_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | New Meter Details Complete label displayed");
