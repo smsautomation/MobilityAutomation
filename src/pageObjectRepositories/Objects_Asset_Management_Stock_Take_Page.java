@@ -77,8 +77,45 @@ public class Objects_Asset_Management_Stock_Take_Page {
 	    return element;
 	}
     
+    public static WebElement btn_Submit(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/stocklist/div[1]/div"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Submit not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
     
+    public static WebElement btn_OK(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.className("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_OK not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Cancel(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.className("cancel"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Cancel not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
      
+    public static WebElement btn_Stock_Take_OK(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.className("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Stock_Take_OK not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 				
 //END OF METHODS	    
 }
