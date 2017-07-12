@@ -17,6 +17,7 @@
 package automationTestCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -97,9 +98,14 @@ public class FLTY_17_End_To_End_Chrome {
 	@Test
 	public void main() throws Exception {
 			
-Methods_Appointments_List.viewPage(driver, sTestCaseName);
+		Methods_Login.viewPage(driver, sTestCaseName);
 		
-		Objects_Appointments_List_Page.btn_First_Appointment_Select(driver).click();
+		Methods_Login.addSuccessValues(driver, sTestCaseName);
+		
+		Methods_Appointments_List.viewPage(driver, sTestCaseName);
+		
+		//Select the correct appointment
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[47]/div/div[1]/div/div[1]/span[1]/span")).click();
 		
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();

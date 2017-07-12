@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20733" started-at="2017-07-03T13:19:05Z" finished-at="2017-07-03T13:19:25Z">
+  <suite name="Default suite" duration-ms="23883" started-at="2017-07-12T08:10:15Z" finished-at="2017-07-12T08:10:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20733" started-at="2017-07-03T13:19:05Z" finished-at="2017-07-03T13:19:25Z">
-      <class name="automationTestCases.FLTY_17_End_To_End_Chrome">
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.FLTY_17_End_To_End_Chrome@4883b407]" name="beforeMethod" is-config="true" duration-ms="20652" started-at="2017-07-03T14:19:05Z" finished-at="2017-07-03T14:19:25Z">
+    <test name="Default test" duration-ms="23883" started-at="2017-07-12T08:10:15Z" finished-at="2017-07-12T08:10:39Z">
+      <class name="automationTestCases.Asset_Management_Add_Assets_Chrome">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@4883b407]" name="beforeMethod" is-config="true" duration-ms="23825" started-at="2017-07-12T09:10:15Z" finished-at="2017-07-12T09:10:39Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at automationTestCases.FLTY_17_End_To_End_Chrome.beforeMethod(FLTY_17_End_To_End_Chrome.java:91)
+	at automationTestCases.Asset_Management_Add_Assets_Chrome.beforeMethod(Asset_Management_Add_Assets_Chrome.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,11 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.FLTY_17_End_To_End_Chrome@4883b407]" name="main" duration-ms="1" started-at="2017-07-03T14:19:25Z" finished-at="2017-07-03T14:19:25Z">
+        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@4883b407]" name="main" duration-ms="0" started-at="2017-07-12T09:10:39Z" finished-at="2017-07-12T09:10:39Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at automationTestCases.FLTY_17_End_To_End_Chrome.beforeMethod(FLTY_17_End_To_End_Chrome.java:91)
+	at automationTestCases.Asset_Management_Add_Assets_Chrome.beforeMethod(Asset_Management_Add_Assets_Chrome.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -83,7 +83,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-      </class> <!-- automationTestCases.FLTY_17_End_To_End_Chrome -->
+      </class> <!-- automationTestCases.Asset_Management_Add_Assets_Chrome -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

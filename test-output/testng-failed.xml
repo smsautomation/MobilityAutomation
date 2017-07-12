@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.FLTY_17_End_To_End_Chrome">
+      <class name="automationTestCases.Asset_Management_Add_Assets_Chrome">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="main"/>
           <include name="afterMethod"/>
+          <include name="main"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationTestCases.FLTY_17_End_To_End_Chrome -->
+      </class> <!-- automationTestCases.Asset_Management_Add_Assets_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,7 +9,6 @@ public class Methods_Appointment_Details{
 	
 	//Declare variables 
 	private static String sMPAN; 
-	private static String sMPRN;
 	private static String sCustomerName;
 	private static String sPostCode;
 	private static String sSupplier;
@@ -54,32 +53,31 @@ public class Methods_Appointment_Details{
 	****************************************************************************************************/	
 	public static void getTableValues(int iRow) {
 		
-		sMPAN = Utils.assignStringVariable("MPAN", iRow); 
-		sMPRN = Utils.assignStringVariable("MPRN", iRow);
-		sCustomerName = Utils.assignStringVariable("Customer Name", iRow);
-		sPostCode = Utils.assignStringVariable("Post Code", iRow);
-		sSupplier = Utils.assignStringVariable("Supplier", iRow);
-		sMeterTypeElec = Utils.assignStringVariable("Meter Type Elec", iRow);
-		sJobDescriptionElec = Utils.assignStringVariable("Job Description Elec", iRow);
-		sMeterLocationElec = Utils.assignStringVariable("Meter Location Elec", iRow);
-		sMeterTypeGas = Utils.assignStringVariable("Meter Type Gas", iRow);
-		sJobDescriptionGas = Utils.assignStringVariable("Job Description Gas", iRow);
-		sCustomerAddress = Utils.assignStringVariable("Customer Address", iRow);
-		sContactNumber = Utils.assignStringVariable("Contact Number", iRow);
-		sWorkContactNumber = Utils.assignStringVariable("Work Contact Number", iRow);
-		sSiteContactDetails = Utils.assignStringVariable("Site Contact Details", iRow);
-		sCustomerDoorstepPassword = Utils.assignStringVariable("Customer Doorstep Password", iRow);
-		sAccessDetails = Utils.assignStringVariable("Access Details", iRow);
-		sCustomerSpecialNeeds = Utils.assignStringVariable("Customer Special Needs", iRow);
-		sSpecialInstructions = Utils.assignStringVariable("Special Instructions", iRow);
-		sAdditionalEquipment = Utils.assignStringVariable("Additional Equipment", iRow);
-		sPreviousRiskAssess = Utils.assignStringVariable("Previous Risk Assess", iRow);
-		sBookingRemarks = Utils.assignStringVariable("Booking Remarks", iRow);
-		sPreviousVisits = Utils.assignStringVariable("Previous Visits", iRow);
-		sElecMeterSerialNumber = Utils.assignStringVariable("Elec Meter Serial Number", iRow);
-		sSSCCode = Utils.assignStringVariable("SSC Code", iRow);
-		sGasMeterSerialNumber = Utils.assignStringVariable("Gas Meter Serial Number", iRow);
-		sMeterLocationGas = Utils.assignStringVariable("Gas Meter Serial Number", iRow);
+		sMPAN = Utils.assignStringVariable("E_SPR(mpan)", iRow); 
+		sCustomerName = Utils.assignStringVariable("CUSTOMER_NAME", iRow);
+		sPostCode = Utils.assignStringVariable("POSTCODE", iRow);
+		sSupplier = Utils.assignStringVariable("SUPPLIER", iRow);
+		sMeterTypeElec = Utils.assignStringVariable("E_METER_TYPE", iRow);
+		sJobDescriptionElec = Utils.assignStringVariable("E_JOB_DESCRIPTION", iRow);
+		sMeterLocationElec = Utils.assignStringVariable("E_METER_LOCATION", iRow);
+		sMeterTypeGas = Utils.assignStringVariable("G_METER_TYPE", iRow);
+		sJobDescriptionGas = Utils.assignStringVariable("G_JOB_DESCRIPTION", iRow);
+		sCustomerAddress = Utils.assignStringVariable("CUSTOMER_ADDRESS", iRow);
+		sContactNumber = Utils.assignStringVariable("CONTACT_TEL", iRow);
+		sWorkContactNumber = Utils.assignStringVariable("WORKPHONE", iRow);
+		sSiteContactDetails = Utils.assignStringVariable("SITE_CONTACT", iRow);
+		sCustomerDoorstepPassword = Utils.assignStringVariable("DS_PASSWORD_PLAIN", iRow);
+		sAccessDetails = Utils.assignStringVariable("ACCESS_DETAILS", iRow);
+		sCustomerSpecialNeeds = Utils.assignStringVariable("SPECIAL_NEEDS", iRow);
+		sSpecialInstructions = Utils.assignStringVariable("SPECIAL_INSTRUCTIONS", iRow);
+		sAdditionalEquipment = Utils.assignStringVariable("SPECIAL_EQUIPMENT", iRow);
+		sPreviousRiskAssess = Utils.assignStringVariable("PREVIOUS_RISK ASSESS OUTCOME", iRow);
+		sBookingRemarks = Utils.assignStringVariable("APPNT_REMARKS", iRow);
+		sPreviousVisits = Utils.assignStringVariable("PREVIOUS_REMARKS FIELD ENGINEER", iRow);
+		sElecMeterSerialNumber = Utils.assignStringVariable("E_ASSET_SERIAL_NO", iRow);
+		sSSCCode = Utils.assignStringVariable("E_SSC", iRow);
+		sGasMeterSerialNumber = Utils.assignStringVariable("G_ASSET_SERIAL_NO", iRow);
+		sMeterLocationGas = Utils.assignStringVariable("G_METER_LOCATION", iRow);
 		
 	//END OF GET TABLE VALUES METHOD
 	}
@@ -107,12 +105,6 @@ public class Methods_Appointment_Details{
 		if (sMPAN.length() > 0){
 			sMPAN = Objects_Appointment_Details_Page.Job_Details.lbl_MPAN(driver).getText();
 			Log.info(sTestCaseName + " | \"" + sMPAN + "\" displayed as MPAN");
-		}
-		
-		//Check that the MPRN is shown
-		if (sMPRN.length() > 0){
-			sMPRN = Objects_Appointment_Details_Page.Job_Details.lbl_MPRN(driver).getText();
-			Log.info(sTestCaseName + " | \"" + sMPRN + "\" displayed as MPRN");
 		}
 		
 		//Check that the Customer Name is shown
@@ -228,12 +220,6 @@ public class Methods_Appointment_Details{
 		if (sMPAN.length() > 0){
 			sMPAN = Objects_Appointment_Details_Page.Customer_Details.lbl_MPAN(driver).getText();
 			Log.info(sTestCaseName + " | \"" + sMPAN + "\" displayed as MPAN");
-		}
-		
-		//Check that the MPRN is shown
-		if (sMPRN.length() > 0){
-			sMPRN = Objects_Appointment_Details_Page.Customer_Details.lbl_MPRN(driver).getText();
-			Log.info(sTestCaseName + " | \"" + sMPRN + "\" displayed as MPRN");
 		}
 		
 		//Check that the Supplier is shown

@@ -20,13 +20,13 @@ package automationTestCases;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
-import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Abort_Page;
@@ -67,9 +67,14 @@ public class FLTY_17_Appointment_Details_Page_Abort_No_Access_IE {
 	@Test
 	public void main() throws Exception {
 			
+		Methods_Login.viewPage(driver, sTestCaseName);
+		
+		Methods_Login.addSuccessValues(driver, sTestCaseName);
+		
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
-		Objects_Appointments_List_Page.btn_First_Appointment_Select(driver).click();
+		//Select the correct appointment
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[36]/div/div[1]/div/div[1]/span[1]/span")).click();
 		
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();

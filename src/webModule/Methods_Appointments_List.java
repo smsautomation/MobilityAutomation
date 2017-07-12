@@ -50,46 +50,6 @@ public class Methods_Appointments_List{
 			Log.info(sTestCaseName + " | First Appointment Header displayed as expected");
 		}
 		
-		Objects_Appointments_List_Page.btn_First_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | First Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Second_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Second Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Third_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Third Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Fourth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Fourth Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Fifth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Fifth Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Sixth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Sixth Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Seventh_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Seventh Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Eighth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Eighth Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Ninth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Ninth Appointment Select button displayed as expected");
-		}
-		
-		Objects_Appointments_List_Page.btn_Tenth_Appointment_Select(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Tenth Appointment Select button displayed as expected");
-		}
-			
 		//Screenshot time
 		Utils.takeScreenshot(driver, sTestCaseName + "-ViewPage");
 		
