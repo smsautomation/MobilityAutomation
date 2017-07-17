@@ -139,7 +139,7 @@ public class Utils {
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
 	            
 	            //WebDriverWait = new WebDriverWait(driver, 10);   
-	            WebDriverWait(driver, 10000);
+	            //WebDriverWait(driver, 10000);
 	            driver.get(sURL);
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	            /*
@@ -178,15 +178,16 @@ public class Utils {
         }catch (Exception e){
             Log.error("Class Utils | Method OpenBrowser | Exception desc : "+e.getMessage());
         }
+        //System.out.println("driver =" + driver);
         return driver;
     }
 
-	
+/*	
 	private static void WebDriverWait(WebDriver driver2, int i) {
 		// TODO Auto-generated method stub
 		
 	}
-
+*/
 
 	/* **************************************************************************************************
 	* Function: getTestCaseName

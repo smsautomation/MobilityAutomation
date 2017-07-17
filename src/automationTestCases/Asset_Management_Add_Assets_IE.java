@@ -60,6 +60,7 @@ public class Asset_Management_Add_Assets_IE {
 	    
 	    //Verify that we are on the correct page
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    System.out.println("driver =" + driver);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 			    

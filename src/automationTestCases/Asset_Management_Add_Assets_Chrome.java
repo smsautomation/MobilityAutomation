@@ -18,13 +18,14 @@ package automationTestCases;
 
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
-import pageObjectRepositories.Objects_Login_Page;
+//import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Asset_Management_Van_List_Page;
 
@@ -56,9 +57,10 @@ public class Asset_Management_Add_Assets_Chrome {
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
+	    //Verify that we are on the correct page
 	    Thread.sleep(10000);
-	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    System.out.println("driver =" + driver);
+	    driver.findElement(By.id("btn")).isDisplayed();
 	    Log.info("Login button displayed");
 			    
 	}
