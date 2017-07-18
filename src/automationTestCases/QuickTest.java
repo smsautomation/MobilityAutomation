@@ -57,10 +57,10 @@ public class QuickTest {
 	   driver.get(appUrl);
 
 	   // maximize the browser window
-		
+	
 	   driver.manage().window().maximize();
 	   driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	   		
+	   	   
 	   driver.findElement(By.id("input1")).click();
 	   driver.findElement(By.id("input1")).sendKeys("automation");
 	   driver.findElement(By.id("input2")).click();

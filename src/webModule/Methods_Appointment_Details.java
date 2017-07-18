@@ -98,7 +98,7 @@ public class Methods_Appointment_Details{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void viewJobDetails(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void viewJobDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
 				
 		//Check that the MPAN is shown
@@ -183,7 +183,7 @@ public class Methods_Appointment_Details{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void viewCustomerDetails(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void viewCustomerDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
 				
 		//Check that the Customer Name is shown
@@ -304,7 +304,7 @@ public class Methods_Appointment_Details{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void viewMeterDetails(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void viewMeterDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
 				
 		//Check that the Customer Name Elec is shown

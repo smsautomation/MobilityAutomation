@@ -73,36 +73,11 @@ public class Utils {
 	public static WebDriver openBrowser(int iTestCaseRow) throws Exception{
 
         String sBrowserName;
-        //String sUser;
         String sURL;
-        //String sUsername;
-        //String sPassword;
-
+        
         try{
         sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
-        //sUser = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_User);
-        
-        /*
-        //Check which browser we are using as that will define how we handle username and password
-        if(sBrowserName.matches("IE|Chrome|Firefox") ){
-	       	
-        	switch(sUser){
-	        	case "Automation" :
-	        		Log.info("User set as " + sUser);
-	        		sUsername = "automation";
-	        		sPassword = "Aut0m4t1on";
-	        		break;
-		        default :
-		            Log.error("No valid user selected");
-	        }     
-	        //The URL will always be the same, so set that here
-        	sURL = "https://" + Constant.URL;
-        }else{       	 
-		            Log.error("No valid user selected1");
-		            sURL = "";
-	        }
-        */
-        
+                
         //The URL will always be the same, so set that here
     	sURL = "https://" + Constant.URL;
         
@@ -138,8 +113,6 @@ public class Utils {
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
 	            
-	            //WebDriverWait = new WebDriverWait(driver, 10);   
-	            //WebDriverWait(driver, 10000);
 	            driver.get(sURL);
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	            /*

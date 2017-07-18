@@ -49,18 +49,7 @@ public class QuickTestIE {
         driver = new InternetExplorerDriver(cap);
         Log.info("New IE driver instantiated");
        
-        /*
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
-        Log.info("Implicit wait applied on the driver for 20 seconds");
-        
-        //WebDriverWait = new WebDriverWait(driver, 10);   
-        //WebDriverWait(driver, 10000);
-       
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		
-		*/
-		String appUrl = "https://siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
+        String appUrl = "https://siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
 		
 	   // launch the ie browser and open the application url
 		
@@ -70,6 +59,7 @@ public class QuickTestIE {
 		
 	   driver.manage().window().maximize();
 	   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	   
 	   System.out.println("driver =" + driver);
 	   driver.findElement(By.id("input1")).click();
 	   driver.findElement(By.id("input1")).sendKeys("automation");
