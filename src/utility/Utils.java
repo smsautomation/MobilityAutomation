@@ -52,6 +52,7 @@ import utility.ExcelUtils;
 public class Utils {
 
 	public static WebDriver driver = null;
+	
 
 	/* **************************************************************************************************
 	* Function: openBrowser

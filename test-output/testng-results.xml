@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24520" started-at="2017-07-18T14:55:29Z" finished-at="2017-07-18T14:55:54Z">
+  <suite name="Default suite" duration-ms="21235" started-at="2017-07-19T07:54:41Z" finished-at="2017-07-19T07:55:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24520" started-at="2017-07-18T14:55:29Z" finished-at="2017-07-18T14:55:54Z">
+    <test name="Default test" duration-ms="21235" started-at="2017-07-19T07:54:41Z" finished-at="2017-07-19T07:55:03Z">
       <class name="automationTestCases.Asset_Management_Add_Assets_Chrome">
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@6093dd95]" name="beforeMethod" is-config="true" duration-ms="24488" started-at="2017-07-18T15:55:29Z" finished-at="2017-07-18T15:55:54Z">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@6093dd95]" name="beforeMethod" is-config="true" duration-ms="21162" started-at="2017-07-19T08:54:41Z" finished-at="2017-07-19T08:55:03Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@6093dd95]" name="main" duration-ms="0" started-at="2017-07-18T15:55:54Z" finished-at="2017-07-18T15:55:54Z">
+        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.Asset_Management_Add_Assets_Chrome@6093dd95]" name="main" duration-ms="0" started-at="2017-07-19T08:55:03Z" finished-at="2017-07-19T08:55:03Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
