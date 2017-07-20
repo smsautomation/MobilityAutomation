@@ -82,7 +82,7 @@ public static class Sidebar{
     	public static WebElement lbl_Job_Details_Less_Details(WebDriver driver){
          	 
     		try{
-    			element = driver.findElement(By.linkText(".//*[@id='app']/div/div/div[1]/div[2]/div[4]/div"));
+    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[2]/div[4]/div"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Job_Details_Less_Details not found | Exception desc : "+e.getMessage());		
      		} 

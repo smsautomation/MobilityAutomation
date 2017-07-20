@@ -23,6 +23,8 @@ package utility;
 
 //List all of the required imports
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -42,6 +44,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -125,6 +128,7 @@ public class Utils {
 	            
 	        case "Chrome" :
 	        	
+	        	/*
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
@@ -134,7 +138,25 @@ public class Utils {
 	        	WebDriver driver = new ChromeDriver(options);	
 	        	//driver.get("http://www.google.co.uk");
 	        	Log.info("New Chrome driver instantiated");
-	
+				*/
+	        	
+	        	
+	        	ChromeOptions options = new ChromeOptions();
+	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
+	        	//WebDriver driver = new ChromeDriver(options);
+	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	try {
+	    		  driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
+	    		} catch (MalformedURLException e) {
+	    			e.printStackTrace();
+	    		}
+	        	System.out.println("driver =" + driver);
+				
+	        	
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");

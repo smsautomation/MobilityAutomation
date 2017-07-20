@@ -20,11 +20,14 @@ package automationTestCases;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
-
+import java.net.MalformedURLException;
+import java.net.URL;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 
 import utility.Log;
@@ -33,7 +36,8 @@ public class QuickTest {
 
 	//Declare our test variables
 	public WebDriver driver;	
-		
+	
+	
 	public static void main(String[] args) {
 		
 			 
@@ -46,8 +50,21 @@ public class QuickTest {
     	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
     	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
     	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
-    	WebDriver driver = new ChromeDriver(options);	
+    	WebDriver driver = new ChromeDriver(options);
+    	
+    	/*
+    	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+    	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+    	DesiredCapabilities Capability = DesiredCapabilities.chrome();
+    	try {
+		  driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		*/
+    	
     	//driver.get("http://www.google.co.uk");
+				
     	Log.info("New Chrome driver instantiated");
 		
 		String appUrl = "https://siemens-og-bykrw4c6spfh7rcf452vdehd-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
