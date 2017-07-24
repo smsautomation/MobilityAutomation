@@ -35,6 +35,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -140,7 +141,6 @@ public class Utils {
 	        	Log.info("New Chrome driver instantiated");
 				*/
 	        	
-	        	
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
@@ -149,6 +149,8 @@ public class Utils {
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	//WebDriver driver = new ChromeDriver(options);
 	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	Capability.setBrowserName("chrome");
+	        	Capability.setPlatform(Platform.VISTA); 
 	        	try {
 	    		  driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
 	    		} catch (MalformedURLException e) {
