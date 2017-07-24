@@ -20,6 +20,7 @@ package automationTestCases;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -38,6 +39,7 @@ public class Asset_Management_Add_Assets_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;	
+	//public RemoteWebDriver driver;	
 	private String sTestCaseName;
 	private int iTestCaseRow;
 		
@@ -58,6 +60,7 @@ public class Asset_Management_Add_Assets_Chrome {
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 		
 	    driver = Utils.openBrowser(iTestCaseRow);
+	    //driver = (RemoteWebDriver) Utils.openBrowser(iTestCaseRow);
 	    
 	   	    			    
 	    //Verify that we are on the correct page

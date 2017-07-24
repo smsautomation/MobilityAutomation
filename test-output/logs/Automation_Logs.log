@@ -2517,3 +2517,30 @@ Driver info: driver.version: RemoteWebDriver
 Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
 System info: host: 'MD1N0QGC', ip: '137.223.166.118', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
 Driver info: driver.version: RemoteWebDriver 
+2017-07-24 15:50:53,606 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:50:53,607 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:50:53,607 INFO  [Log] $$$$$$$$$$$       Asset_Management_Add_Assets_Chrome       $$$$$$$$$$$ 
+2017-07-24 15:50:53,607 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:50:53,607 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:50:57,503 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Unable to create new remote session. desired capabilities = Capabilities [{browserName=chrome, version=, platform=VISTA}], required capabilities = Capabilities [{}]
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.166.118', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver 
+2017-07-24 15:58:14,901 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:58:14,901 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:58:14,901 INFO  [Log] $$$$$$$$$$$       Asset_Management_Add_Assets_Chrome       $$$$$$$$$$$ 
+2017-07-24 15:58:14,901 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:58:14,902 INFO  [Log] **************************************************************************************** 
+2017-07-24 15:58:17,856 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Unable to create new remote session. desired capabilities = Capabilities [{browserName=chrome, version=, platform=VISTA}], required capabilities = Capabilities [{}]
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.166.118', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver 
+2017-07-24 16:01:53,757 INFO  [Log] **************************************************************************************** 
+2017-07-24 16:01:53,758 INFO  [Log] **************************************************************************************** 
+2017-07-24 16:01:53,758 INFO  [Log] $$$$$$$$$$$       Asset_Management_Add_Assets_Chrome       $$$$$$$$$$$ 
+2017-07-24 16:01:53,758 INFO  [Log] **************************************************************************************** 
+2017-07-24 16:01:53,758 INFO  [Log] **************************************************************************************** 
+2017-07-24 16:01:56,729 ERROR [Log] Class Utils | Method OpenBrowser | Exception desc : Unable to create new remote session. desired capabilities = Capabilities [{browserName=chrome, version=, platform=VISTA}], required capabilities = Capabilities [{}]
+Build info: version: 'unknown', revision: '1969d75', time: '2016-10-18 09:45:56 -0700'
+System info: host: 'MD1N0QGC', ip: '137.223.166.118', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver 

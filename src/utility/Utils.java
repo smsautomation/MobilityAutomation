@@ -23,8 +23,8 @@ package utility;
 
 //List all of the required imports
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
+//import java.net.MalformedURLException;
+//import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -35,7 +35,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
+//import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,7 +45,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -56,6 +56,7 @@ import utility.ExcelUtils;
 public class Utils {
 
 	public static WebDriver driver = null;
+	//public static RemoteWebDriver driver = null;
 	
 
 	/* **************************************************************************************************
@@ -129,7 +130,7 @@ public class Utils {
 	            
 	        case "Chrome" :
 	        	
-	        	/*
+	        	//code for local browser sessions
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
@@ -139,8 +140,9 @@ public class Utils {
 	        	WebDriver driver = new ChromeDriver(options);	
 	        	//driver.get("http://www.google.co.uk");
 	        	Log.info("New Chrome driver instantiated");
-				*/
-	        	
+				
+	        	/*
+	        	//code for Grid sessions
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
@@ -157,8 +159,9 @@ public class Utils {
 	    			e.printStackTrace();
 	    		}
 	        	System.out.println("driver =" + driver);
+				*/
 				
-	        	
+	        	//maximise browser sessions for both local & Grid sessions
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
