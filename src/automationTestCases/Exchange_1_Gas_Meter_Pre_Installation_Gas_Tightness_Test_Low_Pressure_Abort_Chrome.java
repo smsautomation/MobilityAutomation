@@ -62,7 +62,7 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -89,15 +89,15 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 13);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 13);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 13);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();

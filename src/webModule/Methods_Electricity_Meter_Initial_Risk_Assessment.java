@@ -68,6 +68,10 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 	public static void viewSmellGasPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Check that all of the elements of that are expected are displayed
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Smell_Gas_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
+		
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Turned_Off_Gas_Yes(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Turned Off Gas - Yes radio button displayed as expected");
 		}

@@ -160,7 +160,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Depart (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[2]/div[6]/div[1]"));
+			element = driver.findElement(By.xpath("//*[@ng-click='depart()']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Depart not found | Exception desc : "+e.getMessage());		
  		} 
@@ -180,7 +180,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Depart_For_Appointment_OK (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btnCall2"));
+			element = driver.findElement(By.xpath("//*[@ng-click='departOK()']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Depart_ForAppointment_OK not found | Exception desc : "+e.getMessage());		
  		} 
@@ -244,7 +244,7 @@ public class Objects_Appointment_Details_Page {
 	    public static WebElement lbl_Customer_Name(WebDriver driver){
 	    	 
 			try{
-				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[3]/div[2]/div"));
+				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[2]/div[2]/div"));
 	 		}catch(Exception e){
 				Log.error(sRepositoryName + " | lbl_Customer_Name not found | Exception desc : "+e.getMessage());		
 	 		} 
@@ -254,7 +254,7 @@ public class Objects_Appointment_Details_Page {
 	    public static WebElement lbl_Post_Code(WebDriver driver){
 	    	 
 			try{
-				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[4]/div[2]"));
+				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[3]/div[2]"));
 	 		}catch(Exception e){
 				Log.error(sRepositoryName + " | lbl_Post_Code not found | Exception desc : "+e.getMessage());		
 	 		} 
@@ -264,7 +264,7 @@ public class Objects_Appointment_Details_Page {
 	    public static WebElement lbl_Supplier(WebDriver driver){
 	    	 
 			try{
-				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[5]/div[2]"));
+				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[1]/div[4]/div[2]"));
 	 		}catch(Exception e){
 				Log.error(sRepositoryName + " | lbl_Supplier not found | Exception desc : "+e.getMessage());		
 	 		} 
@@ -314,13 +314,13 @@ public class Objects_Appointment_Details_Page {
 	    public static WebElement lbl_Job_Description_Gas(WebDriver driver){
 	    	 
 			try{
-				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[3]/div[2]/div[2]"));
+				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wojob/div/div/div/div[2]/div[2]/div[2]"));
 	 		}catch(Exception e){
 				Log.error(sRepositoryName + " | lbl_Job_Description_Gas not found | Exception desc : "+e.getMessage());		
 	 		} 
 		    return element;
 		}
-	    
+	   /* 
 	    public static WebElement lbl_Meter_Location_Gas(WebDriver driver){
 	    	 
 			try{
@@ -330,6 +330,7 @@ public class Objects_Appointment_Details_Page {
 	 		} 
 		    return element;
 		}
+		*/
 	}
 
 //END OF JOB DETAILS METHODS
@@ -574,7 +575,7 @@ public static class Meter_Details{
     public static WebElement lbl_Customer_Name_Gas(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div[2]/div/div[2]/div[1]/div[2]/div"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div/div/div[2]/div[1]/div[2]/div"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Customer_Name_Gas not found | Exception desc : "+e.getMessage());		
  		} 
@@ -584,7 +585,7 @@ public static class Meter_Details{
     public static WebElement lbl_Post_Code_Gas(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div[2]/div/div[2]/div[2]/div[2]"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div/div/div[2]/div[2]/div[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Post_Code_Gas not found | Exception desc : "+e.getMessage());		
  		} 
@@ -594,13 +595,14 @@ public static class Meter_Details{
     public static WebElement lbl_Gas_Meter_Serial_Number(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div[2]/div/div[2]/div[3]/div[2]"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/wometer/div/div/div/div/div[2]/div[3]/div[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Gas_Meter_Serial_Number not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
     
+    /*
     public static WebElement lbl_Meter_Type_Gas(WebDriver driver){
    	 
 		try{
@@ -610,7 +612,9 @@ public static class Meter_Details{
  		} 
 	    return element;
 	}
-    
+	*/
+   
+    /*
     public static WebElement lbl_Meter_Location_Gas(WebDriver driver){
       	 
 		try{
@@ -620,6 +624,7 @@ public static class Meter_Details{
  		} 
 	    return element;
 	} 
+     */
  
 }
 

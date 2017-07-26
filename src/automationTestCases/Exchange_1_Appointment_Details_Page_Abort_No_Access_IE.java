@@ -84,15 +84,15 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_IE {
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 2);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 2);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 2);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -102,10 +102,12 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_IE {
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_No(driver).click();
 		Objects_Appointment_Details_Page.btn_Customer_Contact_Supplier_Yes(driver).click();
 		Objects_Appointment_Details_Page.btn_Appointment_Reschedule_No(driver).click();
+		Utils.takeScreenshot(driver, sTestCaseName + "-addCustomerContactQuestions");
 		
 		//Verify Abort No Access Button displayed
 		Objects_Appointment_Details_Page.btn_Abort_No_Access(driver).isDisplayed();
 		Log.info("Abort No Access Button displayed as expected");	
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortNoAccessButtonDisplayed");
 		
 		//Click Abort No Access button to bring up Abort page 
 		Objects_Appointment_Details_Page.btn_Abort_No_Access(driver).click();
@@ -113,7 +115,7 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_IE {
 		//Verify Abort No Access page displayed
 		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
-		
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

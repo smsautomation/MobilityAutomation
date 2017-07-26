@@ -19,6 +19,7 @@ package automationTestCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -34,7 +35,8 @@ import pageObjectRepositories.Objects_Asset_Management_Stock_Take_Page;
 public class Asset_Management_Stock_Take_Chrome {
 
 	//Declare our test variables
-	public WebDriver driver;	
+	public WebDriver driver;
+	//public RemoteWebDriver driver;
 	private String sTestCaseName;
 	private int iTestCaseRow;
 	
@@ -55,9 +57,10 @@ public class Asset_Management_Stock_Take_Chrome {
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
+	    //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
 	    
 		//Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 			    
@@ -87,7 +90,7 @@ public class Asset_Management_Stock_Take_Chrome {
 		Methods_Asset_Management_Stock_Take.viewPage(driver, sTestCaseName);
 		
 		//Invoke Method to add assets in Stock Take 
-		Methods_Asset_Management_Stock_Take.addSuccessValues(driver, sTestCaseName);
+		Methods_Asset_Management_Stock_Take.addSuccessValues(driver, sTestCaseName, 139);
 	}
 	
 	//Log out

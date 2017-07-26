@@ -23,8 +23,8 @@ package utility;
 
 //List all of the required imports
 import java.io.File;
-//import java.net.MalformedURLException;
-//import java.net.URL;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -35,7 +35,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.Platform;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,7 +45,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-//import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -137,36 +137,15 @@ public class Utils {
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
-	        	WebDriver driver = new ChromeDriver(options);	
+	        	driver = new ChromeDriver(options);	
 	        	//driver.get("http://www.google.co.uk");
 	        	Log.info("New Chrome driver instantiated");
 				
-	        	/*
-	        	//code for Grid sessions
-	        	ChromeOptions options = new ChromeOptions();
-	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
-	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
-	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
-	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
-	        	//WebDriver driver = new ChromeDriver(options);
-	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
-	        	Capability.setBrowserName("chrome");
-	        	Capability.setPlatform(Platform.VISTA); 
-	        	try {
-	    		  driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
-	    		} catch (MalformedURLException e) {
-	    			e.printStackTrace();
-	    		}
-	        	System.out.println("driver =" + driver);
-				*/
-				
-	        	//maximise browser sessions for both local & Grid sessions
+	        	
 	            driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");
 	
-	            //driver.get(Constant.URL);
 	            driver.get(sURL);
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	            Log.info("Web application launched successfully");
@@ -183,13 +162,109 @@ public class Utils {
         return driver;
     }
 
-/*	
-	private static void WebDriverWait(WebDriver driver2, int i) {
-		// TODO Auto-generated method stub
-		
-	}
-*/
 
+	/* **************************************************************************************************
+	* Function: openGridBrowser
+	* Author: Iain Storrie
+	* Date: 25/07/2017
+	* Purpose: Selects the Grid browser according to input
+	* Arguments: iTestCaseRow
+	* 
+	* Returns: driver
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date: 
+	* Author: 
+	* Details: 
+	* only be used 
+	*
+	****************************************************************************************************/
+	
+	
+	public static WebDriver openGridBrowser(int iTestCaseRow) throws MalformedURLException{
+
+		String sBrowserName;
+        String sURL;
+                
+        try{
+        sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
+                
+        //The URL will always be the same, so set that here
+    	sURL = "https://" + Constant.URL;
+        
+        switch(sBrowserName){
+	        
+	        case "IE" :
+
+	            DesiredCapabilities cap = new DesiredCapabilities();
+	            cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+	            cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+	            cap.setCapability("ignoreZoomSetting", true);
+	            
+	            System.setProperty("webdriver.ie.driver","C:\\IE Driver\\IEDriverServer.exe"); 
+
+	            driver = new InternetExplorerDriver(cap);
+	            Log.info("New IE driver instantiated");
+	            
+	            driver.manage().window().maximize();
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds");
+	            
+	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	            /*
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
+	            alert.authenticateUsing(new UserAndPassword(sUsername, sPassword));
+	            */
+	            Log.info("Web application launched successfully");
+	            break;   
+	            
+	        case "Chrome" :
+	        	
+	        	
+	        	//code for Grid sessions
+	        	/*
+	        	ChromeOptions options = new ChromeOptions();
+	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
+	        	//WebDriver driver = new ChromeDriver(options);
+	        	*/ 
+	        	 
+	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	       	   	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	Capability.setBrowserName("chrome");
+	        	Capability.setPlatform(Platform.VISTA); 
+	        	//RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
+	        	RemoteWebDriver driver = new RemoteWebDriver(new URL("http://137.223.166.118:5555/wd/hub"), Capability);
+	        	System.out.println("driver =" + driver);
+								
+	        	driver.manage().window().maximize();
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds");
+	
+	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	            Log.info("Web application launched successfully");
+	            break;   
+
+	        default :
+	            Log.error("No valid browser selected");	}            	
+	            
+            
+        }catch (Exception e){
+            Log.error("Class Utils | Method OpenBrowser | Exception desc : "+e.getMessage());
+        }
+        //System.out.println("driver =" + driver);
+        return driver;
+    }
+	
+	
 	/* **************************************************************************************************
 	* Function: getTestCaseName
 	* Author: Rory Cruickshank

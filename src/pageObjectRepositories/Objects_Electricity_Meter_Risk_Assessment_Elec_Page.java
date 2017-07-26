@@ -240,7 +240,7 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement btn_Abort(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.xpath("//*[@ng-click='abort()']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

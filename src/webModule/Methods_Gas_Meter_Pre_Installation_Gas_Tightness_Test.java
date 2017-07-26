@@ -79,7 +79,7 @@ public class Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test{
 		Log.info(sTestCaseName + " | Drop In Pressure - No radio button clicked");
 		}
 		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.lbl_Pre_Installation_Gas_Tightness_Test_Complete(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Suitable for Smart Installation Complete Label displayed");
+		Log.info(sTestCaseName + " | Pre Installation Gas Tightness Test Complete Label displayed");
 		}
 		
 		//Take a screenshot to show what we've done

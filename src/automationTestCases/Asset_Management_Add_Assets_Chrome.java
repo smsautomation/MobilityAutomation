@@ -17,6 +17,8 @@
 package automationTestCases;
 
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -64,7 +66,7 @@ public class Asset_Management_Add_Assets_Chrome {
 	    
 	   	    			    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    System.out.println("driver =" + driver);
 	    driver.findElement(By.id("btn")).isDisplayed();
 	    Log.info("Login button displayed");
@@ -80,6 +82,8 @@ public class Asset_Management_Add_Assets_Chrome {
 		Methods_Login.viewPage(driver, sTestCaseName);
 			
 		Methods_Login.addSuccessValues(driver, sTestCaseName);
+		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 			
@@ -93,7 +97,7 @@ public class Asset_Management_Add_Assets_Chrome {
 		Methods_Asset_Management_Van_List.viewPage(driver, sTestCaseName);
 			
 		//Invoke Method to add assets to van 
-		Methods_Asset_Management_Van_List.addSuccessValues(driver, sTestCaseName);
+		Methods_Asset_Management_Van_List.addSuccessValues(driver, sTestCaseName, 137);
 }
 		
 	//Log out

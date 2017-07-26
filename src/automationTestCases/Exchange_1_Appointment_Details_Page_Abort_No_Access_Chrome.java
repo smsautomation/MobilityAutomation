@@ -58,7 +58,7 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 		//Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 			    
@@ -103,10 +103,12 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_No(driver).click();
 		Objects_Appointment_Details_Page.btn_Customer_Contact_Supplier_Yes(driver).click();
 		Objects_Appointment_Details_Page.btn_Appointment_Reschedule_No(driver).click();
+		Utils.takeScreenshot(driver, sTestCaseName + "-addCustomerContactQuestions");
 		
 		//Verify Abort No Access Button displayed
 		Objects_Appointment_Details_Page.btn_Abort_No_Access(driver).isDisplayed();
 		Log.info("Abort No Access Button displayed as expected");	
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortNoAccessButtonDisplayed");
 		
 		//Click Abort No Access button to bring up Abort page 
 		Objects_Appointment_Details_Page.btn_Abort_No_Access(driver).click();
@@ -114,6 +116,7 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 		//Verify Abort No Access page displayed
 		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 		
 	}
 	

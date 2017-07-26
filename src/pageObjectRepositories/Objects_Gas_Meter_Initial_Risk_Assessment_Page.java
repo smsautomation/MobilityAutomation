@@ -147,12 +147,12 @@ public class Objects_Gas_Meter_Initial_Risk_Assessment_Page {
 	    return element;
 	}
 	
-	public static WebElement lbl_Elec_Meter_Procedure_Fail(WebDriver driver){
+	public static WebElement lbl_Gas_Meter_Procedure_Fail(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/div[3]/h4"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/div[3]/div[1]/h4"));
  		}catch(Exception e){
-			Log.error(sRepositoryName + " | lbl_Elec_Meter_Procedure_Fail not found | Exception desc : "+e.getMessage());		
+			Log.error(sRepositoryName + " | lbl_Gas_Meter_Procedure_Fail not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
@@ -170,7 +170,7 @@ public class Objects_Gas_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement lbl_Initial_Risk_Assessment_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[1]/div/div[2]"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/riskassessinitial/div/div[1]/div/div[1]/h4"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Initial_Risk_Assessment_Complete not found | Exception desc : "+e.getMessage());		
  		} 

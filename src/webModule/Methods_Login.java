@@ -73,7 +73,7 @@ public class Methods_Login{
 		}
 		Objects_Login_Page.Password(driver).click();
 		Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on");{
-		Log.info(sTestCaseName + " | Username entered");
+		Log.info(sTestCaseName + " | Password entered");
 		}
 		Objects_Login_Page.btn_Login(driver).click();{
 		Log.info(sTestCaseName + " | Login button clicked");

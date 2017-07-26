@@ -1027,6 +1027,27 @@ public class Objects_Abort_Page {
      		} 
     	    return element;
     	}
+       
+        public static WebElement lbl_Abort_Gas_Meter_Reason_Codes(WebDriver driver){
+       	 
+    		try{
+    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[1]"));
+     		}catch(Exception e){
+    			Log.error(sRepositoryName + " | lbl_Abort_Gas_Meter_Reason_Codes not found | Exception desc : "+e.getMessage());		
+     		} 
+    	    return element;
+    	}
+        
+        public static WebElement lbl_Abort_Risk_Reason_Codes(WebDriver driver){
+          	 
+    		try{
+    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[1]"));
+     		}catch(Exception e){
+    			Log.error(sRepositoryName + " | lbl_Abort_Risk_Reason_Codes not found | Exception desc : "+e.getMessage());		
+     		} 
+    	    return element;
+    	}
+        
         
     }       
 //END OF FIRST_UTILITY_ADDITIONAL_QUESTIONS METHODS

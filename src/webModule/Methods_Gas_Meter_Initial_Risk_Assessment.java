@@ -166,8 +166,11 @@ public class Methods_Gas_Meter_Initial_Risk_Assessment{
 		Objects_Gas_Meter_Initial_Risk_Assessment_Page.btn_Reported_Incident_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported Incident - Yes radio button clicked");
 		}
-		Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Elec_Meter_Procedure_Fail(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Elec Meter Procedure Fail Label displayed");
+		Objects_Gas_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_No(driver).click();{
+		Log.info(sTestCaseName + " | OK to Proceed - No radio button clicked");
+		}
+		Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Gas_Meter_Procedure_Fail(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Gas Meter Procedure Fail Label displayed");
 		}
 				
 		//Take a screenshot to show what we've done

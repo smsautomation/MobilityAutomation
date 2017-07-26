@@ -89,7 +89,7 @@ public class Asset_Management_Stock_Take_IE {
 		Methods_Asset_Management_Stock_Take.viewPage(driver, sTestCaseName);
 		
 		//Invoke Method to add assets in Stock Take 
-		Methods_Asset_Management_Stock_Take.addSuccessValues(driver, sTestCaseName);
+		Methods_Asset_Management_Stock_Take.addSuccessValues(driver, sTestCaseName, 140);
 	}
 	
 	//Log out

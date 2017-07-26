@@ -1,10 +1,10 @@
 /* *******************************************************************
-* Test Case Name: Exchange_11_Elec_Risk_Assessment_Elec_Abort_Chrome
+* Test Case Name: Exchange_11_Elec_Risk_Assessment_Elec_Abort_IE
 * Author: Iain Storrie
 * Date: 07/07/2017
 * Purpose: This test ensure that a user can abort an appointment from the 
 * Elec Risk Assessment - Elec page where the risk assessment fails on the 
-* Chrome browser for an Exchange 11 job
+* IE browser for an Exchange 11 job
 *
 **********************************************************************
 * Change Log:
@@ -16,6 +16,8 @@
 *********************************************************************/
 
 package automationTestCases;
+
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
@@ -32,7 +34,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Pag
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
-public class Exchange_11_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
+public class Exchange_11_Elec_Risk_Assessment_Page_Abort_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
@@ -58,7 +60,7 @@ public class Exchange_11_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -75,7 +77,7 @@ public class Exchange_11_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[149]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[150]/div/div[1]/div/div[1]/span[1]/span")).click();
 		
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -85,15 +87,15 @@ public class Exchange_11_Elec_Risk_Assessment_Elec_Page_Abort_Chrome {
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 92);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 92);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 92);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();

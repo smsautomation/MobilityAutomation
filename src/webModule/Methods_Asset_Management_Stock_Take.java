@@ -97,8 +97,10 @@ public class Methods_Asset_Management_Stock_Take{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void addSuccessValues(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
+		getTableValues(iRow);
+		
 		//Add Assets to the van list
 		
 		Objects_Asset_Management_Stock_Take_Page.txt_Asset_Serial_1(driver).click();

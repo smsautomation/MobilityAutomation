@@ -15,7 +15,7 @@ public class Methods_Appointment_Details{
 	private static String sMeterTypeElec;
 	private static String sJobDescriptionElec;
 	private static String sMeterLocationElec;
-	private static String sMeterTypeGas;
+	//private static String sMeterTypeGas;
 	private static String sJobDescriptionGas;
 	private static String sCustomerAddress;
 	private static String sContactNumber;
@@ -32,7 +32,7 @@ public class Methods_Appointment_Details{
 	private static String sElecMeterSerialNumber;
 	private static String sSSCCode;
 	private static String sGasMeterSerialNumber;
-	private static String sMeterLocationGas;	
+//	private static String sMeterLocationGas;	
 	
 	
 	/* **************************************************************************************************
@@ -60,7 +60,7 @@ public class Methods_Appointment_Details{
 		sMeterTypeElec = Utils.assignStringVariable("E_METER_TYPE", iRow);
 		sJobDescriptionElec = Utils.assignStringVariable("E_JOB_DESCRIPTION", iRow);
 		sMeterLocationElec = Utils.assignStringVariable("E_METER_LOCATION", iRow);
-		sMeterTypeGas = Utils.assignStringVariable("G_METER_TYPE", iRow);
+		//sMeterTypeGas = Utils.assignStringVariable("G_METER_TYPE", iRow);
 		sJobDescriptionGas = Utils.assignStringVariable("G_JOB_DESCRIPTION", iRow);
 		sCustomerAddress = Utils.assignStringVariable("CUSTOMER_ADDRESS", iRow);
 		sContactNumber = Utils.assignStringVariable("CONTACT_TEL", iRow);
@@ -77,7 +77,7 @@ public class Methods_Appointment_Details{
 		sElecMeterSerialNumber = Utils.assignStringVariable("E_ASSET_SERIAL_NO", iRow);
 		sSSCCode = Utils.assignStringVariable("E_SSC", iRow);
 		sGasMeterSerialNumber = Utils.assignStringVariable("G_ASSET_SERIAL_NO", iRow);
-		sMeterLocationGas = Utils.assignStringVariable("G_METER_LOCATION", iRow);
+		//sMeterLocationGas = Utils.assignStringVariable("G_METER_LOCATION", iRow);
 		
 	//END OF GET TABLE VALUES METHOD
 	}
@@ -100,6 +100,7 @@ public class Methods_Appointment_Details{
 	****************************************************************************************************/	
 	public static void viewJobDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
+		getTableValues(iRow);
 				
 		//Check that the MPAN is shown
 		if (sMPAN.length() > 0){
@@ -143,11 +144,13 @@ public class Methods_Appointment_Details{
 		Log.info(sTestCaseName + " | \"" + sMeterLocationElec + "\" displayed as Meter Location Elec");
 		}
 		
+		/*
 		//Check that the Meter Type Gas is shown
 		if (sMeterTypeGas.length() > 0){
 			sMeterTypeGas = Objects_Appointment_Details_Page.Job_Details.lbl_Meter_Type_Gas(driver).getText();
 		Log.info(sTestCaseName + " | \"" + sMeterTypeGas + "\" displayed as Meter Type Gas");
 		}
+		*/
 		
 		//Check that the Job Description Gas is shown
 		if (sJobDescriptionGas.length() > 0){
@@ -155,12 +158,13 @@ public class Methods_Appointment_Details{
 		Log.info(sTestCaseName + " | \"" + sJobDescriptionGas + "\" displayed as Job Description Gas");
 		}
 		
+		/*
 		//Check that the Meter Location Gas is shown
 		if (sMeterLocationGas.length() > 0){
 			sMeterLocationGas = Objects_Appointment_Details_Page.Job_Details.lbl_Meter_Location_Gas(driver).getText();
 		Log.info(sTestCaseName + " | \"" + sMeterLocationGas + "\" displayed as Meter Location Gas");
 		}
-
+		*/
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-viewJobDetails");
 		
@@ -185,6 +189,7 @@ public class Methods_Appointment_Details{
 	****************************************************************************************************/	
 	public static void viewCustomerDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
+		getTableValues(iRow);
 				
 		//Check that the Customer Name is shown
 		if (sCustomerName.length() > 0){
@@ -361,17 +366,21 @@ public class Methods_Appointment_Details{
 		Log.info(sTestCaseName + " | \"" + sGasMeterSerialNumber + "\" displayed as Gas Meter Serial Number");
 		}
 		
+		/*
 		//Check that the Meter Type Gas is shown
 		if (sMeterTypeGas.length() > 0){
 			sMeterTypeGas = Objects_Appointment_Details_Page.Meter_Details.lbl_Meter_Type_Gas(driver).getText();
 		Log.info(sTestCaseName + " | \"" + sMeterTypeGas + "\" displayed as Meter Type Gas");
 		}
+		*/
 		
+		/*
 		//Check that the Meter Location Gas is shown
 		if (sMeterLocationGas.length() > 0){
 			sMeterLocationGas = Objects_Appointment_Details_Page.Meter_Details.lbl_Meter_Location_Gas(driver).getText();
 		Log.info(sTestCaseName + " | \"" + sMeterLocationGas + "\" displayed as Meter Location Gas");
 		}
+		*/
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-viewJobDetails");

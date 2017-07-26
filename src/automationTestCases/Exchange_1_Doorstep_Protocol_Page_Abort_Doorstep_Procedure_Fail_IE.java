@@ -86,15 +86,15 @@ public class Exchange_1_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE 
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 4);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 4);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 4);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -104,9 +104,12 @@ public class Exchange_1_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE 
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_Yes(driver).click();
 			
 		//Click Depart Button to progress to Doorstep Protocol Page
+		Objects_Appointment_Details_Page.btn_Depart(driver).getLocation();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-			
+		
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	
@@ -131,6 +134,7 @@ public class Exchange_1_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE 
 		//Verify Abort No Access page displayed
 		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 				
 	}
 	

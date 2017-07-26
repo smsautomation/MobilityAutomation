@@ -135,7 +135,7 @@ public static class Sidebar{
 	public static WebElement btn_Access_Site_Gained_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("radio1"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[2]/div[4]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Access_Site_Gained_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -145,7 +145,7 @@ public static class Sidebar{
 	public static WebElement btn_Access_Site_Gained_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("radio2"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[2]/div[4]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Access_Site_Gained_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -155,7 +155,7 @@ public static class Sidebar{
 	public static WebElement btn_Customer_Onsite_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("radio3"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[3]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Onsite_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -165,7 +165,7 @@ public static class Sidebar{
 	public static WebElement btn_Customer_Onsite_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("radio4"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[3]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Onsite_No not found | Exception desc : "+e.getMessage());		
  		} 

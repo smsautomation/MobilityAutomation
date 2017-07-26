@@ -61,7 +61,7 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -88,15 +88,15 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 11);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 11);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 11);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -106,9 +106,12 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_Yes(driver).click();
 		
 		//Click Depart Button to progress to Doorstep Protocol Page
+		Objects_Appointment_Details_Page.btn_Depart(driver).getLocation();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-		
+					
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	
@@ -151,7 +154,7 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 	
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Suitable for Smart Installation initial elements displayed as expected");
+		Log.info("Gas Meter Capture Initial Photo Of Gas Installation initial elements displayed as expected");
 					
 		//Invoke Method to complete a successful photo capture 
 		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.addSuccessValues(driver, sTestCaseName);
@@ -172,8 +175,10 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Log.info("Abort button clicked");
 						
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Gas_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
+					
 	}
 	
 	//Log out

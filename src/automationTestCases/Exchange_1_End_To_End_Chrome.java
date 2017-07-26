@@ -74,7 +74,7 @@ public class Exchange_1_End_To_End_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -101,15 +101,15 @@ public class Exchange_1_End_To_End_Chrome {
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 5);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 5);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 1);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 5);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -119,9 +119,12 @@ public class Exchange_1_End_To_End_Chrome {
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_Yes(driver).click();
 		
 		//Click Depart Button to progress to Doorstep Protocol Page
+		Objects_Appointment_Details_Page.btn_Depart(driver).getLocation();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-		
+				
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	
