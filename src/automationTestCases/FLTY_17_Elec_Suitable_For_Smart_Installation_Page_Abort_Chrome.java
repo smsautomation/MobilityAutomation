@@ -60,7 +60,7 @@ public class FLTY_17_Elec_Suitable_For_Smart_Installation_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -159,7 +159,6 @@ public class FLTY_17_Elec_Suitable_For_Smart_Installation_Page_Abort_Chrome {
 		//Invoke Method to complete a successful capture warrant call data
 		Methods_Electricity_Meter_Capture_Warrant_Call_Data_Elec.addSuccessValues(driver, sTestCaseName);
 				
-		
 		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
 		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
 		Log.info("Risk Assessment - Elec page displayed as expected");	
@@ -180,7 +179,7 @@ public class FLTY_17_Elec_Suitable_For_Smart_Installation_Page_Abort_Chrome {
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Elec_Meter_Accessible_Yes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
 	}
 	

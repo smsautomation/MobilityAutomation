@@ -86,6 +86,16 @@ public class Objects_Gas_Meter_Remove_Meter_Page {
  		} 
 	    return element;
 	}
+	
+	public static WebElement lbl_Gas_Meter_Serial_Number(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/removemeter/div/div[2]/div/div[1]/div[1]/div[2]"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Gas_Meter_Serial_Number not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 		
 	public static WebElement lbl_Gas_Remove_Meter_Complete(WebDriver driver){
 	   	 

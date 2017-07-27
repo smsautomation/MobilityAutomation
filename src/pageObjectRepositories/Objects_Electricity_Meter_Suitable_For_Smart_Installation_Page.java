@@ -140,7 +140,7 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Next_Section(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btnNextrae"));
+			element = driver.findElement(By.xpath("//*[@id='btnNextSmart']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 

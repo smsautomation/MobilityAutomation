@@ -40,7 +40,7 @@ public class Objects_Gas_Meter_Remove_Asset_Page {
     public static WebElement cbx_Remove_Asset_Status(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("select1"));
+			element = driver.findElement(By.xpath(".//*[@id='select1']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Remove_Asset_Status not found | Exception desc : "+e.getMessage());		
  		} 

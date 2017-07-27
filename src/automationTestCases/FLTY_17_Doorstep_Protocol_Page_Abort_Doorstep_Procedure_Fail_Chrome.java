@@ -56,7 +56,7 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	  //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		

@@ -25,6 +25,7 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointments_List_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 
 public class Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_Chrome {
@@ -52,9 +53,10 @@ public class Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Detail
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
-	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
-		Log.info("First Appointment Header displayed");
+	    //Verify that we are on the correct page
+	    Thread.sleep(2000);
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
+	    Log.info("Login button displayed");
 		
 	}
 	

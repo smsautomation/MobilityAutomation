@@ -18,6 +18,7 @@ package automationTestCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -63,7 +64,7 @@ public class NMEX_5_End_To_End_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -172,7 +173,16 @@ public class NMEX_5_End_To_End_Chrome {
 												
 		//Invoke Method to complete current meter details page 
 		Methods_Electricity_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
-																																	
+		
+		//Capture current meter reading
+		Objects_Electricity_Meter_Current_Meter_Details_Page.txt_Capture_Meter_Reading(driver).click();
+		Objects_Electricity_Meter_Current_Meter_Details_Page.txt_Capture_Meter_Reading(driver).sendKeys("12345");
+		Objects_Electricity_Meter_Current_Meter_Details_Page.txt_Capture_Meter_Reading(driver).sendKeys(Keys.TAB);{
+		Log.info(sTestCaseName + " | Meter Reading entered");
+		}
+		
+		driver.findElement(By.id("btnNextread")).click();
+		
 		//Verify that we are on the Job Completion Energy Efficiency Information page
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
 		Log.info("Job Completion Energy Efficient Information page displayed as expected");

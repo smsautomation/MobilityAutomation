@@ -76,7 +76,7 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		

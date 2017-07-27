@@ -63,8 +63,6 @@ public class Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation{
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful suitable for smart installation
-		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.btn_Capture_Photo(driver).getLocation();
-		Thread.sleep(2000);
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.btn_Capture_Photo(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo button clicked");
 		}

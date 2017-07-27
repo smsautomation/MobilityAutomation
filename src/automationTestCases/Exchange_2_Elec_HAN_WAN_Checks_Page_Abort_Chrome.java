@@ -64,7 +64,7 @@ public class Exchange_2_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -160,12 +160,9 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 				
-		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
-		
-		//Invoke Method to complete an aborted suitable for smart installation 
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addAbortValues(driver, sTestCaseName);
+		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
 		
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
@@ -178,7 +175,7 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 					
-		//Invoke Method to complete a successful suitable for smart installation 
+		//Invoke Method to complete a successful photo capture 
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
 			
 		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page

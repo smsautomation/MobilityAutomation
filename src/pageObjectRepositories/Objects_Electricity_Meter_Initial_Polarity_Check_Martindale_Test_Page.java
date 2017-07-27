@@ -50,7 +50,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	public static WebElement btn_Socket_Safety_Test_Pass(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[2]/div[2]/div[1]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[2]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Socket_Safety_Test_Pass not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +60,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	public static WebElement btn_Socket_Safety_Test_Fail(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[2]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[2]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Socket_Safety_Test_Fail not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	public static WebElement btn_Capture_Photo(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.xpath("//text()[contains(.,'CAPTURE PHOTO OF PRE INSTALLATION MARTINDALE TEST')]/ancestor::button[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	public static WebElement btn_Sockets_Reverse_Polarity_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[5]/div[2]/div[1]/label/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[5]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Sockets_Reverse_Polarity_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	public static WebElement btn_Sockets_Reverse_Polarity_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[5]/div[2]/div[2]/label/span/span"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[5]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Sockets_Reverse_Polarity_No not found | Exception desc : "+e.getMessage());		
  		} 

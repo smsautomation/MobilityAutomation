@@ -105,9 +105,12 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter{
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Cut_Out_Fail(driver).click();{
 		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
 		}
+		/*
+		 * Thread.sleep(2000);
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Meter_Fail(driver).click();{
 		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
 		}
+		*/
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Reported_Team_Manager_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported To Team Manager - Yes radio button clicked");
 		}

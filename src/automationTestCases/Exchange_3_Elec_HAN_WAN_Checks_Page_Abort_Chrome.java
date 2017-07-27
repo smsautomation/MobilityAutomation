@@ -64,7 +64,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -160,9 +160,9 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 				
-		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
+		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
 		
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);

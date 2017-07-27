@@ -1,6 +1,5 @@
 package webModule;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import pageObjectRepositories.Objects_Gas_Meter_Remove_Meter_Page;
@@ -72,14 +71,16 @@ public class Methods_Gas_Meter_Remove_Meter{
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful remove meter 
+		/*
 		Objects_Gas_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).click();
 		Objects_Gas_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).sendKeys("No");
 		Objects_Gas_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | No Fault Found selected from Status of Asset combobox");
 		}
+		*/
 		Objects_Gas_Meter_Remove_Meter_Page.txt_Removed_Meter_Readings(driver).click();
 		Objects_Gas_Meter_Remove_Meter_Page.txt_Removed_Meter_Readings(driver).sendKeys("12345");
-		Objects_Gas_Meter_Remove_Meter_Page.lbl_Gas_Remove_Meter(driver).click();{
+		Objects_Gas_Meter_Remove_Meter_Page.lbl_Gas_Meter_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | Meter Readings entered in the Removed Meter Readings textbox");
 		}
 		Objects_Gas_Meter_Remove_Meter_Page.lbl_Gas_Remove_Meter_Complete(driver).isDisplayed();{

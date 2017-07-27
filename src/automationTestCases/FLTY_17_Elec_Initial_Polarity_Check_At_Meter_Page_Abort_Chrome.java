@@ -63,7 +63,7 @@ public class FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 	    driver = Utils.openBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
-	    Thread.sleep(10000);
+	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 		
@@ -170,8 +170,8 @@ public class FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
 				
-		//Verify correct page elements displayed after Suitable for Smart Installation - No clicked
-		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableNoPage(driver, sTestCaseName);
+		//Verify correct page elements displayed after Suitable for Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Suitable for Smart Installation No elements displayed as expected");
 		
 		//Invoke Method to complete a successful suitable for smart installation 
@@ -215,7 +215,7 @@ public class FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Elec_Meter_Accessible_Yes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
 	}
 	

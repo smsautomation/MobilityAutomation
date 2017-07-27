@@ -40,7 +40,7 @@ public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	public static WebElement btn_Capture_Photo(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.xpath("//text()[contains(.,'CAPTURE PHOTO OF CURRENT FULL METER INSTALLATION')]/ancestor::button[1]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 

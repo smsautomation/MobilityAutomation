@@ -149,6 +149,8 @@ public class Methods_Electricity_Meter_Suitable_For_Smart_Installation{
 		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.cbx_Equipment_Reposition_Required(driver).sendKeys(Keys.TAB);{
 		Log.info(sTestCaseName + " | No Reposition Required selected");
 		}
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.btn_Next_Section(driver).getLocation();
+		Thread.sleep(2000);
 		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}

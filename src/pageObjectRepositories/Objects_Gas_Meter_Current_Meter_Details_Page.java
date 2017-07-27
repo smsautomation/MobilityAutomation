@@ -80,7 +80,7 @@ public class Objects_Gas_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Existing_Gas_Meter_Correct_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[1]/label"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/currentmeter/div/div[2]/div[6]/div[2]/div[1]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Existing_Gas_Meter_Correct_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Gas_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Existing_Gas_Meter_Correct_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/currentmeter/div/div[2]/div[7]/div[2]/div[2]/label"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/currentmeter/div/div[2]/div[6]/div[2]/div[2]/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Existing_Gas_Meter_Correct_No not found | Exception desc : "+e.getMessage());		
  		} 

@@ -90,7 +90,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Reported_Incident_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[1]/label"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[5]/div/div[2]/div[1]/label/span"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reported_Incident_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -160,7 +160,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	public static WebElement btn_Abort(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.xpath("//*[@ng-click='abort()']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

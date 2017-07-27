@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome">
+      <class name="automationTestCases.RMVE_1_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome">
         <methods>
+          <include name="afterMethod"/>
           <include name="beforeMethod"/>
           <include name="main"/>
-          <include name="afterMethod"/>
         </methods>
-      </class> <!-- automationTestCases.Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome -->
+      </class> <!-- automationTestCases.RMVE_1_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

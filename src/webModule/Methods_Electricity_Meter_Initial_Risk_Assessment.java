@@ -95,7 +95,7 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).isDisplayed() == true){
 			Log.info(sTestCaseName + " | AIRline Reference Number textbox displayed");		
 		}
-		
+		/*		
 		if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_Yes(driver).isDisplayed() == true){
 			Log.info(sTestCaseName + " | OK to Proceed - Yes radio button displayed");		
 		}
@@ -103,7 +103,7 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_No(driver).isDisplayed() == true){
 			Log.info(sTestCaseName + " | OK to Proceed - No radio button displayed");		
 		}
-		
+		*/
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-viewSmellGasPage");
 		
@@ -169,6 +169,9 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Reported_Incident_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported Incident - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_No(driver).click();{
+		Log.info(sTestCaseName + " | OK to Proceed - No radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Elec_Meter_Procedure_Fail(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Elec Meter Procedure Fail Label displayed");
