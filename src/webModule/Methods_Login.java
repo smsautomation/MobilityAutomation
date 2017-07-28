@@ -68,11 +68,13 @@ public class Methods_Login{
 		//Add correct responses for a successful Doorstop Procedure
 		
 		Objects_Login_Page.Username(driver).click();
-		Objects_Login_Page.Username(driver).sendKeys("Automation");{
+		Objects_Login_Page.Username(driver).sendKeys("Automation2");{
+		//Objects_Login_Page.Username(driver).sendKeys("Automation");{
 		Log.info(sTestCaseName + " | Username entered");
 		}
 		Objects_Login_Page.Password(driver).click();
-		Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on");{
+		Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on2");{
+		//Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on");{
 		Log.info(sTestCaseName + " | Password entered");
 		}
 		Objects_Login_Page.btn_Login(driver).click();{

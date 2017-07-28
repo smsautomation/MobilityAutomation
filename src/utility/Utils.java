@@ -35,7 +35,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -223,27 +222,17 @@ public class Utils {
 	        case "Chrome" :
 	        	
 	        	
-	        	//code for Grid sessions
-	        	/*
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	//WebDriver driver = new ChromeDriver(options);
-	        	*/ 
-	        	 
-	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
-	       	   	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
-	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-	        	DesiredCapabilities Capability = DesiredCapabilities.chrome();
-	        	Capability.setBrowserName("chrome");
-	        	Capability.setPlatform(Platform.VISTA); 
 	        	//RemoteWebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), Capability);
 	        	RemoteWebDriver driver = new RemoteWebDriver(new URL("http://137.223.166.118:5555/wd/hub"), Capability);
 	        	System.out.println("driver =" + driver);
-								
+					        				
 	        	driver.manage().window().maximize();
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
 	            Log.info("Implicit wait applied on the driver for 20 seconds");

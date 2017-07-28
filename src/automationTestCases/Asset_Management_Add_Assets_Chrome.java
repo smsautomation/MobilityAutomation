@@ -20,55 +20,54 @@ package automationTestCases;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.xml.DOMConfigurator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//Add for Grid session
 //import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
-//import pageObjectRepositories.Objects_Login_Page;
+import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Asset_Management_Van_List_Page;
-
-
-
 
 
 
 public class Asset_Management_Add_Assets_Chrome {
 
 	//Declare our test variables
-	public WebDriver driver;	
-	//public RemoteWebDriver driver;	
+	public WebDriver driver;
+	//Add for Grid session
+	//public RemoteWebDriver driver;
 	private String sTestCaseName;
 	private int iTestCaseRow;
-		
+	
 	//Get data and open the browser
 	@BeforeMethod
 	public void beforeMethod() throws Exception {
-		
+	
 		DOMConfigurator.configure("log4j.xml");
-		
+	
 	    sTestCaseName = this.toString();
-		
+	
 	    sTestCaseName = Utils.getTestCaseName(this.toString());
-		
+	
 	    Log.startTestCase(sTestCaseName);
-		
+	
 	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
-		
+	
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
-		
+	
 	    driver = Utils.openBrowser(iTestCaseRow);
-	    //driver = (RemoteWebDriver) Utils.openBrowser(iTestCaseRow);
+	    //Add for Grid session
+	    //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
 	    
 	   	    			    
 	    //Verify that we are on the correct page
 	    Thread.sleep(2000);
 	    System.out.println("driver =" + driver);
-	    driver.findElement(By.id("btn")).isDisplayed();
+	    Objects_Login_Page.btn_Login(driver).isDisplayed();
 	    Log.info("Login button displayed");
 				    
 		}
