@@ -126,7 +126,7 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		Log.info("Doorstep Protocol page arrive elements displayed as expected");
 		
 		//Invoke Method to complete doorstep protocol questions for a success outcome 
-		Methods_Doorstep_Protocol.addSuccessValues(driver, sTestCaseName);
+		Methods_Doorstep_Protocol.addSuccessValuesFLTY17(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();

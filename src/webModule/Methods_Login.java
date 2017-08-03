@@ -65,7 +65,7 @@ public class Methods_Login{
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
-		//Add correct responses for a successful Doorstop Procedure
+		//Add correct responses for a successful login Procedure
 		
 		Objects_Login_Page.Username(driver).click();
 		Objects_Login_Page.Username(driver).sendKeys("Automation2");{

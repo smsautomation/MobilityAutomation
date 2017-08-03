@@ -135,7 +135,7 @@ public class Exchange_1_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chr
 		Objects_Doorstep_Protocol_Page.btn_Abort_No_Access(driver).click();
 			
 		//Verify Abort No Access page displayed
-		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Not_Convenient_With_Customer(driver).isDisplayed();
+		Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");		
 	}

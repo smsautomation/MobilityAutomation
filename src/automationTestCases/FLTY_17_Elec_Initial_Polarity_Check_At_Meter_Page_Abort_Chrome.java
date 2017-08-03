@@ -133,7 +133,7 @@ public class FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Log.info("Doorstep Protocol page arrive elements displayed as expected");
 		
 		//Invoke Method to complete doorstep protocol questions for a success outcome 
-		Methods_Doorstep_Protocol.addSuccessValues(driver, sTestCaseName);
+		Methods_Doorstep_Protocol.addSuccessValuesFLTY17(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
@@ -221,8 +221,9 @@ public class FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

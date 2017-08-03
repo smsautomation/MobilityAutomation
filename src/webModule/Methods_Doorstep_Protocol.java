@@ -208,5 +208,39 @@ public class Methods_Doorstep_Protocol{
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesFLTY17
+	* Author: Iain Storrie
+	* Date: 03/08/2017
+	* Purpose: This method adds the required responses in the Doorstep Protocol page in order to force a 
+	* successful doorstep procedure for the FLTY17 workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesFLTY17(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful Doorstop Procedure
+		
+		Objects_Doorstep_Protocol_Page.btn_Access_Site_Gained_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Access Site Gained - Yes radio button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Onsite(driver).click();{
+		Log.info(sTestCaseName + " | Onsite button clicked");
+		}
+						
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES FLTY17 METHOD
+	}
+	
 //END OF METHODS
 }
