@@ -19,6 +19,8 @@ package automationTestCases.automationTestCases;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//Add for Grid session
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -30,7 +32,9 @@ import pageObjectRepositories.Objects_Appointment_Details_Page;
 public class Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Details_Page_IE {
 
 	//Declare our test variables
-	public WebDriver driver;	
+	public WebDriver driver;
+	//Add for Grid session
+	//public RemoteWebDriver driver;
 	private String sTestCaseName;
 	private int iTestCaseRow;
 	
@@ -51,6 +55,8 @@ public class Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Detail
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
+	    //Add for Grid session
+	    //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
 	    
 		//Verify that we are on the correct page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();

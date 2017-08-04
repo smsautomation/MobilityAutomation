@@ -174,9 +174,9 @@ public class Exchange_2_Elec_Suitable_For_Smart_Installation_Page_Abort_Chrome {
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
-		Utils.takeScreenshot(driver, sTestCaseName + "-addAbortValues");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

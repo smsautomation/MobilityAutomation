@@ -218,8 +218,9 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 		Log.info("Abort button clicked");
 		
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Elec_Meter_Accessible_Yes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

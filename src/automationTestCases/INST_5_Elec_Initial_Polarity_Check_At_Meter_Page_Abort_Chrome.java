@@ -184,6 +184,7 @@ public class INST_5_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 		//Verify Abort page displayed
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

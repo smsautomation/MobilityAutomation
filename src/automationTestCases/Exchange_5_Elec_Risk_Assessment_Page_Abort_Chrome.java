@@ -159,6 +159,7 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		//Verify Abort page displayed
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	}
 	
 	//Log out

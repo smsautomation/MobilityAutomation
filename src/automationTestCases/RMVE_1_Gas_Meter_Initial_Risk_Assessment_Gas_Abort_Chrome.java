@@ -144,7 +144,7 @@ public class RMVE_1_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome {
 		//Verify Abort page displayed
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Gas_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
-		
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	
 	}
 	

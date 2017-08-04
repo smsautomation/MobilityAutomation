@@ -21,6 +21,8 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+//Add for Grid session
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -68,6 +70,8 @@ public class FLTY_17_End_To_End_IE {
 
 	//Declare our test variables
 	public WebDriver driver;	
+	//Add for Grid session
+	//public RemoteWebDriver driver;
 	private String sTestCaseName;
 	private int iTestCaseRow;
 	
@@ -88,6 +92,8 @@ public class FLTY_17_End_To_End_IE {
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
 	    driver = Utils.openBrowser(iTestCaseRow);
+	    //Add for Grid session
+	    //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
 	    
 	    //Verify that we are on the correct page
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

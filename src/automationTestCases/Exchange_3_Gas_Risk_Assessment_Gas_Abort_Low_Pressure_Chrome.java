@@ -330,9 +330,9 @@ public class Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome {
 		Log.info("Abort button clicked");
 				
 		//Verify Abort page displayed
-		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Risk_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
-		
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 	
 	}
 	
