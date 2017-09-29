@@ -192,7 +192,7 @@ public class Methods_Gas_Meter_Suitable_For_Smart_Installation{
 		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.btn_Reschedule_Job_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Risk Assessment Pass - No radio button clicked");
 		}
-		Objects_Gas_Meter_Risk_Assessment_Gas_Page.lbl_Gas_Meter_Procedure_Fail(driver).isDisplayed();{
+		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Gas_Meter_Procedure_Fail(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Gas Meter Procedure Fail Label displayed");
 		}
 				

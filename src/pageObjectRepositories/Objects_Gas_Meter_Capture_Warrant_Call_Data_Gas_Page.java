@@ -30,8 +30,9 @@ public class Objects_Gas_Meter_Capture_Warrant_Call_Data_Gas_Page {
     public static WebElement lbl_Capture_Warrant_Call_Data_Gas(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/assessflty/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/assessflty/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_Warrant_Data"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Capture_Warrant_Call_Data_Gas not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -41,7 +42,8 @@ public class Objects_Gas_Meter_Capture_Warrant_Call_Data_Gas_Page {
 	   	 
 		try{
 			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/assessflty/div[2]/div/div/div[2]/div[1]/label/span"));
- 		}catch(Exception e){
+			
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Meter_Exchanged not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

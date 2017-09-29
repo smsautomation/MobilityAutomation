@@ -133,7 +133,7 @@ public class Exchange_1_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 			
 		//Invoke Method to complete doorstep protocol questions for a success outcome 
 		Methods_Doorstep_Protocol.addSuccessValues(driver, sTestCaseName);
-		
+		Thread.sleep(2000);
 		//Verify that we are on the Gas Meter Initial Risk Assessment page
 		Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
 		Log.info("Gas Meter Initial Risk Assessment page displayed as expected");	

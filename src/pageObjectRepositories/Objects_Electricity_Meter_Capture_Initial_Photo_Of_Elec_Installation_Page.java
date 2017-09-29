@@ -30,7 +30,7 @@ public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
     public static WebElement lbl_Capture_Initial_Photo_Of_Elec_Installation(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/initialphoto/div/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_Init_Photo"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Capture_Initial_Photo_Of_Elec_Installation not found | Exception desc : "+e.getMessage());		
  		} 
@@ -40,8 +40,9 @@ public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	public static WebElement btn_Capture_Photo(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath("//text()[contains(.,'CAPTURE PHOTO OF CURRENT FULL METER INSTALLATION')]/ancestor::button[1]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath("//text()[contains(.,'CAPTURE PHOTO OF CURRENT FULL METER INSTALLATION')]/ancestor::button[1]"));
+			element = driver.findElement(By.id("btn_Init_Photo"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -50,8 +51,9 @@ public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	   public static WebElement lbl_Capture_Initial_Photo_Of_Elec_Installation_Completed(WebDriver driver){
 	    	 
 			try{
-				element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/initialphoto/div/div[1]/div[2]"));
-	 		}catch(Exception e){
+				//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/initialphoto/div/div[1]/div[2]"));
+				element = driver.findElement(By.id("Title_Init_Photo"));
+			}catch(Exception e){
 				Log.error(sRepositoryName + " | lbl_Capture_Initial_Photo_Of_Elec_Installation_Completed not found | Exception desc : "+e.getMessage());		
 	 		} 
 		    return element;

@@ -80,7 +80,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Contact_Made_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[3]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_contact_y"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Contact_Made_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Contact_Made_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[3]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_contact_n"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Contact_Made_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Appointment_Confirm_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[4]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_app_conf_y"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appointment_Confirm_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Appointment_Confirm_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[4]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_app_conf_n"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appointment_Confirm_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,8 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Customer_Contact_Supplier_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[5]/div[2]/div[1]/label"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[5]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_cust_sup_y"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Contact_Supplier_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -130,9 +131,20 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Customer_Contact_Supplier_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[5]/div[2]/div[2]/label"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[5]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_cust_sup_n"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Contact_Supplier_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement header_Warn_Cust_Canc_Fee (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("hdr_warn_fee"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | header_Warn_Cust_Canc_Fee not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
@@ -140,7 +152,8 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Appointment_Reschedule_Yes (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[7]/div[2]/div[1]/label"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[7]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_app_re_y"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appointment_Reschedule_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -150,7 +163,8 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Appointment_Reschedule_No (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[7]/div[2]/div[2]/label"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[3]/div/ng-switch/div/callforwardform/div/div/div[1]/div[7]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_app_re_n"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Appointment_Reschedule_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -160,7 +174,8 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Depart (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath("//*[@ng-click='depart()']"));
+			//element = driver.findElement(By.xpath("//*[@ng-click='depart()']"));
+			element = driver.findElement(By.id("btn_depart"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Depart not found | Exception desc : "+e.getMessage());		
  		} 
@@ -170,7 +185,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement txt_Additional_Access_Details (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("notes"));
+			element = driver.findElement(By.id("call_fwd_notes"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Additional_Access_Details not found | Exception desc : "+e.getMessage());		
  		} 
@@ -197,6 +212,7 @@ public class Objects_Appointment_Details_Page {
 	    return element;
 	}
 	
+	//don't know if this is the same notes field as above? cannot see another notes field...
 	public static WebElement txt_Additional_Notes (WebDriver driver){
 	   	 
 		try{
@@ -210,7 +226,7 @@ public class Objects_Appointment_Details_Page {
 	public static WebElement btn_Abort_No_Access (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btnCall2"));
+			element = driver.findElement(By.id("btn_call_fwd_abort"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
  		} 

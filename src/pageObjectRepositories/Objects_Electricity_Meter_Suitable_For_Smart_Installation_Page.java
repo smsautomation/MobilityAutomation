@@ -30,7 +30,8 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
     public static WebElement lbl_Suitable_For_Smart_Installation(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[1]/div[1]/h4"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_Smart_Elec"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Suitable_For_Smart_Installation not found | Exception desc : "+e.getMessage());		
  		} 
@@ -40,7 +41,8 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Suitable_For_Smart_Installation_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[1]/div[2]/div[1]/label"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[1]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_SuitFS_y"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Suitable_For_Smart_Installation_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -50,8 +52,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Suitable_For_Smart_Installation_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[1]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[1]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_SuitFS_n")); 		
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Suitable_For_Smart_Installation_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -80,8 +83,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement lbl_Suitable_For_Smart_Installation_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[1]/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[1]/div[2]"));
+			element = driver.findElement(By.id("Title_Smart_Elec"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Suitable_For_Smart_Installation_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -90,8 +94,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Suitable_For_Dumb_Instalation_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[2]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[2]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_SuitFD_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Suitable_For_Dumb_Instalation_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -100,8 +105,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Suitable_For_Dumb_Instalation_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[2]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[2]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_SuitFD_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Suitable_For_Dumb_Instalation_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -110,8 +116,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Reschedule_Job_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_SuitFD_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reschedule_Job_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -120,8 +127,9 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Reschedule_Job_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_SuitFD_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reschedule_Job_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -140,7 +148,7 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Next_Section(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath("//*[@id='btnNextSmart']"));
+			element = driver.findElement(By.id("btn_Next_Section"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 

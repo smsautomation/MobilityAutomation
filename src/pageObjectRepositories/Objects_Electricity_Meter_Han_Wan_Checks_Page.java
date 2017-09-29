@@ -30,8 +30,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
     public static WebElement lbl_Han_Wan_Checks(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_HanWan"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Han_Wan_Checks not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -40,8 +41,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement btn_Wan_Available_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[1]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[1]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_HanWan_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Wan_Available_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -50,8 +52,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement btn_Wan_Available_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[1]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[1]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_HanWan_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Wan_Avaiable_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -100,7 +103,7 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement btn_Sufficient_Signal_Proceed_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[3]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_HanWan_y2"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,13 +113,14 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement btn_Sufficient_Signal_Proceed_No(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[3]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_HanWan_n2"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
 	
+	/*can't find this element on this screen - looking at the xpath - is this even in the correct section?
 	public static WebElement btn_Called_AIRline_Yes(WebDriver driver){
 	   	 
 		try{
@@ -125,12 +129,12 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 			Log.error(sRepositoryName + " | btn_Called_AIRline_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
-	}
+	}*/
 	
 	public static WebElement cbx_Cancellation_Abort_Reason(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("select2"));
+			element = driver.findElement(By.id("cbx_HW_Reason"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Cancellation_Abort_Reason not found | Exception desc : "+e.getMessage());		
  		} 
@@ -150,8 +154,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement lbl_Han_Wan_Checks_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[1]/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[1]/div[2]"));
+			element = driver.findElement(By.id("Title_HanWan"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Han_Wan_Checks_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

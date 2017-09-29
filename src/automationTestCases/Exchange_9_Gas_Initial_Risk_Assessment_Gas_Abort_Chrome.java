@@ -65,7 +65,6 @@ public class Exchange_9_Gas_Initial_Risk_Assessment_Gas_Abort_Chrome {
 		DOMConfigurator.configure("log4j.xml");
 	
 	    sTestCaseName = this.toString();
-	
 	    sTestCaseName = Utils.getTestCaseName(this.toString());
 	
 	    Log.startTestCase(sTestCaseName);

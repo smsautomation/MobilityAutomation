@@ -62,7 +62,7 @@ public class Methods_Gas_Meter_Remove_Asset{
 	*
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
-	
+		Log.info("addSuccessValues: Started");
 		//Add correct responses for a successful remove asset 
 		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).click();
 		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off");

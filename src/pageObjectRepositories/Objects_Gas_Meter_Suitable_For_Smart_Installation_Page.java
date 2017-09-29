@@ -147,7 +147,15 @@ public class Objects_Gas_Meter_Suitable_For_Smart_Installation_Page {
 	    return element;
 	 }
 	
-		
+	public static WebElement btn_Next_Section(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath("//*[@id='btnNextSmart']"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	 }
 			
 //END OF METHODS	    
 }

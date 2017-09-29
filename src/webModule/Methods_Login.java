@@ -80,6 +80,7 @@ public class Methods_Login{
 		Objects_Login_Page.btn_Login(driver).click();{
 		Log.info(sTestCaseName + " | Login button clicked");
 		}
+		Thread.sleep(5000);
 						
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");

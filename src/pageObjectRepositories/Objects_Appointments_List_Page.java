@@ -36,7 +36,7 @@ public class Objects_Appointments_List_Page {
     public static WebElement btn_Logout(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.className("logout-icon"));
+			element = driver.findElement(By.id("btn_top"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Logout not found | Exception desc : "+e.getMessage());		
  		} 
