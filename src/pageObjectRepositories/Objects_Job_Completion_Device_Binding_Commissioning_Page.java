@@ -60,8 +60,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_Gas_Electricity_Meter_Paired_Successfully_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[3]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[3]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_GasElecMPairSuc_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Gas_Electricity_Meter_Paired_Successfully_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -70,8 +71,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_Gas_Electricity_Meter_Paired_Successfully_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[3]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[3]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_GasElecMPairSuc_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Gas_Electricity_Meter_Paired_Successfully_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -80,8 +82,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_IHD_Paired_Successfully_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[5]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[5]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_IHDPaiSucc_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_IHD_Paired_Successfully_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -90,8 +93,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_IHD_Paired_Successfully_No(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[5]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[5]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_IHDPaiSucc_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_IHD_Paired_Successfully_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -100,8 +104,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_Full_HAN_Established_Yes(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[7]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[7]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_FulHANEst_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_HAN_Established_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -110,8 +115,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_Full_HAN_Established_No(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[7]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[2]/div[7]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_FulHANEst_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Full_HAN_Established_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

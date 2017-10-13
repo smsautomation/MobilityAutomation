@@ -63,8 +63,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement txt_Signal_Strength_Vodafone(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("input1"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[2]/div[2]/div/div[2]"));
+			element = driver.findElement(By.id("Sig1"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Signal_Strength_Vodafone not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -73,8 +74,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement txt_Signal_Strength_O2(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("input1"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[2]/div[3]/div/div[2]"));
+			element = driver.findElement(By.id("Sig2"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Signal_Strength_O2 not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -83,8 +85,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement txt_Signal_Strength_Orange(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("input1"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[2]/div[4]/div/div[2]"));
+			element = driver.findElement(By.id("Sig3"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Signal_Strength_Orange not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -93,8 +96,9 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	public static WebElement txt_Signal_Strength_TMobile(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("input1"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/wanhantest/div[2]/div[2]/div[5]/div/div[2]"));
+			element = driver.findElement(By.id("Sig4"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Signal_Strength_TMobile not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

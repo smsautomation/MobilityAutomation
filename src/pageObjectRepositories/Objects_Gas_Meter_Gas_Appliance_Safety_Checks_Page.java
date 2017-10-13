@@ -100,7 +100,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement cbx_Flue_Type(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath("select1"));
+			element = driver.findElement(By.id("select1"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Flue_Type not found | Exception desc : "+e.getMessage());		
  		} 
@@ -210,7 +210,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_All_Appliances_Tested(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_AllApp_tested"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_All_Appliances_Tested not found | Exception desc : "+e.getMessage());		
  		} 
@@ -220,7 +220,7 @@ public class Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page {
     public static WebElement btn_Submit(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_Subm_gas"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Submit not found | Exception desc : "+e.getMessage());		
  		} 

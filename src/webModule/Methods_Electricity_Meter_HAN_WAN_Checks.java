@@ -70,15 +70,29 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Wan_Available_Yes(driver).click();{
 		Log.info(sTestCaseName + " | WAN Available - Yes radio button clicked");
 		}
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).click();
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("100");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("90");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("80");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("70");{
-		Log.info(sTestCaseName + " | Signal Strength Values entered");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Values Vodafone clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("100");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for Vodafone");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value O2 clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).sendKeys("90");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for O2");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value Orange clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).sendKeys("80");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for Orange");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value TMobile clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).sendKeys("70");{
+		Log.info(sTestCaseName + " | Signal Strength Values entered for TMobile");
 		}
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Sufficient_Signal_Proceed_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");

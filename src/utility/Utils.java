@@ -57,7 +57,20 @@ public class Utils {
 	public static WebDriver driver = null;
 	//public static RemoteWebDriver driver = null;
 	
-
+	/* **************************************************************************************************
+	* Function: compareStrings
+	* Author: Greg Bliss
+	* Date: 17/03/2016
+	* Purpose: To compare two strings
+	* Arguments: str1, str2
+	* 
+	* Returns: boolean
+	****************************************************************************************************/ 
+	public static Boolean compareStrings(String str1, String str2) 
+	{
+		return str1.equals(str2);
+	}
+	
 	/* **************************************************************************************************
 	* Function: openBrowser
 	* Author: Rory Cruickshank
@@ -286,7 +299,7 @@ public class Utils {
         }
         
     }
-    
+       
 	/* **************************************************************************************************
 	* Function: selectFromCombobox
 	* Author: Rory Cruickshank

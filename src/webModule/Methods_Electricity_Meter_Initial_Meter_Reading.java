@@ -68,7 +68,7 @@ public class Methods_Electricity_Meter_Initial_Meter_Reading{
 	
 		//Add correct responses for a successful additional tests scenario 
 		Objects_Electricity_Meter_Initial_Meter_Reading_Page.txt_Capture_Meter_Reading(driver).click();
-		Objects_Electricity_Meter_Initial_Meter_Reading_Page.txt_Capture_Meter_Reading(driver).sendKeys("12345");{
+		Objects_Electricity_Meter_Initial_Meter_Reading_Page.txt_Capture_Meter_Reading(driver).sendKeys("1234567");{
 		Log.info(sTestCaseName + " | Meter reading value entered in the Capture Meter Reading textbox");
 		}
 		
@@ -76,7 +76,7 @@ public class Methods_Electricity_Meter_Initial_Meter_Reading{
 		Log.info(sTestCaseName + " | Initial Meter Reading label clicked");
 		}
 		Objects_Electricity_Meter_Initial_Meter_Reading_Page.lbl_Initial_Meter_Reading_Complete(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | New Meter Details Complete label displayed");
+		Log.info(sTestCaseName + " | Initial Meter Reading label Complete label displayed");
 		}
 		
 		//Take a screenshot to show what we've done

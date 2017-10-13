@@ -45,6 +45,7 @@ import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissionin
 import pageObjectRepositories.Objects_Job_Completion_Scan_IHD_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
 import pageObjectRepositories.Objects_Job_Completion_Energy_Efficiency_Information_Page;
+import pageObjectRepositories.Objects_Job_Completion_Smart_Education_Page;
 import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
@@ -97,7 +98,7 @@ public class Exchange_1_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[169]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[3]/div/div[1]/div/div[1]/span[1]/span")).click();
 				
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -239,7 +240,7 @@ public class Exchange_1_End_To_End_Chrome {
 			
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_New_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
+		Log.info("Gas New Meter Details initial elements displayed as expected");
 																						
 		//Invoke Method to complete Gas New Meter Details page 
 		Methods_Gas_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
@@ -283,7 +284,7 @@ public class Exchange_1_End_To_End_Chrome {
 		
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Post Installation Gas Tightness Test initial elements displayed as expected");
+		Log.info("Gas Appliance Safety Check elements displayed as expected");
 																														
 		//Invoke Method to complete Gas Appliance Safety Checks page 
 		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.addSuccessValues(driver, sTestCaseName);
@@ -331,6 +332,17 @@ public class Exchange_1_End_To_End_Chrome {
 																																		
 		//Invoke Method to complete Energy Efficiency information page 
 		Methods_Job_Completion_Energy_Efficient_Information.addSuccessValues(driver, sTestCaseName);
+			
+		//Verify that we are on the Job Completion Summary page
+		Objects_Job_Completion_Smart_Education_Page.lbl_Smart_Education(driver).isDisplayed();
+		Log.info("Job Completion Smart Education displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Smart_Education.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Summary initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Summary page 
+		Methods_Job_Completion_Smart_Education.addSuccessValues(driver, sTestCaseName);		
 			
 		//Verify that we are on the Job Completion Summary page
 		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();

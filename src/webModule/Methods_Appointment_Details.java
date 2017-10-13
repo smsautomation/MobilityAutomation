@@ -8,7 +8,8 @@ import utility.Utils;
 public class Methods_Appointment_Details{
 	
 	//Declare variables 
-	private static String sMPAN; 
+	private static String sDataMPAN; 
+	private static String sCompareStr; 
 	private static String sCustomerName;
 	private static String sPostCode;
 	private static String sSupplier;
@@ -53,7 +54,7 @@ public class Methods_Appointment_Details{
 	****************************************************************************************************/	
 	public static void getTableValues(int iRow) {
 		
-		sMPAN = Utils.assignStringVariable("E_SPR(mpan)", iRow); 
+		sDataMPAN = Utils.assignStringVariable("E_SPR(mpan)", iRow); 
 		sCustomerName = Utils.assignStringVariable("CUSTOMER_NAME", iRow);
 		sPostCode = Utils.assignStringVariable("POSTCODE", iRow);
 		sSupplier = Utils.assignStringVariable("SUPPLIER", iRow);
@@ -101,13 +102,63 @@ public class Methods_Appointment_Details{
 	public static void viewJobDetails(WebDriver driver, String sTestCaseName, int iRow) throws Exception{
 	
 		getTableValues(iRow);
-				
-		//Check that the MPAN is shown
-		if (sMPAN.length() > 0){
-			sMPAN = Objects_Appointment_Details_Page.Job_Details.lbl_MPAN(driver).getText();
-			Log.info(sTestCaseName + " | \"" + sMPAN + "\" displayed as MPAN");
+						
+		// Compare MPAN ----------------------------------------------------
+		sCompareStr = Objects_Appointment_Details_Page.Job_Details.lbl_MPAN(driver).getText();
+		if (sDataMPAN.length() > 0 && sCompareStr.length() > 0 ) {	
+			if (Utils.compareStrings(sDataMPAN.trim().toUpperCase(), sCompareStr.trim().toUpperCase())) {
+				Log.info(sTestCaseName + " | Compare data: PASS | Item: MPAN | Expected: " + sDataMPAN + " Actual: " + sCompareStr);
+			} 
+			else {
+				Log.info(sTestCaseName + " | Compare data: FAIL | Item: MPAN | Expected: " + sDataMPAN + " Actual: " + sCompareStr);
+			}
+		} 
+		else {			
+			Log.info(sTestCaseName + " | Compare data: SKIP | Item: MPAN  | Expected: " + sDataMPAN + " Actual: " + sCompareStr);
+		}
+
+		// Compare Customer name ---------------------------------------------
+		sCompareStr = Objects_Appointment_Details_Page.Job_Details.lbl_Customer_Name(driver).getText();
+		if (sCustomerName.length() > 0 && sCompareStr.length() > 0 ) {	
+			if (Utils.compareStrings(sCustomerName.trim().toUpperCase(), sCompareStr.trim().toUpperCase())) {
+				Log.info(sTestCaseName + " | Compare data: PASS  | Item: Customer name | Expected: " + sCustomerName + " Actual: " + sCompareStr);
+			} 
+			else {
+				Log.info(sTestCaseName + " | Compare data: FAIL  | Item: Customer name | Expected: " + sCustomerName + " Actual: " + sCompareStr);
+			}
+		} 
+		else {			
+			Log.info(sTestCaseName + " | Compare data: SKIP | Item: Customer name | Expected: " + sCustomerName + " Actual: " + sCompareStr);
 		}
 		
+		// Compare Post code ------------------------------------------------
+		sCompareStr = Objects_Appointment_Details_Page.Job_Details.lbl_Post_Code(driver).getText();
+		if (sPostCode.length() > 0 && sCompareStr.length() > 0 ) {	
+			if (Utils.compareStrings(sPostCode.trim().toUpperCase(), sCompareStr.trim().toUpperCase())) {
+				Log.info(sTestCaseName + " | Compare data: PASS  | Item: Postcode | Expected: " + sPostCode + " Actual: " + sCompareStr);
+			} 
+			else {
+				Log.info(sTestCaseName + " | Compare data: FAIL  | Item: Postcode | Expected: " + sPostCode + " Actual: " + sCompareStr);
+			}
+		} 
+		else {			
+			Log.info(sTestCaseName + " | Compare data: SKIP | Item: Postcode | Expected: " + sPostCode + " Actual: " + sCompareStr);
+		}	
+
+		// Compare Supplier ------------------------------------------------
+		sCompareStr = Objects_Appointment_Details_Page.Job_Details.lbl_Supplier(driver).getText();
+		if (sSupplier.length() > 0 && sCompareStr.length() > 0 ) {	
+			if (Utils.compareStrings(sSupplier.trim().toUpperCase(), sCompareStr.trim().toUpperCase())) {
+				Log.info(sTestCaseName + " | Compare data: PASS  | Item: Supplier | Expected: " + sSupplier + " Actual: " + sCompareStr);
+			} 
+			else {
+				Log.info(sTestCaseName + " | Compare data: FAIL  | Item: Supplier | Expected: " + sSupplier + " Actual: " + sCompareStr);
+			}
+		} 
+		else {			
+			Log.info(sTestCaseName + " | Compare data: SKIP | Item: Supplier | Expected: " + sSupplier + " Actual: " + sCompareStr);
+		}	
+/*
 		//Check that the Customer Name is shown
 		if (sCustomerName.length() > 0){
 			sCustomerName = Objects_Appointment_Details_Page.Job_Details.lbl_Customer_Name(driver).getText();
@@ -125,7 +176,7 @@ public class Methods_Appointment_Details{
 			sSupplier = Objects_Appointment_Details_Page.Job_Details.lbl_Supplier(driver).getText();
 		Log.info(sTestCaseName + " | \"" + sSupplier + "\" displayed as Supplier");
 		}
-		
+*/		
 		//Check that the Meter Type Elec is shown
 		if (sMeterTypeElec.length() > 0){
 			sMeterTypeElec = Objects_Appointment_Details_Page.Job_Details.lbl_Meter_Type_Elec(driver).getText();
@@ -219,12 +270,6 @@ public class Methods_Appointment_Details{
 		if (sWorkContactNumber.length() > 0){
 			sWorkContactNumber = Objects_Appointment_Details_Page.Customer_Details.lbl_Work_Contact_Number(driver).getText();
 			Log.info(sTestCaseName + " | \"" + sWorkContactNumber + "\" displayed as Contact Number");
-		}
-		
-		//Check that the MPAN is shown
-		if (sMPAN.length() > 0){
-			sMPAN = Objects_Appointment_Details_Page.Customer_Details.lbl_MPAN(driver).getText();
-			Log.info(sTestCaseName + " | \"" + sMPAN + "\" displayed as MPAN");
 		}
 		
 		//Check that the Supplier is shown

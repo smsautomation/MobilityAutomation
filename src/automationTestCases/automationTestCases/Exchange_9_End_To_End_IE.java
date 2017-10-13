@@ -320,7 +320,7 @@ public class Exchange_9_End_To_End_IE {
 		Log.info("Electricity Meter Commissioning initial elements displayed as expected");
 																								
 		//Invoke Method to complete Commissioning page 
-		Methods_Electricity_Meter_Commissioning.addSuccessValuesPrePaid(driver, sTestCaseName);
+		Methods_Electricity_Meter_Commissioning.addSuccessValuesSmart(driver, sTestCaseName);
 									
 		//Verify that we are on the Electricity Meter Post Installation Checks page
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Checks(driver).isDisplayed();

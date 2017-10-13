@@ -35,7 +35,7 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		}
 		
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Regulator Serial Number textbox displayed as expected");
+		Log.info(sTestCaseName + " | New Gas Meter Serial Number textbox displayed as expected");
 		}
 		
 		//Take a screenshot to show what we've done
@@ -65,17 +65,23 @@ public class Methods_Gas_Meter_New_Meter_Details{
 	
 		//Add correct responses for a successful new meter details 
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).click();
-		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("ACT");
+		Log.info(sTestCaseName + " | Manufacturer letter click");
+		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("LG");
+		Log.info(sTestCaseName + " | Manufacturer letter LG");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | LPG: Landis + GYR selected from Manufacturer Letter combobox");
+		Log.info(sTestCaseName + " | LG: LANDIS & GYR selected from Manufacturer Letter combobox");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).click();
-		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("L&G");
+		Log.info(sTestCaseName + " | Meter Type click");
+		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("Libra 310P Credit");
+		Log.info(sTestCaseName + " | Meter Type Libra 310P Credit");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | L&G PP METLG210 selected from Meter Type combobox");
+		Log.info(sTestCaseName + " | Libra 310P Credit Smart selected from Meter Type combobox");
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.txt_Gas_Meter_Serial_No(driver).click();
+		Log.info(sTestCaseName + " | Gas Meter Serial No. click");
 		Objects_Gas_Meter_New_Meter_Details_Page.txt_Gas_Meter_Serial_No(driver).sendKeys("54321");
+		Log.info(sTestCaseName + " | Gas Meter Serial No. Enter");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();{
 		Log.info(sTestCaseName + " | Gas Meter Serial Number entered in the Gas Meter Serial number textbox");
 		}
@@ -87,9 +93,12 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.btn_Updated_OK(driver).click();{
 		Log.info(sTestCaseName + " | Updated OK button clicked");
+		Thread.sleep(2000);
 		}
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();
+		Log.info(sTestCaseName + " | Meter Location Click");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys("03");
+		Log.info(sTestCaseName + " | Meter Location 03");
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Hall selected from Manufacturer Letter combobox");
 		}

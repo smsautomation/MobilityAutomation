@@ -60,8 +60,9 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement cbx_Signed_Customer_Representative(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[2]/div[2]/select"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[2]/div[2]/select"));
+			element = driver.findElement(By.id("cbx_SigByCus_sel"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Signed_Customer_Representative not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -100,8 +101,9 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement btn_Job_Complete_Submit(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[4]/div/button"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[4]/div/button"));
+			element = driver.findElement(By.id("btn_Comp_submit"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Job_Complete_Submit not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

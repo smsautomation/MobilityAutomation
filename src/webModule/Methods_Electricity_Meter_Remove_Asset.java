@@ -65,8 +65,10 @@ public class Methods_Electricity_Meter_Remove_Asset{
 	
 		//Add correct responses for a successful remove asset 
 		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).click();
+		Log.info(sTestCaseName + " | Removed Asset Status Clicked");
 		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off");
-		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys(Keys.TAB);{
+		Log.info(sTestCaseName + " | Removed Asset Status Select Off Circuit");
+		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Off Circuit selected from Remove Asset Status combobox");
 		}
 		Objects_Electricity_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{

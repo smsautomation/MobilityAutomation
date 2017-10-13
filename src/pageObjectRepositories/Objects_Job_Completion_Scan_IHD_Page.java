@@ -40,8 +40,9 @@ public class Objects_Job_Completion_Scan_IHD_Page {
     public static WebElement txt_IHD_Serial_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div/input"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div/input"));
+			element = driver.findElement(By.id("txt_IHDSer_num"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_IHD_Serial_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

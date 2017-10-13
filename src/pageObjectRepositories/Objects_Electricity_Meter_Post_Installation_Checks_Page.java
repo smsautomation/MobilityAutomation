@@ -60,7 +60,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement cbx_Polarity_Check_Plugin(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("select1"));
+			element = driver.findElement(By.id("cbx_PolChkplg_sel"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Polarity_Check_Plugin not found | Exception desc : "+e.getMessage());		
  		} 
@@ -80,7 +80,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement txt_Test_Witness_Name(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("input1"));
+			element = driver.findElement(By.id("txt_TestWtn"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Test_Witness_Name not found | Exception desc : "+e.getMessage());		
  		} 
@@ -90,7 +90,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement btn_Capture_Photo_Martindale_Test(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_CapPhoMart_test"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo_Martindale_Test not found | Exception desc : "+e.getMessage());		
  		} 
@@ -100,7 +100,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement btn_Capture_Photo_Final_Meter_Installation(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_CapPhoFinMet_inst"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo_Final_Meter_Installation not found | Exception desc : "+e.getMessage());		
  		} 
@@ -110,7 +110,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement btn_Capture_Photo_Close_Up_Meter(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_CapPhoCloUp_met"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo_Close_Up_Meter not found | Exception desc : "+e.getMessage());		
  		} 
@@ -120,7 +120,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement btn_Submit(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_Submit_elec"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Submit not found | Exception desc : "+e.getMessage());		
  		} 

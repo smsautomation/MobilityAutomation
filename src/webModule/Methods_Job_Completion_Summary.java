@@ -2,6 +2,7 @@ package webModule;
 
 import org.openqa.selenium.WebDriver;
 
+//import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
 import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
 import utility.Log;
 import utility.Utils;
@@ -32,11 +33,36 @@ public class Methods_Job_Completion_Summary{
 		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Summary label displayed as expected");
 		}
-		
-		Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
+
+		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName))
+		{ 
+			Objects_Job_Completion_Summary_Page.lbl_Gas_Meter_Mprn(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Gas Meter MPRN label displayed as expected");
+			}		
 		}
-		
+		else if ("Exchange_2_End_To_End_Chrome".equals(sTestCaseName))
+		{ 
+			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
+			}
+			System.out.println("Doing the elseif"); 
+		}
+		else if (sTestCaseName.equals("Exchange_3_End_To_End_Chrome")) 
+		{ 
+			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
+			}
+		 
+			Objects_Job_Completion_Summary_Page.lbl_Gas_Meter_Mprn(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Gas Meter MPRN label displayed as expected");
+			}
+			System.out.println("Doing the elseif"); 
+		} 
+		else 
+		{ 
+			System.out.println("Doing the else "); 
+		}
+						
 		Objects_Job_Completion_Summary_Page.btn_Potential_Customer_Vulnerability_Identified_Yes(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Potential Customer Vulnerability Identified - Yes radio button displayed as expected");
 		}
@@ -82,7 +108,7 @@ public class Methods_Job_Completion_Summary{
 	
 		//Add correct responses for a successful energy efficiency provided scenario
 		Objects_Job_Completion_Summary_Page.btn_Customer_Agreement_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Cusotmer Agreement - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Customer Agreement - Yes radio button clicked");
 		}
 		Objects_Job_Completion_Summary_Page.lbl_Summary_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Summary Complete Label displayed");

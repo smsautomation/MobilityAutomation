@@ -62,17 +62,17 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 	*
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
-	
+		
 		//Add correct responses for a successful new meter details 
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).click();
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("A");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("P");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | A: Aron selected from Manufacturer Letter combobox");
+		Log.info(sTestCaseName + " | P: Polymeters selected from Manufacturer Letter combobox");
 		}
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).click();
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("e");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("Secure Liberty 100-E1SOB1 1R");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | el selected from Meter Type combobox");
+		Log.info(sTestCaseName + " | Secure Liberty selected from Meter Type combobox");
 		}
 		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).click();
 		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys("12345");
@@ -88,11 +88,13 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		Objects_Electricity_Meter_New_Meter_Details_Page.btn_Updated_OK(driver).click();{
 		Log.info(sTestCaseName + " | Updated OK button clicked");
 		}
+		Thread.sleep(5000);
+		/*
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).click();
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys("0393");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | CCS Code selected from the SSC Code Combobox");
-		}
+		}*/
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys("H");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys(Keys.ENTER);{

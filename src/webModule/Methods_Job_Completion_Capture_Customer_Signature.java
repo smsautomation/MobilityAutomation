@@ -94,13 +94,13 @@ public class Methods_Job_Completion_Capture_Customer_Signature{
 		Objects_Job_Completion_Capture_Customer_Signature_Page.cbx_Signed_Customer_Representative(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Customer selected from Signed Customer Representative combobox");
 		}
-		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Customer_Refused_Sign_No(driver).click();{
+		/*Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Customer_Refused_Sign_No(driver).click();{
 		Log.info(sTestCaseName + " | Customer Refused Sign - No radio button clicked");
-		}
+		}*/
 		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Job_Complete_Submit(driver).click();{
 		Log.info(sTestCaseName + " | Job Complete - Submit button clicked");
 		}
-		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Job_Complete_OK(driver).isDisplayed();{
+		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Job_Complete_OK(driver).click();{
 		Log.info(sTestCaseName + " | Job Complete OK button clicked");
 		}
 				

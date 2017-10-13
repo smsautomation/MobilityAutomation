@@ -100,7 +100,7 @@ public class Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page {
     public static WebElement btn_Capture_Photo(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath("btn1"));
+			element = driver.findElement(By.id("btn_CapPoTi_test"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 

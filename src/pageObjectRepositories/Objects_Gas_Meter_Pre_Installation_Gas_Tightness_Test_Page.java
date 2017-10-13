@@ -60,7 +60,8 @@ public class Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page {
 	public static WebElement btn_Capture_Photo(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element = driver.findElement(By.id("btn_CapPho_GTT"));
+			//element = driver.findElement(By.xpath(".//*[@id='btn1']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 

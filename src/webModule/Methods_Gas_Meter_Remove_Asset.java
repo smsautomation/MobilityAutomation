@@ -65,7 +65,9 @@ public class Methods_Gas_Meter_Remove_Asset{
 		Log.info("addSuccessValues: Started");
 		//Add correct responses for a successful remove asset 
 		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).click();
+		Log.info(sTestCaseName + " | Removed Asset Status Clicked");
 		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off");
+		Log.info(sTestCaseName + " | Removed Asset Status Select Off Circuit");
 		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Off Circuit selected from Remove Asset Status combobox");
 		}

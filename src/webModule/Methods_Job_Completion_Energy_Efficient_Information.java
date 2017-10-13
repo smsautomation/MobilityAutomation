@@ -115,8 +115,9 @@ public class Methods_Job_Completion_Energy_Efficient_Information{
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
+		Thread.sleep(2000);
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information_Complete(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Configure All Meters Installed Complete Label displayed");
+		Log.info(sTestCaseName + " | Energy Efficiency Information Complete Label displayed");
 		}
 				
 		//Take a screenshot to show what we've done

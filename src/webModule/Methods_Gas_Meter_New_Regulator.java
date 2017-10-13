@@ -1,6 +1,6 @@
 package webModule;
 
-import org.openqa.selenium.Keys;
+//import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import pageObjectRepositories.Objects_Gas_Meter_New_Regulator_Page;
@@ -65,8 +65,10 @@ public class Methods_Gas_Meter_New_Regulator{
 	
 		//Add correct responses for a successful new regulator
 		Objects_Gas_Meter_New_Regulator_Page.txt_Regulator_Serial_Number(driver).click();
+		Log.info(sTestCaseName + " | Clicked into box I think");
 		Objects_Gas_Meter_New_Regulator_Page.txt_Regulator_Serial_Number(driver).sendKeys("12345");
-		Objects_Gas_Meter_New_Regulator_Page.txt_Regulator_Serial_Number(driver).sendKeys(Keys.TAB);{
+		Log.info(sTestCaseName + " | Number 1234 in");
+		Objects_Gas_Meter_New_Regulator_Page.lbl_Serial_Asset_Note(driver).click();{
 		Log.info(sTestCaseName + " | Regulator Serial Number entered in the Regulator Serial number textbox");
 		}
 		Objects_Gas_Meter_New_Regulator_Page.btn_Scan_Asset_Now(driver).click();{

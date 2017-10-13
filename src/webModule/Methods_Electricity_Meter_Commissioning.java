@@ -49,11 +49,11 @@ public class Methods_Electricity_Meter_Commissioning{
 		Objects_Electricity_Meter_Commissioning_Page.btn_Add_Another_Asset(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Add Another Asset button displayed as expected");
 		}
-		
+		/*
 		Objects_Electricity_Meter_Commissioning_Page.btn_Next_Section(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Next Section button displayed as expected");
 		}
-		
+		*/
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-viewPage");
 		
@@ -110,7 +110,8 @@ public class Methods_Electricity_Meter_Commissioning{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void addSuccessValuesPrePaid(WebDriver driver, String sTestCaseName) throws Exception{
+	//public static void addSuccessValuesSmart(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void addSuccessValuesSmart(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful commissioning scenario 
 		Objects_Electricity_Meter_Commissioning_Page.btn_Comms_Hub_Connected_WAN_Yes(driver).click();{

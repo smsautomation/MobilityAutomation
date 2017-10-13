@@ -82,7 +82,7 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		}
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).click();
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).sendKeys("Tester");{
-		Log.info(sTestCaseName + " | Polarity tested value selected from the Polarity Check Plugin Combobox");
+		Log.info(sTestCaseName + " | Polarity tested Witness Name Entered");
 		}
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Capture_Photo_Martindale_Test(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo Martindale Test button clicked");
@@ -93,6 +93,7 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Capture_Photo_Close_Up_Meter(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo Close Up Meter button clicked");
 		}
+		Thread.sleep(2000);
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Submit(driver).click();{
 		Log.info(sTestCaseName + " | Submit button clicked");
 		}
