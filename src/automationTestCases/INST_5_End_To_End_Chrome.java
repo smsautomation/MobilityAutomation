@@ -35,6 +35,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Teleswitch_Scan_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Additional_Electricity_Tests_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
@@ -92,7 +93,7 @@ public class INST_5_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[162]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[1]/div/div[1]/span[1]/span")).click();
 		
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -169,7 +170,7 @@ public class INST_5_End_To_End_Chrome {
 		
 		//Verify Initial page elements displayed
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+		Log.info("Capture Initial Photo Of Elec Installation page initial elements displayed as expected");
 				
 		//Invoke Method to complete a successful photo capture 
 		Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
@@ -183,7 +184,7 @@ public class INST_5_End_To_End_Chrome {
 		Log.info("Electricity Meter Initial Polarity check At Meter initial elements displayed as expected");
 								
 		//Invoke Method to complete a successful polarity check 
-		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addSuccessValuesINST(driver, sTestCaseName);
 	
 		//Verify that we are on the Electricity Meter Current Meter Details page
 		Objects_Electricity_Meter_Current_Meter_Details_Page.lbl_Current_Meter_Details(driver).isDisplayed();
@@ -205,8 +206,19 @@ public class INST_5_End_To_End_Chrome {
 		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");
 																		
 		//Invoke Method to complete new meter details page 
-		Methods_Electricity_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
-				
+		Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
+		
+		//Verify that we are on the Teleswitch Serial Number page
+		Objects_Electricity_Meter_Teleswitch_Scan_Page.lbl_Scan_Teleswitch(driver).isDisplayed();
+		Log.info("Elec Teleswitch Serial Number page displayed as expected");		
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Teleswitch_Scan.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");		
+		
+		//Invoke Method to complete Elec Telemeter details page 
+		Methods_Electricity_Meter_Teleswitch_Scan.addSuccessValues(driver, sTestCaseName);		
+						
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
 		Log.info("New Meter Details page displayed as expected");
@@ -227,7 +239,7 @@ public class INST_5_End_To_End_Chrome {
 		Log.info("Electricity Meter Initial Meter Reading initial elements displayed as expected");
 																						
 		//Invoke Method to complete Initial Meter Reading page 
-		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues2Registers(driver, sTestCaseName);
 								
 		//Verify that we are on the Electricity Meter Commissioning page
 		Objects_Electricity_Meter_Commissioning_Page.lbl_Commissioning(driver).isDisplayed();
@@ -249,7 +261,7 @@ public class INST_5_End_To_End_Chrome {
 		Log.info("Electricity Meter Post Installation Checks initial elements displayed as expected");
 																										
 		//Invoke Method to complete Post Installation Checks page 
-		Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValuesINST(driver, sTestCaseName);
 																											
 		//Verify that we are on the Job Completion Energy Efficiency Information page
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();

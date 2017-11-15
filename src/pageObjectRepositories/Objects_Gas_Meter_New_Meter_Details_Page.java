@@ -61,7 +61,7 @@ public class Objects_Gas_Meter_New_Meter_Details_Page {
     public static WebElement txt_Gas_Meter_Serial_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("input1"));
+			element = driver.findElement(By.id("txt_Serial_Num"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Gas_Meter_Serial_No not found | Exception desc : "+e.getMessage());		
  		} 

@@ -31,7 +31,6 @@ public class Methods_Appointments_List{
 		//Declare our variables and instantiate 
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//WebDriverWait wait = new WebDriverWait(driver, 5);
-		
 			
 		//Check that all of the elements of that are expected are displayed
 		Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{

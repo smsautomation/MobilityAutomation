@@ -47,7 +47,7 @@ public class Methods_Job_Completion_Summary{
 			}
 			System.out.println("Doing the elseif"); 
 		}
-		else if (sTestCaseName.equals("Exchange_3_End_To_End_Chrome")) 
+		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");

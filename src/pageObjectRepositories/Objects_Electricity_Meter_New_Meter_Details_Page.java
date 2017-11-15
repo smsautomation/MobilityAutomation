@@ -61,7 +61,19 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
     public static WebElement txt_Elec_Meter_Serial_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("input1"));
+			//element = driver.findElement(By.className("input1"));
+			element = driver.findElement(By.id("txt_Serial_Num"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Elec_Meter_Serial_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement lbl_Elec_Meter_Serial(WebDriver driver){
+    	 
+		try{
+			//element = driver.findElement(By.className("input1"));
+			element = driver.findElement(By.id("cbx_MetType_sel"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Elec_Meter_Serial_No not found | Exception desc : "+e.getMessage());		
  		} 

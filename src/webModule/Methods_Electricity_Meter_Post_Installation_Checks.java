@@ -100,7 +100,45 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 				
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
-		
+	}
+	/* **************************************************************************************************
+	* Function: addSuccessValues
+	* Author: Paul Middleton
+	* Date: 19/06/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Post Installation Checks
+	* page in order to force a successful post installation check scenario
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesINST(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful commissioning scenario 
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Polarity_Check_Meter_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Polarity Check Meter - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).click();
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).sendKeys("Polarity");
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | Polarity tested value selected from the Polarity Check Plugin Combobox");
+		}
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Socket_Safety_Test_Pass(driver).click();{
+		Log.info(sTestCaseName + " | Socket Safety Test - Pass radio button clicked");
+		}
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Submit(driver).click();{
+		Log.info(sTestCaseName + " | Submit button clicked");
+		}
+				
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+			
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 	

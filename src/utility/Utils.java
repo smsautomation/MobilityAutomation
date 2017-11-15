@@ -57,7 +57,7 @@ public class Utils {
 	public static WebDriver driver = null;
 	//public static RemoteWebDriver driver = null;
 	
-	/* **************************************************************************************************
+	/* ------------------------------------------------------------------------------------------------
 	* Function: compareStrings
 	* Author: Greg Bliss
 	* Date: 17/03/2016
@@ -65,12 +65,45 @@ public class Utils {
 	* Arguments: str1, str2
 	* 
 	* Returns: boolean
-	****************************************************************************************************/ 
-	public static Boolean compareStrings(String str1, String str2) 
+	------------------------------------------------------------------------------------------------ */ 
+	public static boolean compareStrings(String str1, String str2) 
 	{
 		return str1.equals(str2);
 	}
-	
+	/* ------------------------------------------------------------------------------------------------
+	* Function: dynamicWait
+	* Author: Greg Bliss
+	* Date: 17/10/2016
+	* Purpose: Check if object is displayed, keep trying until interval value is met/exceeded 
+	* Arguments: 
+	* 	iWaitInt - 
+	* 	sFindStr - 
+	* 	sRepName -
+	* 	driver -
+	* 
+	* Returns: boolean
+	------------------------------------------------------------------------------------------------ */	
+	public static boolean dynamicWait(int iWaitInt, String sFindStr, String sRepName, WebDriver driver) 
+    {           
+        //WebElement element;
+        boolean found = false;
+        
+        for (int l = iWaitInt; l >=1; l--) 
+        {
+           try 
+           {
+                Thread.sleep(500);
+                found = driver.findElement(By.id(sFindStr)).isDisplayed();                                            
+           }
+           catch(Exception e)
+           {                                               
+                Log.error(sRepName + " | Could not find object: " + sFindStr + "| Exception desc : "+e.getMessage());
+                return false;
+           }
+        }
+        return found;        
+    }
+
 	/* **************************************************************************************************
 	* Function: openBrowser
 	* Author: Rory Cruickshank

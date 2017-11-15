@@ -99,7 +99,7 @@ public class Exchange_1_End_To_End_Chrome {
 		
 		//Select the correct appointment
 		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[3]/div/div[1]/div/div[1]/span[1]/span")).click();
-				
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -113,7 +113,7 @@ public class Exchange_1_End_To_End_Chrome {
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
 		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 5);
-				
+		
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
 		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 5);

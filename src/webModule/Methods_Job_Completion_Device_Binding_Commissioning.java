@@ -77,7 +77,7 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
 			}		
 		}
-		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)) 
+		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName)) 
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");

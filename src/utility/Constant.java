@@ -33,19 +33,13 @@ package utility;
 *********************************************************************/
 public class Constant {
 
-    public static final String URL = "siemens-og-bykrw4fz56yr6nyvlskmwpwq-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
-    
-    public static final String Path_TestData = "C://MobilityAutomation//src//testData//";
-    		 
-    public static final String File_TestData = "Mobility_Automation_Test_Data.xlsm";
-    
-    public static final String Path_ScreenShot = "C://MobilityAutomation//MobilityFramework//test-output//screenshots//";
-   
+    //public static final String URL = "siemens-og-bykrw4fz56yr6nyvlskmwpwq-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
+	public static final String URL = "siemens-og-bykrw4fz56yr6nyvlskmwpwq-sdg1-test.mbaas1.sdg.feedhenry.com/#/login";
+    public static final String Path_TestData = "C://MobilityAutomation//src//testData//";    		 
+    public static final String File_TestData = "Mobility_Automation_Test_Data.xlsm";    
+    public static final String Path_ScreenShot = "C://MobilityAutomation//MobilityFramework//test-output//screenshots//";   
 	public static final int Col_Test_Case_Name = 0;	
-
 	public static final int Col_Browser = 1;
-	
 	//public static final int Col_User = 2;
 	
-	    
 }

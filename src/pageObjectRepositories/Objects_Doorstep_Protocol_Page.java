@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utility.Log;
+import utility.Utils;
 
 /* *******************************************************************
 * Author: Iain Storrie
@@ -32,7 +33,6 @@ public static class Sidebar{
 		public static WebElement lbl_Customer_Details(WebDriver driver){
    	 
 		try{
-			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[1]/div[1]/h2"));
 			element = driver.findElement(By.id("lbl_cst_det"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Customer_Details not found | Exception desc : "+e.getMessage());		
@@ -43,7 +43,6 @@ public static class Sidebar{
     	public static WebElement lbl_Customer_Details_More_Details(WebDriver driver){
         	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[1]/div[2]/div"));
     			element = driver.findElement(By.id("lbl_mre_cst_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Customer_Details_More_Details not found | Exception desc : "+e.getMessage());		
@@ -54,7 +53,6 @@ public static class Sidebar{
     	public static WebElement lbl_Customer_Details_Less_Details(WebDriver driver){
        	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[1]/div[4]/div"));
     			element = driver.findElement(By.id("lbl_few_cst_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Customer_Details_Less_Details not found | Exception desc : "+e.getMessage());		
@@ -65,7 +63,6 @@ public static class Sidebar{
     	public static WebElement lbl_Job_Details(WebDriver driver){
         	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[2]/div[1]/h2"));
     			element = driver.findElement(By.id("lbl_job_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Job_Details not found | Exception desc : "+e.getMessage());		
@@ -76,7 +73,6 @@ public static class Sidebar{
     	public static WebElement lbl_Job_Details_More_Details(WebDriver driver){
          	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[2]/div[2]/div"));
     			element = driver.findElement(By.id("lbl_mre_job_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Job_Details_More_Details not found | Exception desc : "+e.getMessage());		
@@ -87,7 +83,6 @@ public static class Sidebar{
     	public static WebElement lbl_Job_Details_Less_Details(WebDriver driver){
          	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[2]/div[4]/div"));
     			element = driver.findElement(By.id("lbl_few_job_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Job_Details_Less_Details not found | Exception desc : "+e.getMessage());		
@@ -98,24 +93,24 @@ public static class Sidebar{
     	public static WebElement lbl_Meter_Details(WebDriver driver){
           	 
     		try{
-    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[1]/div[3]/div[1]/h2"));
     			element = driver.findElement(By.id("lbl_met_det"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Meter_Details not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
     	}
-    	
     //END OF SIDEBAR METHODS
     }    
     
     public static WebElement btn_Arrive(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.id("btn_arrive"));
+			if (Utils.dynamicWait(10, "btn_arrive", "GREG_TEST", driver)) {
+				element = driver.findElement(By.id("btn_arrive"));
+			}
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Arrive not found | Exception desc : "+e.getMessage());		
- 		} 
+ 		}  	
 	    return element;
 	}
 

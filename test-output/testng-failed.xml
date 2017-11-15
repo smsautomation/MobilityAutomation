@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.Exchange_3_End_To_End_Chrome">
+      <class name="automationTestCases.INST_5_End_To_End_Chrome">
         <methods>
           <include name="beforeMethod"/>
           <include name="afterMethod"/>
           <include name="main"/>
         </methods>
-      </class> <!-- automationTestCases.Exchange_3_End_To_End_Chrome -->
+      </class> <!-- automationTestCases.INST_5_End_To_End_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

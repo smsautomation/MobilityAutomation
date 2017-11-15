@@ -78,6 +78,37 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter{
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValues
+	* Author: Iain Storrie
+	* Date: 15/06/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Initial Polarity Check At 
+	* Meter page in order to force a successful check
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesINST(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful initial polarity check 
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Cut_Out_Pass(driver).click();{
+		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Pass radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Initial Polarity Check At Meter Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 		
 	//END OF ADD SUCCESS VALUES METHOD
 	}

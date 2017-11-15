@@ -38,6 +38,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_A
 import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Remove_Meter_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Capture_PrePayment_Data_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Remove_Asset_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Additional_Electricity_Tests_Page;
@@ -113,7 +114,7 @@ public class Exchange_9_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[75]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[1]/div/div[1]/span[1]/span")).click();
 		
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -264,6 +265,17 @@ public class Exchange_9_End_To_End_Chrome {
 														
 		//Invoke Method to complete remove meter page 
 		Methods_Electricity_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
+	
+		//Verify that we are on the Electricity Meter Remove Asset page
+		Objects_Electricity_Meter_Capture_PrePayment_Data_Page.lbl_Prepayment_Meter_Data(driver).isDisplayed();
+		Log.info("Capture Prepayment Meter Data page displayed as expected");		
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.viewPage(driver, sTestCaseName);
+		Log.info("Capture Prepayment Meter Data page initial elements displayed as expected");
+				
+		//Invoke Method to complete remove asset page 
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.addSuccessValues(driver, sTestCaseName);
 		
 		//Verify that we are on the Electricity Meter Remove Asset page
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset(driver).isDisplayed();
@@ -285,7 +297,7 @@ public class Exchange_9_End_To_End_Chrome {
 		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");
 																		
 		//Invoke Method to complete remove asset page 
-		Methods_Electricity_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesEXCH9(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
@@ -349,13 +361,28 @@ public class Exchange_9_End_To_End_Chrome {
 		//Invoke Method to complete a successful risk assessment - gas 
 		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
 													
+		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		Log.info("Suitable for Smart Installation page displayed as expected");	
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+		
+		//Verify correct page elements displayed after Suitable For Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
+	
+		//Invoke Method to complete a successful suitable for smart installation 
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);	
+	
 		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
 		Log.info("Gas Meter Capture Initial Photo Of Gas Installation page displayed as expected");
 	
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter Suitable for Smart Installation initial elements displayed as expected");
+		Log.info("Gas Meter Capture Initial Photo Of Gas Installation initial elements displayed as expected");
 					
 		//Invoke Method to complete a successful photo capture 
 		Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.addSuccessValues(driver, sTestCaseName);
@@ -424,7 +451,7 @@ public class Exchange_9_End_To_End_Chrome {
 		Log.info("Gas Meter New Regulator initial elements displayed as expected");
 																						
 		//Invoke Method to complete Gas New Meter Details page 
-		Methods_Gas_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		Methods_Gas_Meter_New_Meter_Details.addSuccessValuesPPMeter(driver, sTestCaseName);
 											
 		//Verify that we are on the Gas Meter Initial Meter Reading page
 		Objects_Gas_Meter_Initial_Meter_Reading_Page.lbl_Gas_Inital_Meter_Reading(driver).isDisplayed();

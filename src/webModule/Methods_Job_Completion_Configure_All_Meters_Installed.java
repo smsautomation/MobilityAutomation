@@ -71,12 +71,16 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if (sTestCaseName.equals("Exchange_3_End_To_End_Chrome")) 
+		else if ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome")))
 		{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
 			}
 				
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_No(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Full WAN Established - No radio button displayed as expected");
+			}
+			
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full Configuration Applied Gas - Yes radio button displayed as expected");
 			}
@@ -92,7 +96,6 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Electricity_No(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full Configuration Applied Elec - No radio button displayed as expected");
 			}
-			
 		}
 			else	
 		{ 
@@ -171,7 +174,7 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if  ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName))
+		else if  ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome")))
 		{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
