@@ -30,8 +30,9 @@ public class Objects_Gas_Meter_Risk_Assessment_Gas_Page {
     public static WebElement lbl_Risk_Assessment_Gas(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/riskassessgas/div/div[1]/div/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/riskassessgas/div/div[1]/div/div[1]/h4"));
+			element = driver.findElement(By.id("Title_RiskAss_gas"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Risk_Assessment_Gas not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -230,7 +231,7 @@ public class Objects_Gas_Meter_Risk_Assessment_Gas_Page {
 	public static WebElement btn_Abort(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_Gas_fail"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

@@ -190,7 +190,7 @@ public class Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page {
     public static WebElement btn_Abort(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_Gas_fail"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

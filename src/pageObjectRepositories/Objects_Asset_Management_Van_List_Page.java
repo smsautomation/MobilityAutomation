@@ -60,8 +60,9 @@ public class Objects_Asset_Management_Van_List_Page {
     public static WebElement txt_Notes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[2]/input"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[2]/input"));
+			element = driver.findElement(By.id("txt_AddAss_notes"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Notes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -70,8 +71,9 @@ public class Objects_Asset_Management_Van_List_Page {
     public static WebElement btn_Add_Asset(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[3]/div[2]/div/button"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[3]/div[2]/div/button"));
+			element = driver.findElement(By.id("btn_AddAss_van"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Add_Asset not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

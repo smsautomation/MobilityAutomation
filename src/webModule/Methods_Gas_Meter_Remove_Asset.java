@@ -1,5 +1,6 @@
 package webModule;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
@@ -83,6 +84,55 @@ public class Methods_Gas_Meter_Remove_Asset{
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+	}
+		
+	/* **************************************************************************************************
+	* Function: addSuccessValues
+	* Author: Paul Middleton
+	* Date: 20/06/2017
+	* Purpose: This method adds the required responses in the Gas Meter Remove Asset page in order
+	* to force a successful asset removal
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesRMVE(WebDriver driver, String sTestCaseName) throws Exception{
+		Log.info("addSuccessValues: Started");
+		//Add correct responses for a successful remove asset 
+		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).click();
+		Log.info(sTestCaseName + " | Removed Asset Status Clicked");
+		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off");
+		Log.info(sTestCaseName + " | Removed Asset Status Select Off Circuit");
+		Objects_Gas_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | Off Circuit selected from Remove Asset Status combobox");
+		}
+		Objects_Gas_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{
+		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
+		}
+		Thread.sleep(500);
+		Objects_Gas_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
+		Log.info(sTestCaseName + " | Remove Success OK button clicked");
+		}
+		Thread.sleep(500);
+		Objects_Gas_Meter_Remove_Asset_Page.btn_Capture_Final_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Remove Success OK button clicked");
+		}		
+		Objects_Gas_Meter_Remove_Asset_Page.lbl_Gas_Remove_Asset_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Remove Asset Complete label displayed");
+		}
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		Thread.sleep(300);
+		Objects_Gas_Meter_Remove_Asset_Page.btn_Gas_Remove_Asset_Submit(driver).click();{
+		Log.info("Gas Meter Section completed");
+		}
 		
 	//END OF ADD SUCCESS VALUES METHOD
 	}

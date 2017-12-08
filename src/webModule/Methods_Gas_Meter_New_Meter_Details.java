@@ -85,9 +85,11 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();{
 		Log.info(sTestCaseName + " | Gas Meter Serial Number entered in the Gas Meter Serial number textbox");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Meter_Details_Page.btn_Scan_Asset_Now(driver).click();{
 		Log.info(sTestCaseName + " | Scan Asset Now button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Meter_Details_Page.btn_Add_Asset_OK(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset OK button clicked");
 		}
@@ -153,9 +155,11 @@ public class Methods_Gas_Meter_New_Meter_Details{
 		Objects_Gas_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();{
 		Log.info(sTestCaseName + " | Gas Meter Serial Number entered in the Gas Meter Serial number textbox");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Meter_Details_Page.btn_Scan_Asset_Now(driver).click();{
 		Log.info(sTestCaseName + " | Scan Asset Now button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Meter_Details_Page.btn_Add_Asset_OK(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset OK button clicked");
 		}

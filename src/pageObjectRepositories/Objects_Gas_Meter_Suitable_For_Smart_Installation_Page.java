@@ -30,8 +30,9 @@ public class Objects_Gas_Meter_Suitable_For_Smart_Installation_Page {
     public static WebElement lbl_Suitable_For_Smart_Installation(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/smartcheck/div/div[1]/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/smartcheck/div/div[1]/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_Smart_Elec"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Suitable_For_Smart_Installation not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -140,7 +141,7 @@ public class Objects_Gas_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Abort(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_Gas_fail"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 
@@ -150,7 +151,7 @@ public class Objects_Gas_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Next_Section(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath("//*[@id='btnNextSmart']"));
+			element = driver.findElement(By.id("btn_Next_Section"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 

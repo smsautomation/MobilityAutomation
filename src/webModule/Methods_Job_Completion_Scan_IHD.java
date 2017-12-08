@@ -71,12 +71,15 @@ public class Methods_Job_Completion_Scan_IHD{
 		Objects_Job_Completion_Scan_IHD_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
+		Thread.sleep(500);
 		Objects_Job_Completion_Scan_IHD_Page.btn_Scan_Asset_Now(driver).click();{
 		Log.info(sTestCaseName + " | Scan Asset Now button clicked");
 		}
+		Thread.sleep(500);
 		Objects_Job_Completion_Scan_IHD_Page.btn_Add_Asset_OK(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset - OK button clicked");
 		}
+		Thread.sleep(500);
 		Objects_Job_Completion_Scan_IHD_Page.btn_OK(driver).click();{
 		Log.info(sTestCaseName + " | OK button clicked");
 		}

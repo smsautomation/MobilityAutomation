@@ -40,7 +40,7 @@ public class Objects_Gas_Meter_Current_Meter_Details_Page {
 	public static WebElement btn_Update_Values(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btnUpdate"));
+			element = driver.findElement(By.id("btn_Update_values"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Update_Values not found | Exception desc : "+e.getMessage());		
  		} 

@@ -69,6 +69,27 @@ public class Objects_Gas_Meter_Remove_Asset_Page {
 	    return element;
 	}
 
+    public static WebElement btn_Capture_Final_Photo(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.id("btn_CapFin_Pho"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Final_Photo not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+ 
+	public static WebElement btn_Gas_Remove_Asset_Submit(WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/gastask/div/div/removeasset/div/div[1]/div[2]"));
+			element = driver.findElement(By.id("btn_Subm_gas"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Gas_Remove_Asset_Submit not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement lbl_Gas_Remove_Asset_Complete(WebDriver driver){
 	   	 
 		try{

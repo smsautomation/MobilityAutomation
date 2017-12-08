@@ -25,10 +25,10 @@ import utility.Log;
 public class Objects_Electricity_Meter_Meter_Credit_Page {
    
     private static WebElement element = null;
-    private static String sRepositoryName = "Objects_Electricity_Meter_Additional_Electricity_Tests_Page";
+    private static String sRepositoryName = "Objects_Electricity_Meter_Meter_Credit_Page";
 
     public static WebElement lbl_Meter_Credit(WebDriver driver){
-    	 
+
 		try{
 			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/metercredit/div[1]/div[1]/h4"));
  		}catch(Exception e){
@@ -40,7 +40,7 @@ public class Objects_Electricity_Meter_Meter_Credit_Page {
     public static WebElement cbx_Elec_Meter_Tariff(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("select1"));
+			element = driver.findElement(By.id("cbx_ElecMetTar_sel"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Elec_Meter_Tariff not found | Exception desc : "+e.getMessage());		
  		} 
@@ -202,7 +202,7 @@ public class Objects_Electricity_Meter_Meter_Credit_Page {
 		try{
 			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/metercredit/div[1]/div[2]"));
  		}catch(Exception e){
-			Log.error(sRepositoryName + " | lbl_Additional_Electricty_Checks_Complete not found | Exception desc : "+e.getMessage());		
+			Log.error(sRepositoryName + " | lbl_Meter_Credit_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}

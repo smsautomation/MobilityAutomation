@@ -153,7 +153,7 @@ public class Methods_Gas_Meter_Suitable_For_Smart_Installation{
 		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.cbx_Equipment_Reposition_Required(driver).sendKeys(Keys.TAB);{
 		Log.info(sTestCaseName + " | No Reposition Required selected");
 		}
-		Objects_Gas_Meter_Risk_Assessment_Gas_Page.btn_Next_Section(driver).click();{
+		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
 		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation_Complete(driver).isDisplayed();{

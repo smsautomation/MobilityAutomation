@@ -29,6 +29,7 @@ import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
+import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 import pageObjectRepositories.Objects_Login_Page;
@@ -84,7 +85,7 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 	//Run the test
 	@Test
 	public void main() throws Exception {
-			
+		
 		Methods_Login.viewPage(driver, sTestCaseName);
 		
 		Methods_Login.addSuccessValues(driver, sTestCaseName);
@@ -92,8 +93,9 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[173]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[173]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_9_EXCH1')]")).click();
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -102,15 +104,15 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 9);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 5);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 9);
-				
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 5);
+		
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 9);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 5);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -120,9 +122,12 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		Objects_Appointment_Details_Page.btn_Appointment_Confirm_Yes(driver).click();
 		
 		//Click Depart Button to progress to Doorstep Protocol Page
+		Objects_Appointment_Details_Page.btn_Depart(driver).getLocation();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
+		Thread.sleep(2000);
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-		
+				
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	
@@ -144,10 +149,10 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		//Verify that we are on the Gas Meter Initial Risk Assessment page
 		Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
 		Log.info("Gas Meter Initial Risk Assessment page displayed as expected");	
-								
+						
 		//Invoke Method to complete a successful initial risk assessment 
 		Methods_Gas_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
-				
+						
 		//Verify that we are on the Gas Meter Risk Assessment - Gas page
 		Objects_Gas_Meter_Risk_Assessment_Gas_Page.lbl_Risk_Assessment_Gas(driver).isDisplayed();
 		Log.info("Risk Assessment - Gas page displayed as expected");
@@ -178,7 +183,7 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.viewPage(driver, sTestCaseName);
 		Log.info("Gas Meter Pre Installation Gas Tightness Test initial elements displayed as expected");
 							
-		//Invoke Method to complete a successful photo capture 
+		//Invoke Method to complete a successful gas tightness test
 		Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test.addSuccessValues(driver, sTestCaseName);
 				
 		//Verify that we are on the Gas Meter Current Meter Details page
@@ -231,9 +236,9 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 			
 		//Verify Initial page elements displayed
 		Methods_Gas_Meter_New_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Gas Meter New Regulator initial elements displayed as expected");
+		Log.info("Gas New Meter Details initial elements displayed as expected");
 																						
-		//Invoke Method to complete New Regulator page 
+		//Invoke Method to complete Gas New Meter Details page 
 		Methods_Gas_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
 											
 		//Verify that we are on the Gas Meter Initial Meter Reading page
@@ -276,6 +281,19 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		//Verify Abort page displayed
 		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Gas_Meter_Accessible_Yes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
+		
+		//Verify Abort elements displayed
+		Methods_Aborts.viewPageAbortReasons(driver, sTestCaseName);
+		Log.info("Abort page elements displayed as expected");
+			
+		//Invoke Method to complete Aborts questions for a success outcome 
+		Methods_Aborts.addSuccessValuesReasonsRed(driver, sTestCaseName);
+		
+		//Verify that we have returned to the Appointments list page
+	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+		Log.info("First Appointment Header displayed");
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
 		
 	}
 	

@@ -29,6 +29,7 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
+import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
@@ -86,8 +87,9 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[119]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[119]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_61_EXCH2')]")).click();
+	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -204,7 +206,7 @@ Methods_Login.viewPage(driver, sTestCaseName);
 										
 		//Invoke Method to complete an aborted polarity check 
 		Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter.addAbortValues(driver, sTestCaseName);
-			
+
 		//Click Abort button to bring up Abort page 
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort(driver).click();
 		Log.info("Abort button clicked");
@@ -213,7 +215,21 @@ Methods_Login.viewPage(driver, sTestCaseName);
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
+		
+		//Verify Abort elements displayed
+		Methods_Aborts.viewPageAbortReasons(driver, sTestCaseName);
+		Log.info("Abort page elements displayed as expected");
+			
+		//Invoke Method to complete Aborts questions for a success outcome 
+		Methods_Aborts.addSuccessValuesReasonsRed(driver, sTestCaseName);
+		
+		//Verify that we have returned to the Appointments list page
+	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+		Log.info("First Appointment Header displayed");
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
 	}
+	
 	//Log out
 	@AfterMethod
 	public void afterMethod() {

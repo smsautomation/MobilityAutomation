@@ -80,8 +80,9 @@ public class Objects_Asset_Management_Stock_Take_Page {
     public static WebElement btn_Submit(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/stocklist/div[1]/div"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/stocklist/div[1]/div"));
+			element = driver.findElement(By.id("btn_StktkSub"));	
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Submit not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

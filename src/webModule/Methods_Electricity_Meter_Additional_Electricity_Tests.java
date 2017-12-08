@@ -70,7 +70,7 @@ public class Methods_Electricity_Meter_Additional_Electricity_Tests{
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.btn_Approved_Siemens_Cable_Markers_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Approved Siemens Cable Markers - Yes radio button clicked");
 		}
-		Thread.sleep(200);
+		Thread.sleep(1000);
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.btn_Terminal_Screw_Tightness_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Terminal Screw Tightness - Yes radio button clicked");
 		}

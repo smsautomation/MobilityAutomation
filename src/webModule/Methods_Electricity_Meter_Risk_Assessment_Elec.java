@@ -129,6 +129,7 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		Thread.sleep(500);
 		
 	//END OF ADD SUCCESS VALUES METHOD
 	}

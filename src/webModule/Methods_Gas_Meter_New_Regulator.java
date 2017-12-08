@@ -71,9 +71,11 @@ public class Methods_Gas_Meter_New_Regulator{
 		Objects_Gas_Meter_New_Regulator_Page.lbl_Serial_Asset_Note(driver).click();{
 		Log.info(sTestCaseName + " | Regulator Serial Number entered in the Regulator Serial number textbox");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Regulator_Page.btn_Scan_Asset_Now(driver).click();{
 		Log.info(sTestCaseName + " | Scan Asset Now button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Gas_Meter_New_Regulator_Page.btn_Add_Asset_OK(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset OK button clicked");
 		}

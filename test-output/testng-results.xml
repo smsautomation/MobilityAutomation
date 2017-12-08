@@ -1,93 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6549" started-at="2017-11-15T12:39:30Z" finished-at="2017-11-15T12:39:37Z">
+  <suite name="Default suite" duration-ms="17466" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6549" started-at="2017-11-15T12:39:30Z" finished-at="2017-11-15T12:39:37Z">
-      <class name="automationTestCases.INST_5_End_To_End_Chrome">
-        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:automationTestCases.INST_5_End_To_End_Chrome@5f341870]" name="beforeMethod" is-config="true" duration-ms="6519" started-at="2017-11-15T12:39:30Z" finished-at="2017-11-15T12:39:37Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at automationTestCases.INST_5_End_To_End_Chrome.beforeMethod(INST_5_End_To_End_Chrome.java:80)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:776)
-	at org.testng.TestRunner.run(TestRunner.java:634)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
-	at org.testng.TestNG.runSuites(TestNG.java:1161)
-	at org.testng.TestNG.run(TestNG.java:1129)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+    <test name="Default test" duration-ms="17466" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:54Z">
+      <class name="automationTestCases.AA_Logon_Water">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="beforeMethod" is-config="true" duration-ms="9708" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="main()[pri:0, instance:automationTestCases.INST_5_End_To_End_Chrome@5f341870]" name="main" duration-ms="1" started-at="2017-11-15T12:39:37Z" finished-at="2017-11-15T12:39:37Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at automationTestCases.INST_5_End_To_End_Chrome.beforeMethod(INST_5_End_To_End_Chrome.java:80)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:776)
-	at org.testng.TestRunner.run(TestRunner.java:634)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
-	at org.testng.TestNG.runSuites(TestNG.java:1161)
-	at org.testng.TestNG.run(TestNG.java:1129)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="main()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="main" duration-ms="6342" started-at="2017-12-08T10:04:47Z" finished-at="2017-12-08T10:04:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:automationTestCases.INST_5_End_To_End_Chrome@5f341870]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-11-15T12:39:37Z" finished-at="2017-11-15T12:39:37Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="afterMethod" is-config="true" duration-ms="1394" started-at="2017-12-08T10:04:53Z" finished-at="2017-12-08T10:04:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- automationTestCases.INST_5_End_To_End_Chrome -->
+      </class> <!-- automationTestCases.AA_Logon_Water -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

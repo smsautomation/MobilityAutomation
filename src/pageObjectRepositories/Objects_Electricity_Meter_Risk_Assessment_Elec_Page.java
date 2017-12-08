@@ -30,8 +30,9 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
     public static WebElement lbl_Risk_Assessment_Elec(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[1]/div/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[1]/div/div[1]/h4"));
+			element = driver.findElement(By.id("Title_RiskAss_elec"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Risk_Assessment_Elec not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

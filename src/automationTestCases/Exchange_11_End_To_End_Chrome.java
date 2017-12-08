@@ -32,6 +32,7 @@ import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Capture_PrePayment_Data_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
@@ -96,8 +97,9 @@ public class Exchange_11_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[151]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[151]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_93_EXCH11')]")).click();
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -223,6 +225,17 @@ public class Exchange_11_End_To_End_Chrome {
 		Methods_Electricity_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
 		
 		//Verify that we are on the Electricity Meter Remove Asset page
+		Objects_Electricity_Meter_Capture_PrePayment_Data_Page.lbl_Prepayment_Meter_Data(driver).isDisplayed();
+		Log.info("Capture Prepayment Meter Data page displayed as expected");		
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.viewPage(driver, sTestCaseName);
+		Log.info("Capture Prepayment Meter Data page initial elements displayed as expected");
+				
+		//Invoke Method to complete remove asset page 
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Electricity Meter Remove Asset page
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset(driver).isDisplayed();
 		Log.info("Remove Asset page displayed as expected");
 		
@@ -242,15 +255,15 @@ public class Exchange_11_End_To_End_Chrome {
 		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");
 																		
 		//Invoke Method to complete new meter details page 
-		Methods_Electricity_Meter_New_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesEXCH11(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
-		Log.info("New Meter Details page displayed as expected");
+		Log.info("Additional Electricity Tests page displayed as expected");
 		
 		//Verify Initial page elements displayed
 		Methods_Electricity_Meter_Additional_Electricity_Tests.viewPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Additional Electricity Tests initial elements displayed as expected");
+		Log.info("Additional Electricity Tests initial elements displayed as expected");
 																				
 		//Invoke Method to complete Additional Electricity Tests page 
 		Methods_Electricity_Meter_Additional_Electricity_Tests.addSuccessValues(driver, sTestCaseName);
@@ -264,7 +277,7 @@ public class Exchange_11_End_To_End_Chrome {
 		Log.info("Electricity Meter Initial Meter Reading initial elements displayed as expected");
 																						
 		//Invoke Method to complete Initial Meter Reading page 
-		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues1RDumb(driver, sTestCaseName);
 			
 		//Verify that we are on the Electricity Meter Meter Credit page
 		Objects_Electricity_Meter_Meter_Credit_Page.lbl_Meter_Credit(driver).isDisplayed();

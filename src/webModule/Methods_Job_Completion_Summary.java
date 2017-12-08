@@ -40,14 +40,36 @@ public class Methods_Job_Completion_Summary{
 			Log.info(sTestCaseName + " | Gas Meter MPRN label displayed as expected");
 			}		
 		}
-		else if ("Exchange_2_End_To_End_Chrome".equals(sTestCaseName))
+		else if ("Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
+				|| "NMEX_5_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
 			}
 			System.out.println("Doing the elseif"); 
 		}
-		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName))
+		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");

@@ -74,8 +74,9 @@ public class Objects_Job_Completion_Summary_Page {
     public static WebElement txt_Additional_Notes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[4]/div[2]/textarea"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[4]/div[2]/textarea"));
+			element = driver.findElement(By.id("txt_AddNot_Summ"));	
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Additional_Notes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -106,8 +107,9 @@ public class Objects_Job_Completion_Summary_Page {
 	public static WebElement lbl_Summary_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[4]/div[1]/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[4]/div[1]/div[2]"));
+			element = driver.findElement(By.id("lbl_Summary"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Summary_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

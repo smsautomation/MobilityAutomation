@@ -117,7 +117,7 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	   	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[1]/label"));
-			element = driver.findElement(By.id("rb_SuitFD_y"));
+			element = driver.findElement(By.id("rb_SuitRJ_y"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reschedule_Job_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -128,7 +128,7 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	   	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/smartcheck/div/div[1]/div[2]/div[3]/div[2]/div[2]/label"));
-			element = driver.findElement(By.id("rb_SuitFD_n"));
+			element = driver.findElement(By.id("rb_SuitRJ_n"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Reschedule_Job_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -138,7 +138,7 @@ public class Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page {
 	public static WebElement btn_Abort(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_Elec_fail"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

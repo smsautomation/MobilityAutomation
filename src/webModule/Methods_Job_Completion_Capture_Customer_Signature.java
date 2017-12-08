@@ -100,6 +100,7 @@ public class Methods_Job_Completion_Capture_Customer_Signature{
 		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Job_Complete_Submit(driver).click();{
 		Log.info(sTestCaseName + " | Job Complete - Submit button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Job_Completion_Capture_Customer_Signature_Page.btn_Job_Complete_OK(driver).click();{
 		Log.info(sTestCaseName + " | Job Complete OK button clicked");
 		}

@@ -98,7 +98,8 @@ public class Exchange_1_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[3]/div/div[1]/div/div[1]/span[1]/span")).click();
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[169]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_5_EXCH1')]")).click();
 
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -108,14 +109,17 @@ public class Exchange_1_End_To_End_Chrome {
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
+		Log.info("Appointment Details page Customer details clicked");	
 		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 5);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
+		Log.info("Appointment Details page Job details clicked");	
 		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 5);
 		
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
+		Log.info("Appointment Details page Meter details clicked");		
 		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 5);
 				
 		//Click Call Forward to bring up Contact options
@@ -369,6 +373,8 @@ public class Exchange_1_End_To_End_Chrome {
 		//Verify that we have returned to the Appointments list page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
 		
 	}
 	

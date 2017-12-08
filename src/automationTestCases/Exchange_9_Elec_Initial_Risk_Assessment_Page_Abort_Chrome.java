@@ -28,8 +28,11 @@ import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
+import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
+import pageObjectRepositories.Objects_Gas_Meter_Initial_Risk_Assessment_Page;
+import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Abort_Page;
 
@@ -80,8 +83,9 @@ public class Exchange_9_Elec_Initial_Risk_Assessment_Page_Abort_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[69]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[69]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_175_EXCH9')]")).click();
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -145,6 +149,54 @@ public class Exchange_9_Elec_Initial_Risk_Assessment_Page_Abort_Chrome {
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Elec_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
+		
+		//Verify Abort elements displayed
+		Methods_Aborts.viewPageAbortRiskReasons(driver, sTestCaseName);
+		Log.info("Abort page elements displayed as expected");
+			
+		//Invoke Method to complete Aborts questions for a success outcome 
+		Methods_Aborts.addSuccessValuesReasonsOrange(driver, sTestCaseName);
+		
+		//Verify that we are on the Gas Meter Initial Risk Assessment page
+		Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
+		Log.info("Gas Meter Initial Risk Assessment page displayed as expected");	
+						
+		//Invoke Method to complete a successful initial risk assessment 
+		Methods_Gas_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
+
+		//Verify that we are on the Gas Meter Risk Assessment - Gas page
+		Objects_Gas_Meter_Risk_Assessment_Gas_Page.lbl_Risk_Assessment_Gas(driver).isDisplayed();
+		Log.info("Risk Assessment - Gas page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Gas_Meter_Risk_Assessment_Gas.viewPage(driver, sTestCaseName);
+		Log.info("Gas Meter Risk Assessment Gas initial elements displayed as expected");
+																												
+		//Invoke Method to complete an aborted risk assessment - gas due to low pressure 
+		Methods_Gas_Meter_Risk_Assessment_Gas.addAbortValuesLowGas(driver, sTestCaseName);
+
+		//Click Abort button to bring up Abort page 
+		Objects_Gas_Meter_Risk_Assessment_Gas_Page.btn_Abort(driver).click();
+		Log.info("Abort button clicked");
+				
+		//Verify Abort page displayed
+		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Gas_Meter_Reason_Codes(driver).isDisplayed();
+		Log.info("Abort page displayed as expected");
+		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
+		
+		//Verify Abort elements displayed
+		Methods_Aborts.viewPageAbortRiskReasons(driver, sTestCaseName);
+		Log.info("Abort page elements displayed as expected");
+			
+		//Invoke Method to complete Aborts questions for a success outcome 
+		Methods_Aborts.addSuccessValuesRiskReasonsRed(driver, sTestCaseName);
+		
+		//Verify that we have returned to the Appointments list page
+	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+		Log.info("First Appointment Header displayed");
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		
 	}
 	
 	//Log out

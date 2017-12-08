@@ -68,17 +68,43 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 		
-		Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
-		Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
-		
-		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName) || "Exchange_2_End_To_End_Chrome".equals(sTestCaseName))
+		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
+				|| "FLTY_2_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
+			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
+			}
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
 			}		
 		}
-		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName)) 
+		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName)) 
 		{ 
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
+			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
+			}
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");
 			}
@@ -90,12 +116,37 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Full_HAN_Established_Yes(driver).click();{
 			Log.info(sTestCaseName + " | Full HAN Established Successfully - Yes radio button clicked");
 			}	
+		}
+		else if ("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)
+				||"Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)) 
+		{ 
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).click();{
+			Log.info(sTestCaseName + " | Device Binding and Commissioning Title - clicked to Open");
+			}	
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
+			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
+			}
 			
-		} 
+			Thread.sleep(300);
+			
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");
+			}
+			
+			Thread.sleep(500);
+		
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
+			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
+			}	
+			
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Full_HAN_Established_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full HAN Established Successfully - Yes radio button clicked");
+			}
+		}
+		 
 		else 
 		{ 
 			System.out.println("Doing the else "); 
-		}
 		}
 		
 /*
@@ -118,9 +169,8 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 */	
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+	}
 		
 	//END OF ADD SUCCESS VALUES METHOD
-	}
-			
+}		
 //END OF METHODS
-}

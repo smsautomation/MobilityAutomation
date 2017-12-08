@@ -72,7 +72,7 @@ public class Objects_Electricity_Meter_Initial_Risk_Assessment_Page {
 	   	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassessinitial/div/div[2]/div[3]/div[2]/div/label"));
-			element = driver.findElement(By.xpath("rb_CallEGP_y"));
+			element = driver.findElement(By.id("rb_CallEGP_y"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Called_EGP_Yes not found | Exception desc : "+e.getMessage());		
  		} 

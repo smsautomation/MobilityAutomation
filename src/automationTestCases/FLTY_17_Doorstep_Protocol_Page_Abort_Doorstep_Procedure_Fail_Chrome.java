@@ -17,6 +17,7 @@
 
 package automationTestCases;
 
+
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,10 +28,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
 import webModule.*;
-import pageObjectRepositories.Objects_Appointment_Details_Page;
-import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Login_Page;
+import pageObjectRepositories.Objects_Appointment_Details_Page;
+import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Abort_Page;
+import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
+
+
 
 public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome {
 
@@ -71,7 +75,7 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome
 	//Run the test
 	@Test
 	public void main() throws Exception {
-		/*	
+			
 		Methods_Login.viewPage(driver, sTestCaseName);
 		
 		Methods_Login.addSuccessValues(driver, sTestCaseName);
@@ -79,8 +83,9 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[37]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[37]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_143_FLTY17')]")).click();
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -135,7 +140,7 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome
 		Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");	
-	*/			
+			
 	
 	}
 	

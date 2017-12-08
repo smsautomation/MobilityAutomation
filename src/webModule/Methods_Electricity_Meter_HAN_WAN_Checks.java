@@ -132,12 +132,12 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 		}
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).click();
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("5");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("4");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("3");
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys(Keys.TAB);
-		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("2");{
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).sendKeys("4");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).sendKeys("3");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).sendKeys("2");{
 		Log.info(sTestCaseName + " | Signal Strength Values entered");
 		}
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Sufficient_Signal_Proceed_No(driver).click();{

@@ -31,6 +31,7 @@ import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Teleswitch_Scan_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
@@ -95,8 +96,9 @@ public class Exchange_5_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[138]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[139]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_81_EXCH5')]")).click();
+	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -165,7 +167,7 @@ public class Exchange_5_End_To_End_Chrome {
 		
 		//Invoke Method to complete a successful risk assessment 
 		Methods_Electricity_Meter_Risk_Assessment_Elec.addSuccessValues(driver, sTestCaseName);
-	
+		Thread.sleep(500);
 		//Verify that we are on the Electricity Meter Capture Initial Photo Of Elec Installation page
 		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();
 		Log.info("Capture Initial Photo Of Elec Installation page displayed as expected");
@@ -242,6 +244,18 @@ public class Exchange_5_End_To_End_Chrome {
 																		
 		//Invoke Method to complete new meter details page 
 		Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
+		
+		//Verify that we are on the Teleswitch Serial Number page
+		Objects_Electricity_Meter_Teleswitch_Scan_Page.lbl_Scan_Teleswitch(driver).isDisplayed();
+		Log.info("Elec Teleswitch Serial Number page displayed as expected");		
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Teleswitch_Scan.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter New Meter Details initial elements displayed as expected");		
+		
+		//Invoke Method to complete Elec Telemeter details page 
+		Methods_Electricity_Meter_Teleswitch_Scan.addSuccessValues(driver, sTestCaseName);		
+						
 				
 		//Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();

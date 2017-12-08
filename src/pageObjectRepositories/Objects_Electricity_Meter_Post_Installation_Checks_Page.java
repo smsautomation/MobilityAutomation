@@ -40,8 +40,9 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement btn_Polarity_Check_Meter_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[3]/div[2]/div/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[3]/div[2]/div/label"));
+			element = driver.findElement(By.id("rb_CarOutPolCk_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Polarity_Check_Meter_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -71,7 +72,7 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[7]/div[2]/div/label"));
-			element = driver.findElement(By.id("polp5"));
+			element = driver.findElement(By.id("rb_SocSafChk_pass"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Socket_Safety_Test_Pass not found | Exception desc : "+e.getMessage());		
  		} 

@@ -125,6 +125,43 @@ public class Methods_Electricity_Meter_Initial_Meter_Reading{
 		
 	//END OF ADD SUCCESS VALUES METHOD
 	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValues2Registers
+	* Author: Iain Storrie
+	* Date: 05/07/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Initial Meter Reading page
+	* in order to force a successful initial meter reading scenario where two meter registers are present
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValues1RDumb(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful additional tests scenario 
+		Objects_Electricity_Meter_Initial_Meter_Reading_Page.txt_Capture_Meter_Reading(driver).click();
+		Objects_Electricity_Meter_Initial_Meter_Reading_Page.txt_Capture_Meter_Reading(driver).sendKeys("12345");{
+		Log.info(sTestCaseName + " | Meter reading value entered in the Capture Meter Reading textbox");
+		}
+		Objects_Electricity_Meter_Initial_Meter_Reading_Page.lbl_Inital_Meter_Reading(driver).click();{
+		Log.info(sTestCaseName + " | Initial Meter Reading label clicked");
+		}
+		Objects_Electricity_Meter_Initial_Meter_Reading_Page.lbl_Initial_Meter_Reading_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | New Meter Details Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
 		
 //END OF METHODS
 }

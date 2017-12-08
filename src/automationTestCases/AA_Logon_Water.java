@@ -3,16 +3,13 @@ package automationTestCases;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+//Add for Grid session
+//import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-
-import pageObjectRepositories.Objects_Login_Page;
-
 import utility.*;
 import webModule.*;
-/*
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
@@ -36,7 +33,6 @@ import pageObjectRepositories.Objects_Job_Completion_Smart_Education_Page;
 import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
-*/
 
 
 public class AA_Logon_Water {
@@ -76,6 +72,15 @@ public class AA_Logon_Water {
 		Methods_Login.addSuccessValues(driver, sTestCaseName);
 		
 	}
+	//Log out
 	
+	@AfterMethod
+	public void afterMethod() {
+	
+	    driver.quit();
+	    
+	    Log.endTestCase(sTestCaseName);        
+	
+	}
 	
 }

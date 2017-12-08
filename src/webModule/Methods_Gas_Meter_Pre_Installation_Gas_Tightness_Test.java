@@ -164,6 +164,7 @@ public class Methods_Gas_Meter_Pre_Installation_Gas_Tightness_Test{
 		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
 		}
 		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.txt_Additional_Notes(driver).click();
+		Log.info(sTestCaseName + " | Additional Notes TextBox clicked");
 		Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.txt_Additional_Notes(driver).sendKeys("Test");{
 		Log.info(sTestCaseName + " | Value entered in the Additional notes textbox");
 		}

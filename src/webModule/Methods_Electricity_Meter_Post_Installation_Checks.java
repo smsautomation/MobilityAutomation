@@ -72,14 +72,20 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Polarity_Check_Meter_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Polarity Check Meter - Yes radio button clicked");
 		}
-		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).click();
-		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).sendKeys("Polarity");
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).click();{
+		Log.info(sTestCaseName + " | Polarity Check Plugin Combobox clicked");
+		}
+		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).sendKeys("Polarity");{
+		Log.info(sTestCaseName + " | Typed Polarity in Polarity Check Plugin Combobox");
+		}
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.cbx_Polarity_Check_Plugin(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Polarity tested value selected from the Polarity Check Plugin Combobox");
 		}
+		Thread.sleep(400);
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Socket_Safety_Test_Pass(driver).click();{
 		Log.info(sTestCaseName + " | Socket Safety Test - Pass radio button clicked");
 		}
+		Thread.sleep(400);
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).click();
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).sendKeys("Tester");{
 		Log.info(sTestCaseName + " | Polarity tested Witness Name Entered");

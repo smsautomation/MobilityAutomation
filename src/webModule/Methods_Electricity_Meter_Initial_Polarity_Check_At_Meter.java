@@ -2,6 +2,7 @@ package webModule;
 
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
+import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
 import utility.Log;
 import utility.Utils;
 
@@ -136,12 +137,22 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter{
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Cut_Out_Fail(driver).click();{
 		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
 		}
-		/*
-		 * Thread.sleep(2000);
-		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Meter_Fail(driver).click();{
-		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
+		if ("Exchange_11_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName)
+				||("Exchange_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName))
+				||("Exchange_3_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName))
+				||("Exchange_9_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName))
+				||("Exchange_5_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName))
+				||("FLTY_17_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName))
+				||("FLTY_2_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome".equals(sTestCaseName)))
+		{ 
+			Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Meter_Fail(driver).click();{
+			Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
+			}		
 		}
-		*/
+		else 
+		{ 
+			System.out.println("Doing the else "); 
+		}
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Reported_Team_Manager_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported To Team Manager - Yes radio button clicked");
 		}
@@ -152,7 +163,10 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter{
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Team_Manager_Authorisation_No(driver).click();{
 		Log.info(sTestCaseName + " | Team Manager Authorisation - No radio button clicked");
 		}
-		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort(driver).isDisplayed();{
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort_Polarity(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Abort button displayed");
+		}
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Abort_Polarity(driver).click();{
 		Log.info(sTestCaseName + " | Abort button displayed");
 		}
 		

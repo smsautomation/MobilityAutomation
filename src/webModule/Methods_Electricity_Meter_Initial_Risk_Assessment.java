@@ -76,6 +76,8 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		Log.info(sTestCaseName + " | Turned Off Gas - Yes radio button displayed as expected");
 		}
 		
+		Thread.sleep(500);
+		
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Called_EGP_Yes(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Called EGP - Yes radio button displayed as expected");
 		}
@@ -92,10 +94,10 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		Log.info(sTestCaseName + " | Reported Incident - No radio button displayed as expected");
 		}
 		
-		if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).isDisplayed() == true){
+		/*if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).isDisplayed() == true){
 			Log.info(sTestCaseName + " | AIRline Reference Number textbox displayed");		
 		}
-		/*		
+				
 		if (Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_Yes(driver).isDisplayed() == true){
 			Log.info(sTestCaseName + " | OK to Proceed - Yes radio button displayed");		
 		}

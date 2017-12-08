@@ -30,8 +30,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement lbl_Device_Binding_Commissioning(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[1]/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("Title_DevBinComm"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Device_Binding_Commissioning not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -40,8 +41,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_IHD_Accepted_Yes(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div/div[2]/div[1]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div/div[2]/div[1]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_IHDAcc_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_IHD_Accepted_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -50,8 +52,9 @@ public class Objects_Job_Completion_Device_Binding_Commissioning_Page {
     public static WebElement btn_IHD_Accepted_No(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div/div[2]/div[1]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div/div[2]/div[1]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_IHDAcc_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_IHD_Accepted_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

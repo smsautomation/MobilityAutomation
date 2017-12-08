@@ -29,11 +29,13 @@ import utility.*;
 import webModule.*;
 import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
+import pageObjectRepositories.Objects_Appointments_List_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Capture_PrePayment_Data_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
@@ -46,6 +48,13 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
+import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
+import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
+import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
+import pageObjectRepositories.Objects_Job_Completion_Energy_Efficiency_Information_Page;
+import pageObjectRepositories.Objects_Job_Completion_Scan_IHD_Page;
+import pageObjectRepositories.Objects_Job_Completion_Smart_Education_Page;
+import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Initial_Risk_Assessment_Page;
@@ -99,8 +108,9 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[81]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[81]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_187_EXCH9')]")).click();
+	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -252,6 +262,17 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Methods_Electricity_Meter_Remove_Meter.addSuccessValues(driver, sTestCaseName);
 		
 		//Verify that we are on the Electricity Meter Remove Asset page
+		Objects_Electricity_Meter_Capture_PrePayment_Data_Page.lbl_Prepayment_Meter_Data(driver).isDisplayed();
+		Log.info("Capture Prepayment Meter Data page displayed as expected");		
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.viewPage(driver, sTestCaseName);
+		Log.info("Capture Prepayment Meter Data page initial elements displayed as expected");
+				
+		//Invoke Method to complete remove asset page 
+		Methods_Electricity_Meter_Capture_PrePayment_Meter_Data.addSuccessValues(driver, sTestCaseName);	
+		
+		//Verify that we are on the Electricity Meter Remove Asset page
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset(driver).isDisplayed();
 		Log.info("Remove Asset page displayed as expected");
 		
@@ -304,7 +325,7 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Log.info("Electricity Meter Commissioning initial elements displayed as expected");
 																								
 		//Invoke Method to complete Commissioning page 
-		Methods_Electricity_Meter_Commissioning.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Commissioning.addSuccessValuesSmart(driver, sTestCaseName);
 									
 		//Verify that we are on the Electricity Meter Post Installation Checks page
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Checks(driver).isDisplayed();
@@ -334,6 +355,21 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 																												
 		//Invoke Method to complete a successful risk assessment - gas 
 		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
+		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		Log.info("Suitable for Smart Installation page displayed as expected");	
+		
+		//Verify Initial page elements displayed
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+		
+		//Verify correct page elements displayed after Suitable For Smart Installation - Yes clicked
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
+	
+		//Invoke Method to complete a successful suitable for smart installation 
+		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);	
 													
 		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
@@ -365,6 +401,96 @@ public class Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Tes
 		Objects_Abort_Page.First_Utility_Additional_Questions.lbl_Abort_Gas_Meter_Reason_Codes(driver).isDisplayed();
 		Log.info("Abort page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
+		
+		//Verify Abort elements displayed
+		Methods_Aborts.viewPageAbortReasons(driver, sTestCaseName);
+		Log.info("Abort page elements displayed as expected");
+			
+		//Invoke Method to complete Aborts questions for a success outcome 
+		Methods_Aborts.addSuccessValuesReasonsOrange(driver, sTestCaseName);
+		
+		//Verify that we are on the Job Completion Device Binding & Commissioning page
+		Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).isDisplayed();
+		Log.info("Job Completion Device Binding Commissioning page displayed as expected");
+			
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Device_Binding_Commissioning.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Device Binding Commissioning initial elements displayed as expected");
+																																		
+		//Invoke Method to complete Device Binding & Commissioning page 
+		Methods_Job_Completion_Device_Binding_Commissioning.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Job Completion Scan IHD page
+		Objects_Job_Completion_Scan_IHD_Page.lbl_Scan_IHD(driver).isDisplayed();
+		Log.info("Job Completion Scan IHD page displayed as expected");
+					
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Scan_IHD.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Scan IHD initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Scan IHD page 
+		Methods_Job_Completion_Scan_IHD.addSuccessValues(driver, sTestCaseName);
+																			
+		//Verify that we are on the Job Completion Configure All Meters Installed page
+		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
+		Log.info("Job Completion Configure All Meters Installed page displayed as expected");
+	
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Configure_All_Meters_Installed.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Configure All Meters Installed initial elements displayed as expected");
+																																
+		//Invoke Method to complete Configure All Meters Installed page 
+		Methods_Job_Completion_Configure_All_Meters_Installed.addSuccessValues(driver, sTestCaseName);
+																			
+		//Verify that we are on the Job Completion Energy Efficiency Information page
+		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
+		Log.info("Job Completion Energy Efficient Information page displayed as expected");
+	
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Energy_Efficient_Information.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Enerfy Efficiency Information initial elements displayed as expected");
+																																		
+		//Invoke Method to complete Energy Efficiency information page 
+		Methods_Job_Completion_Energy_Efficient_Information.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Job Completion Summary page
+		Objects_Job_Completion_Smart_Education_Page.lbl_Smart_Education(driver).isDisplayed();
+		Log.info("Job Completion Smart Education displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Smart_Education.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Summary initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Summary page 
+		Methods_Job_Completion_Smart_Education.addSuccessValues(driver, sTestCaseName);
+																				
+		//Verify that we are on the Job Completion Summary page
+		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();
+		Log.info("Job Completion Summary page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Summary.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Summary initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Energy Efficiency information page 
+		Methods_Job_Completion_Summary.addSuccessValues(driver, sTestCaseName);
+																						
+		//Verify that we are on the Job Completion Capture Customer Signature page
+		Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
+		Log.info("Job Completion Summary page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Capture_Customer_Signature.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Capture Customer Signature initial elements displayed as expected");
+																																						
+		//Invoke Method to complete Energy Efficiency information page 
+		Methods_Job_Completion_Capture_Customer_Signature.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we have returned to the Appointments list page
+	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+		Log.info("First Appointment Header displayed");
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
 
 	}
 	

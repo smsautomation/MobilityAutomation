@@ -32,8 +32,9 @@ public class Objects_Abort_Page {
     public static WebElement lbl_Risk_Failure(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[1]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[1]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio1"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Risk_Failure not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -42,8 +43,9 @@ public class Objects_Abort_Page {
 	public static WebElement lbl_Tampering_Identified(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[2]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[2]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio2"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Tampering_Identified not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -52,8 +54,9 @@ public class Objects_Abort_Page {
 	public static WebElement lbl_Job_Already_Done(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[3]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[3]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio3"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Job_Already_Done not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -62,8 +65,9 @@ public class Objects_Abort_Page {
 	public static WebElement lbl_No_Meter_Onsite(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[4]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[4]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio4"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_No_Meter_Onsite not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -71,8 +75,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Wrong_Meter_Serial_Number(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[5]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[5]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio5"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Wrong_Meter_Serial_Number not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -80,8 +85,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Customer(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[6]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[6]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio6"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Customer not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -89,8 +95,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_No_Signal_For_Smart(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[7]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[7]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio7"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_No_Signal_For_Smart not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -98,8 +105,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_No_Room_For_Meter(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[8]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[8]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio8"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_No_Room_For_Meter not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -107,8 +115,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_No_Fault_Found(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[10]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[10]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio9"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_No_Fault_Found not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -116,8 +125,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Recent_Job_Already_Done(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[29]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[29]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio10"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Recent_Job_Already_Done not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -125,8 +135,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Incorrect_Skillset_For_Elec_Job_Type(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[30]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[30]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio11"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Incorrect_Skillset_For_Elec_Job_Type not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -134,8 +145,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Warrant_Change_Of_Tenancy(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[14]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[14]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio12"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Warrant_Change_Of_Tenancy not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -143,8 +155,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Warrant_Customer_Paid(WebDriver driver){
 		try{
-			element = driver.findElement(By.id(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[15]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.id(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[15]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio13"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Warrant_Customer_Paid not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -152,8 +165,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Warrant_Cancelled_By_Warrant_Officer(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[16]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[16]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio14"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Warrant_Cancelled_By_Warrant_Officer not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -161,8 +175,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Job_Faulted(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[17]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[17]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio15"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Job_Faulted not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -170,8 +185,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Meter_Blocked_Inaccessible(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[18]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[18]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio16"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Meter_Blocked_Inaccessible not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -179,8 +195,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_New_Mains_Service_Not_Live(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[19]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[19]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio17"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_New_Mains_Service_Not_Live not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -188,8 +205,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Meter_Worker_Not_Correct_Equipment(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[20]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[20]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio18"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Meter_Worker_Not_Correct_Equipment not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -197,8 +215,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Service_Needs_Altered(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[21]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[21]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio19"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Service_Needs_Altered not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -206,8 +225,9 @@ public class Objects_Abort_Page {
 	
 	public static WebElement lbl_Customer_Refused_Resite(WebDriver driver){
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[22]/label/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[22]/label/div[2]"));
+			element = driver.findElement(By.id("abdradio20"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Customer_Refused_Resite not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -311,7 +331,8 @@ public class Objects_Abort_Page {
         public static WebElement lbl_Not_Convenient_With_Customer(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[1]/label/div[2]"));
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[1]/label/div[2]"));
+    			element = driver.findElement(By.id("abdradio1"));
     		}catch(Exception e){
     			Log.error(sRepositoryName + " | lbl_Not_Convenient_With_Customer not found | Exception desc : "+e.getMessage());		
      		} 
@@ -870,7 +891,7 @@ public class Objects_Abort_Page {
         public static WebElement btn_Next(WebDriver driver){
          	 
     		try{
-    			element = driver.findElement(By.id("btnCall3"));
+    			element = driver.findElement(By.id("btnCallNext"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Next not found | Exception desc : "+e.getMessage());		
      		} 
@@ -885,8 +906,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Gas_Meter_Accessible_Yes(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/label/span"));
+    			element = driver.findElement(By.id("abdradiorai11"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Gas_Meter_Accessible_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -895,8 +917,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Gas_Meter_Accessible_No(WebDriver driver){
        	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/label/span"));
+    			element = driver.findElement(By.id("abdradiorai12"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Gas_Meter_Accessible_No not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -905,8 +928,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Gas_Meter_Exchanged_Yes(WebDriver driver){
           	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[2]/div[2]/div[1]/label/span"));
+    			element = driver.findElement(By.id("abdradiorai13"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Gas_Meter_Exchanged_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -915,8 +939,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Gas_Meter_Exchanged_No(WebDriver driver){
          	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div/label/span"));
+    			element = driver.findElement(By.id("abdradiorai14"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Gas_Meter_Exchanged_No not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -925,8 +950,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Contacted_First_Utility_Yes(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div/label/span"));
+    			element = driver.findElement(By.id("abdradioFU1"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Contacted_First_Utility_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -935,7 +961,7 @@ public class Objects_Abort_Page {
         public static WebElement cbx_First_Utility_Rep(WebDriver driver){
        	 
     		try{
-    			element = driver.findElement(By.id("selectInput"));
+    			element = driver.findElement(By.id("cbx_FRST_rep"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | cbx_First_Utility_Rep not found | Exception desc : "+e.getMessage());		
      		} 
@@ -945,8 +971,9 @@ public class Objects_Abort_Page {
         public static WebElement txt_Additional_Notes(WebDriver driver){
           	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[3]/div[2]/textarea"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[3]/div[2]/textarea"));
+    			element = driver.findElement(By.id("txt_addNotAbort"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | txt_Additional_Notes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -965,8 +992,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Elec_Meter_Accessible_Yes(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab5"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Elec_Meter_Accessible_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -975,8 +1003,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Elec_Meter_Accessible_No(WebDriver driver){
        	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab6"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Elec_Meter_Accessible_No not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -985,8 +1014,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Martindale_Test_Passed_Yes(WebDriver driver){
           	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[1]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab7"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Martindale_Test_Passed_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -995,8 +1025,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Martindale_Test_Passed_No(WebDriver driver){
          	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab8"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Martindale_Test_Passed_No not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -1005,7 +1036,7 @@ public class Objects_Abort_Page {
         public static WebElement txt_Signal_Test_Vodafone(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.id("input1"));
+    			element = driver.findElement(By.id("inputSig1"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | txt_Signal_Test_Vodafone not found | Exception desc : "+e.getMessage());		
      		} 
@@ -1015,7 +1046,7 @@ public class Objects_Abort_Page {
         public static WebElement txt_Signal_Test_O2(WebDriver driver){
        	 
     		try{
-    			element = driver.findElement(By.id("input1"));
+    			element = driver.findElement(By.id("inputSig2"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | txt_Signal_Test_O2 not found | Exception desc : "+e.getMessage());		
      		} 
@@ -1025,7 +1056,7 @@ public class Objects_Abort_Page {
         public static WebElement txt_Signal_Test_Orange(WebDriver driver){
           	 
     		try{
-    			element = driver.findElement(By.id("input1"));
+    			element = driver.findElement(By.id("inputSig3"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | txt_Signal_Test_Orange not found | Exception desc : "+e.getMessage());		
      		} 
@@ -1035,7 +1066,7 @@ public class Objects_Abort_Page {
         public static WebElement txt_Signal_Test_TMobile(WebDriver driver){
          	 
     		try{
-    			element = driver.findElement(By.id("input1"));
+    			element = driver.findElement(By.id("inputSig4"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | txt_Signal_Test_TMobile not found | Exception desc : "+e.getMessage());		
      		} 
@@ -1045,8 +1076,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Elec_Meter_Exchanged_Next_Visit_Yes(WebDriver driver){
         	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[4]/div[2]/div[1]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[4]/div[2]/div[1]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab9"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Elec_Meter_Exchanged_Next_Visit_Yes not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -1055,8 +1087,9 @@ public class Objects_Abort_Page {
         public static WebElement btn_Elec_Meter_Exchanged_Next_Visit_No(WebDriver driver){
        	 
     		try{
-    			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[4]/div[2]/div[2]/label/span"));
-     		}catch(Exception e){
+    			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[3]/div/div[2]/div[2]/div[2]/div[1]/div[4]/div[2]/div[2]/label/span"));
+    			element = driver.findElement(By.id("abdradiorab10"));
+    		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Elec_Meter_Exchanged_Next_Visit_No not found | Exception desc : "+e.getMessage());		
      		} 
     	    return element;
@@ -1072,10 +1105,20 @@ public class Objects_Abort_Page {
     	    return element;
     	}
         
-        public static WebElement btn_Abort_Appointment(WebDriver driver){
+        public static WebElement btn_Abort_Appointment_Red(WebDriver driver){
           	 
     		try{
-    			element = driver.findElement(By.id("btnCall2"));
+    			element = driver.findElement(By.id("btnCallabr2"));
+     		}catch(Exception e){
+    			Log.error(sRepositoryName + " | btn_Abort_Appointment not found | Exception desc : "+e.getMessage());		
+     		} 
+    	    return element;
+    	}
+        
+        public static WebElement btn_Abort_Appointment_Orange(WebDriver driver){
+         	 
+    		try{
+    			element = driver.findElement(By.id("btnCall1"));
      		}catch(Exception e){
     			Log.error(sRepositoryName + " | btn_Abort_Appointment not found | Exception desc : "+e.getMessage());		
      		} 
@@ -1122,9 +1165,21 @@ public class Objects_Abort_Page {
     	    return element;
     	}
         
+        public static WebElement btn_Abort_ReScan_Ok(WebDriver driver){
+       	 
+    		try{
+    			element = driver.findElement(By.className("sa-confirm-button-container"));
+     		}catch(Exception e){
+    			Log.error(sRepositoryName + " | btn_Abort_Rescan_Ok not found | Exception desc : "+e.getMessage());		
+     		} 
+    	    return element;
+    	}
+        
         
     }       
 //END OF FIRST_UTILITY_ADDITIONAL_QUESTIONS METHODS
+
+
     
 //END OF METHODS	    
 }

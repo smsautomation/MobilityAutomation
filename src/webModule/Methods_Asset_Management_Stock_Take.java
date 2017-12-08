@@ -116,9 +116,11 @@ public class Methods_Asset_Management_Stock_Take{
 		Objects_Asset_Management_Stock_Take_Page.btn_Submit(driver).click();{
 		Log.info(sTestCaseName + " | Submit button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Stock_Take_Page.btn_OK(driver).click();{
 		Log.info(sTestCaseName + " | OK button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Stock_Take_Page.btn_Stock_Take_OK(driver).click();{
 		Log.info(sTestCaseName + " | Stock Take OK button clicked");
 		}

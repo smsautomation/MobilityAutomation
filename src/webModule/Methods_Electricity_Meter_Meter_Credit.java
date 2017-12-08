@@ -122,7 +122,9 @@ public class Methods_Electricity_Meter_Meter_Credit{
 	
 		//Add correct responses for a successful commissioning scenario 
 		Objects_Electricity_Meter_Meter_Credit_Page.cbx_Elec_Meter_Tariff(driver).click();
-		Objects_Electricity_Meter_Meter_Credit_Page.cbx_Elec_Meter_Tariff(driver).sendKeys("1012 E7 10");
+		Log.info(sTestCaseName + " | Click in the Elec Meter Tariff Combobox");
+		Objects_Electricity_Meter_Meter_Credit_Page.cbx_Elec_Meter_Tariff(driver).sendKeys("1012 E7 10 EMEB");
+		Log.info(sTestCaseName + " | Type 1012 E7 10 EMEB in Elec Meter Tariff Combobox");
 		Objects_Electricity_Meter_Meter_Credit_Page.cbx_Elec_Meter_Tariff(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Tariff selected from the Elec Meter Tariff Combobox");
 		}

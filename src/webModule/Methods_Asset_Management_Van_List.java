@@ -114,13 +114,15 @@ public class Methods_Asset_Management_Van_List{
 		Objects_Asset_Management_Van_List_Page.txt_Notes(driver).sendKeys("Electricity Meter");{
 		Log.info(sTestCaseName + " | Notes entered");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Van_List_Page.btn_Add_Asset(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Van_List_Page.btn_OK(driver).click();{
 		Log.info(sTestCaseName + " | OK button clicked");
 		}
-		
+		Thread.sleep(1000);
 		Objects_Asset_Management_Van_List_Page.txt_Serial_Number(driver).click();
 		Objects_Asset_Management_Van_List_Page.txt_Serial_Number(driver).sendKeys(sGasMeterSerialNumber);{
 		Log.info(sTestCaseName + " | Serial Number entered");
@@ -129,9 +131,11 @@ public class Methods_Asset_Management_Van_List{
 		Objects_Asset_Management_Van_List_Page.txt_Notes(driver).sendKeys("Gas Meter");{
 		Log.info(sTestCaseName + " | Notes entered");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Van_List_Page.btn_Add_Asset(driver).click();{
 		Log.info(sTestCaseName + " | Add Asset button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Asset_Management_Van_List_Page.btn_OK(driver).click();{
 		Log.info(sTestCaseName + " | OK button clicked");
 		}

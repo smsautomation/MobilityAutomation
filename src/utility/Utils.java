@@ -207,6 +207,109 @@ public class Utils {
         return driver;
     }
 
+	/* **************************************************************************************************
+	* Function: openBrowserWaypoint
+	* Author: Paul Middleton
+	* Date: 17/03/2016
+	* Purpose: Selects the browser according to input
+	* Arguments: iTestCaseRow
+	* 
+	* Returns: driver
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date: 12/06/2017
+	* Author: Iain Storrie
+	* Details: Updated sBrowserName to cover Firefox, Chrome & IE.  Removed different user accounts as the automation user 
+	* only be used 
+	*
+	****************************************************************************************************/
+	public static WebDriver openBrowserWaypoint(int iTestCaseRow) throws Exception{
+
+        String sBrowserName;
+        String sURL;
+        
+        try{
+        sBrowserName = ExcelUtils.getCellData(iTestCaseRow, Constant.Col_Browser);
+                
+        //The URL will always be the same, so set that here
+    	sURL = "https://" + Constant.URLWaypoint;
+        
+        switch(sBrowserName){
+	        case "Firefox" :
+        	
+	        	//FirefoxProfile profile = new FirefoxProfile();
+	        	//profile.setPreference("network.proxy.type", 4);
+	        	driver = new FirefoxDriver();//(profile);	
+	            Log.info("New Firefox driver instantiated");
+	
+	            driver.manage().window().maximize();
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds");
+	
+	            driver.get(sURL);
+	            Log.info("Web application launched successfully");
+	            break;
+	            
+	        case "IE" :
+
+	            DesiredCapabilities cap = new DesiredCapabilities();
+	            cap.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+	            cap.setCapability(InternetExplorerDriver.NATIVE_EVENTS, false);
+	            cap.setCapability("ignoreZoomSetting", true);
+	            
+	            System.setProperty("webdriver.ie.driver","C:\\IE Driver\\IEDriverServer.exe"); 
+
+	            driver = new InternetExplorerDriver(cap);
+	            Log.info("New IE driver instantiated");
+	            
+	            driver.manage().window().maximize();
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds");
+	            
+	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	            /*
+	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
+	            alert.authenticateUsing(new UserAndPassword(sUsername, sPassword));
+	            */
+	            Log.info("Web application launched successfully");
+	            break;   
+	            
+	        case "Chrome" :
+	        	
+	        	//code for local browser sessions
+	        	ChromeOptions options = new ChromeOptions();
+	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
+	        	driver = new ChromeDriver(options);	
+	        	//driver.get("http://www.google.co.uk");
+	        	Log.info("New Chrome driver instantiated");
+				
+	        	
+	            driver.manage().window().maximize();
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds");
+	
+	            driver.get(sURL);
+	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	            Log.info("Web application launched successfully");
+	            break;   
+
+	        default :
+	            Log.error("No valid browser selected");	}            	
+	            
+            
+        }catch (Exception e){
+            Log.error("Class Utils | Method OpenBrowser | Exception desc : "+e.getMessage());
+        }
+        //System.out.println("driver =" + driver);
+        return driver;
+    }
+
 
 	/* **************************************************************************************************
 	* Function: openGridBrowser

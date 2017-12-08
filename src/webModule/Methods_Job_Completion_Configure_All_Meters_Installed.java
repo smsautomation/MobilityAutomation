@@ -52,7 +52,9 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")) 
+		
+		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")
+				||(sTestCaseName.equals("FLTY_2_End_To_End_Chrome")))
 		{ 
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -71,7 +73,29 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome")))
+		else if ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_End_To_End_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome")))
 		{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -81,20 +105,20 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			Log.info(sTestCaseName + " | Full WAN Established - No radio button displayed as expected");
 			}
 			
-			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Full Configuration Applied Gas - Yes radio button displayed as expected");
-			}
-				
-			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_No(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Full Configuration Applied Gas - No radio button displayed as expected");
-			}
-			
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Electricity_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full Configuration Applied Elec - Yes radio button displayed as expected");
 			}
 				
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Electricity_No(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full Configuration Applied Elec - No radio button displayed as expected");
+			}
+			
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Gas - Yes radio button displayed as expected");
+			}
+				
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_No(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Gas - No radio button displayed as expected");
 			}
 		}
 			else	
@@ -166,7 +190,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}	
 			
 		}
-		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")) 
+		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")
+				||(sTestCaseName.equals("FLTY_2_End_To_End_Chrome")))
 		{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
@@ -174,7 +199,29 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if  ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome")))
+		else if  ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_End_To_End_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("Exchange_9_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
+				||(sTestCaseName.equals("FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome")))
 		{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{

@@ -30,8 +30,9 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement lbl_Capture_Customer_Signature(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("lbl_CapCus_Sig"));	
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Capture_Customer_Signature not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -71,8 +72,9 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement btn_Customer_Refused_Sign_Yes(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[1]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_CusRefSig_y"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Refused_Sign_Yes not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -81,8 +83,9 @@ public class Objects_Job_Completion_Capture_Customer_Signature_Page {
     public static WebElement btn_Customer_Refused_Sign_No(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[2]/label"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[5]/div[2]/div[3]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_CusRefSig_n"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Customer_Refused_Sign_No not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

@@ -115,8 +115,9 @@ public class Exchange_3_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[15]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_121_EXCH3')]")).click();
+	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -533,7 +534,7 @@ public class Exchange_3_End_To_End_Chrome {
 		Log.info("Job Completion Summary initial elements displayed as expected");
 																																				
 		//Invoke Method to complete Summary page 
-		Methods_Job_Completion_Smart_Education.addSuccessValues(driver, sTestCaseName);	
+		Methods_Job_Completion_Smart_Education.addSuccessValues(driver, sTestCaseName);
 																				
 		//Verify that we are on the Job Completion Summary page
 		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();

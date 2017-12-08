@@ -44,7 +44,10 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
+import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
 import pageObjectRepositories.Objects_Job_Completion_Energy_Efficiency_Information_Page;
+import pageObjectRepositories.Objects_Job_Completion_Scan_IHD_Page;
+import pageObjectRepositories.Objects_Job_Completion_Smart_Education_Page;
 import pageObjectRepositories.Objects_Job_Completion_Summary_Page;
 import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
@@ -97,8 +100,9 @@ public class FLTY_2_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[111]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[111]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_53_FLTY2')]")).click();
+
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -287,7 +291,7 @@ public class FLTY_2_End_To_End_Chrome {
 		Log.info("Electricity Meter Commissioning initial elements displayed as expected");
 																								
 		//Invoke Method to complete Commissioning page 
-		Methods_Electricity_Meter_Commissioning.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_Commissioning.addSuccessValuesSmart(driver, sTestCaseName);
 									
 		//Verify that we are on the Electricity Meter Post Installation Checks page
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Checks(driver).isDisplayed();
@@ -299,6 +303,28 @@ public class FLTY_2_End_To_End_Chrome {
 																										
 		//Invoke Method to complete Post Installation Checks page 
 		Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Job Completion Device Binding & Commissioning page
+		Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).isDisplayed();
+		Log.info("Job Completion Device Binding Commissioning page displayed as expected");
+			
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Device_Binding_Commissioning.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Device Binding Commissioning initial elements displayed as expected");
+																																		
+		//Invoke Method to complete Device Binding & Commissioning page 
+		Methods_Job_Completion_Device_Binding_Commissioning.addSuccessValues(driver, sTestCaseName);
+								
+		//Verify that we are on the Job Completion Scan IHD page
+		Objects_Job_Completion_Scan_IHD_Page.lbl_Scan_IHD(driver).isDisplayed();
+		Log.info("Job Completion Scan IHD page displayed as expected");
+					
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Scan_IHD.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Scan IHD initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Scan IHD page 
+		Methods_Job_Completion_Scan_IHD.addSuccessValues(driver, sTestCaseName);
 																								
 		//Verify that we are on the Job Completion Configure All Meters Installed page
 		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
@@ -321,6 +347,17 @@ public class FLTY_2_End_To_End_Chrome {
 																																		
 		//Invoke Method to complete Energy Efficiency information page 
 		Methods_Job_Completion_Energy_Efficient_Information.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Job Completion Summary page
+		Objects_Job_Completion_Smart_Education_Page.lbl_Smart_Education(driver).isDisplayed();
+		Log.info("Job Completion Smart Education displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Job_Completion_Smart_Education.viewPage(driver, sTestCaseName);
+		Log.info("Job Completion Summary initial elements displayed as expected");
+																																				
+		//Invoke Method to complete Summary page 
+		Methods_Job_Completion_Smart_Education.addSuccessValues(driver, sTestCaseName);	
 																				
 		//Verify that we are on the Job Completion Summary page
 		Objects_Job_Completion_Summary_Page.lbl_Summary(driver).isDisplayed();

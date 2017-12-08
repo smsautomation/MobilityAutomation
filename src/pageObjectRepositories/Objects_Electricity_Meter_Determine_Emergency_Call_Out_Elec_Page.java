@@ -129,7 +129,7 @@ public class Objects_Electricity_Meter_Determine_Emergency_Call_Out_Elec_Page {
     public static WebElement btn_Abort(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element = driver.findElement(By.id("btn_Elec_fail"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort not found | Exception desc : "+e.getMessage());		
  		} 

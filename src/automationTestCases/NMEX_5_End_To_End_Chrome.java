@@ -87,8 +87,9 @@ public class NMEX_5_End_To_End_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[97]/div/div[1]/div/div[1]/span[1]/span")).click();
-		
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[97]/div/div[1]/div/div[1]/span[1]/span")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_39_NMEX5')]")).click();
+	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
@@ -187,7 +188,8 @@ public class NMEX_5_End_To_End_Chrome {
 		Log.info(sTestCaseName + " | Meter Reading entered");
 		}
 		
-		driver.findElement(By.id("btnNextread")).click();
+		driver.findElement(By.id("btn_Next_read")).click();
+		driver.findElement(By.id("btn_Submit_elec")).click();
 		
 		//Verify that we are on the Job Completion Energy Efficiency Information page
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
@@ -213,7 +215,7 @@ public class NMEX_5_End_To_End_Chrome {
 																						
 		//Verify that we are on the Job Completion Capture Customer Signature page
 		Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
-		Log.info("Job Completion Summary page displayed as expected");
+		Log.info("Job Completion Capture Customer Signature page displayed as expected");
 		
 		//Verify Initial page elements displayed
 		Methods_Job_Completion_Capture_Customer_Signature.viewPage(driver, sTestCaseName);
@@ -221,7 +223,8 @@ public class NMEX_5_End_To_End_Chrome {
 																																						
 		//Invoke Method to complete Capture Customer Signature page 
 		Methods_Job_Completion_Capture_Customer_Signature.addSuccessValues(driver, sTestCaseName);
-	
+
+		
 		//Verify that we have returned to the Appointments list page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
