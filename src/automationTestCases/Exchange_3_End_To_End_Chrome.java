@@ -46,7 +46,6 @@ import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 //keeps saying the below is not referenced in the code - however it must be, as in the log it couldn't find the lbl_Suitable_For_Smart_Installation
-import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Current_Meter_Details_Page;

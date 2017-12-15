@@ -3,7 +3,6 @@ package webModule;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
 import utility.Log;
 import utility.Utils;
 

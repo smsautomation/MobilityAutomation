@@ -129,6 +129,16 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
 	    return element;
 	}
       
+	public static WebElement lbl_Post_Installation_Checks_Completion(WebDriver driver){
+	   	 
+		try{
+		element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[1]/div[1]/h4"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Post_Installation_Checks_Completion not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement lbl_Commissioning_Complete(WebDriver driver){
 	   	 
 		try{

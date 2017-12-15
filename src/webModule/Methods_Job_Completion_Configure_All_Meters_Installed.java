@@ -33,7 +33,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Configure All Meters Installed label displayed as expected");
 		}				
-		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName))
+		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
+				||"INST_14_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -54,7 +55,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 		}
 		
 		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")
-				||(sTestCaseName.equals("FLTY_2_End_To_End_Chrome")))
+				||sTestCaseName.equals("FLTY_2_End_To_End_Chrome")
+				||sTestCaseName.equals("INST_15_End_To_End_Chrome"))
 		{ 
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -191,7 +193,7 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			
 		}
 		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")
-				||(sTestCaseName.equals("FLTY_2_End_To_End_Chrome")))
+				||sTestCaseName.equals("FLTY_2_End_To_End_Chrome"))
 		{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
@@ -229,6 +231,44 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
+		else if  (sTestCaseName.equals("INST_15_End_To_End_Chrome"))
+			{ 
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button clicked");
+			}
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Electricity_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Elec Established - Yes radio button clicked");
+			}	
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_IHD_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied IHD Established - Yes radio button clicked");
+			}	
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Capture_Photo_Joined_Asset(driver).click();{		
+			Log.info(sTestCaseName + " | Next Section button clicked");
+			}
+			
+		}
+		else if  (sTestCaseName.equals("INST_14_End_To_End_Chrome"))
+			{ 
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button clicked");
+			}
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Elec Established - Yes radio button clicked");
+			}	
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_IHD_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied IHD Established - Yes radio button clicked");
+			}	
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Capture_Photo_Joined_Asset(driver).click();{		
+			Log.info(sTestCaseName + " | Next Section button clicked");
+			}
+			
+	}
 		else
 		{ 
 			System.out.println("Doing the else "); 

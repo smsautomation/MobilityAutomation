@@ -47,6 +47,16 @@ public class Objects_Gas_Meter_New_Meter_Details_Page {
 	    return element;
 	}
     
+    public static WebElement cbx_Valid_Gas_Meter(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.id("cbx_NewS2GMet_sel"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Valid_Meter not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement cbx_Meter_Type(WebDriver driver){
       	 
 		try{
@@ -64,6 +74,16 @@ public class Objects_Gas_Meter_New_Meter_Details_Page {
 			element = driver.findElement(By.id("txt_Serial_Num"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Gas_Meter_Serial_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+	public static WebElement btn_Serial_Match_Next(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.className("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}

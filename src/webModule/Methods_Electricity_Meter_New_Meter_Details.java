@@ -2,7 +2,7 @@ package webModule;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.support.ui.Select;
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;
@@ -35,6 +35,44 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		}
 		
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Manufacturer Letter combobox displayed as expected");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-viewPage");
+		
+	//END OF VIEW PAGE METHOD
+	}
+	
+	/* **************************************************************************************************
+	* Function: viewPageSMETS2
+	* Author: Paul Middleton
+	* Date: 19/06/2017
+	* Purpose: This method checks the main page elements on the Electricity Meter New Meter Details page 
+	* upon initial landing for SMETS2
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void viewPageSMETS2(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Check that all of the elements that are expected are displayed
+		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | New Meter Details label displayed as expected");
+		}
+		
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Manufacturer Letter combobox displayed as expected");
+		}
+		
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Manufacturer Letter combobox displayed as expected");
 		}
 		
@@ -189,6 +227,110 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 		
+	/* **************************************************************************************************
+	* Function: addSuccessValuesEXCH9
+	* Author: Paul Middleton
+	* Date: 05/07/2017
+	* Purpose: This method adds the required responses in the Electricity Meter New Meter Details page in 
+	* order to force a successful new meter scenario for the EXCH9 workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesR1SMETS2(WebDriver driver, String sTestCaseName) throws Exception{
+		
+		//Click on the Asset selection Combo box and select the first option
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).click();{
+		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter - Select box clicked");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ARROW_DOWN);
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter first option - Select box clicked");
+		}
+		//Define the Combobox element and get the text of the first option and assign to the variable selectedComboValue
+		Select comboBox = new Select(Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver));
+		String selectedComboValue = comboBox.getFirstSelectedOption().getText();{
+		Log.info(sTestCaseName + " | Got data of the first option and assigned to variable");
+		}
+		//Click on the Serial Scan text box and enter in the Serial number assigned to the variable selectedComboValue 
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).click();{
+		Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys(selectedComboValue);{
+		Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
+		}	
+		//Click on the Label bar to get out of the Text box and move on
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Click Away for the Text Box on the Label - Label clicked");
+		}
+		Thread.sleep(500);
+		//Click Next on the Pop Up Dialog Box
+		Objects_Electricity_Meter_New_Meter_Details_Page.btn_Serial_Match_Next(driver).click();{
+		Log.info(sTestCaseName + " | Matched Asset Next button clicked");
+		}
+		Thread.sleep(500);
+		//Add correct responses for a successful new meter details 
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).click();
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("J");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | J: KAIFA selected from Manufacturer Letter combobox");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).click();
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("Kaifa MA120 1 Rate");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | Kaifa MA120 1 Rate selected from Meter Type combobox");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).click();
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys("0393");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | CCS Code selected from the SSC Code Combobox");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).click();
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys("H");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Location_Code(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | Hall Meter location code selected from the Meter Location Code Combobox");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Certification(driver).click();
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Certification(driver).sendKeys("17/06");
+		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details(driver).click();{
+		Log.info(sTestCaseName + " | Certification Date entered in the Certification Year / Month textbox");
+		}
+		//Click the Next Section Button and check the section bar is closed
+		Objects_Electricity_Meter_New_Meter_Details_Page.btn_Next_Section(driver).click();{
+		Log.info(sTestCaseName + " | Scan Asset Now button clicked");
+		}
+		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | New Meter Details Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesEXCH9
+	* Author: Paul Middleton
+	* Date: 05/07/2017
+	* Purpose: This method adds the required responses in the Electricity Meter New Meter Details page in 
+	* order to force a successful new meter scenario for the EXCH9 workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
 	public static void addSuccessValuesEXCH9(WebDriver driver, String sTestCaseName) throws Exception{
 		
 		//Add correct responses for a successful new meter details 
@@ -251,11 +393,11 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		}
 	
 	/* **************************************************************************************************
-	* Function: addSuccessValuesEXCH5
-	* Author: Iain Storrie
+	* Function: addSuccessValuesEXCH11
+	* Author: Paul Middleton
 	* Date: 05/07/2017
 	* Purpose: This method adds the required responses in the Electricity Meter New Meter Details page in 
-	* order to force a successful new meter scenario for the EXCH5 workflow
+	* order to force a successful new meter scenario for the EXCH11 workflow
 	* Arguments: 
 	* 			
 	* Returns: 

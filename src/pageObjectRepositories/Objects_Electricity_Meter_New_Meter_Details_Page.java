@@ -47,6 +47,16 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
 	    return element;
 	}
     
+    public static WebElement cbx_Valid_Elec_Meter(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.id("cbx_NewS2Met_sel"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Valid_Meter not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement cbx_Meter_Type(WebDriver driver){
       	 
 		try{
@@ -69,6 +79,16 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
 	    return element;
 	}
     
+	public static WebElement btn_Serial_Match_Next(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.className("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
     public static WebElement lbl_Elec_Meter_Serial(WebDriver driver){
     	 
 		try{
@@ -137,6 +157,16 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
 			element = driver.findElement(By.id("txt_Cert_year"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Certification not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+	public static WebElement btn_Next_Section(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btnNextPol"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}

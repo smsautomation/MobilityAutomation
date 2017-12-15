@@ -1,9 +1,7 @@
 package webModule;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-
 import pageObjectRepositories.Objects_Gas_Meter_Remove_Asset_Page;
 import utility.Log;
 import utility.Utils;

@@ -34,14 +34,16 @@ public class Methods_Job_Completion_Summary{
 		Log.info(sTestCaseName + " | Summary label displayed as expected");
 		}
 
-		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName))
+		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
+				||"INST_14_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Gas_Meter_Mprn(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Gas Meter MPRN label displayed as expected");
 			}		
 		}
 		else if ("Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
-				|| "NMEX_5_End_To_End_Chrome".equals(sTestCaseName))
+				|| "NMEX_5_End_To_End_Chrome".equals(sTestCaseName)
+				|| "INST_15_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
@@ -80,11 +82,10 @@ public class Methods_Job_Completion_Summary{
 			}
 			System.out.println("Doing the elseif"); 
 		} 
-		else 
+		else 		
 		{ 
 			System.out.println("Doing the else "); 
-		}
-						
+		}						
 		Objects_Job_Completion_Summary_Page.btn_Potential_Customer_Vulnerability_Identified_Yes(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Potential Customer Vulnerability Identified - Yes radio button displayed as expected");
 		}

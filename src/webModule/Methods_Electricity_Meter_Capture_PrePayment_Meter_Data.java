@@ -1,6 +1,5 @@
 package webModule;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_PrePayment_Data_Page;
 import utility.Log;

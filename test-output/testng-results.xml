@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17466" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:54Z">
+  <suite name="Default suite" duration-ms="43935" started-at="2017-12-13T12:29:07Z" finished-at="2017-12-13T12:29:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17466" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:54Z">
-      <class name="automationTestCases.AA_Logon_Water">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="beforeMethod" is-config="true" duration-ms="9708" started-at="2017-12-08T10:04:37Z" finished-at="2017-12-08T10:04:47Z">
+    <test name="Default test" duration-ms="43935" started-at="2017-12-13T12:29:07Z" finished-at="2017-12-13T12:29:51Z">
+      <class name="automationTestCases.Asset_Management_Stock_Take_Chrome">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:automationTestCases.Asset_Management_Stock_Take_Chrome@396e2f39]" name="beforeMethod" is-config="true" duration-ms="11246" started-at="2017-12-13T12:29:07Z" finished-at="2017-12-13T12:29:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="main()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="main" duration-ms="6342" started-at="2017-12-08T10:04:47Z" finished-at="2017-12-08T10:04:53Z">
+        <test-method status="PASS" signature="main()[pri:0, instance:automationTestCases.Asset_Management_Stock_Take_Chrome@396e2f39]" name="main" duration-ms="31440" started-at="2017-12-13T12:29:18Z" finished-at="2017-12-13T12:29:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationTestCases.AA_Logon_Water@5f341870]" name="afterMethod" is-config="true" duration-ms="1394" started-at="2017-12-08T10:04:53Z" finished-at="2017-12-08T10:04:54Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:automationTestCases.Asset_Management_Stock_Take_Chrome@396e2f39]" name="afterMethod" is-config="true" duration-ms="1224" started-at="2017-12-13T12:29:49Z" finished-at="2017-12-13T12:29:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- automationTestCases.AA_Logon_Water -->
+      </class> <!-- automationTestCases.Asset_Management_Stock_Take_Chrome -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

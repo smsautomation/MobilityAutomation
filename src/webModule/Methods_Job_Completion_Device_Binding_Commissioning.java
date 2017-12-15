@@ -70,7 +70,9 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 		
 		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
 				|| "Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
-				|| "FLTY_2_End_To_End_Chrome".equals(sTestCaseName))
+				|| "FLTY_2_End_To_End_Chrome".equals(sTestCaseName)
+				|| "INST_15_End_To_End_Chrome".equals(sTestCaseName)
+				|| "INST_14_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");

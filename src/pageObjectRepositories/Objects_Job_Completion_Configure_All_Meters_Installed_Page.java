@@ -102,6 +102,38 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
  		} 
 	    return element;
 	}
+    
+    public static WebElement btn_Full_Configuration_Applied_IHD_Yes(WebDriver driver){
+     	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_FullCFigIHD_y"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Electricity_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Full_Configuration_Applied_IHD_No(WebDriver driver){
+     	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[2]/div[2]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_FullCFigIHD_n"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Full_Configuration_Applied_Electricity_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement btn_Capture_Photo_Joined_Asset(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("btn_CPhoJoinAss"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Photo_Joined_Ass not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
      
     public static WebElement btn_Next_Section(WebDriver driver){
     	 

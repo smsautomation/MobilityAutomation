@@ -37,6 +37,16 @@ public class Objects_Job_Completion_Scan_IHD_Page {
 	    return element;
 	}
     
+    public static WebElement cbx_Select_Valid_IHD_Asset(WebDriver driver){
+    	 
+		try{
+			element = driver.findElement(By.id("cbx_IHDIns_sel"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | cbx_Select_Valid_IHD_Asset not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement txt_IHD_Serial_No(WebDriver driver){
       	 
 		try{
@@ -44,6 +54,16 @@ public class Objects_Job_Completion_Scan_IHD_Page {
 			element = driver.findElement(By.id("txt_IHDSer_num"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_IHD_Serial_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+	public static WebElement btn_Serial_Match_Next(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.className("confirm"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
 	}
