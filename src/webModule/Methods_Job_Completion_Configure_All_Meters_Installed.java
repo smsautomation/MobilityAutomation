@@ -34,7 +34,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 		Log.info(sTestCaseName + " | Configure All Meters Installed label displayed as expected");
 		}				
 		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
-				||"INST_14_End_To_End_Chrome".equals(sTestCaseName))
+				||"INST_14_End_To_End_Chrome".equals(sTestCaseName)
+				||"Exchange_19_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -56,7 +57,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 		
 		else if (sTestCaseName.equals("Exchange_2_End_To_End_Chrome")
 				||sTestCaseName.equals("FLTY_2_End_To_End_Chrome")
-				||sTestCaseName.equals("INST_15_End_To_End_Chrome"))
+				||sTestCaseName.equals("INST_15_End_To_End_Chrome")
+				||sTestCaseName.equals("Exchange_20_End_To_End_Chrome"))
 		{ 
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -97,7 +99,9 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 				||(sTestCaseName.equals("FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
 				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome"))
 				||(sTestCaseName.equals("FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome"))
-				||(sTestCaseName.equals("FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome")))
+				||(sTestCaseName.equals("FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome"))
+				||(sTestCaseName.equals("Exchange_21_End_To_End_Chrome"))
+				||(sTestCaseName.equals("INST_16_End_To_End_Chrome")))
 		{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -231,7 +235,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if  (sTestCaseName.equals("INST_15_End_To_End_Chrome"))
+		else if  (sTestCaseName.equals("INST_15_End_To_End_Chrome")
+				||sTestCaseName.equals("Exchange_20_End_To_End_Chrome"))
 			{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
@@ -250,7 +255,8 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			
 		}
-		else if  (sTestCaseName.equals("INST_14_End_To_End_Chrome"))
+		else if  (sTestCaseName.equals("INST_14_End_To_End_Chrome")
+				||sTestCaseName.equals("Exchange_19_End_To_End_Chrome"))
 			{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
@@ -258,7 +264,31 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			}
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Gas Established - Yes radio button clicked");
+			}	
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_IHD_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied IHD Established - Yes radio button clicked");
+			}	
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Capture_Photo_Joined_Asset(driver).click();{		
+			Log.info(sTestCaseName + " | Next Section button clicked");
+			}
+			
+	}
+		else if  (sTestCaseName.equals("INST_16_End_To_End_Chrome")
+				||sTestCaseName.equals("Exchange_21_End_To_End_Chrome"))
+			{ 
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button clicked");
+			}
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Electricity_Yes(driver).click();{
 			Log.info(sTestCaseName + " | Full Configuration Applied Elec Established - Yes radio button clicked");
+			}	
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_Gas_Yes(driver).click();{
+			Log.info(sTestCaseName + " | Full Configuration Applied Gas Established - Yes radio button clicked");
 			}	
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Configuration_Applied_IHD_Yes(driver).click();{

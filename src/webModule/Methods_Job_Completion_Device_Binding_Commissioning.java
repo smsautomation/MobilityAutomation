@@ -72,7 +72,9 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 				|| "Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
 				|| "FLTY_2_End_To_End_Chrome".equals(sTestCaseName)
 				|| "INST_15_End_To_End_Chrome".equals(sTestCaseName)
-				|| "INST_14_End_To_End_Chrome".equals(sTestCaseName))
+				|| "INST_14_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_19_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_20_End_To_End_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
@@ -102,7 +104,9 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 				|| "FLTY_17_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Low_Pressure_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
-				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName)) 
+				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName)
+				|| "Exchange_21_End_To_End_Chrome".equals(sTestCaseName)
+				|| "INST_16_End_To_End_Chrome".equals(sTestCaseName)) 
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");

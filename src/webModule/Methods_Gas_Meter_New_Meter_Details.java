@@ -3,8 +3,6 @@ package webModule;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import pageObjectRepositories.Objects_Gas_Meter_New_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;

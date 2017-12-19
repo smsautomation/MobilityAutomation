@@ -60,7 +60,7 @@ public class Methods_Gas_Meter_SMETS2_Install_Commissioning{
 	* Details:
 	*
 	****************************************************************************************************/	
-	public static void addSuccessValuesINST(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void addSuccessValuesSMETS2(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful commissioning scenario 
 		Objects_Gas_Meter_SMETS2_Install_Commissioning_Page.btn_Install_GICOM(driver).click();{
@@ -71,11 +71,7 @@ public class Methods_Gas_Meter_SMETS2_Install_Commissioning{
 	    Objects_Gas_Meter_SMETS2_Install_Commissioning_Page.btn_GICOM_Successful(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
-		Thread.sleep(2000);
-		Objects_Gas_Meter_SMETS2_Install_Commissioning_Page.btn_Submit(driver).click();{
-		Log.info(sTestCaseName + " | Submit button clicked");
-		}
-		
+
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 

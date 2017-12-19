@@ -37,6 +37,16 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
 	    return element;
 	}
     
+    public static WebElement lbl_Post_Installation_Photos(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("Title_PostInsPho"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Post_Installation_Checks not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement btn_Polarity_Check_Meter_Yes(WebDriver driver){
    	 
 		try{

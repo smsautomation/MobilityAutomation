@@ -78,7 +78,44 @@ public class Methods_Electricity_Meter_SMETS2_Install_Commissioning{
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
 
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValues
+	* Author: Paul Middleton
+	* Date: 05/07/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Install & Commissioning page in 
+	* order to force a successful commissioning scenario with EICOM DCC message is generated
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesEXCH(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful commissioning scenario 
+		Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.btn_Install_EICOM(driver).click();{
+		Log.info(sTestCaseName + " | Next Section button clicked");
+		}
+	    Thread.sleep(2000);
+		//Add correct responses for a successful commissioning scenario 
+		Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.btn_EICOM_Successful(driver).click();{
+		Log.info(sTestCaseName + " | Next Section button clicked");
+		}
+
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 		

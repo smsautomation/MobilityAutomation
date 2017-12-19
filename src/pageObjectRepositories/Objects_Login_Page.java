@@ -36,11 +36,51 @@ public class Objects_Login_Page {
  		} 
 	    return element;
 	}
+    
+    public static WebElement UsernameWater(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("input-user"));
+			}catch(Exception e){
+			Log.error(sRepositoryName + " | Username field not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
+    public static WebElement UsernameWaypoint(WebDriver driver){
+      	 
+		try{
+			element = driver.findElement(By.xpath("./html/body/section/div/div/div/div[1]/form/fieldset/input[1]"));
+			}catch(Exception e){
+			Log.error(sRepositoryName + " | Username field not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 
 	public static WebElement Password(WebDriver driver){
 	   	 
 		try{
 			element = driver.findElement(By.id("input2"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | Password field not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement PasswordWater(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("input-password"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | Password field not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement PasswordWaypoint(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath("./html/body/section/div/div/div/div[1]/form/fieldset/input[2]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | Password field not found | Exception desc : "+e.getMessage());		
  		} 
@@ -56,6 +96,28 @@ public class Objects_Login_Page {
  		} 
 	    return element;
 	}
+	
+	public static WebElement btn_LoginWater (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btn-login"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Login not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_LoginWaypoint (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.xpath("./html/body/section/div/div/div/div[1]/form/fieldset/button"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Login not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	
 	
 	
 //END OF METHODS	    
