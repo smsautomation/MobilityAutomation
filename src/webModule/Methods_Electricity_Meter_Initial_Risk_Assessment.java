@@ -148,8 +148,8 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 	
 	/* **************************************************************************************************
 	* Function: addAbortValues
-	* Author: Iain Storrie
-	* Date: 14/06/2017
+	* Author: Paul Middleton
+	* Date: 22/12/2017
 	* Purpose: This method adds the required responses in the Electricity Meter Initial risk Assessment page
 	* in order to force an Elec Meter Procedure Fail Abort
 	* Arguments: 
@@ -169,8 +169,26 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Smell_Gas_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
 		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Turned_Off_Gas_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Called_EGP_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_EGP_Ref_Number(driver).click();{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_EGP_Ref_Number(driver).sendKeys("000554");{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Reported_Incident_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported Incident - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).click();{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).sendKeys("000554");{
+		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_No(driver).click();{
 		Log.info(sTestCaseName + " | OK to Proceed - No radio button clicked");

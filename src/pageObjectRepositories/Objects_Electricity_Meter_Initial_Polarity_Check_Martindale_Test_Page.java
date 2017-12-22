@@ -124,6 +124,17 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
 	    return element;
 	}
 	
+	public static WebElement lbl_Sockets_Reverse_Polarity(WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[2]/div[5]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("lbl_SockTest"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sockets_Reverse_Polarity_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement cbx_Reverse_Polarity_Sockets_Location(WebDriver driver){
 	   	 
 		try{

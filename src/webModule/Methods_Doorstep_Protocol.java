@@ -210,7 +210,7 @@ public class Methods_Doorstep_Protocol{
 	
 	/* **************************************************************************************************
 	* Function: addSuccessValuesFLTY17
-	* Author: Iain Storrie
+	* Author: Paul Middleton
 	* Date: 03/08/2017
 	* Purpose: This method adds the required responses in the Doorstep Protocol page in order to force a 
 	* successful doorstep procedure for the FLTY17 workflow
@@ -238,6 +238,51 @@ public class Methods_Doorstep_Protocol{
 						
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES FLTY17 METHOD
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesFLTY17
+	* Author: Paul Middleton
+	* Date: 03/08/2017
+	* Purpose: This method adds the required responses in the Doorstep Protocol page in order to force a 
+	* successful doorstep procedure for the FLTY17 workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesSuspend(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful Doorstop Procedure
+		
+		Objects_Doorstep_Protocol_Page.btn_Access_Site_Gained_No(driver).click();{
+		Log.info(sTestCaseName + " | Access Site Gained - Yes radio button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Customer_Onsite_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Customer Onsite - Yes radio button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Suspend_Job_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.lbl_Warning_Info(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Warning Info Label displayed");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Suspend_No_Access(driver).isDisplayed();
+		Log.info(sTestCaseName + " | Abort No Access Button displayed as expected");	
+				
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addAbortValues");
 		
 	//END OF ADD SUCCESS VALUES FLTY17 METHOD
 	}

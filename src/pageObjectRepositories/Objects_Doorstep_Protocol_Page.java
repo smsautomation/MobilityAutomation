@@ -233,6 +233,48 @@ public static class Sidebar{
 	    return element;
 	}
 	
+	public static WebElement btn_Suspend_Job_No (WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_SuspJob_n"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Suspend_Job_Yes (WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_SuspJob_y"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Reschedule_Appointment_Required_Yes (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_ReschAppRq_y"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Reschedule_Appointment_Required_No (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_ReschAppRq_n"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement lbl_Doorstep_Procedure_Fail (WebDriver driver){
 	   	 
 		try{
@@ -248,6 +290,16 @@ public static class Sidebar{
 	   	 
 		try{
 			element = driver.findElement(By.id("btn_drstp_abort"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Suspend_No_Access (WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("btn_drstp_suspend"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Abort_No_Access not found | Exception desc : "+e.getMessage());		
  		} 
