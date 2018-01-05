@@ -208,7 +208,6 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 		else if  ((sTestCaseName.equals("Exchange_3_End_To_End_Chrome"))
 				||(sTestCaseName.equals("Exchange_9_End_To_End_Chrome"))
 				||(sTestCaseName.equals("FLTY_17_End_To_End_Chrome"))
-				||(sTestCaseName.equals("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
 				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome"))
 				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Failed_Test_Abort_Chrome"))
 				||(sTestCaseName.equals("Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome"))
@@ -274,7 +273,7 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			Log.info(sTestCaseName + " | Next Section button clicked");
 			}
 			
-	}
+		}
 		else if  (sTestCaseName.equals("INST_16_End_To_End_Chrome")
 				||sTestCaseName.equals("Exchange_21_End_To_End_Chrome"))
 			{ 
@@ -297,8 +296,14 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Capture_Photo_Joined_Asset(driver).click();{		
 			Log.info(sTestCaseName + " | Next Section button clicked");
 			}
-			
-	}
+			}
+		else if (sTestCaseName.equals("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome"))
+		{
+			//Add correct responses for a successful installed meters configuration
+			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_No(driver).click();{
+			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button clicked");
+			}	
+		}
 		else
 		{ 
 			System.out.println("Doing the else "); 

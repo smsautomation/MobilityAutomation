@@ -293,7 +293,7 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome");
 		
 	}
 	

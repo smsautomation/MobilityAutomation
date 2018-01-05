@@ -111,7 +111,7 @@ public class Exchange_3_Doorstep_Protocol_Page_Suspend_Doorstep_Procedure_Fail_C
 		//Click Depart Button to progress to Doorstep Protocol Page
 		Objects_Appointment_Details_Page.btn_Depart(driver).click();
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
-			
+
 		//Verify that we are on the Doorstep Protocol page
 		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
 		Log.info("Doorstep Protocol page displayed as expected");	

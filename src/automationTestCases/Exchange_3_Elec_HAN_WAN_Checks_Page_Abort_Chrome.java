@@ -379,7 +379,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 																														
 		//Invoke Method to complete Install Kit page 
 		Methods_Gas_Meter_Gas_Appliance_Safety_Checks.addSuccessValues(driver, sTestCaseName);
-		
+		/*
 		//Verify that we are on the Job Completion Device Binding & Commissioning page
 		Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).isDisplayed();
 		Log.info("Job Completion Device Binding Commissioning page displayed as expected");
@@ -390,18 +390,7 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 																																		
 		//Invoke Method to complete Device Binding & Commissioning page 
 		Methods_Job_Completion_Device_Binding_Commissioning.addSuccessValues(driver, sTestCaseName);
-		
-		//Verify that we are on the Job Completion Scan IHD page
-		Objects_Job_Completion_Scan_IHD_Page.lbl_Scan_IHD(driver).isDisplayed();
-		Log.info("Job Completion Scan IHD page displayed as expected");
-					
-		//Verify Initial page elements displayed
-		Methods_Job_Completion_Scan_IHD.viewPage(driver, sTestCaseName);
-		Log.info("Job Completion Scan IHD initial elements displayed as expected");
-																																				
-		//Invoke Method to complete Scan IHD page 
-		Methods_Job_Completion_Scan_IHD.addSuccessValues(driver, sTestCaseName);
-																			
+																	
 		//Verify that we are on the Job Completion Configure All Meters Installed page
 		Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
 		Log.info("Job Completion Configure All Meters Installed page displayed as expected");
@@ -412,7 +401,8 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 																																
 		//Invoke Method to complete Configure All Meters Installed page 
 		Methods_Job_Completion_Configure_All_Meters_Installed.addSuccessValues(driver, sTestCaseName);
-																			
+		*/	
+		
 		//Verify that we are on the Job Completion Energy Efficiency Information page
 		Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
 		Log.info("Job Completion Energy Efficient Information page displayed as expected");

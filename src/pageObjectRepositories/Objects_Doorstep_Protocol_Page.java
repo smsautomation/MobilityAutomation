@@ -211,6 +211,17 @@ public static class Sidebar{
 	    return element;
 	}
 	
+	public static WebElement btn_Capture_Photo_Customer_Present (WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[1]/div[1]/div/button"));
+			element = driver.findElement(By.id("btn_NoAccCusPre"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement btn_No_Access_Card_Left_Yes (WebDriver driver){
 	   	 
 		try{

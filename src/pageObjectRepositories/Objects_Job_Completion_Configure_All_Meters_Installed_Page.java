@@ -30,8 +30,9 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
     public static WebElement lbl_Configure_All_Meters_Installed(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[1]/div[1]/h4"));
+			element = driver.findElement(By.id("TITLE_CFigAllMetInst"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Configure_All_Meters_Installed not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -148,8 +149,9 @@ public class Objects_Job_Completion_Configure_All_Meters_Installed_Page {
 	public static WebElement lbl_Configure_All_Meters_Installed_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[1]/div[2]"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/complete/div/div/div[2]/div[1]/div[2]"));
+			element = driver.findElement(By.id("TITLE_CFigAllMetInst"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Configure_All_Meters_Installed_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;

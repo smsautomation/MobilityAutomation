@@ -269,7 +269,7 @@ public class Methods_Doorstep_Protocol{
 		Objects_Doorstep_Protocol_Page.btn_Customer_Onsite_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Customer Onsite - Yes radio button clicked");
 		}
-		Objects_Doorstep_Protocol_Page.btn_Capture_Photo(driver).click();{
+		Objects_Doorstep_Protocol_Page.btn_Capture_Photo_Customer_Present(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo button clicked");
 		}
 		Objects_Doorstep_Protocol_Page.btn_Suspend_Job_Yes(driver).click();{

@@ -170,25 +170,25 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Turned_Off_Gas_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Turned Gas Off - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Called_EGP_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " |Called EGP - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_EGP_Ref_Number(driver).click();{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Text Box EGP Ref - clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_EGP_Ref_Number(driver).sendKeys("000554");{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Text Box EGP Ref - Ref Entered");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_Reported_Incident_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Reported Incident - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).click();{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Text Box Airline Ref - clicked");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.txt_AIRline_Reference_Number(driver).sendKeys("000554");{
-		Log.info(sTestCaseName + " | Smell Gas - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Text Box Airline Ref - Ref Entered");
 		}
 		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.btn_OK_To_Proceed_No(driver).click();{
 		Log.info(sTestCaseName + " | OK to Proceed - No radio button clicked");

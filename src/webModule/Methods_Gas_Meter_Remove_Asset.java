@@ -73,9 +73,9 @@ public class Methods_Gas_Meter_Remove_Asset{
 		Objects_Gas_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{
 		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
 		}
-		Objects_Gas_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
+		/*Objects_Gas_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
 		Log.info(sTestCaseName + " | Remove Success OK button clicked");
-		}
+		}*/
 		Objects_Gas_Meter_Remove_Asset_Page.lbl_Gas_Remove_Asset_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Remove Asset Complete label displayed");
 		}
@@ -114,11 +114,11 @@ public class Methods_Gas_Meter_Remove_Asset{
 		Objects_Gas_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{
 		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
 		}
-		Thread.sleep(500);
+		/*Thread.sleep(500);
 		Objects_Gas_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
 		Log.info(sTestCaseName + " | Remove Success OK button clicked");
 		}
-		Thread.sleep(500);
+		Thread.sleep(500);*/
 		Objects_Gas_Meter_Remove_Asset_Page.btn_Capture_Final_Photo(driver).click();{
 		Log.info(sTestCaseName + " | Remove Success OK button clicked");
 		}		

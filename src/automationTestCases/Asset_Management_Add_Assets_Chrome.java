@@ -97,6 +97,9 @@ public class Asset_Management_Add_Assets_Chrome {
 			
 		//Invoke Method to add assets to van 
 		Methods_Asset_Management_Van_List.addSuccessValues(driver, sTestCaseName, 137);
+		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Asset_Management_Add_Assets_Chrome");
+		
 }
 		
 	//Log out

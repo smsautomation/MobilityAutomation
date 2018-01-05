@@ -106,7 +106,8 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName)
 				|| "Exchange_21_End_To_End_Chrome".equals(sTestCaseName)
-				|| "INST_16_End_To_End_Chrome".equals(sTestCaseName)) 
+				|| "INST_16_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)) 
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
@@ -123,56 +124,28 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 			Log.info(sTestCaseName + " | Full HAN Established Successfully - Yes radio button clicked");
 			}	
 		}
-		else if ("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)
-				||"Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName)) 
-		{ 
-			Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).click();{
-			Log.info(sTestCaseName + " | Device Binding and Commissioning Title - clicked to Open");
-			}	
-			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
-			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
-			}
-			
-			Thread.sleep(300);
-			
-			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
-			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");
-			}
-			
-			Thread.sleep(500);
 		
-			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
-			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
-			}	
-			
-			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Full_HAN_Established_Yes(driver).click();{
-			Log.info(sTestCaseName + " | Full HAN Established Successfully - Yes radio button clicked");
+		else if ("Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome".equals(sTestCaseName))
+		{
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning_Complete(driver).click();{
+			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
+			}
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
+			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
+			}
+			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_No(driver).click();{
+			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");
 			}
 		}
-		 
 		else 
 		{ 
 			System.out.println("Doing the else "); 
 		}
 		
-/*
-		//Add correct responses for a successful installed meters configuration
-		Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
-		Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
-		}
-		Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Gas Electricity Meter Paired Successfully - Yes radio button clicked");
-		}
-		Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
-		Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
-		}
-		Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Full_HAN_Established_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Full HAN Established - Yes radio button clicked");
-		}
 		Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Device Binding Commissioning Complete Label displayed");
 		}
-*/	
+		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 	}

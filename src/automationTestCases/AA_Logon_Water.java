@@ -48,6 +48,8 @@ public class AA_Logon_Water {
 		Methods_LoginWater.viewPageWater(driver, sTestCaseName);
 		Methods_LoginWater.addSuccessValuesWater(driver, sTestCaseName);
 		
+		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>AA_Logon_Water");
+		
 	}
 	//Log out
 	
@@ -57,6 +59,7 @@ public class AA_Logon_Water {
 	    driver.quit();
 	    
 	    Log.endTestCase(sTestCaseName);        
+	    
 	
 	}
 	

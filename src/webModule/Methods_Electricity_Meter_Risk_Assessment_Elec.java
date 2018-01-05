@@ -124,10 +124,10 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		Log.info(sTestCaseName + " | Risk Code accepted - Enter pressed");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Risk_Assessment_Pass_Yes(driver).click();{
-		Log.info(sTestCaseName + " | Risk Assessment - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Risk Assessment Pass - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.txt_Additional_Notes(driver).click();{
-		Log.info(sTestCaseName + " | Risk Assessment Text box clicked - Yes radio button clicked");
+		Log.info(sTestCaseName + " | Risk Assessment Text box clicked - Text Box clicked");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.txt_Additional_Notes(driver).sendKeys("Dog under control");{
 		Log.info(sTestCaseName + " | Risk Assessment Text box - Typed Reason");
