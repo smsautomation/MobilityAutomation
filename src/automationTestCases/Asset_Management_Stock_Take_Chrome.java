@@ -95,7 +95,7 @@ public class Asset_Management_Stock_Take_Chrome {
 		//Invoke Method to add assets in Stock Take 
 		Methods_Asset_Management_Stock_Take.addSuccessValues(driver, sTestCaseName, 139);
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Asset_Management_Stock_Take_Chrome");
+		Log.info("Test Asset 2 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Asset_Management_Stock_Take_Chrome");
 		
 	}
 	
