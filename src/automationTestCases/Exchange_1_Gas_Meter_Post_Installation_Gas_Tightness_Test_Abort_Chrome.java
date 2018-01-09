@@ -104,15 +104,15 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 5);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 9);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 5);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 9);
 		
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 5);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 9);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -293,7 +293,7 @@ public class Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chr
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome");
+		Log.info("Test 9 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_1_Gas_Meter_Post_Installation_Gas_Tightness_Test_Abort_Chrome");
 		
 	}
 	

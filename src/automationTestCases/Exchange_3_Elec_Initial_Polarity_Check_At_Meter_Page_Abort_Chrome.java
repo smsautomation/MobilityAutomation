@@ -255,7 +255,7 @@ public class Exchange_3_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 113 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_3_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_Chrome");
 		
 	}
 	

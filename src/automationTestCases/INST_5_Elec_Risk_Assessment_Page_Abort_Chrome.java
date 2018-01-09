@@ -174,7 +174,7 @@ public class INST_5_Elec_Risk_Assessment_Page_Abort_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 103 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_5_Elec_Risk_Assessment_Page_Abort_Chrome");
 		
 	}
 	

@@ -301,6 +301,8 @@ public class INST_5_End_To_End_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
+		Log.info("Test 105 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_5_End_To_End_Chrome");
+		
 	}
 	
 	//Log out

@@ -149,7 +149,7 @@ public class INST_5_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome 
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 97 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_5_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome");
 		
 	}
 	

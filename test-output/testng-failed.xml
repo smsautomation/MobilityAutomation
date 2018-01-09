@@ -3,34 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome">
-        <methods>
-          <include name="main"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- automationTestCases.Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome -->
-      <class name="automationTestCases.FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome">
+      <class name="automationTestCases.Asset_Management_Add_Assets_Chrome">
         <methods>
           <include name="afterMethod"/>
           <include name="main"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationTestCases.FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_Chrome -->
-      <class name="automationTestCases.Exchange_3_Spark_End_To_End_Chrome">
-        <methods>
-          <include name="main"/>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- automationTestCases.Exchange_3_Spark_End_To_End_Chrome -->
-      <class name="automationTestCases.Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="main"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- automationTestCases.Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome -->
+      </class> <!-- automationTestCases.Asset_Management_Add_Assets_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

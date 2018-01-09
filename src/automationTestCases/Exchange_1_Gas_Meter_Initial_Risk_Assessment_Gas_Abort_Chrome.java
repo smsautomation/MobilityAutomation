@@ -162,7 +162,7 @@ public class Exchange_1_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_1_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome");
+		Log.info("Test 7 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_1_Gas_Meter_Initial_Risk_Assessment_Gas_Abort_Chrome");
 	
 	}
 	

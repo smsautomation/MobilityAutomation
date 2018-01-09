@@ -160,7 +160,7 @@ public class Exchange_11_Elec_Initial_Risk_Assessment_Page_Abort_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 89 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_11_Elec_Initial_Risk_Assessment_Page_Abort_Chrome");
 		
 	}
 	

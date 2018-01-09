@@ -56,7 +56,6 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
-import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
 import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
@@ -570,7 +569,7 @@ public class Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome 
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 133 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_3_Gas_SMeter_Post_Installation_Pressure_Drop_Abort_Chrome");
 
 	}
 	

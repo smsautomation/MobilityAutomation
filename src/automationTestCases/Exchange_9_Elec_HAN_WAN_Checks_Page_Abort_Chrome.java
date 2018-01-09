@@ -486,7 +486,7 @@ public class Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 171 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_9_Elec_HAN_WAN_Checks_Page_Abort_Chrome");
 		
 	}
 	

@@ -136,7 +136,7 @@ public class Exchange_11_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");
+		Log.info("Test 83 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_11_Appointment_Details_Page_Abort_No_Access_Chrome");
 	}
 	
 	//Log out
