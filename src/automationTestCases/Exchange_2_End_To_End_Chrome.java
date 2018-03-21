@@ -207,8 +207,13 @@ public class Exchange_2_End_To_End_Chrome {
 		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.viewPage(driver, sTestCaseName);
 		Log.info("Electricity Meter Initial Polarity Check - Martindale Test initial elements displayed as expected");
 						
-		//Invoke Method to complete a successful Martindale Test 
+		/*//Invoke Method to complete a successful Martindale Test 
 		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.addSuccessValues(driver, sTestCaseName);
+		*/
+		
+		//Invoke Method to complete a successful Martindale Test 
+		// Added by Tomasz
+		Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.addSuccessValuesSocket(driver, sTestCaseName);
 		
 		//Verify that we are on the Electricity Meter Capture Initial Polarity Check - At Meter page
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter(driver).isDisplayed();

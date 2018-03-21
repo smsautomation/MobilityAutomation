@@ -108,6 +108,75 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 	}
 	
 	/* **************************************************************************************************
+	* Function: addSuccessSPRKValues
+	* Author: Paul Middleton
+	* Date: 16/01/2018
+	* Purpose: This method adds the required responses in the Electricity Meter HAN / WAN Checks page in 
+	* order to force a successful check
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessSPRKValues(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful HAN / WAN check 
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Wan_Available_Yes(driver).click();{
+		Log.info(sTestCaseName + " | WAN Available - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Values Vodafone clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("100");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for Vodafone");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value O2 clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).sendKeys("90");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for O2");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value Orange clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).sendKeys("80");{
+		Log.info(sTestCaseName + " | Signal Strength Value entered for Orange");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).click();{
+		Log.info(sTestCaseName + " | Signal Strength Value TMobile clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).sendKeys("70");{
+		Log.info(sTestCaseName + " | Signal Strength Values entered for TMobile");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_HAN_Available_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");
+		}	
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Hub_ElecMeter_Pass(driver).click();{
+		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");
+		}		
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Hub_GasMeter_Pass(driver).click();{
+		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");
+		}			
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Hub_IHD_Pass(driver).click();{
+		Log.info(sTestCaseName + " | Sufficient Signal Proceed - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.lbl_Han_Wan_Checks_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | HAN / WAN Checks Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
+	/* **************************************************************************************************
 	* Function: addAbortValues
 	* Author: Iain Storrie
 	* Date: 15/06/2017

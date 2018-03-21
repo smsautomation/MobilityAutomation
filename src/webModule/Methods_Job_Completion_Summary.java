@@ -36,7 +36,8 @@ public class Methods_Job_Completion_Summary{
 
 		if ("Exchange_1_End_To_End_Chrome".equals(sTestCaseName)
 				||"INST_14_End_To_End_Chrome".equals(sTestCaseName)
-				||"Exchange_19_End_To_End_Chrome".equals(sTestCaseName))
+				||"Exchange_19_End_To_End_Chrome".equals(sTestCaseName)
+				||"Exchange_1_End_To_End_Spark_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Gas_Meter_Mprn(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Gas Meter MPRN label displayed as expected");
@@ -45,7 +46,14 @@ public class Methods_Job_Completion_Summary{
 		else if ("Exchange_2_End_To_End_Chrome".equals(sTestCaseName)
 				|| "NMEX_5_End_To_End_Chrome".equals(sTestCaseName)
 				|| "INST_15_End_To_End_Chrome".equals(sTestCaseName)
-				|| "Exchange_20_End_To_End_Chrome".equals(sTestCaseName))
+				|| "Exchange_20_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_11_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "Exchange_2_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "Exchange_5_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "FLTY_2_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "INST_5_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "INST_8_End_To_End_ECOT_Chrome".equals(sTestCaseName)
+				|| "NMEX_5_End_To_End_Spark_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
@@ -75,7 +83,11 @@ public class Methods_Job_Completion_Summary{
 				|| "FLTY_17_Gas_Risk_Assessment_Gas_Abort_Med_Pressure_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_Gas_Suitable_For_Smart_Installation_Abort_Chrome".equals(sTestCaseName)
 				|| "Exchange_21_End_To_End_Chrome".equals(sTestCaseName)
-				|| "INST_16_End_To_End_Chrome".equals(sTestCaseName))
+				|| "INST_16_End_To_End_Chrome".equals(sTestCaseName)
+				|| "Exchange_9_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "FLTY_17_End_To_End_Spark_Chrome".equals(sTestCaseName)
+				|| "INST_3_End_To_End_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_End_To_End_ECOT_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");

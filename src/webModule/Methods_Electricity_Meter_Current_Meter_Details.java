@@ -83,6 +83,39 @@ public class Methods_Electricity_Meter_Current_Meter_Details{
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesFound
+	* Author: Paul Middleton
+	* Date: 16/03/2018
+	* Purpose: This method adds the required responses in the Electricity Meter Current Meter Details page
+	* in order to force a successful meter confirmation
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesFound(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful current meter confirmation 
+		Objects_Electricity_Meter_Current_Meter_Details_Page.btn_Existing_Meter_Correct_No(driver).click();{
+		Log.info(sTestCaseName + " | Existing Meter Details correct - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Current_Meter_Details_Page.lbl_Current_Meter_Details_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Current Meter Details Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
 		
 //END OF METHODS
 }

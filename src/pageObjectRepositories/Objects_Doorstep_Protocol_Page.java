@@ -244,6 +244,28 @@ public static class Sidebar{
 	    return element;
 	}
 	
+	public static WebElement btn_Call_Back_Card_Yes (WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[1]/label"));
+			element = driver.findElement(By.id("rb_CalBacCar_y"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Call_Back_Card_No (WebDriver driver){
+	   	 
+		try{
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/doorstep/div/div/div/div[4]/div[2]/div[2]/div[2]/label"));
+			element = driver.findElement(By.id("rb_CalBacCar_n"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_No_Access_Card_Left_No not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement btn_Suspend_Job_No (WebDriver driver){
 	   	 
 		try{

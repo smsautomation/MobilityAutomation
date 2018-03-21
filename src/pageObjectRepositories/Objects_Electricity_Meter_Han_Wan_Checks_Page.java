@@ -104,6 +104,86 @@ public class Objects_Electricity_Meter_Han_Wan_Checks_Page {
 	    return element;
 	}
 	
+	public static WebElement btn_HAN_Available_Yes(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HanAva_y"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_HAN_Available_No(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HanAva_n"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_ElecMeter_Pass(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubElecMet_pass"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_ElecMeter_Fail(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubElecMet_fail"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_GasMeter_Pass(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubGasMet_pass"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_GasMeter_Fail(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubGasMet_fail"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_IHD_Pass(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubIHD_pass"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
+	public static WebElement btn_Hub_IHD_Fail(WebDriver driver){
+	   	 
+		try{
+			element = driver.findElement(By.id("rb_HubIHD_fail"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | btn_Sufficient_Signal_Proceed_Yes not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+	
 	public static WebElement btn_Sufficient_Signal_Proceed_Yes(WebDriver driver){
 	   	 
 		try{

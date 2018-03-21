@@ -197,6 +197,58 @@ public class Methods_Aborts{
 	* Details:
 	*
 	****************************************************************************************************/	
+	public static void addSuccessValuesNoAccessSPRK(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful additional tests scenario 
+		Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).click();{
+		Log.info(sTestCaseName + " | Not Convenient with Customer radio button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
+		Log.info(sTestCaseName + " | Additional Notes box clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).sendKeys("The Customer refused entry as not convenient");{
+		Log.info(sTestCaseName + " | Typed message in text box");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Red(driver).click();{
+		Log.info(sTestCaseName + " | Abort Button Red clicked");
+		}
+		/*
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_RedSpark(driver).click();{
+		Log.info(sTestCaseName + " | Abort Button Red clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_ReScan_Ok(driver).click();{
+		Log.info(sTestCaseName + " | Aborting Rescanning Assets Button Red clicked");
+		}
+		*/
+		
+		//Take a screenshot to show what we've done
+		/*Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");*/
+		
+	
+	//END OF ADD SUCCESS VALUES METHOD
+		
+	}
+	
+	/* **************************************************************************************************
+	* Function: AddSuccessValuesNoAccess
+	* Author: Paul Middleton
+	* Date: 19/06/2017
+	* Purpose: This method adds the required responses in the Aborts Page 
+	* in order to force a successful additional tests scenario for the NoAccessAbort workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
 	public static void addSuccessValuesRefusedAccess(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful additional tests scenario 
@@ -234,6 +286,59 @@ public class Methods_Aborts{
 				
 		//Take a screenshot to show what we've done
 		/*Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");*/
+		
+	
+	//END OF ADD SUCCESS VALUES METHOD
+		
+	}
+	
+	/* **************************************************************************************************
+	* Function: AddSuccessValuesRefusedAccessSPK
+	* Author: Paul Middleton
+	* Date: 16/03/2018
+	* Purpose: This method adds the required responses in the Aborts Page 
+	* in order to force a successful additional tests scenario for the NoAccessAbort workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesRefusedAccessSPRK(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful additional tests scenario 
+			Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).click();{
+			Log.info(sTestCaseName + " | Not Convenient with Customer radio button clicked");
+			}
+			Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
+			Log.info(sTestCaseName + " | Additional Notes box clicked");
+			}
+			Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).sendKeys("The Customer refused entry as not convenient");{
+			Log.info(sTestCaseName + " | Typed message in text box");
+			}
+			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Capture_Photo(driver).click();{
+			Log.info(sTestCaseName + " | Capture Photo button clicked");
+			}
+			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Red(driver).click();{
+			Log.info(sTestCaseName + " | Abort Button Red clicked");
+			}
+			/*
+			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_RedSpark(driver).click();{
+			Log.info(sTestCaseName + " | Abort Button Red clicked");
+			}*/
+			Thread.sleep(500);
+			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_ReScan_Ok(driver).click();{
+			Log.info(sTestCaseName + " | Aborting Rescanning Assets Button Red clicked");
+			}
+			
+			
+			//Take a screenshot to show what we've done
+			/*Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");*/
 		
 	
 	//END OF ADD SUCCESS VALUES METHOD

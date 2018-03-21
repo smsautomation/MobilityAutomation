@@ -83,7 +83,7 @@ public class Exchange_11_Appointment_Details_Page_Abort_No_Access_Chrome {
 		Methods_Appointments_List.viewPage(driver, sTestCaseName);
 		
 		//Select the correct appointment
-		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[141]/div/div[1]/div/div[1]/span[1]/span")).click();
+		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[1]/div/div[1]/div/div[1]/span[1]/span")).click();
 		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_83_EXCH11')]")).click();
 
 		//Verify that we are on the Appointment Details page

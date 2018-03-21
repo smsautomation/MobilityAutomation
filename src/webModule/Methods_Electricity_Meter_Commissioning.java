@@ -151,6 +151,44 @@ public class Methods_Electricity_Meter_Commissioning{
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 		
+		//END OF ADD SUCCESS VALUES METHOD
+		}
+		
+	/* **************************************************************************************************
+	* Function: addSuccessValuesSpark
+	* Author: Paul Middleton
+	* Date: 16/01/2018
+	* Purpose: This method adds the required responses in the Electricity Meter Commissioning page in 
+	* order to force a successful commissioning scenario for Spark
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	//public static void addSuccessValuesSmart(WebDriver driver, String sTestCaseName) throws Exception{
+	public static void addSuccessValuesSpark(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful commissioning scenario 
+		Objects_Electricity_Meter_Commissioning_Page.btn_Comms_Hub_Connected_WAN_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Comms Hub Connected WAN - Yes radio button clicked");
+		}
+		Objects_Electricity_Meter_Commissioning_Page.btn_Next_Section(driver).click();{
+		Log.info(sTestCaseName + " | Next Section button clicked");
+		}
+		Objects_Electricity_Meter_Commissioning_Page.lbl_Commissioning_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Commissioning Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+		
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 		

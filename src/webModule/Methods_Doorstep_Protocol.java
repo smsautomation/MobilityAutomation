@@ -172,6 +172,54 @@ public class Methods_Doorstep_Protocol{
 	}
 	
 	/* **************************************************************************************************
+	* Function: addAbortValues
+	* Author: Iain Storrie
+	* Date: 14/06/2017
+	* Purpose: This method adds the required responses in the doorstep Protocol page in order to force a 
+	* Doorstep Procedure Fail Abort 
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addAbortValuesSPRK(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses to force a Doorstep Procedure Fail Abort
+		
+		Objects_Doorstep_Protocol_Page.btn_Access_Site_Gained_No(driver).click();{
+		Log.info(sTestCaseName + " | Access Site Gained - No radio button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Customer_Onsite_No(driver).click();{
+		Log.info(sTestCaseName + " | Customer Onsite - No radio button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Call_Back_Card_Yes(driver).click();{
+		Log.info(sTestCaseName + " | No Access Card Left Radio - Yes button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.btn_No_Access_Card_Left_Yes(driver).click();{
+		Log.info(sTestCaseName + " | No Access Card Left Radio - Yes button clicked");
+		}
+		Objects_Doorstep_Protocol_Page.lbl_Warning_Info(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Warning Info Label displayed");
+		}
+		Objects_Doorstep_Protocol_Page.btn_Abort_No_Access(driver).isDisplayed();
+		Log.info(sTestCaseName + " | Abort No Access Button displayed as expected");	
+				
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addAbortValues");
+		
+	//END OF ADD ABORT VALUES METHOD
+	}
+	
+	/* **************************************************************************************************
 	* Function: addSuccessValues
 	* Author: Iain Storrie
 	* Date: 14/06/2017

@@ -82,6 +82,9 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test{
 		Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.btn_Sockets_Reverse_Polarity_No(driver).click();{
 		Log.info(sTestCaseName + " | Sockets Reverse Polarity - No radio button clicked");
 		}
+		
+		
+		
 		Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Initial Polarity Check - Martindale Test Complete Label displayed");
 		}

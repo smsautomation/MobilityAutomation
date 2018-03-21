@@ -2,6 +2,7 @@ package webModule;
 
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
+import pageObjectRepositories.Objects_Found_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;
 
@@ -103,6 +104,51 @@ public class Methods_Electricity_Meter_Initial_Polarity_Check_At_Meter{
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Cut_Out_Pass(driver).click();{
 		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Pass radio button clicked");
 		}
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Initial Polarity Check At Meter Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValues
+	* Author: Iain Storrie
+	* Date: 15/06/2017
+	* Purpose: This method adds the required responses in the Electricity Meter Initial Polarity Check At 
+	* Meter page in order to force a successful check
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesINSTFail(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for a successful initial polarity check 
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Polarity_Check_At_Cut_Out_Fail(driver).click();{
+		Log.info(sTestCaseName + " | Polarity Check At Cut Out - Fail radio button clicked");
+		}
+		//Add correct responses for a successful Reported to team manager check 
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Reported_Team_Manager_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Reported to team Manager - Yes");
+		}
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.txt_Team_Manager_Name(driver).click();
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.txt_Team_Manager_Name(driver).sendKeys("Harry Hill");{
+		Log.info(sTestCaseName + " | Team Manager name added to textbox");
+		}
+		//Add correct responses for a successful initial polarity check 
+		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.btn_Team_Manager_Authorisation_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Authorisation to continue - Yes");
+		}	
 		Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Initial Polarity Check At Meter Complete label displayed");
 		}

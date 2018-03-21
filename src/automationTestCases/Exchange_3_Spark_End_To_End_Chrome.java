@@ -115,7 +115,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		
 		//Select the correct appointment
 		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[15]/div/div[1]/div/div[1]/span[1]/span")).click();
-		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_134_EXCH3')]")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_122_EXCH3')]")).click();
 	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -125,15 +125,15 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		
 		//Verify correct Customer Details displayed
 		Objects_Appointment_Details_Page.lnk_Customer_Details(driver).click();
-		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 134);
+		Methods_Appointment_Details.viewCustomerDetails(driver, sTestCaseName, 130);
 				
 		//Verify correct Job Details displayed
 		Objects_Appointment_Details_Page.lnk_Job_Details(driver).click();
-		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 134);
+		Methods_Appointment_Details.viewJobDetails(driver, sTestCaseName, 130);
 				
 		//Verify correct Meter Details displayed
 		Objects_Appointment_Details_Page.lnk_Meter_Details(driver).click();
-		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 134);
+		Methods_Appointment_Details.viewMeterDetails(driver, sTestCaseName, 130);
 				
 		//Click Call Forward to bring up Contact options
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).click();
@@ -243,7 +243,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		Log.info("Electricity Meter HAN / WAN checks initial elements displayed as expected");
 										
 		//Invoke Method to complete a successful HAN / WAN check 
-		Methods_Electricity_Meter_HAN_WAN_Checks.addSuccessValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_HAN_WAN_Checks.addSuccessSPRKValues(driver, sTestCaseName);
 	
 		//Verify that we are on the Electricity Meter Current Meter Details page
 		Objects_Electricity_Meter_Current_Meter_Details_Page.lbl_Current_Meter_Details(driver).isDisplayed();
@@ -320,7 +320,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		Log.info("Electricity Meter Commissioning initial elements displayed as expected");
 																								
 		//Invoke Method to complete Commissioning page 
-		Methods_Electricity_Meter_Commissioning.addSuccessValuesSmart(driver, sTestCaseName);
+		Methods_Electricity_Meter_Commissioning.addSuccessValuesSpark(driver, sTestCaseName);
 									
 		//Verify that we are on the Electricity Meter Post Installation Checks page
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Checks(driver).isDisplayed();
@@ -561,7 +561,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("Test 134 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_3_Spark_End_To_End_Chrome");
+		Log.info("Test 122 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_3_Spark_End_To_End_Chrome");
 		
 	}
 	

@@ -166,7 +166,7 @@ public class Methods_Electricity_Meter_Meter_Credit{
 		Log.info(sTestCaseName + " | Demonstrated Customer - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Meter_Credit_Page.btn_Next_Section(driver).click();{
-		Log.info(sTestCaseName + " | Submit button clicked");
+		Log.info(sTestCaseName + " | Next button clicked");
 		}
 		Objects_Electricity_Meter_Meter_Credit_Page.lbl_Meter_Credit_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Meter Credit Complete label displayed as expected");

@@ -1115,6 +1115,16 @@ public class Objects_Abort_Page {
     	    return element;
     	}
         
+        public static WebElement btn_Abort_Appointment_RedSpark(WebDriver driver){
+         	 
+    		try{
+    			element = driver.findElement(By.id("btn_drstp_abort"));
+     		}catch(Exception e){
+    			Log.error(sRepositoryName + " | btn_Abort_Appointment not found | Exception desc : "+e.getMessage());		
+     		} 
+    	    return element;
+    	}
+        
         public static WebElement btn_Abort_Appointment_Orange(WebDriver driver){
          	 
     		try{
