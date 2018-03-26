@@ -47,6 +47,7 @@ import pageObjectRepositories.Objects_Gas_Meter_Pre_Installation_Gas_Tightness_T
 import pageObjectRepositories.Objects_Gas_Meter_Remove_Asset_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Remove_Meter_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
+import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
 import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
@@ -258,6 +259,21 @@ public class Exchange_3_Elec_HAN_WAN_Checks_Page_Abort_Chrome {
 																												
 		//Invoke Method to complete a successful risk assessment - gas 
 		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Gas Meter Suitable for Smart Installation page
+		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		Log.info("Gas Meter Suitable For Smart Installation page displayed as expected");
+	
+		//Verify Initial page elements displayed
+		Methods_Gas_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+		Log.info("Gas Meter Suitable for Smart Installation initial elements displayed as expected");
+				
+		//Verify correct page elements displayed after Suitable For Smart Installation - Yes clicked
+		Methods_Gas_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+		Log.info("Gas Meter Suitable for Smart Installation Yes elements displayed as expected");
+			
+		//Invoke Method to complete a successful suitable for smart installation 
+		Methods_Gas_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
 
 		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();

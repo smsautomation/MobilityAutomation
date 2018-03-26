@@ -1,5 +1,5 @@
 /* *******************************************************************
-* Test Case Name: INST_12_DOORSTEP_PROTOCOL_PAGE_ABORT_DOORSTEP_PROCEDURE_FAIL_ECOT_CHROME
+* Test Case Name: INST_12_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_ECOT_Chrome
 * Author: Paul Middleton
 * Date: 09/03/2018
 * Purpose: This test carries out the end to end Mobility workflow on 
@@ -61,7 +61,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class INST_12_DOORSTEP_PROTOCOL_PAGE_ABORT_DOORSTEP_PROCEDURE_FAIL_ECOT_CHROME {
+public class INST_12_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_ECOT_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;
@@ -157,7 +157,7 @@ public class INST_12_DOORSTEP_PROTOCOL_PAGE_ABORT_DOORSTEP_PROCEDURE_FAIL_ECOT_C
 		Log.info("Doorstep Protocol page arrive elements displayed as expected");
 			
 		//Invoke Method to complete doorstep protocol questions for no access to site granted
-		Methods_Doorstep_Protocol.addAbortValues(driver, sTestCaseName);
+		Methods_Doorstep_Protocol.addAbortValuesSPRK(driver, sTestCaseName);
 		
 		//Click Abort No Access button to bring up Abort page 
 		Objects_Doorstep_Protocol_Page.btn_Abort_No_Access(driver).click();
@@ -172,13 +172,13 @@ public class INST_12_DOORSTEP_PROTOCOL_PAGE_ABORT_DOORSTEP_PROCEDURE_FAIL_ECOT_C
 		Log.info("Abort page elements displayed as expected");
 			
 		//Invoke Method to complete Aborts questions for a success outcome 
-		Methods_Aborts.addSuccessValuesRefusedAccess(driver, sTestCaseName);
+		Methods_Aborts.addSuccessValuesRefusedAccessSPRK(driver, sTestCaseName);
 		
 		//Verify that we have returned to the Appointments list page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("Test 208 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_DOORSTEP_PROTOCOL_PAGE_ABORT_DOORSTEP_PROCEDURE_FAIL_ECOT_CHROME");
+		Log.info("Test 208 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_ECOT_Chrome");
 		
 	}
 	

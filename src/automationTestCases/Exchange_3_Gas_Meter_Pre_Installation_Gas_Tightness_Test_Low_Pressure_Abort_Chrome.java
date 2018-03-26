@@ -48,6 +48,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Pa
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Risk_Assessment_Gas_Page;
+import pageObjectRepositories.Objects_Gas_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 import pageObjectRepositories.Objects_Job_Completion_Configure_All_Meters_Installed_Page;
 import pageObjectRepositories.Objects_Job_Completion_Device_Binding_Commissioning_Page;
@@ -337,7 +338,7 @@ public class Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 																												
 		//Invoke Method to complete a successful risk assessment - gas 
 		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
-	/*												
+											
 		//Verify that we are on the Gas Meter Suitable for Smart Installation page
 		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
 		Log.info("Gas Meter Suitable For Smart Installation page displayed as expected");
@@ -352,7 +353,7 @@ public class Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressu
 			
 		//Invoke Method to complete a successful suitable for smart installation 
 		Methods_Gas_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
-	*/	
+		
 		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
 		Log.info("Gas Meter Capture Initial Photo Of Gas Installation page displayed as expected");

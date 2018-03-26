@@ -1,5 +1,5 @@
 /* *******************************************************************
-* Test Case Name: INST_12_ELEC_HAN_WAN_CHECKS_PAGE_ABORT_ECOT_CHROME
+* Test Case Name: INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome
 * Author: Paul Middleton
 * Date: 09/03/2018
 * Purpose: This test carries out the end to end Mobility workflow on 
@@ -61,7 +61,7 @@ import pageObjectRepositories.Objects_Login_Page;
 import pageObjectRepositories.Objects_Job_Completion_Capture_Customer_Signature_Page;
 
 
-public class INST_12_ELEC_HAN_WAN_CHECKS_PAGE_ABORT_ECOT_CHROME {
+public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 
 	//Declare our test variables
 	public WebDriver driver;
@@ -436,7 +436,7 @@ public class INST_12_ELEC_HAN_WAN_CHECKS_PAGE_ABORT_ECOT_CHROME {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("Test 210 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_ELEC_HAN_WAN_CHECKS_PAGE_ABORT_ECOT_CHROME");
+		Log.info("Test 210 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome");
 		
 	}
 	
