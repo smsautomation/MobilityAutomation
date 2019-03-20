@@ -86,7 +86,7 @@ public class Methods_Electricity_Meter_Suitable_For_Smart_Installation{
 	
 	/* **************************************************************************************************
 	* Function: viewSuitableNoPage
-	* Author: Iain Storrie
+	* Author: Paul Middleton
 	* Date: 15/06/2017
 	* Purpose: This method checks the main page elements on the Electricity Meter Suitable for Smart 
 	* Installation page after the Suitable for Smart Installation - No radio button has been clicked 

@@ -84,7 +84,7 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 			}
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
-			}		
+			}	
 		}
 		else if ("Exchange_3_End_To_End_Chrome".equals(sTestCaseName)
 				|| "Exchange_9_End_To_End_Chrome".equals(sTestCaseName)
@@ -115,7 +115,14 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 				|| "Exchange_9_End_To_End_Spark_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_End_To_End_Spark_Chrome".equals(sTestCaseName)
 				|| "INST_3_End_To_End_ECOT_Chrome".equals(sTestCaseName)
-				|| "INST_12_End_To_End_ECOT_Chrome".equals(sTestCaseName)) 
+				|| "INST_12_End_To_End_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Initial_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Suitable_For_Smart_Installation_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_End_To_End_Found_Meter_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName)) 
 		{ 
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Accepted_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Accepted - Yes radio button clicked");
@@ -123,7 +130,6 @@ public class Methods_Job_Completion_Device_Binding_Commissioning{
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_Gas_Electricity_Meter_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | Gas and Electric Meters Paired Successfully - Yes radio button clicked");
 			}
-			
 			Objects_Job_Completion_Device_Binding_Commissioning_Page.btn_IHD_Paired_Successfully_Yes(driver).click();{
 			Log.info(sTestCaseName + " | IHD Paired Successfully - Yes radio button clicked");
 			}	

@@ -199,15 +199,15 @@ public class INST_8_Elec_Initial_Polarity_Fail_Proceed_End_To_End_ECOT_Chrome {
 		//Invoke Method to complete current meter details page 
 		Methods_Electricity_Meter_Current_Meter_Details.addSuccessValuesFound(driver, sTestCaseName);
 	
-		//Verify that we are on the Electricity Meter Current Meter Details page
+		//Verify that we are on the Electricity Meter Found Meter Details page
 		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).isDisplayed();
-		Log.info("Current Meter Details page displayed as expected");
+		Log.info("Found Meter Details page displayed as expected");
 		
 		//Verify Initial page elements displayed
 		Methods_Found_Meter_Details.viewPage(driver, sTestCaseName);
-		Log.info("Electricity Meter Current Meter Details initial elements displayed as expected");
+		Log.info("Electricity Meter Found Meter Details initial elements displayed as expected");
 												
-		//Invoke Method to complete current meter details page 
+		//Invoke Method to complete Found meter details page 
 		Methods_Found_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
 		
 		//Verify that we are on the Electricity Meter New Meter Details page

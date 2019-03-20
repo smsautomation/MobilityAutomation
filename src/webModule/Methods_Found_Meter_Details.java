@@ -115,10 +115,10 @@ public class Methods_Found_Meter_Details{
 	
 	/* **************************************************************************************************
 	* Function: addSuccessValuesEXCH5
-	* Author: Iain Storrie
-	* Date: 05/07/2017
-	* Purpose: This method adds the required responses in the Electricity Meter New Meter Details page in 
-	* order to force a successful new meter scenario for the EXCH5 workflow
+	* Author: Paul Middleton
+	* Date: 22/03/2018
+	* Purpose: This method adds the required responses in the Electricity Meter Found Details page in 
+	* order to force a successful Found meter scenario for any workflow where found meter is Dumb traditional Credit
 	* Arguments: 
 	* 			
 	* Returns: 
@@ -134,7 +134,7 @@ public class Methods_Found_Meter_Details{
 	
 		Objects_Found_Meter_Details_Page.txt_Found_Meter_Serial_No(driver).click();
 		Objects_Found_Meter_Details_Page.txt_Found_Meter_Serial_No(driver).sendKeys("12345");
-		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).click();{
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | Elec Meter Serial Number entered in the Elec Meter Serial number textbox");
 		}
 		//Add correct responses for a successful new meter details 
@@ -145,13 +145,75 @@ public class Methods_Found_Meter_Details{
 		}
 		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Type(driver).click();
 		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Type(driver).sendKeys("5028A");
-		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Type(driver).sendKeys(Keys.ENTER);{
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | 5028A (credit) selected from Meter Type combobox");
 		}
 		Objects_Found_Meter_Details_Page.cbx_Found_SSC_Code(driver).click();
 		Objects_Found_Meter_Details_Page.cbx_Found_SSC_Code(driver).sendKeys("0126");
-		Objects_Found_Meter_Details_Page.cbx_Found_SSC_Code(driver).sendKeys(Keys.ENTER);{
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | CCS Code selected from the SSC Code Combobox");
+		}
+		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Location_Code(driver).click();
+		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Location_Code(driver).sendKeys("H");
+		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Location_Code(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | Hall Meter location code selected from the Meter Location Code Combobox");
+		}
+
+		Objects_Found_Meter_Details_Page.btn_Found_Read_Meter_No(driver).click();{
+		Log.info(sTestCaseName + " | Know Meter reading from found meter No");
+		}
+		
+		Objects_Found_Meter_Details_Page.btn_Continue_Job_Yes(driver).click();{
+		Log.info(sTestCaseName + " | Continue Job Yes");
+		}
+		Objects_Found_Meter_Details_Page.btn_Capture_Found_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture photo of found meter");
+		}
+
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details_Complete(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Found Meter Details Complete label displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesGas
+	* Author: Paul Middleton
+	* Date: 22/03/2018
+	* Purpose: This method adds the required responses in the Gas Meter Found Details page in 
+	* order to force a successful Found meter scenario for any workflow where found meter is Dumb traditional Credit
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesGas(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		Objects_Found_Meter_Details_Page.txt_Found_Meter_Serial_No(driver).click();
+		Objects_Found_Meter_Details_Page.txt_Found_Meter_Serial_No(driver).sendKeys("12345");
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Serial_Number(driver).click();{
+		Log.info(sTestCaseName + " | Gas Meter Serial Number entered in the Elec Meter Serial number textbox");
+		}
+		//Add correct responses for a successful new meter details 
+		Objects_Found_Meter_Details_Page.cbx_Found_Manufacturer_Letter(driver).click();
+		Objects_Found_Meter_Details_Page.cbx_Found_Manufacturer_Letter(driver).sendKeys("SEC");
+		Objects_Found_Meter_Details_Page.cbx_Found_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | SEC: SECURE selected from Manufacturer Letter combobox");
+		}
+		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Type(driver).click();
+		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Type(driver).sendKeys("Domestic SMART PP Meter");
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Serial_Number(driver).click();{
+		Log.info(sTestCaseName + " | Domestic SMART PP Meter selected from Meter Type combobox");
 		}
 		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Location_Code(driver).click();
 		Objects_Found_Meter_Details_Page.cbx_Found_Meter_Location_Code(driver).sendKeys("H");

@@ -109,7 +109,14 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 				||(sTestCaseName.equals("Exchange_9_End_To_End_Spark_Chrome"))
 				||(sTestCaseName.equals("FLTY_17_End_To_End_Spark_Chrome"))
 				||(sTestCaseName.equals("INST_3_End_To_End_ECOT_Chrome"))
-				||(sTestCaseName.equals("INST_12_End_To_End_ECOT_Chrome")))
+				||(sTestCaseName.equals("INST_12_End_To_End_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Initial_Risk_Assessment_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Suitable_For_Smart_Installation_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_End_To_End_Found_Meter_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome")))
 		{
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Full WAN Established - Yes radio button displayed as expected");
@@ -242,7 +249,14 @@ public class Methods_Job_Completion_Configure_All_Meters_Installed{
 				||(sTestCaseName.equals("Exchange_9_End_To_End_Spark_Chrome"))
 				||(sTestCaseName.equals("FLTY_17_End_To_End_Spark_Chrome"))
 				||(sTestCaseName.equals("INST_3_End_To_End_ECOT_Chrome"))
-				||(sTestCaseName.equals("INST_12_End_To_End_ECOT_Chrome")))
+				||(sTestCaseName.equals("INST_12_End_To_End_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Initial_Risk_Assessment_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_Elec_Suitable_For_Smart_Installation_Page_Abort_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_12_End_To_End_Found_Meter_ECOT_Chrome"))
+				||(sTestCaseName.equals("INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome")))
 		{ 
 			//Add correct responses for a successful installed meters configuration
 			Objects_Job_Completion_Configure_All_Meters_Installed_Page.btn_Full_Wan_Established_Yes(driver).click();{

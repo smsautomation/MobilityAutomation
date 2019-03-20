@@ -36,6 +36,16 @@ public class Objects_Found_Meter_Details_Page {
  		} 
 	    return element;
 	}
+    
+    public static WebElement lbl_Found_Meter_Serial_Number(WebDriver driver){
+   	 
+		try{
+			element = driver.findElement(By.id("lbl_FouMeter_SN"));
+		}catch(Exception e){
+			Log.error(sRepositoryName + " | lbl_Found_Meter_Serial_Number not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
 
     public static WebElement txt_Found_Meter_Serial_No(WebDriver driver){
     	 

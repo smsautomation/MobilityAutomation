@@ -71,15 +71,15 @@ public class Methods_Aborts{
 	
 		//Check that all of the elements that are expected are displayed
 		Objects_Abort_Page.Abort_Reasons.lbl_Job_Already_Done(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Additional Electricity Tests label displayed as expected");
+		Log.info(sTestCaseName + " | Job Already Done label displayed as expected");
 		}
 		
 		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Cancel(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | All Seals Intact - Yes radio button displayed as expected");
+		Log.info(sTestCaseName + " | Cancel button displayed as expected");
 		}
 		
 		Objects_Abort_Page.Abort_No_Access_Reasons.btn_Next(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | All Seals Intact - Yes radio button displayed as expected");
+		Log.info(sTestCaseName + " | Next button displayed as expected");
 		}
 		
 		//Take a screenshot to show what we've done
@@ -314,7 +314,7 @@ public class Methods_Aborts{
 		//Add correct responses for a successful additional tests scenario 
 			Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).click();{
 			Log.info(sTestCaseName + " | Not Convenient with Customer radio button clicked");
-			}
+			}	
 			Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
 			Log.info(sTestCaseName + " | Additional Notes box clicked");
 			}
@@ -327,11 +327,7 @@ public class Methods_Aborts{
 			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Red(driver).click();{
 			Log.info(sTestCaseName + " | Abort Button Red clicked");
 			}
-			/*
-			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_RedSpark(driver).click();{
-			Log.info(sTestCaseName + " | Abort Button Red clicked");
-			}*/
-			Thread.sleep(500);
+			Thread.sleep(1000);
 			Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_ReScan_Ok(driver).click();{
 			Log.info(sTestCaseName + " | Aborting Rescanning Assets Button Red clicked");
 			}
@@ -445,6 +441,104 @@ public class Methods_Aborts{
 		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_ReScan_Ok(driver).click();{
 		Log.info(sTestCaseName + " | Aborting Rescanning Assets Button Red clicked");
 		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+	}
+	
+	/* **************************************************************************************************
+	* Function: addSuccessValuesSPRKRiskReasonsRed
+	* Author: Paul Middleton
+	* Date: 19/06/2017
+	* Purpose: This method adds the required responses in the Aborts Page 
+	* in order to force a successful additional tests scenario for the Risk Abort workflow
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSuccessValuesSPRKRiskReasonsRed(WebDriver driver, String sTestCaseName) throws Exception{
+	
+	if ("INST_8_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+	{ 
+		Objects_Abort_Page.Abort_Risk_Reasons.btn_Next(driver).click();{
+		Log.info(sTestCaseName + " | Next button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
+		Log.info(sTestCaseName + " | Additional Notes box clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).sendKeys("The Customer refused entry as not convenient");{
+		Log.info(sTestCaseName + " | Typed message in text box");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Red(driver).click();{
+		Log.info(sTestCaseName + " | Abort Button Red clicked");
+		}
+		/*
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_RedSpark(driver).click();{
+		Log.info(sTestCaseName + " | Abort Button Red clicked");
+		}*/
+		Thread.sleep(500);
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_ReScan_Ok(driver).click();{
+		Log.info(sTestCaseName + " | Aborting Rescanning Assets Button Red clicked");
+		}	
+	}
+	else if ("INST_12_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+	{
+		Objects_Abort_Page.Abort_Risk_Reasons.btn_Next(driver).click();{
+		Log.info(sTestCaseName + " | Next button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
+		Log.info(sTestCaseName + " | Additional Notes box clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).sendKeys("The Customer refused entry as not convenient");{
+		Log.info(sTestCaseName + " | Typed message in text box");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Orange(driver).click();{
+		Log.info(sTestCaseName + " | Abort Orange button clicked");
+		}
+		Thread.sleep(500);	
+	}
+	else if (("INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+			||("INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+			||("INST_12_Elec_Initial_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+			||("INST_12_Elec_Suitable_For_Smart_Installation_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
+			||("INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName)))
+	{ 
+		//Add correct responses for a successful additional tests scenario 
+		Objects_Abort_Page.Abort_Reasons.lbl_Job_Already_Done(driver).click();{
+		Log.info(sTestCaseName + " | Job Already done - button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).click();{
+		Log.info(sTestCaseName + " | Additional Notes box clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.txt_Additional_Notes(driver).sendKeys("The Customer refused entry as not convenient");{
+		Log.info(sTestCaseName + " | Typed message in text box");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Capture_Photo(driver).click();{
+		Log.info(sTestCaseName + " | Capture Photo button clicked");
+		}
+		Objects_Abort_Page.First_Utility_Additional_Questions.btn_Abort_Appointment_Orange(driver).click();{
+		Log.info(sTestCaseName + " | Abort Orange button clicked");
+		}
+		Thread.sleep(500);
+	}
+	else 
+	{
+		System.out.println("Doing the else "); 
+	}
+			
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");

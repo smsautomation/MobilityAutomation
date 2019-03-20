@@ -181,7 +181,7 @@ public class INST_8_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome {
 		Log.info("Abort page elements displayed as expected");
 			
 		//Invoke Method to complete Aborts questions for a success outcome 
-		Methods_Aborts.addSuccessValuesRefusedAccessSPRK(driver, sTestCaseName);
+		Methods_Aborts.addSuccessValuesSPRKRiskReasonsRed(driver, sTestCaseName);
 		
 		//Verify that we have returned to the Appointments list page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();

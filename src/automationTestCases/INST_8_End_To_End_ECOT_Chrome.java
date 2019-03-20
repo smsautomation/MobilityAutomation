@@ -37,6 +37,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_A
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Teleswitch_Scan_Page;
+import pageObjectRepositories.Objects_Found_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Additional_Electricity_Tests_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Meter_Reading_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Commissioning_Page;
@@ -198,6 +199,17 @@ public class INST_8_End_To_End_ECOT_Chrome {
 												
 		//Invoke Method to complete current meter details page 
 		Methods_Electricity_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Electricity Meter Found Meter Details page
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).isDisplayed();
+		Log.info("Found Meter Details page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Found_Meter_Details.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Found Meter Details initial elements displayed as expected");
+												
+		//Invoke Method to complete Found meter details page 
+		Methods_Found_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
 	
 		//Verify that we are on the Electricity Meter New Meter Details page
 		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details(driver).isDisplayed();

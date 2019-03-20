@@ -32,6 +32,7 @@ import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
+import pageObjectRepositories.Objects_Found_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
@@ -239,6 +240,17 @@ public class INST_3_End_To_End_ECOT_Chrome {
 		//Invoke Method to complete current meter details page 
 		Methods_Electricity_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
 		
+		//Verify that we are on the Electricity Meter Found Meter Details page
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).isDisplayed();
+		Log.info("Found Meter Details page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Found_Meter_Details.viewPage(driver, sTestCaseName);
+		Log.info("Electricity Meter Found Meter Details initial elements displayed as expected");
+												
+		//Invoke Method to complete Found meter details page 
+		Methods_Found_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
+		
 		//Verify that we are on the Electricity Meter New Meter Details page
 		Objects_Electricity_Meter_New_Meter_Details_Page.lbl_New_Meter_Details(driver).isDisplayed();
 		Log.info("New Meter Details page displayed as expected");
@@ -341,6 +353,17 @@ public class INST_3_End_To_End_ECOT_Chrome {
 														
 		//Invoke Method to complete current meter details page 
 		Methods_Gas_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		
+		//Verify that we are on the Meter Found Meter Details page
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).isDisplayed();
+		Log.info("Found Meter Details page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Found_Meter_Details.viewPage(driver, sTestCaseName);
+		Log.info("Meter Found Meter Details initial elements displayed as expected");
+												
+		//Invoke Method to complete Found meter details page 
+		Methods_Found_Meter_Details.addSuccessValuesEXCH5(driver, sTestCaseName);
 							
 		//Verify that we are on the Gas Meter New Regulator page
 		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();

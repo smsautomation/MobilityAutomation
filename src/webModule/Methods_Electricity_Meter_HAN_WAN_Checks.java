@@ -227,5 +227,56 @@ public class Methods_Electricity_Meter_HAN_WAN_Checks{
 	//END OF ADD SUCCESS VALUES METHOD
 	}
 	
+	/* **************************************************************************************************
+	* Function: addAbortValues
+	* Author: Iain Storrie
+	* Date: 15/06/2017
+	* Purpose: This method adds the required responses in the Electricity Meter HAN / WAN Checks Page in 
+	* order to force an aborted HAN / WAN check
+	* Arguments: 
+	* 			
+	* Returns: 
+	*****************************************************************************************************
+	* Change Log:
+	* 
+	* Date:
+	* Author: 
+	* Details:
+	*
+	****************************************************************************************************/	
+	public static void addSPRKAbortValues(WebDriver driver, String sTestCaseName) throws Exception{
+	
+		//Add correct responses for an aborted HAN/WAN Check check
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Wan_Available_No(driver).click();{
+		Log.info(sTestCaseName + " | WAN Available - No radio button clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Vodafone(driver).sendKeys("5");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_O2(driver).sendKeys("4");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_Orange(driver).sendKeys("3");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.txt_Signal_Strength_TMobile(driver).sendKeys("2");{
+		Log.info(sTestCaseName + " | Signal Strength Values entered");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_HAN_Available_No(driver).click();{
+		Log.info(sTestCaseName + " | Sufficient Signal Proceed - No radio button clicked");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.cbx_Cancellation_Abort_Reason(driver).click();
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.cbx_Cancellation_Abort_Reason(driver).sendKeys("No WAN");
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.cbx_Cancellation_Abort_Reason(driver).sendKeys(Keys.TAB);{
+		Log.info(sTestCaseName + " | Cancellation/Abort reason selected from combobox");
+		}
+		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Abort(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Abort button displayed");
+		}
+		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addAbortValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
 //END OF METHODS
 }

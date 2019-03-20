@@ -33,6 +33,7 @@ import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Risk_Assessment_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
+import pageObjectRepositories.Objects_Found_Meter_Details_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Han_Wan_Checks_Page;
@@ -110,7 +111,7 @@ public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 		
 		//Select the correct appointment
 		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[15]/div/div[1]/div/div[1]/span[1]/span")).click();
-		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_210_INST12')]")).click();
+		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_209_INST12')]")).click();
 	
 		//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -223,7 +224,7 @@ public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 		Log.info("HAN / WAN Check page displayed as expected");
 		
 		//Invoke Method to complete an aborted HAN / WAN check 
-		Methods_Electricity_Meter_HAN_WAN_Checks.addAbortValues(driver, sTestCaseName);
+		Methods_Electricity_Meter_HAN_WAN_Checks.addSPRKAbortValues(driver, sTestCaseName);
 			
 		//Click Abort button to bring up Abort page 
 		Objects_Electricity_Meter_Han_Wan_Checks_Page.btn_Abort(driver).click();
@@ -239,7 +240,7 @@ public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 		Log.info("Abort page elements displayed as expected");
 			
 		//Invoke Method to complete Aborts questions for a success outcome 
-		Methods_Aborts.addSuccessValuesReasonsOrange(driver, sTestCaseName);
+		Methods_Aborts.addSuccessValuesSPRKRiskReasonsRed(driver, sTestCaseName);
 											
 		//Verify that we are on the Gas Meter Risk Assessment - Gas page
 		Objects_Gas_Meter_Risk_Assessment_Gas_Page.lbl_Risk_Assessment_Gas(driver).isDisplayed();
@@ -287,7 +288,18 @@ public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 		Log.info("Gas Meter Current Meter Details initial elements displayed as expected");
 														
 		//Invoke Method to complete current meter details page 
-		Methods_Gas_Meter_Current_Meter_Details.addSuccessValues(driver, sTestCaseName);
+		Methods_Gas_Meter_Current_Meter_Details.addSuccessValuesFound(driver, sTestCaseName);
+		
+		//Verify that we are on the Meter Found Meter Details page
+		Objects_Found_Meter_Details_Page.lbl_Found_Meter_Details(driver).isDisplayed();
+		Log.info("Found Meter Details page displayed as expected");
+		
+		//Verify Initial page elements displayed
+		Methods_Found_Meter_Details.viewPage(driver, sTestCaseName);
+		Log.info("Meter Found Meter Details initial elements displayed as expected");
+												
+		//Invoke Method to complete Found meter details page 
+		Methods_Found_Meter_Details.addSuccessValuesGas(driver, sTestCaseName);
 							
 		//Verify that we are on the Gas Meter New Regulator page
 		Objects_Gas_Meter_New_Regulator_Page.lbl_Gas_New_Regulator(driver).isDisplayed();
@@ -436,7 +448,7 @@ public class INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome {
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
 		
-		Log.info("Test 210 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome");
+		Log.info("Test 209 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome");
 		
 	}
 	

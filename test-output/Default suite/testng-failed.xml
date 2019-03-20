@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationTestCases.Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome">
+      <class name="automationTestCases.INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome">
         <methods>
-          <include name="main"/>
           <include name="afterMethod"/>
+          <include name="main"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- automationTestCases.Exchange_3_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Low_Pressure_Abort_Chrome -->
+      </class> <!-- automationTestCases.INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

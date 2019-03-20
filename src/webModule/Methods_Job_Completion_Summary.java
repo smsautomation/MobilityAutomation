@@ -87,7 +87,14 @@ public class Methods_Job_Completion_Summary{
 				|| "Exchange_9_End_To_End_Spark_Chrome".equals(sTestCaseName)
 				|| "FLTY_17_End_To_End_Spark_Chrome".equals(sTestCaseName)
 				|| "INST_3_End_To_End_ECOT_Chrome".equals(sTestCaseName)
-				|| "INST_12_End_To_End_ECOT_Chrome".equals(sTestCaseName))
+				|| "INST_12_End_To_End_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Initial_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Risk_Assessment_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_Elec_Suitable_For_Smart_Installation_Page_Abort_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_12_End_To_End_Found_Meter_ECOT_Chrome".equals(sTestCaseName)
+				|| "INST_3_Elec_HAN_WAN_Checks_Page_Abort_ECOT_Chrome".equals(sTestCaseName))
 		{ 
 			Objects_Job_Completion_Summary_Page.lbl_Electricity_Meter_Mpan(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Electricity Meter MPAN label displayed as expected");
