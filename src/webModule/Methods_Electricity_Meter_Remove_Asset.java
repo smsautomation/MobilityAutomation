@@ -74,9 +74,9 @@ public class Methods_Electricity_Meter_Remove_Asset{
 		Objects_Electricity_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{
 		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
 		}
-		/*Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
+		Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
 		Log.info(sTestCaseName + " | Remove Success OK button clicked");
-		}*/
+		}
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Remove Meter Complete label displayed");
 		}

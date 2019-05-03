@@ -92,7 +92,7 @@ public class Utils {
         {
            try 
            {
-                Thread.sleep(500);
+                Thread.sleep(200);
                 found = driver.findElement(By.id(sFindStr)).isDisplayed();                                            
            }
            catch(Exception e)
@@ -133,7 +133,7 @@ public class Utils {
     	sURL = "https://" + Constant.URL;
         
         switch(sBrowserName){
-	        case "Firefox" :
+	       /* case "Firefox" :
         	
 	        	//FirefoxProfile profile = new FirefoxProfile();
 	        	//profile.setPreference("network.proxy.type", 4);
@@ -146,7 +146,7 @@ public class Utils {
 	
 	            driver.get(sURL);
 	            Log.info("Web application launched successfully");
-	            break;
+	            break;*/
 	            
 	        case "IE" :
 
@@ -161,11 +161,12 @@ public class Utils {
 	            Log.info("New IE driver instantiated");
 	            
 	            driver.manage().window().maximize();
-	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
-	            Log.info("Implicit wait applied on the driver for 20 seconds");
-	            
 	            driver.get(sURL);
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	           
+	            
+	            /*driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	            Log.info("Implicit wait applied on the driver for 20 seconds")*/;
 	            /*
 	            Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
 	            alert.authenticateUsing(new UserAndPassword(sUsername, sPassword));
@@ -173,14 +174,19 @@ public class Utils {
 	            Log.info("Web application launched successfully");
 	            break;   
 	            
+	            
 	        case "Chrome" :
 	        	
 	        	//code for local browser sessions
 	        	ChromeOptions options = new ChromeOptions();
-	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
-	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	//options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	
+	        	//File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
+	        	File file = new File("C:\\newChromeDriver\\chromedriver.exe"); 
+	        	
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	System.out.println("All Properties: " + System.getProperties().toString());
 	        	driver = new ChromeDriver(options);	
@@ -189,11 +195,12 @@ public class Utils {
 				
 	        	
 	            driver.manage().window().maximize();
-	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
-	            Log.info("Implicit wait applied on the driver for 20 seconds");
-	
 	            driver.get(sURL);
 	            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	          //  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);	
+	           // Log.info("Implicit wait applied on the driver for 20 seconds");
+	
+	           
 	            Log.info("Web application launched successfully");
 	            break;   
 

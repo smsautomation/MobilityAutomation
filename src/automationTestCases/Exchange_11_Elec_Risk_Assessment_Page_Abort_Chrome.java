@@ -18,6 +18,7 @@
 package automationTestCases;
 
 import org.apache.log4j.xml.DOMConfigurator;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 //Add for Grid session
@@ -56,7 +57,7 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
 		
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
@@ -115,8 +116,8 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 		Objects_Appointment_Details_Page.btn_Depart_For_Appointment_OK(driver).click();
 			
 		//Verify that we are on the Doorstep Protocol page
-		Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
-		Log.info("Doorstep Protocol page displayed as expected");	
+		//Objects_Doorstep_Protocol_Page.btn_Arrive(driver).isDisplayed();
+		//Log.info("Doorstep Protocol page displayed as expected");	
 		
 		//Verify that Doorstep Sidebar displayed
 		Methods_Doorstep_Protocol.viewSidebar(driver, sTestCaseName);
@@ -133,15 +134,15 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 		Methods_Doorstep_Protocol.addSuccessValues(driver, sTestCaseName);
 				
 		//Verify that we are on the Electricity Meter Initial Risk Assessment page
-		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
-		Log.info("Electricity Meter Initial Risk Assessment page displayed as expected");	
+		//Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
+		//Log.info("Electricity Meter Initial Risk Assessment page displayed as expected");	
 		
 		//Invoke Method to complete a successful initial risk assessment 
 		Methods_Electricity_Meter_Initial_Risk_Assessment.addSuccessValues(driver, sTestCaseName);
 		
-		//Verify that we are on the Electricity Meter Risk Assessment - Elec page
+		/*//Verify that we are on the Electricity Meter Risk Assessment - Elec page
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).isDisplayed();
-		Log.info("Risk Assessment - Elec page displayed as expected");
+		Log.info("Risk Assessment - Elec page displayed as expected");*/
 		
 		//Verify Initial page elements displayed
 		Methods_Electricity_Meter_Risk_Assessment_Elec.viewPage(driver, sTestCaseName);
@@ -163,9 +164,9 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 		Log.info("Abort page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");
 		
-		//Verify Abort elements displayed
+		/*//Verify Abort elements displayed
 		Methods_Aborts.viewPageAbortRiskReasons(driver, sTestCaseName);
-		Log.info("Abort page elements displayed as expected");
+		Log.info("Abort page elements displayed as expected");*/
 			
 		//Invoke Method to complete Aborts questions for a success outcome 
 		Methods_Aborts.addSuccessValuesElecRiskReasonsRed(driver, sTestCaseName);
@@ -173,6 +174,7 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 		//Verify that we have returned to the Appointments list page
 	    Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
 		Log.info("First Appointment Header displayed");
+		Assert.assertTrue("Do Not Return To Appointments List Page After Appointment Was Aborted " , driver.findElement(By.cssSelector("div.header-text white tg ng-binding")).getText().equalsIgnoreCase("Appointments List"));
 		
 		Log.info("Test 91 <<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome");
 	}
@@ -180,7 +182,8 @@ public class Exchange_11_Elec_Risk_Assessment_Page_Abort_Chrome {
 	//Log out
 	@AfterMethod
 	public void afterMethod() {
-	
+		
+		driver.close();
 	    driver.quit();
 	    
 	    Log.endTestCase(sTestCaseName);        

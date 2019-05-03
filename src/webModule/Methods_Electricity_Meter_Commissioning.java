@@ -117,6 +117,9 @@ public class Methods_Electricity_Meter_Commissioning{
 		Objects_Electricity_Meter_Commissioning_Page.btn_Comms_Hub_Connected_WAN_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Comms Hub Connected WAN - Yes radio button clicked");
 		}
+		
+		// Shiva: Redundant for Exch21 scenario (confirmed from Paul M)
+		/*
 		Objects_Electricity_Meter_Commissioning_Page.cbx_Gas_Meter_Location(driver).click();
 		Objects_Electricity_Meter_Commissioning_Page.cbx_Gas_Meter_Location(driver).sendKeys("03");
 		Objects_Electricity_Meter_Commissioning_Page.cbx_Gas_Meter_Location(driver).sendKeys(Keys.ENTER);{
@@ -140,7 +143,7 @@ public class Methods_Electricity_Meter_Commissioning{
 		Objects_Electricity_Meter_Commissioning_Page.cbx_Time_Taken_Commission_Meter(driver).sendKeys("5");
 		Objects_Electricity_Meter_Commissioning_Page.cbx_Time_Taken_Commission_Meter(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | 5-10 minutes selected from Time Taken Commission Meter combobox");
-		}
+		}*/
 		Objects_Electricity_Meter_Commissioning_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}

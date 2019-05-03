@@ -12,7 +12,7 @@
 * Author: 
 * Details:
 *
-*********************************************************************/
+********************************************************************
 
 package automationTestCases;
 
@@ -62,7 +62,7 @@ public class Exchange_19_End_To_End_Chrome {
             //public RemoteWebDriver driver;
             private String sTestCaseName;
             private int iTestCaseRow;
-            
+             
             //Get data and open the browser
             @BeforeMethod
             public void beforeMethod() throws Exception {
@@ -412,4 +412,4 @@ public class Exchange_19_End_To_End_Chrome {
                 Log.endTestCase(sTestCaseName);        
             
             }
-}
+}*/

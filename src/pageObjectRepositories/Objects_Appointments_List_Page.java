@@ -36,7 +36,7 @@ public class Objects_Appointments_List_Page {
     public static WebElement btn_Logout(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.id("btn_top"));
+			element = driver.findElement(By.xpath("//button[@id='btn'or @ class='btnLogin']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Logout not found | Exception desc : "+e.getMessage());		
  		} 
@@ -56,7 +56,8 @@ public class Objects_Appointments_List_Page {
 	public static WebElement btn_Asset_Management (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.className("menu-open-button"));
+			//element = driver.findElement(By.className("menu-open-button"));
+			element = driver.findElement(By.xpath("//*[@class='menu-open-button']"));			
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Asset_Management not found | Exception desc : "+e.getMessage());		
  		} 

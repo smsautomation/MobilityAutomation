@@ -31,7 +31,7 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[1]/div[1]/h4"));
-			element = driver.findElement(By.id("Title_Commission_e"));
+			element = driver.findElement(By.id("Title_commissioning"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Commissioning not found | Exception desc : "+e.getMessage());		
  		} 
@@ -41,7 +41,8 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     public static WebElement cbx_Non_Serialised_Assets(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("cbx_NonSAss_sel"));
+			//element = driver.findElement(By.id("cbx_NonSAss_sel"));
+			element = driver.findElement(By.id("Cselect4"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Non_Serialised_Assets not found | Exception desc : "+e.getMessage());		
  		} 
@@ -51,7 +52,8 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     public static WebElement txt_Non_Serialised_Assets_Number(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.id("txt_NonSAss_num"));
+			//element = driver.findElement(By.id("txt_NonSAss_num"));
+			element = driver.findElement(By.id("Cbar3"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Non_Serialised_Assets_Number not found | Exception desc : "+e.getMessage());		
  		} 
@@ -62,7 +64,8 @@ public class Objects_Electricity_Meter_Commissioning_Page {
      	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div/div[3]"));
-			element = driver.findElement(By.id("btn_Del_Ass"));
+			//element = driver.findElement(By.id("btn_Del_Ass"));
+			element = driver.findElement(By.xpath("//*[@class='delIcon del']"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | img_Trash not found | Exception desc : "+e.getMessage());		
  		} 
@@ -72,7 +75,7 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     public static WebElement btn_Add_Another_Asset(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.id("btn_AddAnot_Ass"));
+			element = driver.findElement(By.id("Cbtn1"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Add_Another_Asset not found | Exception desc : "+e.getMessage());		
  		} 
@@ -83,7 +86,7 @@ public class Objects_Electricity_Meter_Commissioning_Page {
    	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div[1]/label"));
-			element = driver.findElement(By.id("rb_CHConWan_y"));
+			element = driver.findElement(By.id("Cradionm1"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Comms_Hub_Connected_WAN_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -94,7 +97,7 @@ public class Objects_Electricity_Meter_Commissioning_Page {
       	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div[2]/label"));
-			element = driver.findElement(By.id("rb_CHConWan_n"));
+			element = driver.findElement(By.id("Cradionm2"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Comms_Hub_Connected_WAN_No not found | Exception desc : "+e.getMessage());		
  		} 
@@ -154,7 +157,7 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     public static WebElement btn_Next_Section(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.id("btn_Next_Comm"));
+			element = driver.findElement(By.id("CbtnNextComm"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Next_Section not found | Exception desc : "+e.getMessage());		
  		} 

@@ -51,7 +51,7 @@ public class Exchange_3_Return_To_Appointments_List_Page_From_Appointment_Detail
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
 		
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	

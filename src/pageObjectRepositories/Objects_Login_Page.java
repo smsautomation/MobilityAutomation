@@ -90,7 +90,15 @@ public class Objects_Login_Page {
 	public static WebElement btn_Login (WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn"));
+			Thread.sleep(200);
+			
+			element = driver.findElement(By.xpath("//button[@id='btn' and @ class='btnLogin']"));
+			Thread.sleep(200);
+			
+			//element = driver.findElement(By.xpath("//[text()'LOGIN']"));
+			element = driver.findElement(By.xpath("//button[@id='btn' and @ class='btnLogin']"));
+			
+		
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Login not found | Exception desc : "+e.getMessage());		
  		} 

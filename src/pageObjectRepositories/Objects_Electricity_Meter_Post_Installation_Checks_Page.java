@@ -30,8 +30,9 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     public static WebElement lbl_Post_Installation_Checks(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[1]/div[1]/h4"));
+			element = driver.findElement(By.xpath(".//*[@id='app']/div[2]/div/div/div[2]/ng-switch/div/electask/div/div/posttest/div/div[1]/div[1]/h4"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Post_Installation_Checks not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -82,7 +83,8 @@ public class Objects_Electricity_Meter_Post_Installation_Checks_Page {
     	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/posttest/div/div[7]/div[2]/div/label"));
-			element = driver.findElement(By.id("rb_SocSafChk_pass"));
+			//element = driver.findElement(By.id("rb_SocSafChk_pass"));
+			element = driver.findElement(By.id("polp5"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Socket_Safety_Test_Pass not found | Exception desc : "+e.getMessage());		
  		} 

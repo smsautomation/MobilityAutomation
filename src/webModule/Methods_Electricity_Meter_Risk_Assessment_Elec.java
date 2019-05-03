@@ -1,7 +1,9 @@
 package webModule;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import pageObjectRepositories.Objects_Electricity_Meter_Risk_Assessment_Elec_Page;
 import utility.Log;
@@ -67,6 +69,8 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		//Check that all of the elements of that are expected are displayed
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Perform_Risk_Assessment_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Perform Risk Assessment - Yes radio button clicked");
+		
+		//driver.findElement(By.xpath("//div[@id='Title_RiskAss_elec']")).click();
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Risk Reason Code combobox displayed as expected");
@@ -194,7 +198,11 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Elec_Meter_Procedure_Fail(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Elec Meter Procedure Fail Label displayed");
 		}
-				
+		
+		 Assert.assertEquals("Elec Meter Procedure Fail Label Not displayed", driver.findElement(By.cssSelector("h4.sectionTitle assessHeader alignCenter red warning-header")).getText().contentEquals("Abort"));
+		//h4[(contains(text),'Elec Meter Procedure Fail')]
+		 Assert.assertEquals("Abort Bar Not  Displayed", driver.findElement(By.id("btn_Elec_fail")).getText().contentEquals("Abort"));
+				//driver.findElement(By.id("btn_Elec_fail")).getText().contentEquals("Abort");
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addAbortValues");
 		

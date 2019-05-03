@@ -12,9 +12,9 @@
 * Author: 
 * Details:
 *
-*********************************************************************/
-
+********************************************************************/
 package automationTestCases;
+
 
 import org.testng.annotations.Test;
 import org.apache.log4j.xml.DOMConfigurator;
@@ -44,6 +44,7 @@ import pageObjectRepositories.Objects_Electricity_Meter_Post_Installation_Checks
 import pageObjectRepositories.Objects_Electricity_Meter_Remove_Asset_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_Remove_Meter_Page;
 import pageObjectRepositories.Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page;
+import pageObjectRepositories.Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Current_Meter_Details_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page;
@@ -80,23 +81,21 @@ public class Exchange_21_End_To_End_Chrome {
             //Get data and open the browser
             @BeforeMethod
             public void beforeMethod() throws Exception {
-            
-                        DOMConfigurator.configure("log4j.xml");
-            
-                sTestCaseName = this.toString();
-            
-                sTestCaseName = Utils.getTestCaseName(this.toString());
-            
-                Log.startTestCase(sTestCaseName);
-            
-                ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
-                        
-                iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
-            
-                driver = Utils.openBrowser(iTestCaseRow);
-                //Add for Grid session
-                //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
-                 
+            	
+        		DOMConfigurator.configure("log4j.xml");
+        		
+        	    sTestCaseName = this.toString();
+        	
+        	    sTestCaseName = Utils.getTestCaseName(this.toString());
+        	
+        	    Log.startTestCase(sTestCaseName);
+        	
+        	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
+        	
+        	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
+        	
+        	    driver = Utils.openBrowser(iTestCaseRow);
+        	                    
                 //Verify that we are on the correct page
                 Thread.sleep(2000);
                 Objects_Login_Page.btn_Login(driver).isDisplayed();
@@ -115,7 +114,8 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Appointments_List.viewPage(driver, sTestCaseName);
                         
                         //Select the correct appointment
-                        driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_200_EXCH21')]")).click();
+                        //driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_228_EXCH21')]")).click();
+                        driver.findElement(By.xpath("//*[contains(text(), ' Mr Test40')]")).click();
                         
                         //Verify that we are on the Appointment Details page
                         Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -185,9 +185,24 @@ public class Exchange_21_End_To_End_Chrome {
                         
                         //Invoke Method to complete a successful risk assessment 
                         Methods_Electricity_Meter_Risk_Assessment_Elec.addSuccessValues(driver, sTestCaseName);
+                        
+                		//Verify that we are on the Electricity Meter Suitable For Smart Installation page
+                		Objects_Electricity_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+                		Log.info("Suitable for Smart Installation page displayed as expected");	
+                		
+                		//Verify Initial page elements displayed
+                		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewPage(driver, sTestCaseName);
+                		Log.info("Electricity Meter Suitable for Smart Installation initial elements displayed as expected");
+                		
+                		//Verify correct page elements displayed after Suitable For Smart Installation - Yes clicked
+                		Methods_Electricity_Meter_Suitable_For_Smart_Installation.viewSuitableYesPage(driver, sTestCaseName);
+                		Log.info("Electricity Meter Suitable for Smart Installation Yes elements displayed as expected");
+                	
+                		//Invoke Method to complete a successful suitable for smart installation 
+                		Methods_Electricity_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);                     
             
                         //Verify that we are on the Electricity Meter Capture Initial Photo Of Elec Installation page
-            Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();
+                        Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation(driver).isDisplayed();
                         Log.info("Capture Initial Photo Of Elec Installation page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -198,7 +213,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
                         
                         //Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page
-            Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed();
+                        Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed();
                         Log.info("Initial Polarity Check - Martindale Test page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -209,7 +224,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.addSuccessValues(driver, sTestCaseName);
 
                         //Verify that we are on the Electricity Meter Capture Initial Polarity Check - At Meter page
-            Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter(driver).isDisplayed();
+                        Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page.lbl_Initial_Polarity_Check_At_Meter(driver).isDisplayed();
                         Log.info("Initial Polarity Check At Meter page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -275,7 +290,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Electricity_Meter_New_Meter_Details.addSuccessValuesR1SMETS2(driver, sTestCaseName);
                                                 
                         //Verify that we are on the Electricity Meter Additional Electricity Tests & Checks page
-                    Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
+                        Objects_Electricity_Meter_Additional_Electricity_Tests_Page.lbl_Additional_Electricity_Tests(driver).isDisplayed();
                         Log.info("New Meter Details page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -294,7 +309,8 @@ public class Exchange_21_End_To_End_Chrome {
                         Log.info("Electricity Meter Initial Meter Reading initial elements displayed as expected");
                                                                                                                                                                                                                                                                         
                         //Invoke Method to complete Initial Meter Reading page 
-                        Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
+                        //Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues(driver, sTestCaseName);
+                        Methods_Electricity_Meter_Initial_Meter_Reading.addSuccessValues2Registers(driver, sTestCaseName);
                                                                                                 
                         //Verify that we are on the Electricity Meter Commissioning page
                         Objects_Electricity_Meter_Commissioning_Page.lbl_Commissioning(driver).isDisplayed();
@@ -318,17 +334,20 @@ public class Exchange_21_End_To_End_Chrome {
                         //Invoke Method to complete Post Installation Checks page 
                         Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValuesSMETS2(driver, sTestCaseName);
                         
+                        //Invoke Method to complete Post Installation Checks page 
+                        Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValuesSMETS2Photos(driver, sTestCaseName);                      
+                        
                         //Verify that we are on the Electric Install & Commissioning page
-                     Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.lbl_Install_Commissioning(driver).isDisplayed();
+                        Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.lbl_Install_Commissioning(driver).isDisplayed();
                         Log.info("Initial Meter Reading page displayed as expected");
                         
                         //Verify Initial page elements displayed
                         Methods_Electricity_Meter_SMETS2_Install_Commissioning.viewPage(driver, sTestCaseName);
-                        Log.info("Electricity Meter Post Installation Checks initial elements displayed as expected");
+                        Log.info("Electric Install Commisioning page elements displayed as expected");
                                                                                                                                                                                                                                                                                                                         
                         //Invoke Method to complete Post Installation Checks page 
-                        Methods_Electricity_Meter_SMETS2_Install_Commissioning.addSuccessValuesEXCH(driver, sTestCaseName);
-                        
+                        Methods_Electricity_Meter_SMETS2_Install_Commissioning.addSuccessValuesEXCH21(driver, sTestCaseName);
+                        /*
                         //Verify that we are on the Electricity Meter Post Installation Checks page
                         Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Photos(driver).isDisplayed();
                         Log.info("Initial Meter Reading page displayed as expected");
@@ -338,7 +357,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Log.info("Electricity Meter Post Installation Checks initial elements displayed as expected");
                                                                                                                                                                                                                                                                                                                         
                         //Invoke Method to complete Post Installation Checks page 
-                        Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValuesSMETS2Photos(driver, sTestCaseName);
+                        Methods_Electricity_Meter_Post_Installation_Checks.addSuccessValuesSMETS2Photos(driver, sTestCaseName);*/
                         
                         //Verify that we are on the Gas Meter Initial Risk Assessment page
                         Objects_Gas_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment(driver).isDisplayed();
@@ -359,7 +378,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
                                                                                                                                                                         
                         //Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
-            Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
+                        Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();
                         Log.info("Gas Meter Capture Initial Photo Of Gas Installation page displayed as expected");
             
                         //Verify Initial page elements displayed
@@ -370,7 +389,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation.addSuccessValues(driver, sTestCaseName);
                         
                         //Verify that we are on the Gas Meter Capture Pre Installation Gas Tightness Test page
-            Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.lbl_Pre_Installation_Gas_Tightness_Test(driver).isDisplayed();
+                        Objects_Gas_Meter_Pre_Installation_Gas_Tightness_Test_Page.lbl_Pre_Installation_Gas_Tightness_Test(driver).isDisplayed();
                         Log.info("Gas Meter Pre Installation Gas Tightness Test page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -454,7 +473,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Gas_Meter_Install_Kit.addSuccessValues(driver, sTestCaseName);
                                                                                                                                                                                     
                         //Verify that we are on the Gas Meter Post Installation Gas Tightness Test page
-            Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page.lbl_Post_Installation_Gas_Tightness_Test(driver).isDisplayed();
+                        Objects_Gas_Meter_Post_Installation_Gas_Tightness_Test_Page.lbl_Post_Installation_Gas_Tightness_Test(driver).isDisplayed();
                         Log.info("Gas Install Kit page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -476,7 +495,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Gas_Meter_SMETS2_Install_Commissioning.addSuccessValuesSMETS2(driver, sTestCaseName);                      
                                                                                                                                                                                                 
                         //Verify that we are on the Gas Meter Gas Appliance Safety Checks page
-                 Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page.lbl_Gas_Appliance_Safety_Checks(driver).isDisplayed();
+                        Objects_Gas_Meter_Gas_Appliance_Safety_Checks_Page.lbl_Gas_Appliance_Safety_Checks(driver).isDisplayed();
                         Log.info("Gas Appliance Safety Checks page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -487,7 +506,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Gas_Meter_Gas_Appliance_Safety_Checks.addSuccessValues(driver, sTestCaseName);
                         
                         //Verify that we are on the Job Completion Device Binding & Commissioning page
-            Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).isDisplayed();
+                        Objects_Job_Completion_Device_Binding_Commissioning_Page.lbl_Device_Binding_Commissioning(driver).isDisplayed();
                         Log.info("Job Completion Device Binding Commissioning page displayed as expected");
                                     
                         //Verify Initial page elements displayed
@@ -520,7 +539,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Job_Completion_SMETS2_IHD_Commissioning.addSuccessValues(driver, sTestCaseName);
                         
                         //Verify that we are on the Job Completion Configure All Meters Installed page
-            Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
+                        Objects_Job_Completion_Configure_All_Meters_Installed_Page.lbl_Configure_All_Meters_Installed(driver).isDisplayed();
                         Log.info("Job Completion Configure All Meters Installed page displayed as expected");
             
                         //Verify Initial page elements displayed
@@ -531,7 +550,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Job_Completion_Configure_All_Meters_Installed.addSuccessValues(driver, sTestCaseName);
                         
                         //Verify that we are on the Job Completion Energy Efficiency Information page
-            Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
+                        Objects_Job_Completion_Energy_Efficiency_Information_Page.lbl_Energy_Efficiency_Information(driver).isDisplayed();
                         Log.info("Job Completion Energy Efficient Information page displayed as expected");
             
                         //Verify Initial page elements displayed
@@ -564,7 +583,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Job_Completion_Summary.addSuccessValues(driver, sTestCaseName);
                                                                                                                                                                                                                                                                         
                         //Verify that we are on the Job Completion Capture Customer Signature page
-               Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
+                        Objects_Job_Completion_Capture_Customer_Signature_Page.lbl_Capture_Customer_Signature(driver).isDisplayed();
                         Log.info("Job Completion Summary page displayed as expected");
                         
                         //Verify Initial page elements displayed
@@ -575,7 +594,7 @@ public class Exchange_21_End_To_End_Chrome {
                         Methods_Job_Completion_Capture_Customer_Signature.addSuccessValues(driver, sTestCaseName);
             
                         //Verify that we have returned to the Appointments list page
-                Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
+                        Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();
                         Log.info("First Appointment Header displayed");
                         
                         Log.info("<<<<<<<<<<Completed By Paul Middleton>>>>>>>>>>");       

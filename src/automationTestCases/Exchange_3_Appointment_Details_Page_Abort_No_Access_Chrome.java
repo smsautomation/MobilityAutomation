@@ -56,7 +56,8 @@ public class Exchange_3_Appointment_Details_Page_Abort_No_Access_Chrome {
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	   //ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
 	
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	

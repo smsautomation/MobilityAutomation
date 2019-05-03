@@ -1,5 +1,6 @@
 package webModule;
 
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import pageObjectRepositories.Objects_Appointments_List_Page;
 import utility.Log;
@@ -28,11 +29,22 @@ public class Methods_Appointments_List{
 	****************************************************************************************************/	
 	public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
+		
+		
+		Log.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&& START:  Methods_Appointments_List.viewPage &&&&&&&&&&&&&&&&&&&&&&&&&&&");
+		Log.info(sTestCaseName + "This method checks the main page elements on the Appointments List page");
+		Log.info("&&&&&&&&&&&&&&&&&&&&&&&&&&   START: Methods_Appointments_List.viewPage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
+		
 		//Declare our variables and instantiate 
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//WebDriverWait wait = new WebDriverWait(driver, 5);
 			
 		//Check that all of the elements of that are expected are displayed
+		try {
+			Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();
+		} catch(StaleElementReferenceException e) {
+			Thread.sleep(2000);
+		}
 		Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Logout button displayed as expected");
 		}
@@ -48,6 +60,9 @@ public class Methods_Appointments_List{
 		Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | First Appointment Header displayed as expected");
 		}
+		Log.info("&&&&&&&&&&&&&&&&&&&&&&&&&&&&END:  Methods_Appointments_List.viewPage &&&&&&&&&&&&&&&&&&&&&&&&&&&");
+		Log.info(sTestCaseName + "This method checks the main page elements on the Appointments List page");
+		Log.info("&&&&&&&&&&&&&&&&&&&&&&&&&& END: Methods_Appointments_List.viewPage &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 		
 		//Screenshot time
 		Utils.takeScreenshot(driver, sTestCaseName + "-ViewPage");

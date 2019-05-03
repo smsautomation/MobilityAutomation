@@ -88,7 +88,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
 		
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
@@ -346,7 +346,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		Methods_Gas_Meter_Risk_Assessment_Gas.addSuccessValues(driver, sTestCaseName);
 												
 		//Verify that we are on the Gas Meter Suitable for Smart Installation page
-		Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
+		/*Objects_Gas_Meter_Suitable_For_Smart_Installation_Page.lbl_Suitable_For_Smart_Installation(driver).isDisplayed();
 		Log.info("Gas Meter Suitable For Smart Installation page displayed as expected");
 	
 		//Verify Initial page elements displayed
@@ -358,7 +358,7 @@ public class Exchange_3_Spark_End_To_End_Chrome {
 		Log.info("Gas Meter Suitable for Smart Installation Yes elements displayed as expected");
 			
 		//Invoke Method to complete a successful suitable for smart installation 
-		Methods_Gas_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);
+		Methods_Gas_Meter_Suitable_For_Smart_Installation.addSuccessValues(driver, sTestCaseName);*/
 		
 		//Verify that we are on the Gas Meter Capture Initial Photo Of Gas Installation page
 		Objects_Gas_Meter_Capture_Initial_Photo_Of_Gas_Installation_Page.lbl_Capture_Initial_Photo_Of_Gas_Installation(driver).isDisplayed();

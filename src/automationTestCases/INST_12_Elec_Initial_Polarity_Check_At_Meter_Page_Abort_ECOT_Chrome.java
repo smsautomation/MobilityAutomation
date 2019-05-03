@@ -83,8 +83,7 @@ public class INST_12_Elec_Initial_Polarity_Check_At_Meter_Page_Abort_ECOT_Chrome
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
-		
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");		
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
 	    driver = Utils.openBrowser(iTestCaseRow);

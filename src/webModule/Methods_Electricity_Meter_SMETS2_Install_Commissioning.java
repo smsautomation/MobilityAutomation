@@ -111,8 +111,28 @@ public class Methods_Electricity_Meter_SMETS2_Install_Commissioning{
 		Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.btn_EICOM_Successful(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
-
 		
+		//Take a screenshot to show what we've done
+		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
+		
+	//END OF ADD SUCCESS VALUES METHOD
+	}
+	
+	//Added by Shiva Pasham
+	public static void addSuccessValuesEXCH21(WebDriver driver, String sTestCaseName) throws Exception{
+		
+		//Click Send Message Button
+		Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.btn_Send_Message(driver).click();{
+		Log.info(sTestCaseName + " | Next Section button clicked");
+		}
+	    Thread.sleep(2000);
+		
+		//Click Send Message Button
+		Objects_Electricity_Meter_SMETS2_Install_Commissioning_Page.btn_Awaiting_Response(driver).isDisplayed();{
+		Log.info(sTestCaseName + " | Awaiting Response button is displayed");
+		}
+	    Thread.sleep(2000);
+	    
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 		

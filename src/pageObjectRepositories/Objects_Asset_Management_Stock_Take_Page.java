@@ -81,7 +81,8 @@ public class Objects_Asset_Management_Stock_Take_Page {
      	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/stocklist/div[1]/div"));
-			element = driver.findElement(By.id("btn_StktkSub"));	
+			//element = driver.findElement(By.id("btn_StktkSub"));	
+			element = driver.findElement(By.xpath("//*[text()='Submit']"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Submit not found | Exception desc : "+e.getMessage());		
  		} 
@@ -91,7 +92,8 @@ public class Objects_Asset_Management_Stock_Take_Page {
     public static WebElement btn_OK(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.className("confirm"));
+			//element = driver.findElement(By.className("confirm"));
+			element = driver.findElement(By.xpath("//*[text()='SUBMIT STOCK TAKE']/..//button[@class='confirm']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_OK not found | Exception desc : "+e.getMessage());		
  		} 
@@ -111,7 +113,8 @@ public class Objects_Asset_Management_Stock_Take_Page {
     public static WebElement btn_Stock_Take_OK(WebDriver driver){
    	 
 		try{
-			element = driver.findElement(By.className("confirm"));
+			//element = driver.findElement(By.className("confirm"));
+			element = driver.findElement(By.xpath("//*[text()='Stock Take Ok']/..//button[@class='confirm']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Stock_Take_OK not found | Exception desc : "+e.getMessage());		
  		} 

@@ -37,6 +37,7 @@ public class Methods_Login{
 		
 		Objects_Login_Page.btn_Login(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Login button displayed as expected");
+		
 		}
 		
 		//Take a screenshot to show what we've done
@@ -69,16 +70,20 @@ public class Methods_Login{
 		
 		Objects_Login_Page.Username(driver).click();
 		Objects_Login_Page.Username(driver).sendKeys("Automation2");{
-		//Objects_Login_Page.Username(driver).sendKeys("Automation");{
 		Log.info(sTestCaseName + " | Username entered");
 		}
+		
 		Objects_Login_Page.Password(driver).click();
 		Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on2");{
-		//Objects_Login_Page.Password(driver).sendKeys("Aut0m4t1on");{
 		Log.info(sTestCaseName + " | Password entered");
 		}
+		
+		
 		Objects_Login_Page.btn_Login(driver).click();{
 		Log.info(sTestCaseName + " | Login button clicked");
+		Log.info(" &&&&&&&&&&& SUCCESSFULLY LOG INaddSuccessValues : SUCCESSFULLY LOG IN   &&&&&&&&&&& SUCCESSFULLY LOG IN");
+		Log.info("addSuccessValues : SUCCESSFULLY LOG IN");
+		Log.info("&&&&&&&&&&& SUCCESSFULLY LOG IN ddSuccessValues : SUCCESSFULLY LOG IN   &&&&&&&&&&& SUCCESSFULLY LOG IN");
 		}
 		Thread.sleep(5000);
 						

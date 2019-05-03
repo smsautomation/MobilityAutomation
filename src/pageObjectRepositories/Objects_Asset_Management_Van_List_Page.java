@@ -50,18 +50,34 @@ public class Objects_Asset_Management_Van_List_Page {
     public static WebElement txt_Serial_Number(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.id("addVanAsset"));
+			//driver.findElement(By.linkText(" MR. Test_107_EXCH3_9900990148"));
+			//element= driver.findElement(By.xpath("//span[contains (text(),'continue') and @class='turq'] "));
+			element= driver.findElement(By.id("addVanAsset0"));
+			//span[contains (text(),'continue')] or @class='turq'] 
+			//element = driver.findElement(By.id("addVanAsset"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Serial_Number not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
+	    
+	/*}
+    
+    public static WebElement txt_Serial_Number2(WebDriver driver){
+     	 
+		try{
+			element = driver.findElement(By.id("addVanAsset"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Serial_Number not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;*/
 	}
+    
     
     public static WebElement txt_Notes(WebDriver driver){
      	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[2]/input"));
-			element = driver.findElement(By.id("txt_AddAss_notes"));
+			element = driver.findElement(By.id("addVanAssetNotes"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | txt_Notes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -72,7 +88,7 @@ public class Objects_Asset_Management_Van_List_Page {
     	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/assettab/div/div[1]/div/div/ng-switch/div/vanlist/div[3]/div/div/div[3]/div[2]/div/button"));
-			element = driver.findElement(By.id("btn_AddAss_van"));
+			element = driver.findElement(By.id("addAssetToVanList"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Add_Asset not found | Exception desc : "+e.getMessage());		
  		} 

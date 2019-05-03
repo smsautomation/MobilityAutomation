@@ -56,7 +56,7 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 	
 	    Log.startTestCase(sTestCaseName);
 	
-	    ExcelUtils.setExcelFile(Constant.Path_TestData + "Mobility_Automation_Test_Data" + ".xlsm","Data");
+	    ExcelUtils.setExcelFile(Constant.Path_TestData +  Constant.File_TestData,"Data");
 	
 	    iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,Constant.Col_Test_Case_Name);
 	
@@ -64,10 +64,10 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 	    //Add for Grid session
 	    //driver = (RemoteWebDriver) Utils.openGridBrowser(iTestCaseRow);
 	    
-		//Verify that we are on the correct page
+		/*//Verify that we are on the correct page
 	    Thread.sleep(2000);
 	    Objects_Login_Page.btn_Login(driver).isDisplayed();
-	    Log.info("Login button displayed");
+	    Log.info("Login button displayed");*/
 			    
 	}
 	
@@ -85,10 +85,10 @@ public class Exchange_1_Appointment_Details_Page_Abort_No_Access_Chrome {
 		//driver.findElement(By.xpath(".//*[@id='app']/div/div/workorderlistitem[165]/div/div[1]/div/div[1]/span[1]/span")).click();
 		driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_1_EXCH1')]")).click();
 		
-		//Verify that we are on the Appointment Details page
+		/*//Verify that we are on the Appointment Details page
 		Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
 		Log.info("Appointment Details page displayed as expected");	
-		
+		*/
 		Methods_Appointment_Details.viewPage(driver, sTestCaseName);
 		
 		//Verify correct Customer Details displayed

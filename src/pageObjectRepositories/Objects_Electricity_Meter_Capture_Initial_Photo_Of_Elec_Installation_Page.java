@@ -31,6 +31,7 @@ public class Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
     	 
 		try{
 			element = driver.findElement(By.id("Title_Init_Photo"));
+			//element = driver.findElement(By.id("btn1"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Capture_Initial_Photo_Of_Elec_Installation not found | Exception desc : "+e.getMessage());		
  		} 

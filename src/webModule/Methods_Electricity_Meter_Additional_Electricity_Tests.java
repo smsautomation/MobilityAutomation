@@ -74,9 +74,11 @@ public class Methods_Electricity_Meter_Additional_Electricity_Tests{
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.btn_Terminal_Screw_Tightness_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Terminal Screw Tightness - Yes radio button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.btn_Capture_Photo(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo button clicked");
 		}
+		Thread.sleep(1000);
 		Objects_Electricity_Meter_Additional_Electricity_Tests_Page.btn_Visual_Inspection_Completed_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Visual Inspection Completed - Yes radio button clicked");
 		}

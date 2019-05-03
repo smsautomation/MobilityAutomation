@@ -30,8 +30,9 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
     public static WebElement lbl_New_Meter_Details(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/newmeter/div/div[1]/div[1]/h4"));
- 		}catch(Exception e){
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/newmeter/div/div[1]/div[1]/h4"));
+			element = driver.findElement(By.xpath("//*[@id='Title_newMeter']/h4"));
+		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_New_Meter_Details not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
@@ -47,10 +48,34 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
 	    return element;
 	}
     
+	//Added by Shiva Pasham
+	public static String txt_Elec_Meter_Serial_Number(WebDriver driver){
+	   	 
+		String msn=null;
+		try{
+			element = driver.findElement(By.xpath("//*[@id='newMeter_assetSelect']/option[1]"));
+			msn = element.getAttribute("value");
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_Elec_Meter_Serial_Number not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return msn;
+	}
+	
+	//Added by Shiva Pasham
+    public static WebElement txt_EUI_Device_ID(WebDriver driver){    	 
+		try{
+			element = driver.findElement(By.xpath("//*[contains(text(), 'EUI Device ID')]"));
+ 		}catch(Exception e){
+			Log.error(sRepositoryName + " | txt_EUI_Device_ID not found | Exception desc : "+e.getMessage());		
+ 		} 
+	    return element;
+	}
+    
     public static WebElement cbx_Valid_Elec_Meter(WebDriver driver){
       	 
 		try{
-			element = driver.findElement(By.id("cbx_NewS2Met_sel"));
+			//element = driver.findElement(By.id("cbx_NewS2Met_sel"));
+			element = driver.findElement(By.id("newMeter_assetSelect"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Valid_Meter not found | Exception desc : "+e.getMessage());		
  		} 
@@ -61,7 +86,8 @@ public class Objects_Electricity_Meter_New_Meter_Details_Page {
       	 
 		try{
 			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/newmeter/div/div[2]/div[2]/div[2]/select"));
-			element = driver.findElement(By.id("cbx_MetType_sel"));
+			//element = driver.findElement(By.id("cbx_MetType_sel"));
+			element = driver.findElement(By.id("select_meter_letter"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Meter_Type not found | Exception desc : "+e.getMessage());		
  		} 
