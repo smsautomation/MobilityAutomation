@@ -136,10 +136,10 @@ public class Methods_Electricity_Meter_Initial_Risk_Assessment{
 		Log.info(sTestCaseName + " | Smell Gas - No radio button clicked");
 		}
 		
-		Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment_Complete(driver).isDisplayed();{
+		/*Objects_Electricity_Meter_Initial_Risk_Assessment_Page.lbl_Initial_Risk_Assessment_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Initial Risk Assessment Complete Label displayed");
-		}
 		
+		}*/
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 		

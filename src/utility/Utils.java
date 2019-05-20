@@ -34,6 +34,7 @@ import org.apache.commons.io.FileUtils;
 //import org.apache.poi.openxml4j.opc.Configuration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -175,17 +176,28 @@ public class Utils {
 	            
 	        case "Chrome" :
 	        	
+				/*
+				 * DesiredCapabilities cap2= new DesiredCapabilities();
+				 * cap2.setCapability("disable-restore-session-state", true);
+				 */
 	        	//code for local browser sessions
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	options.addArguments("--disable-inforbars");
+	        	
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
-	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
-	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
+	        	
+	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());	        	
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
-	        	System.out.println("All Properties: " + System.getProperties().toString());
+	        	System.out.println("All Properties: " + System.getProperties().toString());        	        	
 	        	driver = new ChromeDriver(options);	
-	        	//driver.get("http://www.google.co.uk");
+	        	driver.manage().deleteCookieNamed(sBrowserName);
+	        	driver.manage().deleteCookieNamed(sURL);
+	        	driver.manage().deleteAllCookies();
+	        	
+	 
 	        	Log.info("New Chrome driver instantiated");
+				
 				
 	        	
 	            driver.manage().window().maximize();
@@ -282,11 +294,15 @@ public class Utils {
 	        	//code for local browser sessions
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	options.addArguments("--disable-inforbars");
+	        	
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	driver = new ChromeDriver(options);	
+	        	driver.manage().deleteAllCookies();
+	        	driver.manage().deleteCookieNamed(sURL);
 	        	//driver.get("http://www.google.co.uk");
 	        	Log.info("New Chrome driver instantiated");
 				
@@ -385,12 +401,17 @@ public class Utils {
 	        	//code for local browser sessions
 	        	ChromeOptions options = new ChromeOptions();
 	        	options.setBinary("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+	        	options.addArguments("--disable-inforbars");
+	        	
 	        	File file = new File("C:\\ChromeDriver\\chromedriver.exe"); 
 	        	System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 	        	//DesiredCapabilities Capability = DesiredCapabilities.chrome();
 	        	System.setProperty("webdriver.chrome.logfile", "C:\\eclipse\\chromedriver.log");
 	        	driver = new ChromeDriver(options);	
-	        	//driver.get("http://www.google.co.uk");
+	        	driver.manage().deleteCookieNamed(sBrowserName);
+	        	driver.manage().deleteCookieNamed(sURL);
+	        	driver.manage().deleteAllCookies();
+	        	
 	        	Log.info("New Chrome driver instantiated");
 				
 	        	

@@ -30,7 +30,6 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
     public static WebElement lbl_Risk_Assessment_Elec(WebDriver driver){
     	 
 		try{
-			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[1]/div/div[1]/h4"));
 			element = driver.findElement(By.id("Title_RiskAss_elec"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Risk_Assessment_Elec not found | Exception desc : "+e.getMessage());		
@@ -41,7 +40,8 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement btn_Perform_Risk_Assessment_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div/div[2]/div/label"));
+			element= driver.findElement(By.cssSelector("[collapse='task\\.riskassesselecCollapsed'] .outer"));
+			//element= driver.findElement(By.xpath("(//span[@class='inner'])[3]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Perform_Risk_Assessment_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -51,6 +51,8 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement cbx_Risk_Reason_Code(WebDriver driver){
 	   	 
 		try{
+			//element= driver.findElement(By.xpath("//select[contains(@id,'select1')]"));
+			
 			element = driver.findElement(By.id("select1"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Risk_Reason_Code not found | Exception desc : "+e.getMessage());		
@@ -61,7 +63,8 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement btn_Risk_Assessment_Pass_Yes(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[2]/div[2]/div[2]/div[2]/div[1]/label"));
+			element= driver.findElement(By.cssSelector("[collapse] .ng-scope:nth-child(3) .radioWidth:nth-of-type(1) .outer"));
+			//element = driver.findElement(By.xpath("(//span[@class='inner'])[4]"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Risk_Assessment_Pass_Yes not found | Exception desc : "+e.getMessage());		
  		} 
@@ -91,7 +94,8 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement btn_Capture_Photo(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn1"));
+			element= driver.findElement(By.xpath("//button[@id='btn1']"));
+			//element = driver.findElement(By.id("btn1"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo not found | Exception desc : "+e.getMessage());		
  		} 
@@ -101,7 +105,8 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement btn_Capture_Photo_Hazards(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.id("btn2"));
+			element=driver.findElement(By.xpath("//button[@id='btnNextrae']"));
+			//element = driver.findElement(By.id("btn2"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Capture_Photo_Hazards not found | Exception desc : "+e.getMessage());		
  		} 
@@ -251,7 +256,7 @@ public class Objects_Electricity_Meter_Risk_Assessment_Elec_Page {
 	public static WebElement lbl_Risk_Assessment_Elec_Complete(WebDriver driver){
 	   	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/riskassesselec/div/div[1]/div/div[2]"));
+			element= driver.findElement(By.cssSelector("#Title_RiskAss_elec h4"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Risk_Assessment_Elec_Complete not found | Exception desc : "+e.getMessage());		
  		} 

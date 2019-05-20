@@ -3,6 +3,8 @@ package pageObjectRepositories;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 import utility.Log;
 
 /* *******************************************************************
@@ -30,8 +32,9 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     public static WebElement lbl_Commissioning(WebDriver driver){
     	 
 		try{
-			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[1]/div[1]/h4"));
-			element = driver.findElement(By.id("Title_Commission_e"));
+			Thread.sleep(2000);
+			element= driver.findElement(By.xpath("//h4[contains(text(),'Commissioning')]"));
+			//element = driver.findElement(By.id("Title_Commission_e"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Commissioning not found | Exception desc : "+e.getMessage());		
  		} 
@@ -81,9 +84,13 @@ public class Objects_Electricity_Meter_Commissioning_Page {
     
     public static WebElement btn_Comms_Hub_Connected_WAN_Yes(WebDriver driver){
    	 
-		try{
-			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/commission/div/div[2]/div[1]/div[2]/div[1]/label"));
-			element = driver.findElement(By.id("rb_CHConWan_y"));
+		try{Thread.sleep(2000);
+			 Actions act= new Actions(driver);
+			//act.moveToElement( element = driver.findElement(By.cssSelector("[collapse='task\\[stepid \\+ \\'Collapsed\\'\\]'] .radioWidth:nth-of-type(1) .outer"))).click().build().perform();
+			act.moveToElement(driver.findElement(By.xpath("(//span[@class='outer'])[37]"))).click().build().perform();
+
+			
+			//element = driver.findElement(By.id("rb_CHConWan_y"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Comms_Hub_Connected_WAN_Yes not found | Exception desc : "+e.getMessage());		
  		} 

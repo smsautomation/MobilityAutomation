@@ -1,6 +1,10 @@
 package webModule;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
 import pageObjectRepositories.Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page;
 import utility.Log;
 import utility.Utils;
@@ -60,14 +64,27 @@ public class Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installatio
 	*
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
-	
+		
+		driver.findElement(By.cssSelector("#rb_SuitFS_y .outer")).click();
+		
+		/*Select textValue= new Select (driver.findElement(By.xpath("//select[#'repositionSelect']")));
+		textValue.selectByValue("No Reposition Required");
+		textValue.selectByIndex(1)*/;
+		
+		driver.findElement(By.xpath("//select[contains(@ng-model,'scp.equipRepositionCode')]")).click();
+		driver.findElement(By.xpath("//select[contains(@ng-model,'scp.equipRepositionCode')]")).sendKeys("Yes-Customer Agreed");
+		driver.findElement(By.xpath("//select[contains(@ng-model,'scp.equipRepositionCode')]")).sendKeys(Keys.ENTER);
+		driver.findElement(By.id("btn_Next_Section")).click();
+
+		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation_Completed(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Capture Initial Photo Of Elec Installation Complete Label displayed");
+			}
+		
 		//Add correct responses for a successful suitable for photo capture
 		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.btn_Capture_Photo(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo button clicked");
 		}
-		Objects_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation_Page.lbl_Capture_Initial_Photo_Of_Elec_Installation_Completed(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Capture Initial Photo Of Elec Installation Complete Label displayed");
-		}
+		
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");

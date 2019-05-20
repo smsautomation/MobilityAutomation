@@ -1,8 +1,13 @@
 package webModule;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import pageObjectRepositories.Objects_Electricity_Meter_New_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;
@@ -250,45 +255,42 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).click();{
 		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter - Select box clicked");
 		}
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ARROW_DOWN);
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys("99E0000003");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter first option - Select box clicked");
 		}
-		//Define the Combobox element and get the text of the first option and assign to the variable selectedComboValue
-		Select comboBox = new Select(Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver));
-		String selectedComboValue = comboBox.getFirstSelectedOption().getText();{
-		Log.info(sTestCaseName + " | Got data of the first option and assigned to variable");
-		}
+		/*
+		 * //Define the Combobox element and get the text of the first option and assign
+		 * to the variable selectedComboValue Select comboBox = new
+		 * Select(Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(
+		 * driver)); String selectedComboValue =
+		 * comboBox.getFirstSelectedOption().getText();{ Log.info(sTestCaseName +
+		 * " | Got data of the first option and assigned to variable"); }
+		 */
 		//Click on the Serial Scan text box and enter in the Serial number assigned to the variable selectedComboValue 
 		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).click();{
 		Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
 		}
-		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys(selectedComboValue);{
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys("99E0000003");{
 		Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
-		}	
+		//}	
+		
 		//Click on the Label bar to get out of the Text box and move on
-		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).isDisplayed();{
-		Log.info(sTestCaseName + " | Click Away for the Text Box on the Label - Label clicked");
+		//Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).isDisplayed();{
+		//Log.info(sTestCaseName + " | Click Away for the Text Box on the Label - Label clicked");
+		WebDriverWait wait= new WebDriverWait (driver, 2);
+		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h4[(text()='New Meter Details')]")));
+		element.click();
+		
 		}
-		Thread.sleep(500);
+		
 		//Click Next on the Pop Up Dialog Box
 		Objects_Electricity_Meter_New_Meter_Details_Page.btn_Serial_Match_Next(driver).click();{
 		Log.info(sTestCaseName + " | Matched Asset Next button clicked");
-		}
-		Thread.sleep(500);
-		//Add correct responses for a successful new meter details 
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).click();
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys("J");
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Manufacturer_Letter(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | J: KAIFA selected from Manufacturer Letter combobox");
-		}
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).click();
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys("Kaifa MA120 1 Rate");
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Meter_Type(driver).sendKeys(Keys.ENTER);{
-		Log.info(sTestCaseName + " | Kaifa MA120 1 Rate selected from Meter Type combobox");
+		
 		}
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).click();
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys("0393");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys("0151");
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_SSC_Code(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | CCS Code selected from the SSC Code Combobox");
 		}
@@ -313,6 +315,8 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
 		}
+		
+	
 	
 	/* **************************************************************************************************
 	* Function: addSuccessValuesEXCH9

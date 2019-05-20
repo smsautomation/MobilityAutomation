@@ -30,13 +30,14 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 	public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Check that all of the elements of that are expected are displayed
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).isDisplayed();{
+		/*Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec(driver).click();{
 		Log.info(sTestCaseName + " | Risk Assessment - Elec label displayed as expected");
-		}
+		}*/
 		
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Perform_Risk_Assessment_Yes(driver).isDisplayed();{
+		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Perform_Risk_Assessment_Yes(driver).click();{
 		Log.info(sTestCaseName + " | Perform Risk Assessment - Yes radio button displayed as expected");
 		}
+		Thread.sleep(2000);
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-viewPage");
@@ -65,7 +66,7 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 	public static void viewRiskAssessmentYesPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Check that all of the elements of that are expected are displayed
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Perform_Risk_Assessment_Yes(driver).click();{
+		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Perform_Risk_Assessment_Yes(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Perform Risk Assessment - Yes radio button clicked");
 		}
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).isDisplayed();{
@@ -112,7 +113,7 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 	*
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
-	
+		
 		//Add correct responses for a successful risk assessment - elec
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.cbx_Risk_Reason_Code(driver).click();{
 		Log.info(sTestCaseName + " | Risk code - Combobox clicked");
@@ -138,16 +139,17 @@ public class Methods_Electricity_Meter_Risk_Assessment_Elec{
 		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.btn_Next_Section(driver).click();{
 		Log.info(sTestCaseName + " | Next Section button clicked");
 		}
-		Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec_Complete(driver).isDisplayed();{
+		/*Objects_Electricity_Meter_Risk_Assessment_Elec_Page.lbl_Risk_Assessment_Elec_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Risk Assessment - Elec Complete Label displayed");
-		}
+		}*/
 		
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
-		Thread.sleep(500);
+		
+		}
 		
 	//END OF ADD SUCCESS VALUES METHOD
-	}
+	
 	
 	/* **************************************************************************************************
 	* Function: addAbortValues

@@ -30,7 +30,8 @@ public class Objects_Electricity_Meter_Remove_Meter_Page {
     public static WebElement lbl_Remove_Meter(WebDriver driver){
     	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[1]/div[1]/h4"));
+			element= driver.findElement(By.xpath("//h4[contains(.,'Remove Meter')]"));
+			//element = driver.findElement(By.xpath("//?/h4[@innertext='Remove Meter']"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Remove_Meter not found | Exception desc : "+e.getMessage());		
  		} 
@@ -39,8 +40,9 @@ public class Objects_Electricity_Meter_Remove_Meter_Page {
     
     public static WebElement cbx_Status_Of_Asset(WebDriver driver){
    	 
-		try{
-			element = driver.findElement(By.id("select1"));
+		try{//
+			//element = driver.findElement(By.id("select1"));
+			element = driver.findElement(By.id("cbx_StaAss_sel"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | cbx_Status_Of_Asset not found | Exception desc : "+e.getMessage());		
  		} 
@@ -60,7 +62,8 @@ public class Objects_Electricity_Meter_Remove_Meter_Page {
     public static WebElement btn_Unable_Read_Meter_Yes(WebDriver driver){
      	 
 		try{
-			element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[2]/div/div[3]/div[2]/div[2]/div/label"));
+			element= driver.findElement(By.cssSelector(".chckbox .outer"));
+			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/removemeter/div/div[2]/div/div[3]/div[2]/div[2]/div/label"));
  		}catch(Exception e){
 			Log.error(sRepositoryName + " | btn_Unable_Read_Meter_Yes not found | Exception desc : "+e.getMessage());		
  		} 

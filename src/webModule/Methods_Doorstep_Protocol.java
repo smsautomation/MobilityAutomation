@@ -236,6 +236,8 @@ public class Methods_Doorstep_Protocol{
 	* Details:
 	*
 	****************************************************************************************************/	
+	
+	   //*********ON SITE BUTTON INSTAEAD  
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful Doorstop Procedure

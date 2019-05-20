@@ -32,10 +32,16 @@ public class Methods_Appointments_List{
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//WebDriverWait wait = new WebDriverWait(driver, 5);
 			
-		//Check that all of the elements of that are expected are displayed
-		Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
-			Log.info(sTestCaseName + " | Logout button displayed as expected");
+		
+		  try {
+			//Check that all of the elements of that are expected are displayed
+			  Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
+			  Log.info(sTestCaseName + " | Logout button displayed as expected"); }
+		} catch (NullPointerException  e) {
+			
+			e.getMessage();
 		}
+		 
 
 		Objects_Appointments_List_Page.btn_Force_Sync(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Force Sync button displayed as expected");

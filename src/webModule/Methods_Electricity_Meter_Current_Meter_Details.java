@@ -1,6 +1,10 @@
 package webModule;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;
@@ -68,6 +72,21 @@ public class Methods_Electricity_Meter_Current_Meter_Details{
 	*
 	****************************************************************************************************/	
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
+		//ELETRIC METER DETAILS UP DATE MOTHODS
+		
+		//click on update label to update eletric meter details
+		driver.findElement(By.xpath("//button[@id='btn_Update_values']")).click();
+		//select eletric meter manufactural
+		WebElement element=driver.findElement(By.xpath("//select[@id='selectcm1']"));
+		element.click();
+		element.sendKeys("B:");
+		element.sendKeys(Keys.TAB);
+		
+		/*//select letric meter type
+		WebElement element2=driver.findElement(By.xpath("$x(\"//select[@id='currentMeterDetails_meterTypeSelect']\")"));
+		element2.click();
+		element2.sendKeys("TM3");
+		element2.sendKeys(Keys.TAB);*/
 	
 		//Add correct responses for a successful current meter confirmation 
 		Objects_Electricity_Meter_Current_Meter_Details_Page.btn_Existing_Meter_Correct_Yes(driver).click();{

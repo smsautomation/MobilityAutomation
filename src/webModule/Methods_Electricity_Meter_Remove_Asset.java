@@ -1,7 +1,12 @@
 package webModule;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjectRepositories.Objects_Electricity_Meter_Remove_Asset_Page;
 import utility.Log;
@@ -66,17 +71,35 @@ public class Methods_Electricity_Meter_Remove_Asset{
 		//Add correct responses for a successful remove asset 
 		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).click();
 		Log.info(sTestCaseName + " | Removed Asset Status Clicked");
-		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off");
-		Log.info(sTestCaseName + " | Removed Asset Status Select Off Circuit");
+		
+		try {
+			Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys("Off Circut");
+			Log.info(sTestCaseName + " | Removed Asset Status Select Off Circuit");
+		} catch (NullPointerException e) {
+			e.getMessage();
+		}
+		
+		Thread.sleep(2000);
 		Objects_Electricity_Meter_Remove_Asset_Page.cbx_Remove_Asset_Status(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | Off Circuit selected from Remove Asset Status combobox");
 		}
 		Objects_Electricity_Meter_Remove_Asset_Page.btn_Confirm_Asset_Removed(driver).click();{
 		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
+		
 		}
-		/*Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
-		Log.info(sTestCaseName + " | Remove Success OK button clicked");
-		}*/
+		//Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
+		//Log.info(sTestCaseName + " | Remove Success OK button clicked");
+	
+		
+			Thread.sleep(5000);
+			WebElement element2 = driver.findElement(By.cssSelector("[tabindex='1']"));
+			 Actions act=new Actions(driver);
+			 act.moveToElement(element2).click().build().perform();
+		
+		//}
+		
+		
+		Thread.sleep(2000);
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Remove Meter Complete label displayed");
 		}

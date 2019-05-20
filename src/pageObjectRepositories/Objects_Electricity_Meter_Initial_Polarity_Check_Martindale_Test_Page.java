@@ -30,7 +30,6 @@ public class Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Pa
     public static WebElement lbl_Initial_Polarity_Check_Martindale_Test(WebDriver driver){
     	 
 		try{
-			//element = driver.findElement(By.xpath(".//*[@id='app']/div/div/div[2]/div[2]/ng-switch/div/electask/div/div/plugintest/div/div[1]/div[1]/h4"));
 			element = driver.findElement(By.id("Title_InitPolMart_test"));
 		}catch(Exception e){
 			Log.error(sRepositoryName + " | lbl_Initial_Polarity_Check_Martindale_Test not found | Exception desc : "+e.getMessage());		
