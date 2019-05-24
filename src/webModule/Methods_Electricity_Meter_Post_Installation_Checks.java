@@ -178,21 +178,27 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Socket_Safety_Test_Pass(driver).click();{
 		Log.info(sTestCaseName + " | Socket Safety Test - Pass radio button clicked");
 		}
+<<<<<<< HEAD
 	if ("NewExchange_20_End_To_End_Chrome".equals(sTestCaseName))
+=======
+	if ("Exchange_20_End_To_End_Chrome".equals(sTestCaseName)||"Exchange_21_End_To_End_Chrome".equals(sTestCaseName))
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 	{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).click();
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).sendKeys("Tester");{
 		Log.info(sTestCaseName + " | Polarity tested Witness Name Entered");
 		}
+		Thread.sleep(1000);
 	}
 	else	
 		{ 
 			System.out.println("Doing the else "); 
 		}
+	/*
 		//Check that all of the elements that are expected are displayed
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.lbl_Post_Installation_Checks_Completion(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Post Installation Checks Completion label displayed as expected");
-		}
+		}*/
 				
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");
@@ -262,6 +268,7 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Capture_Photo_Martindale_Test(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo Martindale Test button clicked");
 		}
+		/*
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Capture_Photo_Final_Meter_Installation(driver).click();{
 		Log.info(sTestCaseName + " | Capture Photo Final Meter Installation button clicked");
 		}
@@ -270,7 +277,7 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		}
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Submit(driver).click();{
 		Log.info(sTestCaseName + " | Submit button clicked");
-		}
+		}*/
 				
 		//Take a screenshot to show what we've done
 		Utils.takeScreenshot(driver, sTestCaseName + "-addSuccessValues");

@@ -71,6 +71,7 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 			
 	
+<<<<<<< HEAD
 		WebDriverWait wait= new WebDriverWait(driver ,10);
 		WebElement element1 =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='chubInstall_selectAsset']")));
 		element1.click();
@@ -79,13 +80,34 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 		
 		
 		Thread.sleep(2000);
+=======
+		//Click on the Asset selection Combo box and select the first option
+		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Select(driver).click();{
+		Log.info(sTestCaseName + " | cbx_Comms_Hub_Select - Select box clicked");
+		}
+		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Select(driver).sendKeys(Keys.ARROW_DOWN);
+		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Select(driver).sendKeys(Keys.ENTER);{
+		Log.info(sTestCaseName + " | cbx_Comms_Hub_Select first option - Select box clicked");
+		}
+		//Define the Combobox element and get the text of the first option and assign to the variable selectedComboValue
+		//Select comboBox = new Select(driver.findElement(By.id("cbx_CommHub_sel")));
+		//Select comboBox = new Select(Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Select(driver));
+		//String selectedComboValue = comboBox.getFirstSelectedOption().getText();
+		String selectedComboOptionValue = Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_CHF_ID(driver); {
+		Log.info(sTestCaseName + " | Got data of the first option and assigned to variable");
+		}
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 		//Click on the Serial Scan text box and enter in the Serial number assigned to the variable selectedComboValue 
 		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
 		}
+<<<<<<< HEAD
 		Thread.sleep(2000);
 		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(Keys.ARROW_DOWN);{
 		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(Keys.ENTER);{
+=======
+		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(selectedComboOptionValue);{
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 		Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
 		}
 		
@@ -130,7 +152,13 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Location(driver).sendKeys("C");
 		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Location(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | cbx_Comms_Hub_Location Selection Entered");
-		}	
+		}		
+		//Added by Shiva Pasham
+		Thread.sleep(500);
+		//Add correct responses for a successful selection of the Comms Hub Location
+		Objects_Meter_Comms_Hub_Serial_Number_Page.btn_Aerial_Installed_Yes(driver).click();{
+		Log.info(sTestCaseName + " | btn_Aerial_Installed_Yes - clicked");
+		}
 		//Add correct responses for a successful selection of the Comms Hub Connection Method
 		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Connection_Method(driver).click();{
 		Log.info(sTestCaseName + " | cbx_Comms_Hub_Connection_Method - clicked");
@@ -140,6 +168,12 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 		Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Connection_Method(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | cbx_Comms_Hub_Connection_Method Selection Entered");
 		driver.findElement(By.id("chubInstall_photoEvidence")).click();
+		}
+		//Added by Shiva Pasham
+		Thread.sleep(500);
+		//Add correct responses for a successful selection of the Comms Hub Location
+		Objects_Meter_Comms_Hub_Serial_Number_Page.btn_Capture_Photographic_Evidence(driver).click();{
+		Log.info(sTestCaseName + " | btn_Capture_Photographic_Evidence - clicked");
 		}
 		//Click the Next Section Button and check the section bar is closed
 		Objects_Meter_Comms_Hub_Serial_Number_Page.btn_Next_Section(driver).click();{

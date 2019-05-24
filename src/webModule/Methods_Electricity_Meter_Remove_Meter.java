@@ -72,14 +72,23 @@ public class Methods_Electricity_Meter_Remove_Meter{
 	public static void addSuccessValues(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		//Add correct responses for a successful remove meter 
+<<<<<<< HEAD
 		
 		 
+=======
+
+		Thread.sleep(2000);
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 		Objects_Electricity_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).click();
 		Objects_Electricity_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).sendKeys("Meter Failure");
 		Objects_Electricity_Meter_Remove_Meter_Page.cbx_Status_Of_Asset(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | No Fault Found selected from Status of Asset combobox");
 		}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 		Objects_Electricity_Meter_Remove_Meter_Page.txt_Removed_Meter_Readings(driver).click();
 		Objects_Electricity_Meter_Remove_Meter_Page.txt_Removed_Meter_Readings(driver).sendKeys("12345");
 		Objects_Electricity_Meter_Remove_Meter_Page.txt_Removed_Meter_Readings(driver).sendKeys(Keys.TAB);{

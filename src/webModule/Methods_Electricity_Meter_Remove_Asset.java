@@ -87,6 +87,7 @@ public class Methods_Electricity_Meter_Remove_Asset{
 		Log.info(sTestCaseName + " | Confirm Asset Removed - Yes radio button clicked");
 		
 		}
+<<<<<<< HEAD
 		//Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
 		//Log.info(sTestCaseName + " | Remove Success OK button clicked");
 	
@@ -100,6 +101,11 @@ public class Methods_Electricity_Meter_Remove_Asset{
 		
 		
 		Thread.sleep(2000);
+=======
+		Objects_Electricity_Meter_Remove_Asset_Page.btn_Remove_Success_OK(driver).click();{
+		Log.info(sTestCaseName + " | Remove Success OK button clicked");
+		}
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
 		Objects_Electricity_Meter_Remove_Asset_Page.lbl_Remove_Asset_Complete(driver).isDisplayed();{
 		Log.info(sTestCaseName + " | Remove Meter Complete label displayed");
 		}

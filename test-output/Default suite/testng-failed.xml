@@ -3,12 +3,23 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="automationTestCases.NewExchange_21_End_To_End_Chrome">
         <methods>
           <include name="main"/>
+=======
+      <class name="automationTestCases.Exchange_21_End_To_End_Chrome">
+        <methods>
+          <include name="afterMethod"/>
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
           <include name="beforeMethod"/>
+          <include name="main"/>
         </methods>
+<<<<<<< HEAD
       </class> <!-- automationTestCases.NewExchange_21_End_To_End_Chrome -->
+=======
+      </class> <!-- automationTestCases.Exchange_21_End_To_End_Chrome -->
+>>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
