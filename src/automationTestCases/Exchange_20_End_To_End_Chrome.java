@@ -102,7 +102,7 @@ public class Exchange_20_End_To_End_Chrome {
                         Methods_Appointments_List.viewPage(driver, sTestCaseName);
                         
                         //Select the correct appointment
-                        driver.findElement(By.xpath("//*[contains(text(), ' MR. Test_199_EXCH20')]")).click();
+                        driver.findElement(By.xpath("///div[contains(text(),' MR. Manual_dispatch_EXCH21 DF')]")).click();
                         
                         //Verify that we are on the Appointment Details page
                         Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();

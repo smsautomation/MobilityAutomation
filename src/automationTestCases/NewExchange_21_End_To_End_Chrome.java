@@ -147,7 +147,7 @@ public class NewExchange_21_End_To_End_Chrome {
                 Methods_Appointments_List.viewPage(driver, sTestCaseName);
                 
                 //Select the correct appointment
-                driver.findElement(By.xpath("//div[contains(text(),'MR.Test_211_EXCH21')]")).click();
+                driver.findElement(By.xpath("//div[contains(text(),'MR.Test_001_EXCH21')]")).click();
                 
                 //Verify that we are on the Appointment Details page
                 Objects_Appointment_Details_Page.btn_Call_Forward(driver).isDisplayed();
@@ -233,8 +233,11 @@ public class NewExchange_21_End_To_End_Chrome {
                 Methods_Electricity_Meter_Capture_Initial_Photo_Of_Elec_Installation.addSuccessValues(driver, sTestCaseName);
                 
                 //Verify that we are on the Electricity Meter Capture Initial Polarity Check - Martindale Test page
-    Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed();
-                Log.info("Initial Polarity Check - Martindale Test page displayed as expected");
+		/*
+		 * Objects_Electricity_Meter_Initial_Polarity_Check_Martindale_Test_Page.
+		 * lbl_Initial_Polarity_Check_Martindale_Test(driver).isDisplayed(); Log.
+		 * info("Initial Polarity Check - Martindale Test page displayed as expected");
+		 */
                 
                 //Verify Initial page elements displayed
                 Methods_Electricity_Meter_Initial_Polarity_Check_Martindale_Test.viewPage(driver, sTestCaseName);

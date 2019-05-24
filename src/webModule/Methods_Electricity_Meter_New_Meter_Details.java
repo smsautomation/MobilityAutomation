@@ -255,29 +255,32 @@ public class Methods_Electricity_Meter_New_Meter_Details{
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).click();{
 		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter - Select box clicked");
 		}
-		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys("99E0000003");
+		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ARROW_DOWN);;
 		Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | cbx_Valid_Elec_Meter first option - Select box clicked");
 		}
-		/*
-		 * //Define the Combobox element and get the text of the first option and assign
-		 * to the variable selectedComboValue Select comboBox = new
-		 * Select(Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(
-		 * driver)); String selectedComboValue =
-		 * comboBox.getFirstSelectedOption().getText();{ Log.info(sTestCaseName +
-		 * " | Got data of the first option and assigned to variable"); }
-		 */
+		
+		  //Define the Combobox element and get the text of the first option and assign to the variable  selectedComboValue
+		   Select comboBox = new  Select(Objects_Electricity_Meter_New_Meter_Details_Page.cbx_Valid_Elec_Meter(driver)); 
+		   String selectedComboValue = comboBox.getFirstSelectedOption().getText();
+		   
+		   { Log.info(sTestCaseName + " | Got data of the first option and assigned to variable"); }
+		  
+		 
 		//Click on the Serial Scan text box and enter in the Serial number assigned to the variable selectedComboValue 
 		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).click();{
 		Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
 		}
-		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys("99E0000003");{
+		String CHF_ID_Value= selectedComboValue.substring(0, 11);
+				
+		Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).sendKeys(CHF_ID_Value);{
 		Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
 		//}	
 		
 		//Click on the Label bar to get out of the Text box and move on
 		//Objects_Electricity_Meter_New_Meter_Details_Page.txt_Elec_Meter_Serial_No(driver).isDisplayed();{
 		//Log.info(sTestCaseName + " | Click Away for the Text Box on the Label - Label clicked");
+		
 		WebDriverWait wait= new WebDriverWait (driver, 2);
 		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h4[(text()='New Meter Details')]")));
 		element.click();

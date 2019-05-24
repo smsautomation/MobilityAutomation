@@ -84,14 +84,32 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 		Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
 		}
 		Thread.sleep(2000);
-		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys("8870051000000001");{
-		//Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(selectedComboValue);{
+		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(Keys.ARROW_DOWN);{
+		Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(Keys.ENTER);{
 		Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
 		}
+		
+		//Define the Combobox element and get the text of the first option and assign to the variable selectedComboValue
+				Select comboBox = new Select(Objects_Meter_Comms_Hub_Serial_Number_Page.cbx_Comms_Hub_Select(driver));
+				String selectedComboValue = comboBox.getFirstSelectedOption().getText();{
+				Log.info(sTestCaseName + " | Got data of the first option and assigned to variable");
+				
+				}
+				//Click on the Serial Scan text box and enter in the Serial number assigned to the variable selectedComboValue 
+				Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).click();{
+				Log.info(sTestCaseName + " | Serial Number Box - Text Box clicked");
+				}
+				String CHSN_value  = selectedComboValue.substring(0,16 );
+				Objects_Meter_Comms_Hub_Serial_Number_Page.txt_Comms_Hub_Serial_Number(driver).sendKeys(CHSN_value);{
+				Log.info(sTestCaseName + " | First Option of Combo Box - Text Entered");
+				}	
+		
+		
 		Thread.sleep(2000);
 		//Click on the Label bar to get out of the Text box and move on
 		Objects_Meter_Comms_Hub_Serial_Number_Page.lbl_Comms_Hub_Serial_Number(driver).click();{
 		Log.info(sTestCaseName + " | Click Away for the Text Box on the Label - Label clicked");
+		
 		
 	/*	//select common hub location code
 		WebElement element3= driver.findElement(By.xpath("//select[@id='chubInstall_chubLocationSelect']"));
@@ -138,6 +156,7 @@ public class Methods_Meter_Comms_Hub_Serial_Number{
 	}
 		}
 	
+}
 
 	
 		

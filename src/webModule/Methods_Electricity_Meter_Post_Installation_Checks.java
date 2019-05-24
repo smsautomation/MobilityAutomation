@@ -178,7 +178,7 @@ public class Methods_Electricity_Meter_Post_Installation_Checks{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.btn_Socket_Safety_Test_Pass(driver).click();{
 		Log.info(sTestCaseName + " | Socket Safety Test - Pass radio button clicked");
 		}
-	if ("Exchange_20_End_To_End_Chrome".equals(sTestCaseName))
+	if ("NewExchange_20_End_To_End_Chrome".equals(sTestCaseName))
 	{
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).click();
 		Objects_Electricity_Meter_Post_Installation_Checks_Page.txt_Test_Witness_Name(driver).sendKeys("Tester");{
