@@ -46,6 +46,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.security.Credentials;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -1007,7 +1008,7 @@ public class Utils {
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			try{
 				Alert alert = wait.until(ExpectedConditions.alertIsPresent());    
-				alert.authenticateUsing(new UserAndPassword(sUserName, sPassword));
+				alert.authenticateUsing((Credentials) new UserAndPassword(sUserName, sPassword));
 			}catch(Exception e){
 				Log.info(sTestCaseName + " | Authentication popup not found after " + iCount + " iterations");
 				break;

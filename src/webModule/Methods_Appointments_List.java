@@ -27,7 +27,47 @@ public class Methods_Appointments_List{
 	* Details:
 	*
 	****************************************************************************************************/	
+	
+	
+	
+	
 	public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
+		
+		//Declare our variables and instantiate 
+		//JavascriptExecutor executor = (JavascriptExecutor) driver;
+		//WebDriverWait wait = new WebDriverWait(driver, 5);
+			
+		
+		  //Check that all of the elements of that are expected are displayed
+		  Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
+		  Log.info(sTestCaseName + " | Logout button displayed as expected"); }
+		 
+
+		Objects_Appointments_List_Page.btn_Force_Sync(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Force Sync button displayed as expected");
+		}
+		
+		Objects_Appointments_List_Page.btn_Asset_Management(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | Asset Management button displayed as expected");
+		}
+		
+		Objects_Appointments_List_Page.hdr_First_Appointment(driver).isDisplayed();{
+			Log.info(sTestCaseName + " | First Appointment Header displayed as expected");
+		}
+		
+		//Screenshot time
+		Utils.takeScreenshot(driver, sTestCaseName + "-ViewPage");
+		
+	//END OF VIEW PAGE METHOD
+	}
+//END OF METHODS
+}
+	
+	
+	
+	
+	
+	/*public static void viewPage(WebDriver driver, String sTestCaseName) throws Exception{
 	
 		
 		
@@ -39,25 +79,24 @@ public class Methods_Appointments_List{
 		//JavascriptExecutor executor = (JavascriptExecutor) driver;
 		//WebDriverWait wait = new WebDriverWait(driver, 5);
 			
-<<<<<<< HEAD
 		
 		  try {
 			//Check that all of the elements of that are expected are displayed
-			  Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
-			  Log.info(sTestCaseName + " | Logout button displayed as expected"); }
-		} catch (NullPointerException  e) {
-			
-			e.getMessage();
-=======
-		//Check that all of the elements of that are expected are displayed
-		try {
-			Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();
+			  Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();
+			  {
+			  Log.info(sTestCaseName + " | Logout button displayed as expected");
+			  }
+			  
+			  //Check that all of the elements of that are expected are displayed
+			  try {
+				  Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();
+				  
 		} catch(StaleElementReferenceException e) {
 			Thread.sleep(2000);
 		}
 		Objects_Appointments_List_Page.btn_Logout(driver).isDisplayed();{
 			Log.info(sTestCaseName + " | Logout button displayed as expected");
->>>>>>> bf7b6d1c41ed9e6ebec79609ddf5787700cd98d0
+
 		}
 		 
 
@@ -80,6 +119,6 @@ public class Methods_Appointments_List{
 		Utils.takeScreenshot(driver, sTestCaseName + "-ViewPage");
 		
 	//END OF VIEW PAGE METHOD
-	}
+		  }
 //END OF METHODS
-}
+}*/
