@@ -29,6 +29,7 @@ public class Objects_Electricity_Meter_Remove_Asset_Page {
    
     private static WebElement element = null;
     private static String sRepositoryName = "Objects_Electricity_Meter_Remove_Asset_Page";
+	private static WebElement element1;
 
     public static WebElement lbl_Remove_Asset(WebDriver driver){
     	 
@@ -69,7 +70,7 @@ public class Objects_Electricity_Meter_Remove_Asset_Page {
 			
 			///////////////////////////////////////
 		    WebDriverWait wait= new WebDriverWait(driver ,5);
-			WebElement element1 =wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[tabindex='1']")));
+			setElement1(wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[tabindex='1']"))));
 			
 			 
 			//element= driver.findElement(By.cssSelector(""));
@@ -88,6 +89,14 @@ public class Objects_Electricity_Meter_Remove_Asset_Page {
 			Log.error(sRepositoryName + " | lbl_Remove_Asset_Complete not found | Exception desc : "+e.getMessage());		
  		} 
 	    return element;
+	}
+
+	public static WebElement getElement1() {
+		return element1;
+	}
+
+	public static void setElement1(WebElement element1) {
+		Objects_Electricity_Meter_Remove_Asset_Page.element1 = element1;
 	}
 	
 			

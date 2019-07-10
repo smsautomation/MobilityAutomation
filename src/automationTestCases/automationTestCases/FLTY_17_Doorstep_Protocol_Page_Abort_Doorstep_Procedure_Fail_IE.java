@@ -28,11 +28,14 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import utility.*;
-import webModule.*;
+import webModule.Methods_Appointment_Details;
+import webModule.Methods_Appointments_List;
+import webModule.Methods_Doorstep_Protocol;
+import webModule.Methods_Login;
+import pageObjectRepositories.Objects_Abort_Page;
 import pageObjectRepositories.Objects_Appointment_Details_Page;
 import pageObjectRepositories.Objects_Doorstep_Protocol_Page;
 import pageObjectRepositories.Objects_Login_Page;
-import pageObjectRepositories.Objects_Abort_Page;
 
 public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE {
 
@@ -74,7 +77,7 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE {
 	@Test
 	public void main() throws Exception {
 		
-		/*
+		
 		Methods_Login.viewPage(driver, sTestCaseName);
 		
 		Methods_Login.addSuccessValues(driver, sTestCaseName);
@@ -138,7 +141,7 @@ public class FLTY_17_Doorstep_Protocol_Page_Abort_Doorstep_Procedure_Fail_IE {
 		Objects_Abort_Page.Abort_No_Access_Reasons.lbl_Not_Convenient_With_Customer(driver).isDisplayed();
 		Log.info("Abort No Access page displayed as expected");
 		Utils.takeScreenshot(driver, sTestCaseName + "-AbortPage");	
-		*/	
+		
 	}
 	
 	//Log out

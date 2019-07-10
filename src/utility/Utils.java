@@ -31,10 +31,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
-//import org.apache.poi.openxml4j.opc.Configuration;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -46,12 +43,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.WebDriver.ie.driver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.security.Credentials;
-import org.openqa.selenium.security.UserAndPassword;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import utility.ExcelUtils;
 
 public class Utils {
@@ -1002,19 +994,19 @@ public class Utils {
  	* Details:
  	*
  	****************************************************************************************************/
- 	public static void passAuthentication(String sTestCaseName, String sUserName, String sPassword){
+ /*	public static void passAuthentication(String sTestCaseName, String sUserName, String sPassword){
 	
  		for (int iCount = 0; iCount < 10; iCount++){
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			try{
 				Alert alert = wait.until(ExpectedConditions.alertIsPresent());    
-				alert.authenticateUsing((Credentials) new UserAndPassword(sUserName, sPassword));
+			//	alert).authenticateUsing((Credentials) new UserAndPassword(sUserName, sPassword));
 			}catch(Exception e){
 				Log.info(sTestCaseName + " | Authentication popup not found after " + iCount + " iterations");
 				break;
 			}
 		}
- 	}
+ 	}*/
  	
 //END OF METHODS    
 }

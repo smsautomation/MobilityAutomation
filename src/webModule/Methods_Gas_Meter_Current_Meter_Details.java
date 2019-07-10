@@ -1,8 +1,6 @@
 package webModule;
 
 import org.openqa.selenium.WebDriver;
-
-import pageObjectRepositories.Objects_Electricity_Meter_Current_Meter_Details_Page;
 import pageObjectRepositories.Objects_Gas_Meter_Current_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;

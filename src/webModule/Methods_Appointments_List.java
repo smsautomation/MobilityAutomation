@@ -6,6 +6,7 @@ import pageObjectRepositories.Objects_Appointments_List_Page;
 import utility.Log;
 import utility.Utils;
 
+@SuppressWarnings("unused")
 public class Methods_Appointments_List{
 	
 		

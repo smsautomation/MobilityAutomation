@@ -1,8 +1,8 @@
 package webModule;
 
 import org.openqa.selenium.WebDriver;
+
 import pageObjectRepositories.Objects_Electricity_Meter_Initial_Polarity_Check_At_Meter_Page;
-import pageObjectRepositories.Objects_Found_Meter_Details_Page;
 import utility.Log;
 import utility.Utils;
 
